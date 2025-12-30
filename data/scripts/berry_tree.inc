@@ -184,23 +184,23 @@ BerryTree_EventScript_PlantBerry::
 	return
 
 ApricornTree_Text_Growing:
-	.string "It's a BERRY tree!\n"
-	.string "These BERRIES aren't ripe yet.$"
+	.string "It's a Berry tree!\n"
+	.string "These Berries aren't ripe yet.$"
 
 BerryTree_Text_ItsSoftLoamySoil:
 	.string "It's soft, loamy soil.$"
 
 BerryTree_Text_BerryGrowthStage1:
 	.string "One {STR_VAR_1} was planted here.\n"
-	.string "Want to water it with the WAILMER PAIL?$"
+	.string "Want to water it with the Wailmer Pail?$"
 
 BerryTree_Text_BerryGrowthStage2:
 	.string "{STR_VAR_1} has sprouted.\n"
-	.string "Want to water it with the WAILMER PAIL?$"
+	.string "Want to water it with the Wailmer Pail?$"
 
 BerryTree_Text_BerryGrowthStage3:
 	.string "This {STR_VAR_1} plant is growing taller.\n"
-	.string "Want to water it with the WAILMER PAIL?$"
+	.string "Want to water it with the Wailmer Pail?$"
 
 BerryTree_Text_BerryGrowthStage4:
 	.string "These {STR_VAR_1} flowers are\n"
@@ -219,7 +219,7 @@ BerryTree_Text_PickedTheBerry:
 	.string "{PLAYER} picked the {STR_VAR_2} {STR_VAR_1}.$"
 
 BerryTree_Text_BerryPocketFull:
-	.string "The BAG's BERRIES POCKET is full.\p"
+	.string "The Bag's Berries Pocket is full.\p"
 	.string "The {STR_VAR_1} couldn't be taken.$"
 
 BerryTree_Text_ExclamationPoint:

@@ -3,7 +3,7 @@ Route5_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
 	.byte 0
 
-Route5_OnTransition: 
+Route5_OnTransition:
 	callnative SetTimeBasedEncounters
 	end
 
@@ -12,6 +12,6 @@ Route5_EventScript_UndergroundPathSign::
 	end
 
 Route5_Text_UndergroundPathSign:
-	.string "UNDERGROUND PATH\p"
-	.string "CERULEAN CITY - VERMILION CITY$"
+	.string "Underground Path\p"
+	.string "Cerulean City - Vermilion City$"
 

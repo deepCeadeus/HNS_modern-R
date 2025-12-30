@@ -3,7 +3,7 @@ Route4_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
 	.byte 0
 
-Route4_OnTransition: 
+Route4_OnTransition:
 	callnative SetTimeBasedEncounters
 	end
 
@@ -35,14 +35,14 @@ Route4_EventScript_Sign::
 	end
 
 Route4_Text_BirdKeeperHank_Seen:
-	.string "I'm raising my POKéMON. Want to battle\n"
+	.string "I'm raising my Pokémon. Want to battle\n"
 	.string "with me?$"
 
 Route4_Text_BirdKeeperHank_Beaten:
 	.string "Ack! I lost that one…$"
 
 Route4_Text_BirdKeeperHank_AfterBattle:
-	.string "If you have a specific POKéMON that you\n"
+	.string "If you have a specific Pokémon that you\n"
 	.string "want to raise, put it out first, then\l"
 	.string "switch it right away.\p"
 	.string "That's how to do it.$"
@@ -55,7 +55,7 @@ Route4_Text_PicnickerHope_Beaten:
 	.string "Aww, you are too strong.$"
 
 Route4_Text_PicnickerHope_AfterBattle:
-	.string "I heard CLEFAIRY appear at MT.MOON.\p"
+	.string "I heard Clefairy appear at Mt.Moon.\p"
 	.string "But where could they be?$"
 
 Route4_Text_PicnickerSharon_Seen:
@@ -69,7 +69,7 @@ Route4_Text_PicnickerSharon_AfterBattle:
 	.string "……I'll go train some more…$"
 
 Route4_Text_MtMoonSquareSign:
-	.string "MT.MOON NEW ENTRANCE\n"
-	.string "DUE TO CAVE-IN\p"
-	.string "WATCH YOUR STEP$"
+	.string "Mt.Moon New Entrance\n"
+	.string "Due To Cave-In\p"
+	.string "Watch Your Step$"
 
