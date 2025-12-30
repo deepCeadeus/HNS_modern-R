@@ -255,7 +255,7 @@ static const u16 sOptionMenuText_Pal[] = INCBIN_U16("graphics/interface/option_m
 #define TEXT_COLOR_OPTIONS_RED_DARK_FG          13
 #define TEXT_COLOR_OPTIONS_RED_DARK_SHADOW      14
 
-// Menu draw and input functions 
+// Menu draw and input functions
 struct // MENU_MAIN
 {
     void (*drawChoices)(int selection, int y);
@@ -271,13 +271,13 @@ struct // MENU_MAIN
     [MENUITEM_MAIN_FOLLOWER]                = {DrawChoices_Follower,         ProcessInput_Options_Two},
     [MENUITEM_MAIN_LARGE_FOLLOWER]          = {DrawChoices_LargeFollower,    ProcessInput_Options_Two},
     [MENUITEM_MAIN_AUTORUN]                 = {DrawChoices_Autorun,          ProcessInput_Options_Two},
-    [MENUITEM_MAIN_AUTORUN_SURF]            = {DrawChoices_Autorun_Surf,     ProcessInput_Options_Two},  
-    //[MENUITEM_MAIN_AUTORUN_DIVE]            = {DrawChoices_Autorun_Dive,     ProcessInput_Options_Two},  
+    [MENUITEM_MAIN_AUTORUN_SURF]            = {DrawChoices_Autorun_Surf,     ProcessInput_Options_Two},
+    //[MENUITEM_MAIN_AUTORUN_DIVE]            = {DrawChoices_Autorun_Dive,     ProcessInput_Options_Two},
     //[MENUITEM_MAIN_MATCHCALL]               = {DrawChoices_MatchCall,        ProcessInput_Options_Two},
     [MENUITEM_CUSTOM_FISHING]               = {DrawChoices_Fishing,          ProcessInput_Options_Two},
     [MENUITEM_MAIN_EVEN_FASTER_JOY]         = {DrawChoices_EvenFasterJoy,    ProcessInput_Options_Two},
-    //[MENUITEM_MAIN_SKIP_INTRO]              = {DrawChoices_Skip_Intro,       ProcessInput_Options_Two}, 
-    [MENUITEM_MAIN_UNIT_TYPE]               = {DrawChoices_Unit_Type,        ProcessInput_Options_Two},  
+    //[MENUITEM_MAIN_SKIP_INTRO]              = {DrawChoices_Skip_Intro,       ProcessInput_Options_Two},
+    [MENUITEM_MAIN_UNIT_TYPE]               = {DrawChoices_Unit_Type,        ProcessInput_Options_Two},
     [MENUITEM_MAIN_FRAMETYPE]               = {DrawChoices_FrameType,        ProcessInput_FrameType},
     [MENUITEM_MAIN_SHOW_INTRO_MSG]          = {DrawChoices_ShowIntroMsg,     ProcessInput_Options_Two},
 };
@@ -317,23 +317,23 @@ struct // MENU_SOUND
 };
 
 // Menu left side option names text
-static const u8 sText_OptionTypeEffective[]       = _("SHOW EFFECTIVE");
-static const u8 sText_OptionFishing[]             = _("EASIER FISHING");
-static const u8 sText_OptionFastIntro[]           = _("FAST INTRO");
-static const u8 sText_OptionLargeFollower[]       = _("BIG FOLLOWERS");
-static const u8 sText_OptionFastBattles[]         = _("FAST BATTLES");
-static const u8 sText_OptionEvenFasterJoy[]       = _("FASTER JOY");
-static const u8 sText_OptionSkipIntro[]           = _("SKIP INTRO");
-static const u8 sText_OptionLR_Run[]              = _("RUN PROMPT");
-static const u8 sText_OptionBallPrompt[]          = _("BALL PROMPT");
-static const u8 sText_OptionUnitType[]            = _("UNIT SYSTEM");
-static const u8 sText_OptionNewBackgrounds[]      = _("BATTLE TERRAIN");
-static const u8 sText_OptionNewBattleUI[]         = _("BATTLE UI");
-static const u8 sText_OptionRunType[]             = _("QUICK RUN");
-static const u8 sText_AutorunEnable_Surf[]        = _("AUTORUN (SURF)");
-static const u8 sText_AutorunEnable_Dive[]        = _("AUTORUN (DIVE)");
-static const u8 sText_IntroMsg[]                  = _("SHOW INTRO MSG");
-static const u8 sText_FontType[]                  = _("FONT TYPE");
+static const u8 sText_OptionTypeEffective[]       = _("Show Effective");
+static const u8 sText_OptionFishing[]             = _("Easier Fishing");
+static const u8 sText_OptionFastIntro[]           = _("Fast Intro");
+static const u8 sText_OptionLargeFollower[]       = _("Big Followers");
+static const u8 sText_OptionFastBattles[]         = _("Fast Battles");
+static const u8 sText_OptionEvenFasterJoy[]       = _("Faster Joy");
+static const u8 sText_OptionSkipIntro[]           = _("Skip Intro");
+static const u8 sText_OptionLR_Run[]              = _("Run Prompt");
+static const u8 sText_OptionBallPrompt[]          = _("Ball Prompt");
+static const u8 sText_OptionUnitType[]            = _("Unit System");
+static const u8 sText_OptionNewBackgrounds[]      = _("Battle Terrain");
+static const u8 sText_OptionNewBattleUI[]         = _("Battle Ui");
+static const u8 sText_OptionRunType[]             = _("Quick Run");
+static const u8 sText_AutorunEnable_Surf[]        = _("Autorun (surf)");
+static const u8 sText_AutorunEnable_Dive[]        = _("Autorun (dive)");
+static const u8 sText_IntroMsg[]                  = _("Show Intro Msg");
+static const u8 sText_FontType[]                  = _("Font Type");
 static const u8 *const sOptionMenuItemsNamesMain[MENUITEM_MAIN_COUNT] =
 {
     [MENUITEM_MAIN_TEXTSPEED]           = gText_TextSpeed,
@@ -369,13 +369,13 @@ static const u8 *const sOptionMenuItemsNamesCustom[MENUITEM_BATTLE_COUNT] =
     [MENUITEM_BATTLE_NEW_BATTLEUI]     = sText_OptionNewBattleUI,
 };
 
-static const u8 sText_OptionMusic[]                  = _("MUSIC");
-static const u8 sText_OptionSurfMusic[]              = _("SURF MUSIC");
-static const u8 sText_OptionBikeMusic[]              = _("BIKE MUSIC");
-static const u8 sText_OptionWildMonMusic[]           = _("WILD MUSIC");
-static const u8 sText_OptionTrainerBattleMusic[]     = _("TRAINER MUSIC");
-static const u8 sText_OptionFrontierTrainerBattleMusic[]     = _("FRONTIER MUSIC");
-static const u8 sText_OptionSoundEffects[]           = _("SOUND EFFECTS");
+static const u8 sText_OptionMusic[]                  = _("Music");
+static const u8 sText_OptionSurfMusic[]              = _("Surf Music");
+static const u8 sText_OptionBikeMusic[]              = _("Bike Music");
+static const u8 sText_OptionWildMonMusic[]           = _("Wild Music");
+static const u8 sText_OptionTrainerBattleMusic[]     = _("Trainer Music");
+static const u8 sText_OptionFrontierTrainerBattleMusic[]     = _("Frontier Music");
+static const u8 sText_OptionSoundEffects[]           = _("Sound Effects");
 static const u8 *const sOptionMenuItemsNamesSound[MENUITEM_SOUND_COUNT] =
 {
     [MENUITEM_SOUND_SOUND]                           = gText_Sound,
@@ -461,18 +461,18 @@ static const u8 sText_Desc_Save[]               = _("Save your settings.");
 static const u8 sText_Desc_TextSpeed[]          = _("Choose one of the four text-display\nspeeds.");
 static const u8 sText_Desc_Font_Em[]            = _("{COLOR 9}{COLOR 10}Emerald{COLOR 2} font type. Exit the Options\nMenu to properly apply the option.");
 static const u8 sText_Desc_Font_FRLG[]          = _("{COLOR 7}{COLOR 8}FR{COLOR 9}{COLOR 10}LG{COLOR 2} font type. Exit the Options Menu\nto properly apply the option.");
-static const u8 sText_Desc_BattleScene_On[]     = _("Show the POKéMON animations\nand attack animations.");
-static const u8 sText_Desc_BattleScene_Off[]    = _("Skip the POKéMON animations\nand attack animations.");
-static const u8 sText_Desc_Difficulty_Easy[]    = _("Change the difficulty to EASY.\nEverything is easier.");
-static const u8 sText_Desc_Difficulty_Normal[]  = _("Change the difficulty to NORMAL.\nVanilla experience.");
-static const u8 sText_Desc_Difficulty_Hard[]    = _("Change the difficulty to HARD.\nIncludes extra challenges.");
-static const u8 sText_Desc_BattleStyle_Shift[]  = _("Get the option to switch your\nPOKéMON after the enemies faints.");
-static const u8 sText_Desc_BattleStyle_Set[]    = _("No free switch after fainting the\nenemies POKéMON.");
+static const u8 sText_Desc_BattleScene_On[]     = _("Show the Pokémon animations\nand attack animations.");
+static const u8 sText_Desc_BattleScene_Off[]    = _("Skip the Pokémon animations\nand attack animations.");
+static const u8 sText_Desc_Difficulty_Easy[]    = _("Change the difficulty to Easy.\nEverything is easier.");
+static const u8 sText_Desc_Difficulty_Normal[]  = _("Change the difficulty to Normal.\nVanilla experience.");
+static const u8 sText_Desc_Difficulty_Hard[]    = _("Change the difficulty to Hard.\nIncludes extra challenges.");
+static const u8 sText_Desc_BattleStyle_Shift[]  = _("Get the option to switch your\nPokémon after the enemies faints.");
+static const u8 sText_Desc_BattleStyle_Set[]    = _("No free switch after fainting the\nenemies Pokémon.");
 static const u8 sText_Desc_ButtonMode[]         = _("All buttons work as normal.");
 static const u8 sText_Desc_ButtonMode_LR[]      = _("On some screens the L and R buttons\nact as left and right.");
 static const u8 sText_Desc_ButtonMode_LA[]      = _("The L button acts as another A\nbutton for one-handed play.");
 static const u8 sText_Desc_FrameType[]          = _("Choose the frame surrounding the\nwindows. Frames 21-29 are from {COLOR 7}{COLOR 8}FR{COLOR 9}{COLOR 10}LG{COLOR 2}.");
-static const u8 sText_Desc_FollowerOn[]            = _("Let the first POKéMON in your\nparty follow you.");
+static const u8 sText_Desc_FollowerOn[]            = _("Let the first Pokémon in your\nparty follow you.");
 static const u8 sText_Desc_FollowerOff[]           = _("Walk alone.");
 static const u8 sText_Desc_FollowerLargeOn[]       = _("Enable large {PKMN} followers.\n{COLOR 7}{COLOR 8}Can cause graphical issues.");
 static const u8 sText_Desc_FollowerLargeOff[]      = _("Disable large {PKMN} followers.\nRecommended.");
@@ -484,14 +484,14 @@ static const u8 sText_Desc_AutorunDiveOn[]         = _("Surf underwater faster\n
 static const u8 sText_Desc_AutorunDiveOff[]        = _("Press and hold B to surf\nunderwater faster.");
 static const u8 sText_Desc_FishingOn[]             = _("Automatically reel while fishing.");
 static const u8 sText_Desc_FishingOff[]            = _("Manually reel while fishing.\nFish like you always fished!");
-static const u8 sText_Desc_EvenFasterJoyOn[]       = _("NURSE JOY heals you faster.");
-static const u8 sText_Desc_EvenFasterJoyOff[]      = _("NURSE JOY heals you with the\nusual animation.");
+static const u8 sText_Desc_EvenFasterJoyOn[]       = _("Nurse Joy heals you faster.");
+static const u8 sText_Desc_EvenFasterJoyOff[]      = _("Nurse Joy heals you with the\nusual animation.");
 static const u8 sText_Desc_SkipIntroOn[]           = _("Skips the Copyright screen and\nintro. Applies to soft-resets.");
 static const u8 sText_Desc_SkipIntroOff[]          = _("Shows the Copyright screen and\nthe game's introduction.");
-static const u8 sText_Desc_OverworldCallsOn[]      = _("TRAINERs will be able to call you,\noffering rematches and info.");
+static const u8 sText_Desc_OverworldCallsOn[]      = _("Trainers will be able to call you,\noffering rematches and info.");
 static const u8 sText_Desc_OverworldCallsOff[]     = _("You will not receive calls.\nSpecial events will still occur.");
-static const u8 sText_Desc_Units_Imperial[]        = _("Display BERRY and POKéMON weight\nand size in pounds and inches.");
-static const u8 sText_Desc_Units_Metric[]          = _("Display BERRY and POKéMON weight\nand size in kilograms and meters.");
+static const u8 sText_Desc_Units_Imperial[]        = _("Display Berry and Pokémon weight\nand size in pounds and inches.");
+static const u8 sText_Desc_Units_Metric[]          = _("Display Berry and Pokémon weight\nand size in kilograms and meters.");
 static const u8 sText_Desc_IntroMsg_On[]           = _("Bug reports {COLOR 7}{COLOR 8}MUST NOT{COLOR 2} be sent\nto the original HEART & SOUL devs.");
 static const u8 sText_Desc_IntroMsg_Off[]          = _("Report issues at\n{COLOR 9}{COLOR 10}github.com/resetes12/HNS{UNDERSCORE}modern");
 static const u8 *const sOptionMenuItemDescriptionsMain[MENUITEM_MAIN_COUNT][3] =
@@ -517,10 +517,10 @@ static const u8 *const sOptionMenuItemDescriptionsMain[MENUITEM_MAIN_COUNT][3] =
 };
 
 // Custom {PKMN}
-static const u8 sText_Desc_StyleOn[]               = _("PHYSICAL and SPECIAL MOVES\nare MOVE specific.");
-static const u8 sText_Desc_StyleOff[]              = _("PHYSICAL and SPECIAL MOVES\ndepend on the POKéMON TYPE.");
-static const u8 sText_Desc_TypeEffectiveOn[]       = _("TYPE effectiveness will be\nshown in battles.");
-static const u8 sText_Desc_TypeEffectiveOff[]      = _("TYPE effectiveness won't be\nshown in battles.");
+static const u8 sText_Desc_StyleOn[]               = _("Physical and Special Moves\nare Move specific.");
+static const u8 sText_Desc_StyleOff[]              = _("Physical and Special Moves\ndepend on the Pokémon Type.");
+static const u8 sText_Desc_TypeEffectiveOn[]       = _("Type effectiveness will be\nshown in battles.");
+static const u8 sText_Desc_TypeEffectiveOff[]      = _("Type effectiveness won't be\nshown in battles.");
 static const u8 sText_Desc_FastIntroOn[]           = _("Skip the sliding animation\nand enter battles faster.");
 static const u8 sText_Desc_FastIntroOff[]          = _("Battles load at the usual speed.");
 static const u8 sText_Desc_FastBattleOn[]          = _("Skips all delays in battles, which\nmakes them faster.");
@@ -531,8 +531,8 @@ static const u8 sText_Desc_Run_Type_B[]            = _("Press {B_BUTTON} to move
 static const u8 sText_Desc_Run_Type_B_2[]          = _("Press {B_BUTTON} to run from battles before\nthey start.");
 static const u8 sText_Desc_LR_Run_On[]             = _("Enables a prompt to show that you\ncan run away from battles.");
 static const u8 sText_Desc_LR_Run_Off[]            = _("Disables said prompt to flee.\nButton combo still works.");
-static const u8 sText_Desc_Ball_Prompt_On[]        = _("Press {R_BUTTON} in battle to use Pokeballs.\nHold {L_BUTTON}/{R_BUTTON} to swap POKéBALLS.");
-static const u8 sText_Desc_Ball_Prompt_Off[]       = _("Disables the prompt to use\nPOKéBALLS quickly.");
+static const u8 sText_Desc_Ball_Prompt_On[]        = _("Press {R_BUTTON} in battle to use Pokeballs.\nHold {L_BUTTON}/{R_BUTTON} to swap Pokéballs.");
+static const u8 sText_Desc_Ball_Prompt_Off[]       = _("Disables the prompt to use\nPokéballs quickly.");
 static const u8 sText_Desc_NewBackgrounds_Old[]    = _("Classic battle terrain backgrounds,\nfrom {COLOR 7}{COLOR 8}Fire Red {COLOR 2}/ {COLOR 9}{COLOR 10}Leaf Green{COLOR 2}.");
 static const u8 sText_Desc_NewBackgrounds_New[]    = _("Modernized battle terrain\nbackgrounds, from {COLOR 5}{COLOR 6}Heart & {COLOR 3}{COLOR 4}Soul{COLOR 2}.");
 static const u8 sText_Desc_NewBattleUI_Old[]       = _("{COLOR 7}{COLOR 8}Fire Red {COLOR 2}/ {COLOR 9}{COLOR 10}Leaf Green{COLOR 2} Battle UI,\nbut with slightly different colors.");
@@ -555,10 +555,10 @@ static const u8 sText_Desc_SoundMono[]                       = _("Sound is the s
 static const u8 sText_Desc_SoundStereo[]                     = _("Play the left and right audio channel\nseperatly. Great with headphones.");
 static const u8 sText_Desc_Music_On[]                        = _("Enables music playback.\nChange maps to take effect.");
 static const u8 sText_Desc_Music_Off[]                       = _("Disables music playback.\nChange maps to take effect.");
-static const u8 sText_Desc_BikeMusicOn[]                     = _("Enables BIKE music.");
-static const u8 sText_Desc_BikeMusicOff[]                    = _("Disables BIKE music.");
-static const u8 sText_Desc_SurfMusicOn[]                     = _("Enables SURF music.");
-static const u8 sText_Desc_SurfMusicOff[]                    = _("Disables SURF music.");
+static const u8 sText_Desc_BikeMusicOn[]                     = _("Enables Bike music.");
+static const u8 sText_Desc_BikeMusicOff[]                    = _("Disables Bike music.");
+static const u8 sText_Desc_SurfMusicOn[]                     = _("Enables Surf music.");
+static const u8 sText_Desc_SurfMusicOff[]                    = _("Disables Surf music.");
 static const u8 sText_Desc_WildMonMusic_Hoenn[]              = _("Default music from Hoenn.");
 static const u8 sText_Desc_WildMonMusic_Kanto_Old[]          = _("Music from {COLOR 7}{COLOR 8}Fire Red{COLOR 2} and {COLOR 9}{COLOR 10}Leaf Green{COLOR 2}.");
 static const u8 sText_Desc_WildMonMusic_Sinnoh[]             = _("Music from Diamond, Pearl and\nPlatinum.");
@@ -566,7 +566,7 @@ static const u8 sText_Desc_WildMonMusic_HGSS[]               = _("Music from {CO
 static const u8 sText_Desc_WildMonMusic_Johto[]              = _("Music from {COLOR 5}{COLOR 6}Heart Gold{COLOR 2} and {COLOR 3}{COLOR 4}Soul Silver{COLOR 2},\nbut from Johto.");
 static const u8 sText_Desc_WildMonMusic_Kanto_New[]          = _("Music from {COLOR 5}{COLOR 6}Heart Gold{COLOR 2} and {COLOR 3}{COLOR 4}Soul Silver{COLOR 2},\nbut from Kanto.");
 static const u8 sText_Desc_WildMonMusic_Random[]             = _("Randomizes music from all available\ngames.");
-static const u8 sText_Desc_SoundEffects_Gen3[]               = _("Default sound effects from GEN III.");
+static const u8 sText_Desc_SoundEffects_Gen3[]               = _("Default sound effects from Gen III.");
 static const u8 sText_Desc_SoundEffects_DP[]                 = _("Sound effects from Diamond, Pearl\nand Platinum.");
 static const u8 sText_Desc_SoundEffects_HGSS[]               = _("Sound effects from {COLOR 5}{COLOR 6}Heart Gold{COLOR 2} and\n{COLOR 3}{COLOR 4}Soul Silver{COLOR 2}.");
 
@@ -686,11 +686,11 @@ static void VBlankCB(void)
     TransferPlttBuffer();
 }
 
-static const u8 sText_TopBar_Main[]         = _("OPTIONS");
+static const u8 sText_TopBar_Main[]         = _("Options");
 static const u8 sText_TopBar_Main_Right[]   = _("{R_BUTTON}");
-static const u8 sText_TopBar_Custom[]       = _("BATTLE OPTIONS");
+static const u8 sText_TopBar_Custom[]       = _("Battle Options");
 static const u8 sText_TopBar_Custom_Left[]  = _("{L_BUTTON}");
-static const u8 sText_TopBar_Sound[]        = _("SOUND");
+static const u8 sText_TopBar_Sound[]        = _("Sound");
 static void DrawTopBarText(void)
 {
     const u8 color[3] = { TEXT_DYNAMIC_COLOR_6, TEXT_COLOR_WHITE, TEXT_COLOR_OPTIONS_GRAY_FG };
@@ -732,7 +732,7 @@ static void DrawDescriptionText(void)
     color_gray[0] = TEXT_COLOR_TRANSPARENT;
     color_gray[1] = TEXT_COLOR_OPTIONS_GRAY_FG;
     color_gray[2] = TEXT_COLOR_OPTIONS_GRAY_SHADOW;
-        
+
     FillWindowPixelBuffer(WIN_DESCRIPTION, PIXEL_FILL(1));
     AddTextPrinterParameterized4(WIN_DESCRIPTION, FONT_NORMAL, 8, 1, 0, 0, color_gray, TEXT_SKIP_DRAW, OptionTextDescription());
     CopyWindowToVram(WIN_DESCRIPTION, COPYWIN_FULL);
@@ -927,7 +927,7 @@ void CB2_InitOptionPlusMenu(void)
         break;
     case 10:
         taskId = CreateTask(Task_OptionMenuFadeIn, 0);
-        
+
         sOptions->arrowTaskId = AddScrollIndicatorArrowPairParameterized(SCROLL_ARROW_UP, 240 / 2, 20, 110, MENUITEM_MAIN_COUNT - 1, 110, 110, 0);
 
         for (i = 0; i < min(OPTIONS_ON_SCREEN, MenuItemCount()); i++)
@@ -1084,7 +1084,7 @@ static void Task_OptionMenuProcessInput(u8 taskId)
     {
         if (sOptions->submenu != 0)
             sOptions->submenu--;
-        
+
         DrawTopBarText();
         ReDrawAll();
         HighlightOptionMenuItem();
@@ -1113,7 +1113,7 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsFontType              = sOptions->sel[MENUITEM_MAIN_FONT];
     gSaveBlock2Ptr->optionsBattleSceneOff        = sOptions->sel[MENUITEM_MAIN_BATTLESCENE];
     gSaveBlock2Ptr->optionsDifficulty            = sOptions->sel[MENUITEM_MAIN_DIFFICULTY];
-    gSaveBlock2Ptr->optionsBattleStyle           = sOptions->sel[MENUITEM_MAIN_BATTLESTYLE]; 
+    gSaveBlock2Ptr->optionsBattleStyle           = sOptions->sel[MENUITEM_MAIN_BATTLESTYLE];
     gSaveBlock2Ptr->optionsButtonMode            = sOptions->sel[MENUITEM_MAIN_BUTTONMODE];
     gSaveBlock2Ptr->optionsfollowerEnable        = sOptions->sel[MENUITEM_MAIN_FOLLOWER];
     gSaveBlock2Ptr->optionsfollowerLargeEnable   = sOptions->sel[MENUITEM_MAIN_LARGE_FOLLOWER];
@@ -1137,7 +1137,7 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsNewBackgrounds   = sOptions->sel_battle[MENUITEM_BATTLE_NEW_BACKGROUNDS];
     gSaveBlock2Ptr->optionsNewBattleUI      = sOptions->sel_battle[MENUITEM_BATTLE_NEW_BATTLEUI];
     gSaveBlock2Ptr->optionsRunType          = sOptions->sel_battle[MENUITEM_BATTLE_RUN_TYPE];
-    
+
     gSaveBlock2Ptr->optionsSound            = sOptions->sel_sound[MENUITEM_SOUND_SOUND];
     gSaveBlock2Ptr->optionsMusicOnOff       = sOptions->sel_sound[MENUITEM_SOUND_MUSIC];
     gSaveBlock2Ptr->optionsBikeMusic        = sOptions->sel_sound[MENUITEM_SOUND_BIKE_MUSIC];
@@ -1233,7 +1233,7 @@ static int GetMiddleX(const u8 *txt1, const u8 *txt2, const u8 *txt3)
 }
 
 static int XOptions_ProcessInput(int x, int selection)
-{  
+{
     if (JOY_NEW(DPAD_RIGHT))
     {
         if (++selection > (x - 1))
@@ -1454,8 +1454,8 @@ static void ReDrawAll(void)
 }
 
 // Process Input functions ****SPECIFIC****
-static const u8 sText_Faster[] = _("FASTER");
-static const u8 sText_Instant[] = _("INSTANT");
+static const u8 sText_Faster[] = _("Faster");
+static const u8 sText_Instant[] = _("Instant");
 static const u8 *const sTextSpeedStrings[] = {gText_TextSpeedSlow, gText_TextSpeedMid, gText_TextSpeedFast, sText_Faster};
 static void DrawChoices_TextSpeed(int selection, int y)
 {
@@ -1500,12 +1500,12 @@ static void DrawChoices_Difficulty(int selection, int y)
     DrawOptionMenuChoice(gText_ButtonTypeNormal, xMid, y, styles[1], active);
     DrawOptionMenuChoice(gText_Hard, GetStringRightAlignXOffset(1, gText_ButtonTypeLEqualsA, 198), y, styles[2], active);
 }
-static const u8 sText_Sound_WildMon_Hoenn[]       = _("HOENN");
-static const u8 sText_Sound_WildMon_Kanto_Old[]   = _("KANTO 1");
-static const u8 sText_Sound_WildMon_Sinnoh[]      = _("SINNOH");
-static const u8 sText_Sound_WildMon_Johto[]       = _("JOHTO");
-static const u8 sText_Sound_WildMon_Kanto_New[]   = _("KANTO 2");
-static const u8 sText_Sound_WildMon_Random[]      = _("RANDOM");
+static const u8 sText_Sound_WildMon_Hoenn[]       = _("Hoenn");
+static const u8 sText_Sound_WildMon_Kanto_Old[]   = _("Kanto 1");
+static const u8 sText_Sound_WildMon_Sinnoh[]      = _("Sinnoh");
+static const u8 sText_Sound_WildMon_Johto[]       = _("Johto");
+static const u8 sText_Sound_WildMon_Kanto_New[]   = _("Kanto 2");
+static const u8 sText_Sound_WildMon_Random[]      = _("Random");
 
 static const u8 sText_Sound_WildMon_HGSS[]        = _("HGSS");
 static const u8 *const sText_Sound_WildMonBattleMusic_Strings_Six[] = {sText_Sound_WildMon_Hoenn,  sText_Sound_WildMon_Kanto_Old,  sText_Sound_WildMon_Sinnoh,  sText_Sound_WildMon_Johto, sText_Sound_WildMon_Kanto_New,   sText_Sound_WildMon_Random};
@@ -1515,7 +1515,7 @@ static void DrawChoices_Wild_Battle_Music(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_SOUND_WILD_MON_MUSIC);
     DrawChoices_Options_Five(sText_Sound_WildMonBattleMusic_Strings, selection, y, active);
-    
+
     if (selection == 0)
     {
         gSaveBlock2Ptr->optionsWildBattleMusic = 0; // Hoenn
@@ -1542,7 +1542,7 @@ static void DrawChoices_Trainer_Battle_Music(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_SOUND_BATTLE_TRAINER_MUSIC);
     DrawChoices_Options_Five(sText_Sound_WildMonBattleMusic_Strings, selection, y, active);
-    
+
     if (selection == 0)
     {
         gSaveBlock2Ptr->optionsTrainerBattleMusic = 0; // Hoenn
@@ -1569,7 +1569,7 @@ static void DrawChoices_Frontier_Trainer_Battle_Music(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_SOUND_BATTLE_FRONTIER_TRAINER_MUSIC);
     DrawChoices_Options_Six(sText_Sound_WildMonBattleMusic_Strings_Six, selection, y, active);
-    
+
     if (selection == 0)
     {
         gSaveBlock2Ptr->optionsFrontierTrainerBattleMusic = 0; // Hoenn
@@ -1596,7 +1596,7 @@ static void DrawChoices_Frontier_Trainer_Battle_Music(int selection, int y)
     }
 }
 
-static const u8 sText_Sound_Effects_Gen3[]      = _("GEN 3");
+static const u8 sText_Sound_Effects_Gen3[]      = _("Gen 3");
 static const u8 sText_Sound_Effects_DP[]        = _("DPPL");
 static const u8 sText_Sound_Effects_HGSS[]      = _("HGSS");
 
@@ -1956,8 +1956,8 @@ static void DrawChoices_Ball_Prompt(int selection, int y)
     DrawOptionMenuChoice(gText_BattleSceneOff, GetStringRightAlignXOffset(1, gText_BattleSceneOff, 198), y, styles[1], active);
 }
 
-static const u8 sText_Metric[]        = _("METRIC");
-static const u8 sText_Imperial[]      = _("IMPERIAL");
+static const u8 sText_Metric[]        = _("Metric");
+static const u8 sText_Imperial[]      = _("Imperial");
 static void DrawChoices_Unit_Type(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_MAIN_UNIT_TYPE);
@@ -1994,7 +1994,7 @@ static void DrawChoices_Music(int selection, int y)
     DrawOptionMenuChoice(gText_BattleSceneOff, GetStringRightAlignXOffset(1, gText_BattleSceneOff, 198), y, styles[1], active);
 }
 static const u8 sText_Old[]        = _("FRLG");
-static const u8 sText_New[]        = _("MODERN");
+static const u8 sText_New[]        = _("Modern");
 static void DrawChoices_New_Backgrounds(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_BATTLE_NEW_BACKGROUNDS);

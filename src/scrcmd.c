@@ -1649,7 +1649,7 @@ bool8 ScrCmd_showmonpic(struct ScriptContext *ctx)
     u8 y = ScriptReadByte(ctx);
 
     bool8 shinyStarter = FALSE;
-    
+
     // If we have not gotten a pokemon yet, assume this is starter preview
     if (!FlagGet(FLAG_SYS_POKEMON_GET))
     {
@@ -1696,7 +1696,7 @@ bool8 ScrCmd_showmonpic(struct ScriptContext *ctx)
             species = GetStarterPokemon(VarGet(VAR_STARTER_MON));
             if (IsOneTypeChallengeActive() && (gSaveBlock1Ptr->tx_Challenges_OneTypeChallenge == TYPE_DRAGON) && (species == 0))
                 species = SPECIES_DRATINI;
-            
+
             VarSet(VAR_TEMP_2, species);
         }
     }
@@ -1705,7 +1705,7 @@ bool8 ScrCmd_showmonpic(struct ScriptContext *ctx)
         ScriptMenu_ShowShinyPokemonPic(species, x, y);
     else
         ScriptMenu_ShowPokemonPic(species, x, y);
-    
+
     return FALSE;
 }
 
@@ -2675,7 +2675,7 @@ bool8 ScrCmd_checkpartymonlevel(struct ScriptContext *ctx)
 
     gSpecialVar_Result = PARTY_SIZE;
     struct Pokemon *pokemon = &gPlayerParty[gSpecialVar_0x8004];
-    if (GetMonData(pokemon, MON_DATA_LEVEL) == 100) 
+    if (GetMonData(pokemon, MON_DATA_LEVEL) == 100)
         gSpecialVar_Result = TRUE;
     else
         gSpecialVar_Result = FALSE;
@@ -2756,7 +2756,7 @@ bool8 ScrCmd_remove5mons(struct ScriptContext *ctx)
     {
         gSpecialVar_Result = MON_CANT_GIVE;
         return FALSE;
-    } 
+    }
 
 
     for (u8 i = 1; i < PARTY_SIZE; i++)
@@ -2810,11 +2810,11 @@ bool8 ScrCmd_givenamedmon(struct ScriptContext *ctx)
     u8 heldItem[2];
     u8 mailIndex = 0;
 
-    static const u8 sKenyaNickname[] = _("KENYA");
-    static const u8 sKenyaOtName[]   = _("RUDY");
-    static const u8 sShuckieNickname[] = _("SHUCKIE");
-    static const u8 sShuckieOtName[]   = _("KIRK");
-    static const u8 sEeveeOtName[]     = _("BILL");
+    static const u8 sKenyaNickname[] = _("Kenya");
+    static const u8 sKenyaOtName[]   = _("Rudy");
+    static const u8 sShuckieNickname[] = _("Shuckie");
+    static const u8 sShuckieOtName[]   = _("Kirk");
+    static const u8 sEeveeOtName[]     = _("Bill");
 
     // Use actual Easy Chat word constants
     static const u16 sKenyaMailWords[MAIL_WORDS_COUNT] = {
@@ -2951,8 +2951,8 @@ bool8 ScrCmd_removenamedmon(struct ScriptContext *ctx)
     u16 giftId = ScriptReadHalfword(ctx);
     const u8 *targetNickname;
 
-    static const u8 sKenyaNickname[]   = _("KENYA");
-    static const u8 sShuckieNickname[] = _("SHUCKIE");
+    static const u8 sKenyaNickname[]   = _("Kenya");
+    static const u8 sShuckieNickname[] = _("Shuckie");
 
     switch (giftId)
     {
@@ -3145,12 +3145,12 @@ static const u16 sOddEggSpecies[8] = {
 
 // EDIT THIS LIST: exact-match names that force 100% shiny eggs
 static const u8 sOddEggShinyNameList[][PLAYER_NAME_LENGTH + 1] = {
-    _("DYLAN"),
+    _("Dylan"),
     _("Zee"),
     _("Meara"),
     _("Anthony"),
-    _("RAINBOW"),
-    _("FERRO"),
+    _("Rainbow"),
+    _("Ferro"),
     _("Kris"),
     _("Chad"),
     _("Bacon"),
@@ -3167,18 +3167,18 @@ static const u8 sOddEggShinyNameList[][PLAYER_NAME_LENGTH + 1] = {
     _("Phant"),
     _("Papito"),
     _("Casper"),
-    _("ELLI"),
+    _("Elli"),
     _("Grey"),
     _("Necro"),
     _("Penka"),
     _("Emmam"),
     _("Casper"),
-    _("MARZ"),
+    _("Marz"),
     _("leob050"),
     _("Sayu"),
     _("Brick"),
     _("Kino"),
-    _("JIRAIYA"),
+    _("Jiraiya"),
 };
 
 static bool8 IsPlayerNameInShinyList(void)
@@ -3329,33 +3329,33 @@ bool8 ScrCmd_checknuzlocke(struct ScriptContext *ctx) //untested, unused
     else
     {
         gSpecialVar_Result = FALSE;
-    }     
+    }
     return FALSE;
 }
 
 bool8 ScrCmd_checkrandomizer(struct ScriptContext *ctx)
 {
-    if((gSaveBlock1Ptr->tx_Random_Chaos) 
-        || (gSaveBlock1Ptr->tx_Random_WildPokemon) 
+    if((gSaveBlock1Ptr->tx_Random_Chaos)
+        || (gSaveBlock1Ptr->tx_Random_WildPokemon)
         || (gSaveBlock1Ptr->tx_Random_Similar)
-        || (gSaveBlock1Ptr->tx_Random_MapBased) 
-        || (gSaveBlock1Ptr->tx_Random_IncludeLegendaries) 
+        || (gSaveBlock1Ptr->tx_Random_MapBased)
+        || (gSaveBlock1Ptr->tx_Random_IncludeLegendaries)
         || (gSaveBlock1Ptr->tx_Random_Type)
         || (gSaveBlock1Ptr->tx_Random_TypeEffectiveness)
-        || (gSaveBlock1Ptr->tx_Random_Abilities) 
-        || (gSaveBlock1Ptr->tx_Random_Moves) 
-        || (gSaveBlock1Ptr->tx_Random_Trainer) 
-        || (gSaveBlock1Ptr->tx_Random_Evolutions) 
+        || (gSaveBlock1Ptr->tx_Random_Abilities)
+        || (gSaveBlock1Ptr->tx_Random_Moves)
+        || (gSaveBlock1Ptr->tx_Random_Trainer)
+        || (gSaveBlock1Ptr->tx_Random_Evolutions)
         || (gSaveBlock1Ptr->tx_Random_EvolutionMethods)
         || (gSaveBlock1Ptr->tx_Random_Items)
-        || (gSaveBlock1Ptr->tx_Random_Static) 
+        || (gSaveBlock1Ptr->tx_Random_Static)
         || (gSaveBlock1Ptr->tx_Random_Starter)){
         gSpecialVar_Result = TRUE;
     }
     else
     {
         gSpecialVar_Result = FALSE;
-    }     
+    }
     return FALSE;
 }
 
