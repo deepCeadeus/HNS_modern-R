@@ -1901,8 +1901,13 @@ static void DecompressGlyph_Normal(u16 glyphId, bool32 isJapanese)
     }
     else
     {
-        glyphs = gFontNormalLatinGlyphs + (0x20 * glyphId);
-        gCurGlyph.width = gFontNormalLatinGlyphWidths[glyphId];
+        //Emerald font, disabled
+        //glyphs = gFontNormalLatinGlyphs + (0x20 * glyphId);
+        //gCurGlyph.width = gFontNormalLatinGlyphWidths[glyphId];
+
+        //Fire Red font
+        glyphs = gFontShortLatinGlyphs + (0x20 * glyphId);
+        gCurGlyph.width = gFontShortLatinGlyphWidths[glyphId];
 
         if (gCurGlyph.width <= 8)
         {
@@ -1926,7 +1931,11 @@ static u32 GetGlyphWidth_Normal(u16 glyphId, bool32 isJapanese)
     if (isJapanese == TRUE)
         return 8;
     else
-        return gFontNormalLatinGlyphWidths[glyphId];
+        //Emerald font, disabled
+        //return gFontNormalLatinGlyphWidths[glyphId];
+
+        //Fire Red font
+        return gFontShortLatinGlyphWidths[glyphId];
 }
 
 static void DecompressGlyph_Bold(u16 glyphId)
