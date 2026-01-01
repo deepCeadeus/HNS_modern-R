@@ -2248,7 +2248,6 @@ extern const u8 gText_ItemIsNowHeld[];
 extern const u8 gText_ChangedToNewItem[];
 extern const u8 gText_MailCantBeStored[];
 extern const u8 gText_NuzlockeFainted[];
-extern const u8 gText_FaintedForever[];
 extern const u8 gPCText_Cancel[];
 extern const u8 gPCText_Store[];
 extern const u8 gPCText_Withdraw[];
