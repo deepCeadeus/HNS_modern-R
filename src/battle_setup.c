@@ -862,9 +862,8 @@ u8 BattleSetup_GetTerrainId(void)
     case MAP_TYPE_UNDERGROUND:
         if (MetatileBehavior_IsIndoorEncounter(tileBehavior))
             return BATTLE_TERRAIN_BUILDING;
-       /* if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
-            return BATTLE_TERRAIN_WATER;
-        {*/
+        if ((MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior)) && (gSaveBlock2Ptr->optionsNewBackgrounds == 0))
+            return BATTLE_TERRAIN_POND;
         if (
             IS_MAP(CERULEAN_CAVE1, CERULEAN_CAVE1) ||
             IS_MAP(CERULEAN_CAVE2, CERULEAN_CAVE2) ||
