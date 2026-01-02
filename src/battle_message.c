@@ -1737,7 +1737,7 @@ static const struct BattleWindowText sTextOnWindowsInfo_Normal[] =
     },
     [24] = { // 24 "type" super-effective
         .fillValue = PIXEL_FILL(0xE),
-        .fontId = 7,
+        FONT_SMALL,
         .x = 0,
         .y = 1,
         .letterSpacing = 0,
@@ -1749,7 +1749,7 @@ static const struct BattleWindowText sTextOnWindowsInfo_Normal[] =
     },
     [25] = { // 25 "type" not very effective
         .fillValue = PIXEL_FILL(0xE),
-        .fontId = 7,
+        FONT_SMALL,
         .x = 0,
         .y = 1,
         .letterSpacing = 0,
@@ -1761,7 +1761,7 @@ static const struct BattleWindowText sTextOnWindowsInfo_Normal[] =
     },
     [26] = { // 26 "type" no effect
         .fillValue = PIXEL_FILL(0xE),
-        .fontId = 7,
+        FONT_SMALL,
         .x = 0,
         .y = 1,
         .letterSpacing = 0,
@@ -2027,7 +2027,7 @@ static const struct BattleWindowText sTextOnWindowsInfo_Arena[] =
     },
     [24] = { // 24 "type" super-effective
         .fillValue = PIXEL_FILL(0xE),
-        .fontId = 7,
+        FONT_SMALL,
         .x = 0,
         .y = 1,
         .letterSpacing = 0,
@@ -2039,7 +2039,7 @@ static const struct BattleWindowText sTextOnWindowsInfo_Arena[] =
     },
     [25] = { // 25 "type" not very effective
         .fillValue = PIXEL_FILL(0xE),
-        .fontId = 7,
+        FONT_SMALL,
         .x = 0,
         .y = 1,
         .letterSpacing = 0,
@@ -2051,7 +2051,7 @@ static const struct BattleWindowText sTextOnWindowsInfo_Arena[] =
     },
     [26] = { // 26 "type" no effect
         .fillValue = PIXEL_FILL(0xE),
-        .fontId = 7,
+        FONT_SMALL,
         .x = 0,
         .y = 1,
         .letterSpacing = 0,
