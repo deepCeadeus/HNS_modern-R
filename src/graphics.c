@@ -354,7 +354,8 @@ const u16 gBattleInterface_BallStatusBarPalGen4[] = INCBIN_U16("graphics/battle_
 
 const u16 gBattleInterface_BallDisplayPalGen4[] = INCBIN_U16("graphics/battle_interface/ball_display.gbapal");
 
-const u16 gBattleInterface_BallStatusBarPalGen3[] = INCBIN_U16("graphics/battle_interface/ball_status_bargen3.gbapal");
+const u16 gBattleInterface_BallStatusBarPalGen3[] = INCBIN_U16("graphics/battle_interface/ball_status_bargen3.gbapal"); //HnS Exp. bar Colors
+//const u16 gBattleInterface_BallStatusBarPalGen3[] = INCBIN_U16("graphics/battle_interface/ball_status_bar_frlg.gbapal"); //FRLG Exp. bar Colors, currently disabled 
 
 const u16 gBattleInterface_BallDisplayPalGen3[] = INCBIN_U16("graphics/battle_interface/ball_displaygen3.gbapal");
 

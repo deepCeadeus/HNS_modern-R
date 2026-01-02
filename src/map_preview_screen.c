@@ -24,7 +24,7 @@ static void Task_RunMapPreviewScreenForest(u8 taskId);
 static void Task_RunMapPreview_Script(u8 taskId);
 static void CB2_MapPreviewScript(void);
 static void VblankCB_MapPreviewScript(void);
-
+//FRLG
 /*static const u8 sViridianForestMapPreviewPalette[] = INCBIN_U8("graphics/map_preview/frlg/viridian_forest/tiles.gbapal");
 static const u8 sViridianForestMapPreviewTiles[] = INCBIN_U8("graphics/map_preview/frlg/viridian_forest/tiles.4bpp.lz");
 static const u8 sViridianForestMapPreviewTilemap[] = INCBIN_U8("graphics/map_preview/frlg/viridian_forest/tilemap.bin.lz");
