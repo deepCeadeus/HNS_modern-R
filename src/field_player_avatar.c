@@ -1976,7 +1976,7 @@ static bool8 Fishing_GotBite(struct Task *task)
         task->tFrameCounter = 0;
         return FALSE;
     }
-    else //FRLG Fishing
+    else // FRLG Fishing
     {
         task->tStep += 3;
         return FALSE;

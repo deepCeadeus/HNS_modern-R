@@ -1783,11 +1783,11 @@ static void DrawChoices_Fishing(int selection, int y)
 
     if (selection == 0)
     {
-        gSaveBlock2Ptr->optionsFishing = 0; //FRLG
+        gSaveBlock2Ptr->optionsFishing = 0; // FRLG
     }
     else
     {
-        gSaveBlock2Ptr->optionsFishing = 1; //Emerald
+        gSaveBlock2Ptr->optionsFishing = 1; // Emerald
     }
 
     DrawOptionMenuChoice(gText_BattleSceneOn, 104, y, styles[0], active);
