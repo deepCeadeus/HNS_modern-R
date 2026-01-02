@@ -524,11 +524,10 @@ static const u8 sText_Desc_LR_Run_On[]             = _("Enables a prompt to show
 static const u8 sText_Desc_LR_Run_Off[]            = _("Disables said prompt to flee.\nButton combo still works.");
 static const u8 sText_Desc_Ball_Prompt_On[]        = _("Press {R_BUTTON} in battle to use Pokeballs.\nHold {L_BUTTON}/{R_BUTTON} to swap POKéBALLS.");
 static const u8 sText_Desc_Ball_Prompt_Off[]       = _("Disables the prompt to use\nPOKéBALLS quickly.");
-static const u8 sText_Desc_NewBackgrounds_Old[]    = _("Original battle terrain backgrounds.");
-//static const u8 sText_Desc_NewBackgrounds_New[]    = _("Modernized battle terrain\nbackgrounds, similar to GEN IV.");
-static const u8 sText_Desc_NewBattleUI_Old[]        = _("Original GEN III Battle UI.");
-static const u8 sText_Desc_NewBattleUI_New[]        = _("Modernized GEN IV like Battle UI.");
-static const u8 sText_Desc_NewBackgrounds_New[]     = _("Modernized battle terrain\nbackgrounds, from HnS.");
+static const u8 sText_Desc_NewBackgrounds_Old[]    = _("Classic battle terrain backgrounds,\nfrom {COLOR 7}{COLOR 8}Fire Red {COLOR 2}/ {COLOR 9}{COLOR 10}Leaf Green{COLOR 2}.");
+static const u8 sText_Desc_NewBackgrounds_New[]    = _("Modernized battle terrain\nbackgrounds, from {COLOR 5}{COLOR 6}Heart & {COLOR 3}{COLOR 4}Soul{COLOR 2}.");
+static const u8 sText_Desc_NewBattleUI_Old[]       = _("{COLOR 7}{COLOR 8}Fire Red {COLOR 2}/ {COLOR 9}{COLOR 10}Leaf Green{COLOR 2} Battle UI,\nbut with slightly different colors.");
+static const u8 sText_Desc_NewBattleUI_New[]       = _("{COLOR 5}{COLOR 6}Heart Gold{COLOR 2} / {COLOR 3}{COLOR 4}Soul Silver{COLOR 2} Battle UI.");
 static const u8 *const sOptionMenuItemDescriptionsCustom[MENUITEM_BATTLE_COUNT][4] =
 {
 
@@ -552,15 +551,15 @@ static const u8 sText_Desc_BikeMusicOff[]                    = _("Disables BIKE 
 static const u8 sText_Desc_SurfMusicOn[]                     = _("Enables SURF music.");
 static const u8 sText_Desc_SurfMusicOff[]                    = _("Disables SURF music.");
 static const u8 sText_Desc_WildMonMusic_Hoenn[]              = _("Default music from Hoenn.");
-static const u8 sText_Desc_WildMonMusic_Kanto_Old[]          = _("Music from Fire Red and Leaf Green.");
+static const u8 sText_Desc_WildMonMusic_Kanto_Old[]          = _("Music from {COLOR 7}{COLOR 8}Fire Red{COLOR 2} and {COLOR 9}{COLOR 10}Leaf Green{COLOR 2}.");
 static const u8 sText_Desc_WildMonMusic_Sinnoh[]             = _("Music from Diamond, Pearl and\nPlatinum.");
-static const u8 sText_Desc_WildMonMusic_HGSS[]               = _("Music from Heart Gold and Soul Silver.\nJohto and Kanto have different music.");
-static const u8 sText_Desc_WildMonMusic_Johto[]              = _("Music from Heart Gold and Soul Silver,\nbut from Johto.");
-static const u8 sText_Desc_WildMonMusic_Kanto_New[]          = _("Music from Heart Gold and Soul Silver,\nbut from Kanto.");
+static const u8 sText_Desc_WildMonMusic_HGSS[]               = _("Music from {COLOR 5}{COLOR 6}Heart Gold{COLOR 2} and {COLOR 3}{COLOR 4}Soul Silver{COLOR 2}.\nJohto and Kanto have different music.");
+static const u8 sText_Desc_WildMonMusic_Johto[]              = _("Music from {COLOR 5}{COLOR 6}Heart Gold{COLOR 2} and {COLOR 3}{COLOR 4}Soul Silver{COLOR 2},\nbut from Johto.");
+static const u8 sText_Desc_WildMonMusic_Kanto_New[]          = _("Music from {COLOR 5}{COLOR 6}Heart Gold{COLOR 2} and {COLOR 3}{COLOR 4}Soul Silver{COLOR 2},\nbut from Kanto.");
 static const u8 sText_Desc_WildMonMusic_Random[]             = _("Randomizes music from all available\ngames.");
 static const u8 sText_Desc_SoundEffects_Gen3[]               = _("Default sound effects from GEN III.");
 static const u8 sText_Desc_SoundEffects_DP[]                 = _("Sound effects from Diamond, Pearl\nand Platinum.");
-static const u8 sText_Desc_SoundEffects_HGSS[]               = _("Sound effects from Heart Gold and\nSoul Silver.");
+static const u8 sText_Desc_SoundEffects_HGSS[]               = _("Sound effects from {COLOR 5}{COLOR 6}Heart Gold{COLOR 2} and\n{COLOR 3}{COLOR 4}Soul Silver{COLOR 2}.");
 
 static const u8 *const sOptionMenuItemDescriptionsSound[MENUITEM_SOUND_COUNT][6] =
 {
@@ -1982,7 +1981,7 @@ static void DrawChoices_Music(int selection, int y)
     DrawOptionMenuChoice(gText_BattleSceneOn, 104, y, styles[0], active);
     DrawOptionMenuChoice(gText_BattleSceneOff, GetStringRightAlignXOffset(1, gText_BattleSceneOff, 198), y, styles[1], active);
 }
-static const u8 sText_Old[]        = _("OLD");
+static const u8 sText_Old[]        = _("FRLG");
 static const u8 sText_New[]        = _("MODERN");
 static void DrawChoices_New_Backgrounds(int selection, int y)
 {
@@ -2002,8 +2001,8 @@ static void DrawChoices_New_Backgrounds(int selection, int y)
     DrawOptionMenuChoice(sText_New, GetStringRightAlignXOffset(1, sText_New, 198), y, styles[1], active);
 }
 
-static const u8 sText_OldUI[]        = _("GEN 3");
-static const u8 sText_NewUI[]        = _("GEN 4");
+static const u8 sText_OldUI[]        = _("FRLG");
+static const u8 sText_NewUI[]        = _("HGSS");
 static void DrawChoices_New_BattleUI(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_BATTLE_NEW_BATTLEUI);
