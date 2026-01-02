@@ -90,7 +90,7 @@ const u32 gBattleTerrainPalette_Plain_2_Night[] = INCBIN_U32("graphics/battle_te
 
 const u32 gBattleTerrainTiles_Building[] = INCBIN_U32("graphics/battle_terrain/building/tiles.4bpp.lz");
 const u32 gBattleTerrainTiles_Building_2[] = INCBIN_U32("graphics/battle_terrain/building_2/tiles.4bpp.lz");
-const u32 gBattleTerrainPalette_Frontier[] = INCBIN_U32("graphics/battle_terrain/stadium/battle_frontier.gbapal.lz"); // this is also used for link battles
+const u32 gBattleTerrainPalette_Frontier[] = INCBIN_U32("graphics/battle_terrain/plain/link.gbapal.lz"); // this is also used for link battles
 const u32 gBattleTerrainTilemap_Building[] = INCBIN_U32("graphics/battle_terrain/building/map.bin.lz");
 const u32 gBattleTerrainTilemap_Building_2[] = INCBIN_U32("graphics/battle_terrain/building_2/map.bin.lz");
 
@@ -114,23 +114,23 @@ const u32 gBattleTerrainTilemap_Rayquaza_2[] = INCBIN_U32("graphics/battle_terra
 const u32 gBattleTerrainPalette_Building[] = INCBIN_U32("graphics/battle_terrain/building/palette.gbapal.lz");
 const u32 gBattleTerrainPalette_Building_2[] = INCBIN_U32("graphics/battle_terrain/building_2/palette.gbapal.lz");
 
-const u32 gBattleTerrainPalette_Blue_Building[] = INCBIN_U32("graphics/battle_terrain/blue_building/palette.gbapal.lz");
+const u32 gBattleTerrainPalette_Blue_Building[] = INCBIN_U32("graphics/battle_terrain/plain/1.gbapal.lz");
 const u32 gBattleTerrainPalette_Blue_Building_2[] = INCBIN_U32("graphics/battle_terrain/blue_building_2/palette.gbapal.lz");
 
-const u32 gBattleTerrainPalette_Kyogre[] = INCBIN_U32("graphics/battle_terrain/water/kyogre.gbapal.lz");
+const u32 gBattleTerrainPalette_Kyogre[] = INCBIN_U32("graphics/battle_terrain/water/kyogre.gbapal.lz"); //Unused
 const u32 gBattleTerrainPalette_Kyogre_2[] = INCBIN_U32("graphics/battle_terrain/water_2/kyogre.gbapal.lz");
-const u32 gBattleTerrainPalette_Groudon[] = INCBIN_U32("graphics/battle_terrain/cave/groudon.gbapal.lz");
+const u32 gBattleTerrainPalette_Groudon[] = INCBIN_U32("graphics/battle_terrain/cave/groudon.gbapal.lz"); //Unused
 const u32 gBattleTerrainPalette_Groudon_2[] = INCBIN_U32("graphics/battle_terrain/cave_2/groudon.gbapal.lz");
-const u32 gBattleTerrainPalette_BuildingGym[] = INCBIN_U32("graphics/battle_terrain/building/palette2.gbapal.lz");
-const u32 gBattleTerrainPalette_BuildingLeader[] = INCBIN_U32("graphics/battle_terrain/building/palette3.gbapal.lz");
+const u32 gBattleTerrainPalette_BuildingGym[] = INCBIN_U32("graphics/battle_terrain/plain/gym.gbapal.lz");
+const u32 gBattleTerrainPalette_BuildingLeader[] = INCBIN_U32("graphics/battle_terrain/plain/leader.gbapal.lz");
 
-const u32 gBattleTerrainPalette_StadiumAqua[] = INCBIN_U32("graphics/battle_terrain/stadium/palette1.gbapal.lz");
-const u32 gBattleTerrainPalette_StadiumMagma[] = INCBIN_U32("graphics/battle_terrain/stadium/palette2.gbapal.lz");
-const u32 gBattleTerrainPalette_StadiumSidney[] = INCBIN_U32("graphics/battle_terrain/stadium/palette3.gbapal.lz");
-const u32 gBattleTerrainPalette_StadiumPhoebe[] = INCBIN_U32("graphics/battle_terrain/stadium/palette4.gbapal.lz");
-const u32 gBattleTerrainPalette_StadiumGlacia[] = INCBIN_U32("graphics/battle_terrain/stadium/palette5.gbapal.lz");
-const u32 gBattleTerrainPalette_StadiumDrake[] = INCBIN_U32("graphics/battle_terrain/stadium/palette6.gbapal.lz");
-const u32 gBattleTerrainPalette_StadiumWallace[] = INCBIN_U32("graphics/battle_terrain/stadium/palette7.gbapal.lz");
+const u32 gBattleTerrainPalette_StadiumAqua[] = INCBIN_U32("graphics/battle_terrain/building/palette.gbapal.lz"); //Unused
+const u32 gBattleTerrainPalette_StadiumMagma[] = INCBIN_U32("graphics/battle_terrain/building/palette.gbapal.lz"); //Unused
+const u32 gBattleTerrainPalette_StadiumSidney[] = INCBIN_U32("graphics/battle_terrain/plain/lorelei.gbapal.lz");
+const u32 gBattleTerrainPalette_StadiumPhoebe[] = INCBIN_U32("graphics/battle_terrain/plain/bruno.gbapal.lz");
+const u32 gBattleTerrainPalette_StadiumGlacia[] = INCBIN_U32("graphics/battle_terrain/plain/agatha.gbapal.lz");
+const u32 gBattleTerrainPalette_StadiumDrake[] = INCBIN_U32("graphics/battle_terrain/plain/lance.gbapal.lz");
+const u32 gBattleTerrainPalette_StadiumWallace[] = INCBIN_U32("graphics/battle_terrain/plain/champion.gbapal.lz");
 
 const u32 gBattleTerrainPalette_StadiumWill_2[] = INCBIN_U32("graphics/battle_terrain/stadium_2/palette3.gbapal.lz");
 const u32 gBattleTerrainPalette_StadiumKoga_2[] = INCBIN_U32("graphics/battle_terrain/stadium_2/palette4.gbapal.lz");
