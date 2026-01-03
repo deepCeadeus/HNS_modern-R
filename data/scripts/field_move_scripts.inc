@@ -186,31 +186,15 @@ EventScript_FollowerSwap:
 	return
 
 EventScript_FollowerMoveNorth:
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_WalkDown
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
 	return
 
 EventScript_FollowerMoveEast:
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_WalkLeft
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
-	waitmovement 0
 	return
 
 EventScript_FollowerMoveSouth:
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_WalkUp
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
-	waitmovement 0
 	return
 
 EventScript_FollowerMoveWest:
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_WalkRight
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
-	waitmovement 0
 	return
 
 EventScript_FollowerJumpNorth:
