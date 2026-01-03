@@ -420,7 +420,7 @@ static void Task_MapPreviewScreen_0(u8 taskId)
         break;
     case 4:
         data[1]++;
-        if (data[1] > data[2] || JOY_HELD(B_BUTTON))
+        if (data[1] > data[2] || JOY_HELD(B_BUTTON) || JOY_HELD(A_BUTTON))
         {
             if (MapHasPreviewScreen_HandleQLState2(gMapHeader.regionMapSectionId, MPS_TYPE_BASIC) == TRUE)
             {
