@@ -103,7 +103,7 @@ GoldenrodCity_RadioTower_4F4_Text_Proton_Beaten:
 
 GoldenrodCity_RadioTower_4F4_Text_Proton_After:
 	.string "PROTON: You may have won this\n"
-	.string "time... But all you did was make\p"
+	.string "time... But all you did was make\l"
 	.string "TEAM ROCKET's wrath grow.$"
 
 GoldenrodCity_RadioTower_4F4_Text_Fisher:

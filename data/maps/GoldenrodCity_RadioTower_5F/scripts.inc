@@ -121,8 +121,8 @@ GoldenrodCity_RadioTower_5F_Text_FakeDirectorWin:
 GoldenrodCity_RadioTower_5F_Text_FakeDirectorAfter:
 	.string "The boss stashed the DIRECTOR in\n"
 	.string "the UNDERGROUND WAREHOUSE.\p"
-	.string "It's at the far end of the UNDER-\n"
-	.string "GROUND.\p"
+	.string "It's at the far end of the\n"
+	.string "UNDERGROUND.\p"
 	.string "I am a nice guy, I will give you\n"
 	.string "the BASEMENT KEY to get to the\l"
 	.string "UNDERGROUND WAREHOUSE.\p"
@@ -131,8 +131,8 @@ GoldenrodCity_RadioTower_5F_Text_FakeDirectorAfter:
 GoldenrodCity_RadioTower_5F_Text_FakeDirectorAfter2:
 	.string "The boss stashed the DIRECTOR in\n"
 	.string "the UNDERGROUND WAREHOUSE.\p"
-	.string "It's at the far end of the UNDER-\n"
-	.string "GROUND.\p"
+	.string "It's at the far end of the\n"
+	.string "UNDERGROUND.\p"
 	.string "You can use the BASEMENT KEY to\n"
 	.string "get to the UNDERGROUND WAREHOUSE.\p"
 	.string "But I doubt you'll get that far.$"
