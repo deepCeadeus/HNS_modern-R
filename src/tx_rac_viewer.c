@@ -511,7 +511,7 @@ static u8 GetSel_Diff_TrainerEVs(void)      { return gSaveBlock1Ptr->tx_Challeng
 static u8 GetSel_Diff_CatchRate(void)       { return gSaveBlock1Ptr->tx_Difficulty_CatchRate; } // 0..3 (1x, 0.5x, 2x, 3x)
 
 // Plain bool rows (normalize to 0/1 for the shared bool renderer)
-static u8 GetSel_Diff_LimitDifficulty(void) { return gSaveBlock1Ptr->tx_Features_LimitDifficulty; }      // 0..5 (OFF,5,4,3,2,1)
+static u8 GetSel_Diff_LimitDifficulty(void) { return gSaveBlock1Ptr->tx_Features_LimitDifficulty ? 1 : 0; } // Yes/No
 static u8 GetSel_Diff_HardExp(void)         { return gSaveBlock1Ptr->tx_Difficulty_HardExp ? 1 : 0; } //Yes/No
 static u8 GetSel_Diff_NoItemPlayer(void)    { return gSaveBlock1Ptr->tx_Challenges_NoItemPlayer ? 1 : 0; } //Yes/No
 static u8 GetSel_Diff_NoItemTrainer(void)   { return gSaveBlock1Ptr->tx_Challenges_NoItemTrainer ? 1 : 0; } //Yes/No
@@ -569,7 +569,7 @@ static const struct ViewerBoolRow sBoolRows[] = {
     { sText_LegendaryAbils_Label,    GetSel_LegendaryAbilities },  //8
     { sText_Mints_Label,             GetSel_Mints              },  //9
     { sText_InfiniteTMs_Label,       GetSel_InfiniteTMs        },  //10
-    //{ sText_Gen1Recharge,            GetSel_Gen1Recharge       },
+    { sText_Gen1Recharge,            GetSel_Gen1Recharge       },
     { sText_SurvivePoison_Label,     GetSel_SurvivePoison      },  //11
 };
 
