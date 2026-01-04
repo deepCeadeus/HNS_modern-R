@@ -83,7 +83,7 @@ gText_Birch_ChallengeHard::
     .string "DIFFICULTY HACKROMS, but uses simple\l"
     .string "mechanics to raise the difficulty.\l"
     .string "This MODE includes:\p"
-    .string "POKéMON gain only 60% EXPERIENCE.\p"
+    .string "POKéMON gain only 80% EXPERIENCE.\p"
     .string "Enemy and wild {PKMN} level scale\n"
     .string "with your BADGES.\p"
     .string "All BADGE BOOSTS removed.\p"

@@ -3872,8 +3872,8 @@ static void Cmd_getexp(void)
 
             if (gSaveBlock2Ptr->optionsDifficulty == 2) //Only if playing HARD MODE
             {
-                if (gSaveBlock1Ptr->tx_Difficulty_HardExp == 0) //Exp decrease for HARD MODE (40%, might need tweaking in HnS) #DIFFICULTY
-                    calculatedExp *= 0.60;
+                if (gSaveBlock1Ptr->tx_Difficulty_HardExp == 0) //Exp decrease for HARD MODE (20%, might need tweaking in HnS) #DIFFICULTY
+                    calculatedExp *= 0.80;
                 else if (gSaveBlock1Ptr->tx_Difficulty_HardExp == 1) //Maintain default exp. gain for HARD MODE
                     calculatedExp *= 1;
             }
