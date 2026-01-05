@@ -748,4 +748,6 @@ extern u16 gLastThrownBall;
 extern u16 gBallToDisplay;
 extern bool8 gLastUsedBallMenuPresent;
 
+extern u8 gItemLimit;
+
 #endif // GUARD_BATTLE_H
