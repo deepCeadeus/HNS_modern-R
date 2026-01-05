@@ -62,7 +62,7 @@ DesertRuins_EventScript_Regirock::
 	playmoncry SPECIES_REGIROCK, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	seteventmon SPECIES_REGIROCK, 40
+	seteventmon SPECIES_REGIROCK, 60
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	call_if_set FLAG_DIFFICULTY_HARD, DesertRuins_EventScript_Regirock_Stats
 	special StartRegiBattle
