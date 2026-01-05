@@ -64,39 +64,39 @@ PokemonLeague_HallOfFame_EventScript_SetFirstGameClearFlags::
 	return
 
 PokemonLeague_HallOfFame_EventScript_SetGameClearFlags::
-	clearflag FLAG_HIDE_LATIOS
-	clearflag FLAG_HIDE_LATIAS
-	clearflag FLAG_HIDE_RAYQUAZA
-	clearflag FLAG_HIDE_GROUDON
-	clearflag FLAG_HIDE_KYOGRE
-	clearflag FLAG_HIDE_MEWTWO
-	clearflag FLAG_HIDE_VERMILION_SNORLAX
-	clearflag FLAG_HIDE_UNION_CAVE_LAPRAS
-	clearflag FLAG_HIDE_SUDOWOODO
-	clearflag FLAG_HIDE_ZAPDOS
-	clearflag FLAG_HIDE_ARTICUNO
-	clearflag FLAG_HIDE_MOLTRES
-	clearflag FLAG_ITEM_GS_BALL
-	setflag FLAG_HIDE_BATTLEFRONTIER_ENGINEER
+	@clearflag FLAG_HIDE_LATIOS
+	@clearflag FLAG_HIDE_LATIAS
+	@clearflag FLAG_HIDE_RAYQUAZA
+	@clearflag FLAG_HIDE_GROUDON
+	@clearflag FLAG_HIDE_KYOGRE
+	@clearflag FLAG_HIDE_MEWTWO
+	@clearflag FLAG_HIDE_VERMILION_SNORLAX
+	@clearflag FLAG_HIDE_UNION_CAVE_LAPRAS
+	@clearflag FLAG_HIDE_SUDOWOODO
+	@clearflag FLAG_HIDE_ZAPDOS
+	@clearflag FLAG_HIDE_ARTICUNO
+	@clearflag FLAG_HIDE_MOLTRES
+	@clearflag FLAG_ITEM_GS_BALL
+	@setflag FLAG_HIDE_BATTLEFRONTIER_ENGINEER @unused
 	setflag FLAG_IS_KANTO_CHAMPION
-	setvar VAR_COMPLETED_LUGIA, 4
-	clearflag FLAG_HIDE_LUGIA
-	setvar VAR_COMPLETED_HO_OH, 4
-	clearflag FLAG_HIDE_HO_OH
-	call PokemonLeague_HallOfFame_EventScript_SpawnRoamers
-	call_if_ge VAR_SUICUNE_ENCOUNTERS, 8, PokemonLeague_HallOfFame_EventScript_SpawnSuicune
-	call_if_set FLAG_CAUGHT_CELEBI, PokemonLeague_HallOfFame_EventScript_SpawnSecondCelebi
-	clearflag FLAG_DEFEATED_MEW
-	clearflag FLAG_CAUGHT_MEW
-	clearflag FLAG_BATTLED_DEOXYS
-	clearflag FLAG_DEFEATED_DEOXYS
-	clearflag FLAG_SUMMONED_MTMOON_JIRACHI
-	clearflag FLAG_HIDE_REGICE
-	clearflag FLAG_HIDE_REGISTEEL
-	clearflag FLAG_HIDE_REGIROCK
-	clearflag FLAG_HIDE_REGIELEKI
-	clearflag FLAG_HIDE_REGIDRAGO
-	clearflag FLAG_HIDE_REGIGIGAS
+	@setvar VAR_COMPLETED_LUGIA, 4
+	@clearflag FLAG_HIDE_LUGIA
+	@setvar VAR_COMPLETED_HO_OH, 4
+	@clearflag FLAG_HIDE_HO_OH
+	@call PokemonLeague_HallOfFame_EventScript_SpawnRoamers
+	@call_if_ge VAR_SUICUNE_ENCOUNTERS, 8, PokemonLeague_HallOfFame_EventScript_SpawnSuicune
+	@call_if_set FLAG_CAUGHT_CELEBI, PokemonLeague_HallOfFame_EventScript_SpawnSecondCelebi
+	@clearflag FLAG_DEFEATED_MEW
+	@clearflag FLAG_CAUGHT_MEW
+	@clearflag FLAG_BATTLED_DEOXYS
+	@clearflag FLAG_DEFEATED_DEOXYS
+	@clearflag FLAG_SUMMONED_MTMOON_JIRACHI
+	@clearflag FLAG_HIDE_REGICE
+	@clearflag FLAG_HIDE_REGISTEEL
+	@clearflag FLAG_HIDE_REGIROCK
+	@clearflag FLAG_HIDE_REGIELEKI
+	@clearflag FLAG_HIDE_REGIDRAGO
+	@clearflag FLAG_HIDE_REGIGIGAS
 	setvar VAR_LEAGUE_STATE, 1
 	return
 
