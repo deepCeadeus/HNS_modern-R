@@ -23,7 +23,9 @@ SaffronCity_FightingDojoVIP_EventScript_Falkner::
 	applymovement2 VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
+	playfanfare MUS_OBTAIN_B_POINTS
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_DEFAULT
+	waitfanfare
 	closemessage
 	release
 	end
@@ -38,7 +40,9 @@ SaffronCity_FightingDojoVIP_EventScript_Bugsy::
 	applymovement2 VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
+	playfanfare MUS_OBTAIN_B_POINTS
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_DEFAULT
+	waitfanfare
 	closemessage
 	release
 	end
@@ -53,7 +57,9 @@ SaffronCity_FightingDojoVIP_EventScript_Whitney::
 	applymovement2 VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
+	playfanfare MUS_OBTAIN_B_POINTS
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_DEFAULT
+	waitfanfare
 	closemessage
 	release
 	end
@@ -68,7 +74,9 @@ SaffronCity_FightingDojoVIP_EventScript_Morty::
 	applymovement2 VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
+	playfanfare MUS_OBTAIN_B_POINTS
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_DEFAULT
+	waitfanfare
 	closemessage
 	release
 	end
@@ -83,7 +91,9 @@ SaffronCity_FightingDojoVIP_EventScript_Chuck::
 	applymovement2 VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
+	playfanfare MUS_OBTAIN_B_POINTS
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_DEFAULT
+	waitfanfare
 	closemessage
 	release
 	end
@@ -98,7 +108,9 @@ SaffronCity_FightingDojoVIP_EventScript_Jasmine::
 	applymovement2 VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
+	playfanfare MUS_OBTAIN_B_POINTS
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_DEFAULT
+	waitfanfare
 	closemessage
 	release
 	end
@@ -113,7 +125,9 @@ SaffronCity_FightingDojoVIP_EventScript_Pryce::
 	applymovement2 VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
+	playfanfare MUS_OBTAIN_B_POINTS
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_DEFAULT
+	waitfanfare
 	closemessage
 	release
 	end
@@ -128,7 +142,9 @@ SaffronCity_FightingDojoVIP_EventScript_Clair::
 	applymovement2 VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
+	playfanfare MUS_OBTAIN_B_POINTS
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_DEFAULT
+	waitfanfare
 	closemessage
 	release
 	end
@@ -143,7 +159,9 @@ SaffronCity_FightingDojoVIP_EventScript_Brock::
 	applymovement2 VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
+	playfanfare MUS_OBTAIN_B_POINTS
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_DEFAULT
+	waitfanfare
 	closemessage
 	release
 	end
@@ -158,7 +176,9 @@ SaffronCity_FightingDojoVIP_EventScript_Misty::
 	applymovement2 VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
+	playfanfare MUS_OBTAIN_B_POINTS
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_DEFAULT
+	waitfanfare
 	closemessage
 	release
 	end
@@ -173,7 +193,9 @@ SaffronCity_FightingDojoVIP_EventScript_Surge::
 	applymovement2 VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
+	playfanfare MUS_OBTAIN_B_POINTS
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_DEFAULT
+	waitfanfare
 	closemessage
 	release
 	end
@@ -188,7 +210,9 @@ SaffronCity_FightingDojoVIP_EventScript_Erika::
 	applymovement2 VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
+	playfanfare MUS_OBTAIN_B_POINTS
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_DEFAULT
+	waitfanfare
 	closemessage
 	release
 	end
@@ -203,7 +227,9 @@ SaffronCity_FightingDojoVIP_EventScript_Janine::
 	applymovement2 VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
+	playfanfare MUS_OBTAIN_B_POINTS
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_DEFAULT
+	waitfanfare
 	closemessage
 	release
 	end
@@ -218,7 +244,9 @@ SaffronCity_FightingDojoVIP_EventScript_Sabrina::
 	applymovement2 VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
+	playfanfare MUS_OBTAIN_B_POINTS
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_DEFAULT
+	waitfanfare
 	closemessage
 	release
 	end
@@ -233,7 +261,9 @@ SaffronCity_FightingDojoVIP_EventScript_Blaine::
 	applymovement2 VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
+	playfanfare MUS_OBTAIN_B_POINTS
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_DEFAULT
+	waitfanfare
 	closemessage
 	release
 	end
@@ -248,7 +278,9 @@ SaffronCity_FightingDojoVIP_EventScript_Blue::
 	applymovement2 VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
+	playfanfare MUS_OBTAIN_B_POINTS
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_DEFAULT
+	waitfanfare
 	closemessage
 	release
 	end
