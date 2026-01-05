@@ -16,7 +16,6 @@
 #include "item.h"
 #include "item_menu_icons.h"
 #include "menu.h"
-#include "pokemon_special_anim_internal.h"
 #include "random.h"
 #include "strings.h"
 #include "text_window.h"
