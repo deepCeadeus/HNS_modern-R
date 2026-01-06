@@ -3099,15 +3099,33 @@ static void ChooseTypeOfMoveUsedString(u8 *dst)
     }
 }
 
+static const u8 sNpcTextColorToFont[] = 
+{
+    [NPC_TEXT_COLOR_MALE]    = FONT_NORMAL, 
+    [NPC_TEXT_COLOR_FEMALE]  = FONT_NORMAL, 
+    [NPC_TEXT_COLOR_MON]     = FONT_NORMAL, 
+    [NPC_TEXT_COLOR_NEUTRAL] = FONT_NORMAL,
+};
+
+
 void BattlePutTextOnWindow(const u8 *text, u8 windowId)
 {
     const struct BattleWindowText *textInfo = sBattleTextOnWindowsInfo[gBattleScripting.windowsType];
     bool32 copyToVram;
     struct TextPrinterTemplate printerTemplate;
     u8 speed;
+    u8 color;
+    u8 textFlags = windowId & 0xC0;
+
+    /*if (textFlags & 0x40) 
+    {
+        color = ContextNpcGetTextColor();
+        printerTemplate.fontId = sNpcTextColorToFont[color];
+    }*/
 
     if (windowId & B_WIN_COPYTOVRAM)
     {
+        color = ContextNpcGetTextColor();
         windowId &= ~B_WIN_COPYTOVRAM;
         copyToVram = FALSE;
     }

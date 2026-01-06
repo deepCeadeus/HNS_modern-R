@@ -171,6 +171,7 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
 
     playerDirection = GetPlayerFacingDirection();
     GetPlayerPosition(&position);
+    ResetFacingNpcOrSignpostVars();
     metatileBehavior = MapGridGetMetatileBehaviorAt(position.x, position.y);
 
     if (CheckForTrainersWantingBattle() == TRUE)

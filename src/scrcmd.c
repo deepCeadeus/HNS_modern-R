@@ -3306,3 +3306,10 @@ bool8 ScrCmd_checkrandomizer(struct ScriptContext *ctx)
     }     
     return FALSE;
 }
+
+bool8 ScrCmd_textcolor(struct ScriptContext * ctx)
+{
+    gSpecialVar_PrevTextColor = gSpecialVar_TextColor;
+    gSpecialVar_TextColor = ScriptReadByte(ctx);
+    return FALSE;
+}

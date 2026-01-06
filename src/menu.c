@@ -19,6 +19,7 @@
 #include "text_window.h"
 #include "window.h"
 #include "constants/songs.h"
+#include "constants/vars.h"
 
 #define DLG_WINDOW_PALETTE_NUM 15
 #define DLG_WINDOW_BASE_TILE_NUM 0x200
@@ -188,6 +189,26 @@ u16 AddTextPrinterParameterized2(u8 windowId, u8 fontId, const u8 *str, u8 speed
 
     gTextFlags.useAlternateDownArrow = 0;
     return AddTextPrinter(&printer, speed, callback);
+}
+
+void AddTextPrinterDiffStyle(bool8 allowSkippingDelayWithButtonPress)
+{
+    u8 color;
+    void *nptr = NULL;
+
+    //gTextFlags.canABSpeedUpPrint = allowSkippingDelayWithButtonPress;    
+    color = ContextNpcGetTextColor();
+    if (color == NPC_TEXT_COLOR_MALE)
+        AddTextPrinterParameterized2(0, FONT_NORMAL, gStringVar4, GetPlayerTextSpeedDelay(), nptr, TEXT_COLOR_BLUE, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+    else if (color == NPC_TEXT_COLOR_FEMALE)
+        AddTextPrinterParameterized2(0, FONT_NORMAL, gStringVar4, GetPlayerTextSpeedDelay(), nptr, TEXT_COLOR_RED, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+    else // NPC_TEXT_COLOR_MON / NPC_TEXT_COLOR_NEUTRAL
+        AddTextPrinterParameterized2(0, FONT_NORMAL, gStringVar4, GetPlayerTextSpeedDelay(), nptr, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+}
+
+u8 GetDialogBoxFontId(void)
+{
+    return FONT_NORMAL;
 }
 
 void AddTextPrinterForMessage(bool8 allowSkippingDelayWithButtonPress)

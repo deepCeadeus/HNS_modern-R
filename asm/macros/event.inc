@@ -1551,7 +1551,7 @@
 	.2byte \box
 	.endm
 
-	@ Used only in FireRed/LeafGreen, does nothing in Emerald.
+	@ From FRLG
 	.macro textcolor color:req
 	.byte 0xc7
 	.byte \color

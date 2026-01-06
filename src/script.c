@@ -21,6 +21,7 @@ enum {
     CONTEXT_WAITING,
     CONTEXT_SHUTDOWN,
 };
+extern void ResetContextNpcTextColor(void); // field_specials
 
 extern const u8 *gRamScriptRetAddr;
 
@@ -28,10 +29,22 @@ static u8 sGlobalScriptContextStatus;
 static struct ScriptContext sGlobalScriptContext;
 static struct ScriptContext sImmediateScriptContext;
 static bool8 sLockFieldControls;
+static u8 sMsgIsSignpost;
 
 extern ScrCmdFunc gScriptCmdTable[];
 extern ScrCmdFunc gScriptCmdTableEnd[];
 extern void *gNullScriptPtr;
+
+void MsgSetNotSignpost(void)
+{
+    sMsgIsSignpost = FALSE;
+}
+
+void ResetFacingNpcOrSignpostVars(void)
+{
+    ResetContextNpcTextColor();
+    MsgSetNotSignpost();
+}
 
 void InitScriptContext(struct ScriptContext *ctx, void *cmdTable, void *cmdTableEnd)
 {

@@ -119,11 +119,13 @@ static void ExpandStringAndStartDrawFieldMessage(const u8 *str, bool32 allowSkip
 {
     StringExpandPlaceholders(gStringVar4, str);
     AddTextPrinterForMessage(allowSkippingDelayWithButtonPress);
+    AddTextPrinterDiffStyle(TRUE);
     CreateTask_DrawFieldMessage();
 }
 
 static void StartDrawFieldMessage(void)
 {
+    AddTextPrinterDiffStyle(TRUE);
     AddTextPrinterForMessage(TRUE);
     CreateTask_DrawFieldMessage();
 }

@@ -71,6 +71,8 @@
 #include "constants/rgb.h"
 #include "constants/abilities.h"
 #include "constants/rgb.h"
+#include "constants/vars.h"
+#include "dynamic_placeholder_text_util.h"
 
 #define TAG_ITEM_ICON 5500
 
@@ -4821,4 +4823,41 @@ void SwitchMonAbility(void)
     {
         gSpecialVar_Result = FALSE;
     }
+}
+
+void ResetContextNpcTextColor(void)
+{
+    gSelectedObjectEvent = 0;
+    gSpecialVar_TextColor = NPC_TEXT_COLOR_DEFAULT;
+}
+
+u8 ContextNpcGetTextColor(void)
+{
+    u8 gfxId;
+    gfxId = gObjectEvents[gSelectedObjectEvent].graphicsId;
+    struct SpriteTemplate *spriteTemplate;
+    
+    // HnS and Emerald: just black text for everything, unless told otherwise via scripting and variables
+    return NPC_TEXT_COLOR_NEUTRAL;
+
+    //FRLG text coloring
+    // Object events with Pokémon don't update their colored text properly. See "dynamic_placeholder_text_util.c", line 386.
+    /*if (gSpecialVar_TextColor != NPC_TEXT_COLOR_DEFAULT)
+    {
+        // A text color has been specified, use that
+        return gSpecialVar_TextColor;
+    }
+    else if (gSelectedObjectEvent == 0)
+    {
+        // No text color specified and no object selected, use neutral
+        return NPC_TEXT_COLOR_NEUTRAL;
+    }
+    else
+    {
+        // An object is selected and no color has been specified.
+        // Use the text color normally associated with this object's sprite.
+        if (gfxId >= OBJ_EVENT_GFX_VAR_0)
+            gfxId = VarGetObjectEventGraphicsId(gfxId - OBJ_EVENT_GFX_VAR_0);
+        return GetColorFromTextColorTable(gfxId);
+    }*/
 }
