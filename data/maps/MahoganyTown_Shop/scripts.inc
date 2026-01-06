@@ -12,6 +12,7 @@ MahoganyTown_Shop_OnLoad:
 	end
 
 MahoganyTown_Shop_SetStairs::
+	setmetatile 7, 4, 0x228, FALSE
 	setmetatile 8, 4, 0x28D, FALSE
 	end
 
@@ -72,6 +73,7 @@ MahoganyTown_Shop_EventScript_Raid::
 	waitmovement 0
 	
 	setmetatile 8, 4, 0x28D, FALSE
+	setmetatile 7, 4, 0x228, FALSE
 	special DrawWholeMapView
 	delay 40
 	msgbox MahoganyMart1F_Text_Lance_Stairs, MSGBOX_DEFAULT
