@@ -791,9 +791,178 @@ u8 BattleSetup_GetTerrainId(void)
 
     PlayerGetDestCoords(&x, &y);
     tileBehavior = MapGridGetMetatileBehaviorAt(x, y);
-
-    if (MetatileBehavior_IsTallGrass(tileBehavior))
+    if (gSaveBlock2Ptr->optionsNewBackgrounds == 1)
     {
+        if (MetatileBehavior_IsTallGrass(tileBehavior))
+        {
+            if (
+                IS_MAP(BLACKTHORN_CITY, BLACKTHORN_CITY) ||
+                IS_MAP(CIANWOOD_CITY, CIANWOOD_CITY) ||
+                IS_MAP(DRAGONS_DEN_CAVERN, DRAGONS_DEN_CAVERN) ||
+                IS_MAP(LAKE_OF_RAGE, LAKE_OF_RAGE) ||
+                IS_MAP(LAKE_OF_RAGE_LOW_TIDE, LAKE_OF_RAGE_LOW_TIDE) ||
+                IS_MAP(MAHOGANYTOWN, MAHOGANYTOWN) ||
+                IS_MAP(MT_MORTAR_2F, MT_MORTAR_2F) ||
+                IS_MAP(MT_MORTAR_B1F, MT_MORTAR_B1F) ||
+                IS_MAP(MT_SILVER_OUTSIDE, MT_SILVER_OUTSIDE) ||
+                IS_MAP(MT_SILVER_MOUNTAIN_SIDE, MT_SILVER_MOUNTAIN_SIDE) ||
+                IS_MAP(MT_SILVER_2F, MT_SILVER_2F) ||
+                IS_MAP(MT_SILVER_SNOW, MT_SILVER_SNOW) ||
+                IS_MAP(MT_SILVER_3F, MT_SILVER_3F) ||
+                IS_MAP(ROUTE28, ROUTE28) ||
+                IS_MAP(ROUTE41, ROUTE41) ||
+                IS_MAP(ROUTE42, ROUTE42) ||
+                IS_MAP(ROUTE43, ROUTE43) ||
+                IS_MAP(ROUTE44, ROUTE44) ||
+                IS_MAP(ROUTE45, ROUTE45) ||
+                IS_MAP(ROUTE46, ROUTE46) ||
+                IS_MAP(ROUTE47, ROUTE47) ||
+                IS_MAP(ROUTE48, ROUTE48) ||
+                IS_MAP(RUINS_OF_ALPH_OUTSIDE, RUINS_OF_ALPH_OUTSIDE) ||
+                IS_MAP(SAFARI_ZONE1, SAFARI_ZONE1) ||
+                IS_MAP(SAFARI_ZONE2, SAFARI_ZONE2) ||
+                IS_MAP(SAFARI_ZONE3, SAFARI_ZONE3) ||
+                IS_MAP(SAFARI_ZONE_ENTERANCE, SAFARI_ZONE_ENTERANCE) ||
+                IS_MAP(SAFARI_ZONE_GATE, SAFARI_ZONE_GATE) ||
+                IS_MAP(SAFARI_ZONE_LOW_LEFT, SAFARI_ZONE_LOW_LEFT) ||
+                IS_MAP(SAFARI_ZONE_LOW_MID, SAFARI_ZONE_LOW_MID) ||
+                IS_MAP(SAFARI_ZONE_LOW_RIGHT, SAFARI_ZONE_LOW_RIGHT) ||
+                IS_MAP(SAFARI_ZONE_TOP_LEFT, SAFARI_ZONE_TOP_LEFT) ||
+                IS_MAP(SAFARI_ZONE_TOP_MID, SAFARI_ZONE_TOP_MID) ||
+                IS_MAP(SAFARI_ZONE_TOP_RIGHT, SAFARI_ZONE_TOP_RIGHT) ||
+                IS_MAP(WHIRL_ISLANDS_1F, WHIRL_ISLANDS_1F) ||
+                IS_MAP(MT_SILVER_SNOW, MT_SILVER_SNOW) ||
+                IS_MAP(ROUTE3, ROUTE3) ||
+                IS_MAP(ROUTE4, ROUTE4) ||
+                IS_MAP(ROUTE9, ROUTE9) ||
+                IS_MAP(ROUTE10, ROUTE10))
+            {
+                return BATTLE_TERRAIN_MOUNTAIN;
+            }
+            if (IS_MAP(FUCHSIA_CITY_SAFARI_ZONE_BEACH, FUCHSIA_CITY_SAFARI_ZONE_BEACH) || IS_MAP(CINNABAR_ISLAND, CINNABAR_ISLAND))
+                return BATTLE_TERRAIN_SAND;
+        return BATTLE_TERRAIN_GRASS;
+        }
+        if (MetatileBehavior_IsLongGrass(tileBehavior)) {
+            if(IS_MAP(FUCHSIA_CITY_SAFARI_ZONE_MOUNTAIN, FUCHSIA_CITY_SAFARI_ZONE_MOUNTAIN)) {
+                return BATTLE_TERRAIN_MOUNTAIN;
+            }
+            return BATTLE_TERRAIN_LONG_GRASS;
+        }
+        if(MetatileBehavior_IsDeepSand(tileBehavior))
+            return BATTLE_TERRAIN_MOUNTAIN;
+        if (MetatileBehavior_IsSand(tileBehavior))
+            return BATTLE_TERRAIN_SAND;
+
+        switch (gMapHeader.mapType)
+        {
+        case MAP_TYPE_TOWN:
+        case MAP_TYPE_CITY:
+        case MAP_TYPE_ROUTE:
+            break;
+        case MAP_TYPE_UNDERGROUND:
+            if (MetatileBehavior_IsIndoorEncounter(tileBehavior))
+                return BATTLE_TERRAIN_BUILDING;
+            if (
+                IS_MAP(CERULEAN_CAVE1, CERULEAN_CAVE1) ||
+                IS_MAP(CERULEAN_CAVE2, CERULEAN_CAVE2) ||
+                IS_MAP(CERULEAN_CAVE3, CERULEAN_CAVE3) ||
+                IS_MAP(WHIRL_ISLANDS_1F, WHIRL_ISLANDS_1F) ||
+                IS_MAP(WHIRL_ISLANDS_B1F, WHIRL_ISLANDS_B1F) ||
+                IS_MAP(WHIRL_ISLANDS_B2F, WHIRL_ISLANDS_B2F) ||
+                IS_MAP(SEAFOAM_ISLANDS_1F, SEAFOAM_ISLANDS_1F) ||
+                IS_MAP(SEAFOAM_ISLANDS_GYM, SEAFOAM_ISLANDS_GYM) ||
+                IS_MAP(SEAFOAM_ISLANDS_B1F, SEAFOAM_ISLANDS_B1F) ||
+                IS_MAP(MT_SILVER_1F_ITEM_ROOM, MT_SILVER_1F_ITEM_ROOM) ||
+                IS_MAP(MT_SILVER_1F_WATERFALL_ROOM, MT_SILVER_1F_WATERFALL_ROOM) ||
+                IS_MAP(MT_SILVER_1F_MOLTRES_ROOM, MT_SILVER_1F_MOLTRES_ROOM) ||
+                IS_MAP(MT_SILVER_2F, MT_SILVER_2F) ||
+                IS_MAP(MT_SILVER_3F, MT_SILVER_3F) ||
+                IS_MAP(ICE_PATH_1F, ICE_PATH_1F) ||
+                IS_MAP(ICE_PATH_B1F, ICE_PATH_B1F) ||
+                IS_MAP(ICE_PATH_B2F, ICE_PATH_B2F) ||
+                IS_MAP(ICE_PATH_B3F, ICE_PATH_B3F) ||
+                IS_MAP(ICE_PATH_B4F, ICE_PATH_B4F) ||
+                IS_MAP(MT_MORTAR_1F_SOUTH, MT_MORTAR_1F_SOUTH) ||
+                IS_MAP(MT_MORTAR_1F_NORTH, MT_MORTAR_1F_NORTH) ||
+                IS_MAP(MT_MORTAR_2F, MT_MORTAR_2F) ||
+                IS_MAP(MT_MORTAR_B1F, MT_MORTAR_B1F) ||
+                IS_MAP(DRAGONS_DEN_ENTRANCE, DRAGONS_DEN_ENTRANCE) ||
+                IS_MAP(DRAGONS_DEN_CAVERN, DRAGONS_DEN_CAVERN) ||
+                IS_MAP(ROCK_TUNNEL_B1F, ROCK_TUNNEL_B1F) ||
+                IS_MAP(ROCK_TUNNEL_1F, ROCK_TUNNEL_1F) ||
+                IS_MAP(SLOWPOKE_WELL_B1F, SLOWPOKE_WELL_B1F) ||
+                IS_MAP(SLOWPOKE_WELL_B2F, SLOWPOKE_WELL_B2F) ||
+                IS_MAP(SAFARI_ZONE_LOW_RIGHT, SAFARI_ZONE_LOW_RIGHT) ||
+                IS_MAP(FUCHSIA_CITY_SAFARI_ZONE_CAVE, FUCHSIA_CITY_SAFARI_ZONE_CAVE) ||
+                IS_MAP(RUINS_OF_ALPH_B1F, RUINS_OF_ALPH_B1F))
+            {
+                return BATTLE_TERRAIN_GRAY_CAVE;
+            }
+        return BATTLE_TERRAIN_CAVE;
+        
+        case MAP_TYPE_INDOOR:
+                if (
+                IS_MAP(ROCKET_HIDEOUT_B1F, ROCKET_HIDEOUT_B1F) ||
+                IS_MAP(ROCKET_HIDEOUT_B2F, ROCKET_HIDEOUT_B2F) ||
+                IS_MAP(ROCKET_HIDEOUT_B3F, ROCKET_HIDEOUT_B3F) ||
+                IS_MAP(GOLDENROD_CITY_UNDERGROUND_ENTRANCE, GOLDENROD_CITY_UNDERGROUND_ENTRANCE) ||
+                IS_MAP(GOLDENROD_CITY_UNDERGROUND_SWITCHES, GOLDENROD_CITY_UNDERGROUND_SWITCHES) ||
+                IS_MAP(GOLDENROD_CITY_UNDERGROUND_TUNNEL, GOLDENROD_CITY_UNDERGROUND_TUNNEL) ||
+                IS_MAP(GOLDENROD_CITY_UNDERGROUND_STORAGE, GOLDENROD_CITY_UNDERGROUND_STORAGE) ||
+                IS_MAP(GOLDENROD_CITY_RADIO_TOWER_1F, GOLDENROD_CITY_RADIO_TOWER_1F) ||
+                IS_MAP(GOLDENROD_CITY_RADIO_TOWER_2F, GOLDENROD_CITY_RADIO_TOWER_2F) ||
+                IS_MAP(GOLDENROD_CITY_RADIO_TOWER_3F, GOLDENROD_CITY_RADIO_TOWER_3F) ||
+                IS_MAP(GOLDENROD_CITY_RADIO_TOWER_4F, GOLDENROD_CITY_RADIO_TOWER_4F) ||
+                IS_MAP(GOLDENROD_CITY_RADIO_TOWER_5F, GOLDENROD_CITY_RADIO_TOWER_5F) ||
+                IS_MAP(VIOLET_CITY_GYM, VIOLET_CITY_GYM) ||
+                IS_MAP(ECRUTEAK_CITY_GYM, ECRUTEAK_CITY_GYM) ||
+                IS_MAP(CIANWOOD_GYM, CIANWOOD_GYM) ||
+                IS_MAP(OLIVINE_CITY_LIGHTHOUSE, OLIVINE_CITY_LIGHTHOUSE) ||
+                IS_MAP(OLIVINE_CITY_GYM, OLIVINE_CITY_GYM) ||
+                IS_MAP(MAHOGANY_TOWN_GYM, MAHOGANY_TOWN_GYM) ||
+                IS_MAP(BLACKTHORN_CITY_GYM, BLACKTHORN_CITY_GYM) ||
+                IS_MAP(VIRIDIAN_CITY_GYM, VIRIDIAN_CITY_GYM) ||
+                IS_MAP(CERULEAN_CITY_GYM, CERULEAN_CITY_GYM) ||
+                IS_MAP(SAFFRON_CITY_GYM, SAFFRON_CITY_GYM))
+            {
+                return BATTLE_TERRAIN_BLUE_BUILDING;
+            }
+        case MAP_TYPE_SECRET_BASE:
+            return BATTLE_TERRAIN_BUILDING;
+            if (
+                    IS_MAP(BLACKTHORN_CITY_GYM, BLACKTHORN_CITY_GYM))
+                {
+                    return BATTLE_TERRAIN_CAVE;
+                }
+        case MAP_TYPE_UNDERWATER:
+            return BATTLE_TERRAIN_GRAY_CAVE;
+        case MAP_TYPE_OCEAN_ROUTE:
+            if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
+                return BATTLE_TERRAIN_WATER;
+            return BATTLE_TERRAIN_PLAIN;
+        }
+        if (MetatileBehavior_IsDeepOrOceanWater(tileBehavior))
+            return BATTLE_TERRAIN_WATER;
+        if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
+            return BATTLE_TERRAIN_POND;
+        if (MetatileBehavior_IsMountain(tileBehavior))
+            return BATTLE_TERRAIN_MOUNTAIN;
+        if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
+        {
+            // Is BRIDGE_TYPE_POND_*?
+            if (MetatileBehavior_GetBridgeType(tileBehavior) != BRIDGE_TYPE_OCEAN)
+                return BATTLE_TERRAIN_POND;
+
+            if (MetatileBehavior_IsBridgeOverWater(tileBehavior) == TRUE)
+                return BATTLE_TERRAIN_WATER;
+        }
+        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE113) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE113))
+            return BATTLE_TERRAIN_SAND;
+        if (GetSavedWeather() == WEATHER_SANDSTORM)
+            return BATTLE_TERRAIN_SAND;
+
+
         if (
             IS_MAP(BLACKTHORN_CITY, BLACKTHORN_CITY) ||
             IS_MAP(CIANWOOD_CITY, CIANWOOD_CITY) ||
@@ -806,7 +975,6 @@ u8 BattleSetup_GetTerrainId(void)
             IS_MAP(MT_SILVER_OUTSIDE, MT_SILVER_OUTSIDE) ||
             IS_MAP(MT_SILVER_MOUNTAIN_SIDE, MT_SILVER_MOUNTAIN_SIDE) ||
             IS_MAP(MT_SILVER_2F, MT_SILVER_2F) ||
-            IS_MAP(MT_SILVER_SNOW, MT_SILVER_SNOW) ||
             IS_MAP(MT_SILVER_3F, MT_SILVER_3F) ||
             IS_MAP(ROUTE28, ROUTE28) ||
             IS_MAP(ROUTE41, ROUTE41) ||
@@ -830,7 +998,6 @@ u8 BattleSetup_GetTerrainId(void)
             IS_MAP(SAFARI_ZONE_TOP_MID, SAFARI_ZONE_TOP_MID) ||
             IS_MAP(SAFARI_ZONE_TOP_RIGHT, SAFARI_ZONE_TOP_RIGHT) ||
             IS_MAP(WHIRL_ISLANDS_1F, WHIRL_ISLANDS_1F) ||
-            IS_MAP(MT_SILVER_SNOW, MT_SILVER_SNOW) ||
             IS_MAP(ROUTE3, ROUTE3) ||
             IS_MAP(ROUTE4, ROUTE4) ||
             IS_MAP(ROUTE9, ROUTE9) ||
@@ -838,211 +1005,93 @@ u8 BattleSetup_GetTerrainId(void)
         {
             return BATTLE_TERRAIN_MOUNTAIN;
         }
-        if (IS_MAP(FUCHSIA_CITY_SAFARI_ZONE_BEACH, FUCHSIA_CITY_SAFARI_ZONE_BEACH) || IS_MAP(CINNABAR_ISLAND, CINNABAR_ISLAND))
-            return BATTLE_TERRAIN_SAND;
-    return BATTLE_TERRAIN_GRASS;
-    }
-    if (MetatileBehavior_IsLongGrass(tileBehavior)) {
-        if(IS_MAP(FUCHSIA_CITY_SAFARI_ZONE_MOUNTAIN, FUCHSIA_CITY_SAFARI_ZONE_MOUNTAIN)) {
-            return BATTLE_TERRAIN_MOUNTAIN;
-        }
-        return BATTLE_TERRAIN_LONG_GRASS;
-    }
-    if(MetatileBehavior_IsDeepSand(tileBehavior))
-        return BATTLE_TERRAIN_MOUNTAIN;
-    if (MetatileBehavior_IsSand(tileBehavior))
-        return BATTLE_TERRAIN_SAND;
-
-    switch (gMapHeader.mapType)
-    {
-    case MAP_TYPE_TOWN:
-    case MAP_TYPE_CITY:
-    case MAP_TYPE_ROUTE:
-        break;
-    case MAP_TYPE_UNDERGROUND:
-        if (MetatileBehavior_IsIndoorEncounter(tileBehavior))
-            return BATTLE_TERRAIN_BUILDING;
-        if ((MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior)) && (gSaveBlock2Ptr->optionsNewBackgrounds == 0))
-            return BATTLE_TERRAIN_POND;
         if (
-            IS_MAP(CERULEAN_CAVE1, CERULEAN_CAVE1) ||
-            IS_MAP(CERULEAN_CAVE2, CERULEAN_CAVE2) ||
-            IS_MAP(CERULEAN_CAVE3, CERULEAN_CAVE3) ||
-            IS_MAP(WHIRL_ISLANDS_1F, WHIRL_ISLANDS_1F) ||
-            IS_MAP(WHIRL_ISLANDS_B1F, WHIRL_ISLANDS_B1F) ||
-            IS_MAP(WHIRL_ISLANDS_B2F, WHIRL_ISLANDS_B2F) ||
-            IS_MAP(SEAFOAM_ISLANDS_1F, SEAFOAM_ISLANDS_1F) ||
-            IS_MAP(SEAFOAM_ISLANDS_GYM, SEAFOAM_ISLANDS_GYM) ||
-            IS_MAP(SEAFOAM_ISLANDS_B1F, SEAFOAM_ISLANDS_B1F) ||
-            IS_MAP(MT_SILVER_1F_ITEM_ROOM, MT_SILVER_1F_ITEM_ROOM) ||
-            IS_MAP(MT_SILVER_1F_WATERFALL_ROOM, MT_SILVER_1F_WATERFALL_ROOM) ||
-            IS_MAP(MT_SILVER_1F_MOLTRES_ROOM, MT_SILVER_1F_MOLTRES_ROOM) ||
-            IS_MAP(MT_SILVER_2F, MT_SILVER_2F) ||
-            IS_MAP(MT_SILVER_3F, MT_SILVER_3F) ||
-            IS_MAP(ICE_PATH_1F, ICE_PATH_1F) ||
-            IS_MAP(ICE_PATH_B1F, ICE_PATH_B1F) ||
-            IS_MAP(ICE_PATH_B2F, ICE_PATH_B2F) ||
-            IS_MAP(ICE_PATH_B3F, ICE_PATH_B3F) ||
-            IS_MAP(ICE_PATH_B4F, ICE_PATH_B4F) ||
-            IS_MAP(MT_MORTAR_1F_SOUTH, MT_MORTAR_1F_SOUTH) ||
-            IS_MAP(MT_MORTAR_1F_NORTH, MT_MORTAR_1F_NORTH) ||
-            IS_MAP(MT_MORTAR_2F, MT_MORTAR_2F) ||
-            IS_MAP(MT_MORTAR_B1F, MT_MORTAR_B1F) ||
-            IS_MAP(DRAGONS_DEN_ENTRANCE, DRAGONS_DEN_ENTRANCE) ||
-            IS_MAP(DRAGONS_DEN_CAVERN, DRAGONS_DEN_CAVERN) ||
-            IS_MAP(ROCK_TUNNEL_B1F, ROCK_TUNNEL_B1F) ||
-            IS_MAP(ROCK_TUNNEL_1F, ROCK_TUNNEL_1F) ||
-            IS_MAP(SLOWPOKE_WELL_B1F, SLOWPOKE_WELL_B1F) ||
-            IS_MAP(SLOWPOKE_WELL_B2F, SLOWPOKE_WELL_B2F) ||
-            IS_MAP(SAFARI_ZONE_LOW_RIGHT, SAFARI_ZONE_LOW_RIGHT) ||
-            IS_MAP(FUCHSIA_CITY_SAFARI_ZONE_CAVE, FUCHSIA_CITY_SAFARI_ZONE_CAVE) ||
-            IS_MAP(RUINS_OF_ALPH_B1F, RUINS_OF_ALPH_B1F))
-        {
-            return BATTLE_TERRAIN_GRAY_CAVE;
-        }
-    return BATTLE_TERRAIN_CAVE;
-    
-    case MAP_TYPE_INDOOR:
-            if (
-            IS_MAP(ROCKET_HIDEOUT_B1F, ROCKET_HIDEOUT_B1F) ||
-            IS_MAP(ROCKET_HIDEOUT_B2F, ROCKET_HIDEOUT_B2F) ||
-            IS_MAP(ROCKET_HIDEOUT_B3F, ROCKET_HIDEOUT_B3F) ||
-            IS_MAP(GOLDENROD_CITY_UNDERGROUND_ENTRANCE, GOLDENROD_CITY_UNDERGROUND_ENTRANCE) ||
-            IS_MAP(GOLDENROD_CITY_UNDERGROUND_SWITCHES, GOLDENROD_CITY_UNDERGROUND_SWITCHES) ||
-            IS_MAP(GOLDENROD_CITY_UNDERGROUND_TUNNEL, GOLDENROD_CITY_UNDERGROUND_TUNNEL) ||
-            IS_MAP(GOLDENROD_CITY_UNDERGROUND_STORAGE, GOLDENROD_CITY_UNDERGROUND_STORAGE) ||
-            IS_MAP(GOLDENROD_CITY_RADIO_TOWER_1F, GOLDENROD_CITY_RADIO_TOWER_1F) ||
-            IS_MAP(GOLDENROD_CITY_RADIO_TOWER_2F, GOLDENROD_CITY_RADIO_TOWER_2F) ||
-            IS_MAP(GOLDENROD_CITY_RADIO_TOWER_3F, GOLDENROD_CITY_RADIO_TOWER_3F) ||
-            IS_MAP(GOLDENROD_CITY_RADIO_TOWER_4F, GOLDENROD_CITY_RADIO_TOWER_4F) ||
-            IS_MAP(GOLDENROD_CITY_RADIO_TOWER_5F, GOLDENROD_CITY_RADIO_TOWER_5F) ||
-            IS_MAP(VIOLET_CITY_GYM, VIOLET_CITY_GYM) ||
-            IS_MAP(ECRUTEAK_CITY_GYM, ECRUTEAK_CITY_GYM) ||
-            IS_MAP(CIANWOOD_GYM, CIANWOOD_GYM) ||
-            IS_MAP(OLIVINE_CITY_LIGHTHOUSE, OLIVINE_CITY_LIGHTHOUSE) ||
-            IS_MAP(OLIVINE_CITY_GYM, OLIVINE_CITY_GYM) ||
-            IS_MAP(MAHOGANY_TOWN_GYM, MAHOGANY_TOWN_GYM) ||
-            IS_MAP(BLACKTHORN_CITY_GYM, BLACKTHORN_CITY_GYM) ||
-            IS_MAP(VIRIDIAN_CITY_GYM, VIRIDIAN_CITY_GYM) ||
-            IS_MAP(CERULEAN_CITY_GYM, CERULEAN_CITY_GYM) ||
-            IS_MAP(SAFFRON_CITY_GYM, SAFFRON_CITY_GYM))
-        {
-            return BATTLE_TERRAIN_BLUE_BUILDING;
-        }
-    case MAP_TYPE_SECRET_BASE:
-        return BATTLE_TERRAIN_BUILDING;
-        if (
-                IS_MAP(BLACKTHORN_CITY_GYM, BLACKTHORN_CITY_GYM))
+                IS_MAP(CERULEAN_CAVE1, CERULEAN_CAVE1) ||
+                IS_MAP(CERULEAN_CAVE2, CERULEAN_CAVE2) ||
+                IS_MAP(CERULEAN_CAVE3, CERULEAN_CAVE3) ||
+                IS_MAP(WHIRL_ISLANDS_1F, WHIRL_ISLANDS_1F) ||
+                IS_MAP(WHIRL_ISLANDS_B1F, WHIRL_ISLANDS_B1F) ||
+                IS_MAP(WHIRL_ISLANDS_B2F, WHIRL_ISLANDS_B2F) ||
+                IS_MAP(SEAFOAM_ISLANDS_1F, SEAFOAM_ISLANDS_1F) ||
+                IS_MAP(SEAFOAM_ISLANDS_GYM, SEAFOAM_ISLANDS_GYM) ||
+                IS_MAP(SEAFOAM_ISLANDS_B1F, SEAFOAM_ISLANDS_B1F) ||
+                IS_MAP(MT_SILVER_1F_ITEM_ROOM, MT_SILVER_1F_ITEM_ROOM) ||
+                IS_MAP(MT_SILVER_1F_WATERFALL_ROOM, MT_SILVER_1F_WATERFALL_ROOM) ||
+                IS_MAP(MT_SILVER_1F_MOLTRES_ROOM, MT_SILVER_1F_MOLTRES_ROOM) ||
+                IS_MAP(MT_SILVER_2F, MT_SILVER_2F) ||
+                IS_MAP(MT_SILVER_3F, MT_SILVER_3F) ||
+                IS_MAP(ICE_PATH_1F, ICE_PATH_1F) ||
+                IS_MAP(ICE_PATH_B1F, ICE_PATH_B1F) ||
+                IS_MAP(ICE_PATH_B2F, ICE_PATH_B2F) ||
+                IS_MAP(ICE_PATH_B3F, ICE_PATH_B3F) ||
+                IS_MAP(ICE_PATH_B4F, ICE_PATH_B4F) ||
+                IS_MAP(MT_MORTAR_1F_SOUTH, MT_MORTAR_1F_SOUTH) ||
+                IS_MAP(MT_MORTAR_1F_NORTH, MT_MORTAR_1F_NORTH) ||
+                IS_MAP(MT_MORTAR_2F, MT_MORTAR_2F) ||
+                IS_MAP(MT_MORTAR_B1F, MT_MORTAR_B1F) ||
+                IS_MAP(DRAGONS_DEN_ENTRANCE, DRAGONS_DEN_ENTRANCE) ||
+                IS_MAP(DRAGONS_DEN_CAVERN, DRAGONS_DEN_CAVERN) ||
+                IS_MAP(ROCK_TUNNEL_B1F, ROCK_TUNNEL_B1F) ||
+                IS_MAP(ROCK_TUNNEL_1F, ROCK_TUNNEL_1F) ||
+                IS_MAP(SLOWPOKE_WELL_B1F, SLOWPOKE_WELL_B1F) ||
+                IS_MAP(SLOWPOKE_WELL_B2F, SLOWPOKE_WELL_B2F) ||
+                IS_MAP(SAFARI_ZONE_LOW_RIGHT, SAFARI_ZONE_LOW_RIGHT) ||
+                IS_MAP(FUCHSIA_CITY_SAFARI_ZONE_CAVE, FUCHSIA_CITY_SAFARI_ZONE_CAVE))
             {
-                return BATTLE_TERRAIN_CAVE;
+                return BATTLE_TERRAIN_GRAY_CAVE;
             }
-    case MAP_TYPE_UNDERWATER:
-        return BATTLE_TERRAIN_GRAY_CAVE;
-    case MAP_TYPE_OCEAN_ROUTE:
-        if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
+
+        return BATTLE_TERRAIN_GRASS;
+    }
+    else
+    {
+        if (MetatileBehavior_IsTallGrass(tileBehavior))
+            return BATTLE_TERRAIN_GRASS;
+        if (MetatileBehavior_IsLongGrass(tileBehavior))
+            return BATTLE_TERRAIN_LONG_GRASS;
+        if (MetatileBehavior_IsSand(tileBehavior))
+            return BATTLE_TERRAIN_SAND;
+
+        switch (gMapHeader.mapType)
+        {
+        case MAP_TYPE_TOWN:
+        case MAP_TYPE_CITY:
+        case MAP_TYPE_ROUTE:
+            break;
+        case MAP_TYPE_UNDERGROUND:
+            if (MetatileBehavior_IsIndoorEncounter(tileBehavior))
+                return BATTLE_TERRAIN_BUILDING;
+            if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
+                return BATTLE_TERRAIN_POND;
+            return BATTLE_TERRAIN_CAVE;
+        case MAP_TYPE_INDOOR:
+        case MAP_TYPE_SECRET_BASE:
+            return BATTLE_TERRAIN_BUILDING;
+        case MAP_TYPE_OCEAN_ROUTE:
+            if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
+                return BATTLE_TERRAIN_WATER;
+            return BATTLE_TERRAIN_PLAIN;
+        }
+        if (MetatileBehavior_IsDeepOrOceanWater(tileBehavior))
             return BATTLE_TERRAIN_WATER;
+        if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
+            return BATTLE_TERRAIN_POND;
+        if (MetatileBehavior_IsMountain(tileBehavior))
+            return BATTLE_TERRAIN_MOUNTAIN;
+        if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
+        {
+            // Is BRIDGE_TYPE_POND_*?
+            if (MetatileBehavior_GetBridgeType(tileBehavior) != BRIDGE_TYPE_OCEAN)
+                return BATTLE_TERRAIN_POND;
+
+            if (MetatileBehavior_IsBridgeOverWater(tileBehavior) == TRUE)
+                return BATTLE_TERRAIN_WATER;
+        }
+        if (GetSavedWeather() == WEATHER_SANDSTORM)
+            return BATTLE_TERRAIN_SAND;
+
         return BATTLE_TERRAIN_PLAIN;
     }
-    if (MetatileBehavior_IsDeepOrOceanWater(tileBehavior))
-        return BATTLE_TERRAIN_WATER;
-    if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
-        return BATTLE_TERRAIN_POND;
-    if (MetatileBehavior_IsMountain(tileBehavior))
-        return BATTLE_TERRAIN_MOUNTAIN;
-    if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
-    {
-        // Is BRIDGE_TYPE_POND_*?
-        if (MetatileBehavior_GetBridgeType(tileBehavior) != BRIDGE_TYPE_OCEAN)
-            return BATTLE_TERRAIN_POND;
-
-        if (MetatileBehavior_IsBridgeOverWater(tileBehavior) == TRUE)
-            return BATTLE_TERRAIN_WATER;
-    }
-    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE113) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE113))
-        return BATTLE_TERRAIN_SAND;
-    if (GetSavedWeather() == WEATHER_SANDSTORM)
-        return BATTLE_TERRAIN_SAND;
-
-
-    if (
-        IS_MAP(BLACKTHORN_CITY, BLACKTHORN_CITY) ||
-        IS_MAP(CIANWOOD_CITY, CIANWOOD_CITY) ||
-        IS_MAP(DRAGONS_DEN_CAVERN, DRAGONS_DEN_CAVERN) ||
-        IS_MAP(LAKE_OF_RAGE, LAKE_OF_RAGE) ||
-        IS_MAP(LAKE_OF_RAGE_LOW_TIDE, LAKE_OF_RAGE_LOW_TIDE) ||
-        IS_MAP(MAHOGANYTOWN, MAHOGANYTOWN) ||
-        IS_MAP(MT_MORTAR_2F, MT_MORTAR_2F) ||
-        IS_MAP(MT_MORTAR_B1F, MT_MORTAR_B1F) ||
-        IS_MAP(MT_SILVER_OUTSIDE, MT_SILVER_OUTSIDE) ||
-        IS_MAP(MT_SILVER_MOUNTAIN_SIDE, MT_SILVER_MOUNTAIN_SIDE) ||
-        IS_MAP(MT_SILVER_2F, MT_SILVER_2F) ||
-        IS_MAP(MT_SILVER_3F, MT_SILVER_3F) ||
-        IS_MAP(ROUTE28, ROUTE28) ||
-        IS_MAP(ROUTE41, ROUTE41) ||
-        IS_MAP(ROUTE42, ROUTE42) ||
-        IS_MAP(ROUTE43, ROUTE43) ||
-        IS_MAP(ROUTE44, ROUTE44) ||
-        IS_MAP(ROUTE45, ROUTE45) ||
-        IS_MAP(ROUTE46, ROUTE46) ||
-        IS_MAP(ROUTE47, ROUTE47) ||
-        IS_MAP(ROUTE48, ROUTE48) ||
-        IS_MAP(RUINS_OF_ALPH_OUTSIDE, RUINS_OF_ALPH_OUTSIDE) ||
-        IS_MAP(SAFARI_ZONE1, SAFARI_ZONE1) ||
-        IS_MAP(SAFARI_ZONE2, SAFARI_ZONE2) ||
-        IS_MAP(SAFARI_ZONE3, SAFARI_ZONE3) ||
-        IS_MAP(SAFARI_ZONE_ENTERANCE, SAFARI_ZONE_ENTERANCE) ||
-        IS_MAP(SAFARI_ZONE_GATE, SAFARI_ZONE_GATE) ||
-        IS_MAP(SAFARI_ZONE_LOW_LEFT, SAFARI_ZONE_LOW_LEFT) ||
-        IS_MAP(SAFARI_ZONE_LOW_MID, SAFARI_ZONE_LOW_MID) ||
-        IS_MAP(SAFARI_ZONE_LOW_RIGHT, SAFARI_ZONE_LOW_RIGHT) ||
-        IS_MAP(SAFARI_ZONE_TOP_LEFT, SAFARI_ZONE_TOP_LEFT) ||
-        IS_MAP(SAFARI_ZONE_TOP_MID, SAFARI_ZONE_TOP_MID) ||
-        IS_MAP(SAFARI_ZONE_TOP_RIGHT, SAFARI_ZONE_TOP_RIGHT) ||
-        IS_MAP(WHIRL_ISLANDS_1F, WHIRL_ISLANDS_1F) ||
-        IS_MAP(ROUTE3, ROUTE3) ||
-        IS_MAP(ROUTE4, ROUTE4) ||
-        IS_MAP(ROUTE9, ROUTE9) ||
-        IS_MAP(ROUTE10, ROUTE10))
-    {
-        return BATTLE_TERRAIN_MOUNTAIN;
-    }
-    if (
-            IS_MAP(CERULEAN_CAVE1, CERULEAN_CAVE1) ||
-            IS_MAP(CERULEAN_CAVE2, CERULEAN_CAVE2) ||
-            IS_MAP(CERULEAN_CAVE3, CERULEAN_CAVE3) ||
-            IS_MAP(WHIRL_ISLANDS_1F, WHIRL_ISLANDS_1F) ||
-            IS_MAP(WHIRL_ISLANDS_B1F, WHIRL_ISLANDS_B1F) ||
-            IS_MAP(WHIRL_ISLANDS_B2F, WHIRL_ISLANDS_B2F) ||
-            IS_MAP(SEAFOAM_ISLANDS_1F, SEAFOAM_ISLANDS_1F) ||
-            IS_MAP(SEAFOAM_ISLANDS_GYM, SEAFOAM_ISLANDS_GYM) ||
-            IS_MAP(SEAFOAM_ISLANDS_B1F, SEAFOAM_ISLANDS_B1F) ||
-            IS_MAP(MT_SILVER_1F_ITEM_ROOM, MT_SILVER_1F_ITEM_ROOM) ||
-            IS_MAP(MT_SILVER_1F_WATERFALL_ROOM, MT_SILVER_1F_WATERFALL_ROOM) ||
-            IS_MAP(MT_SILVER_1F_MOLTRES_ROOM, MT_SILVER_1F_MOLTRES_ROOM) ||
-            IS_MAP(MT_SILVER_2F, MT_SILVER_2F) ||
-            IS_MAP(MT_SILVER_3F, MT_SILVER_3F) ||
-            IS_MAP(ICE_PATH_1F, ICE_PATH_1F) ||
-            IS_MAP(ICE_PATH_B1F, ICE_PATH_B1F) ||
-            IS_MAP(ICE_PATH_B2F, ICE_PATH_B2F) ||
-            IS_MAP(ICE_PATH_B3F, ICE_PATH_B3F) ||
-            IS_MAP(ICE_PATH_B4F, ICE_PATH_B4F) ||
-            IS_MAP(MT_MORTAR_1F_SOUTH, MT_MORTAR_1F_SOUTH) ||
-            IS_MAP(MT_MORTAR_1F_NORTH, MT_MORTAR_1F_NORTH) ||
-            IS_MAP(MT_MORTAR_2F, MT_MORTAR_2F) ||
-            IS_MAP(MT_MORTAR_B1F, MT_MORTAR_B1F) ||
-            IS_MAP(DRAGONS_DEN_ENTRANCE, DRAGONS_DEN_ENTRANCE) ||
-            IS_MAP(DRAGONS_DEN_CAVERN, DRAGONS_DEN_CAVERN) ||
-            IS_MAP(ROCK_TUNNEL_B1F, ROCK_TUNNEL_B1F) ||
-            IS_MAP(ROCK_TUNNEL_1F, ROCK_TUNNEL_1F) ||
-            IS_MAP(SLOWPOKE_WELL_B1F, SLOWPOKE_WELL_B1F) ||
-            IS_MAP(SLOWPOKE_WELL_B2F, SLOWPOKE_WELL_B2F) ||
-            IS_MAP(SAFARI_ZONE_LOW_RIGHT, SAFARI_ZONE_LOW_RIGHT) ||
-            IS_MAP(FUCHSIA_CITY_SAFARI_ZONE_CAVE, FUCHSIA_CITY_SAFARI_ZONE_CAVE))
-        {
-            return BATTLE_TERRAIN_GRAY_CAVE;
-        }
-
-    return BATTLE_TERRAIN_GRASS;
 }
 
 static u8 GetBattleTransitionTypeByMap(void)
