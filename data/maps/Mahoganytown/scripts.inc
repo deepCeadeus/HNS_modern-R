@@ -19,6 +19,7 @@ Mahoganytown_OnFrame::
 	.2byte 0
 
 Mahoganytown_EventScript_RocketTrigger::
+	goto_if_unset FLAG_ENABLE_BAOBA_MATCH_CALL, Mahoganytown_EventScript_RocketTrigger_NoBaoba
 	lock
 	pokenavcall ElmPhoneRadioTowerRocketTakeoverText
 	waitmessage
@@ -30,6 +31,9 @@ Mahoganytown_EventScript_RocketTrigger::
 	setvar VAR_MAHOGANY_TOWN_STATE, 16
 	delay 10
 	release
+	end
+
+Mahoganytown_EventScript_RocketTrigger_NoBaoba:
 	end
 
 MahoganyTown_EventScript_TownTrigger::
