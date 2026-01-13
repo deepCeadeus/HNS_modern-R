@@ -77,6 +77,7 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_WESTWARD_CURRENT]                = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
     [MB_NORTHWARD_CURRENT]               = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
     [MB_SOUTHWARD_CURRENT]               = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
+    [MB_MOUNTAIN_TERRAIN]                = TILE_FLAG_UNUSED,
     [MB_NON_ANIMATED_DOOR]               = TILE_FLAG_UNUSED,
     [MB_LADDER]                          = TILE_FLAG_UNUSED,
     [MB_EAST_ARROW_WARP]                 = TILE_FLAG_UNUSED,
@@ -863,6 +864,14 @@ bool8 MetatileBehavior_IsIndoorEncounter(u8 metatileBehavior)
 bool8 MetatileBehavior_IsMountain(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_MOUNTAIN_TOP)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsMountain_NoEncounters(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_MOUNTAIN_TERRAIN)
         return TRUE;
     else
         return FALSE;
