@@ -441,30 +441,30 @@ static const u8 sLevelCapTable_Hard[] = //HNS UPDATED
     [LEVEL_CAP_BADGE_8]     = 54,
 };
 
-static const u8 sLevelCapTable_Normal_Caps_And_Hard_Mode[] =//UNCHANGED FROM M.E. 
+static const u8 sLevelCapTable_Normal_Caps_And_Hard_Mode[] =//MODERN HNS UPDATED
 {
-    [LEVEL_CAP_NO_BADGES]   = 16, //+1
-    [LEVEL_CAP_BADGE_1]     = 21, //+2
-    [LEVEL_CAP_BADGE_2]     = 26, //+2
-    [LEVEL_CAP_BADGE_3]     = 32, //+3
+    [LEVEL_CAP_NO_BADGES]   = 12, //+1
+    [LEVEL_CAP_BADGE_1]     = 18, //+2
+    [LEVEL_CAP_BADGE_2]     = 23, //+2
+    [LEVEL_CAP_BADGE_3]     = 28, //+3
     [LEVEL_CAP_BADGE_4]     = 34, //+3
-    [LEVEL_CAP_BADGE_5]     = 36, //+3
-    [LEVEL_CAP_BADGE_6]     = 48, //+6
-    [LEVEL_CAP_BADGE_7]     = 52, //+6
-    [LEVEL_CAP_BADGE_8]     = 64, //+6
+    [LEVEL_CAP_BADGE_5]     = 41, //+5
+    [LEVEL_CAP_BADGE_6]     = 44, //+6
+    [LEVEL_CAP_BADGE_7]     = 51, //+6
+    [LEVEL_CAP_BADGE_8]     = 62, //+6
 };
 
-static const u8 sLevelCapTable_Hard_Caps_And_Hard_Mode[] = //UNCHANGED FROM M.E. 
+static const u8 sLevelCapTable_Hard_Caps_And_Hard_Mode[] = //MODERN HNS UPDATED
 {
-    [LEVEL_CAP_NO_BADGES]   = 13, //+1
-    [LEVEL_CAP_BADGE_1]     = 18, //+2
+    [LEVEL_CAP_NO_BADGES]   = 9,  //+1
+    [LEVEL_CAP_BADGE_1]     = 17, //+2
     [LEVEL_CAP_BADGE_2]     = 22, //+2
-    [LEVEL_CAP_BADGE_3]     = 27, //+3
-    [LEVEL_CAP_BADGE_4]     = 30, //+3
-    [LEVEL_CAP_BADGE_5]     = 32, //+3
-    [LEVEL_CAP_BADGE_6]     = 47, //+6
-    [LEVEL_CAP_BADGE_7]     = 47, //+6
-    [LEVEL_CAP_BADGE_8]     = 61, //+6
+    [LEVEL_CAP_BADGE_3]     = 23, //+3
+    [LEVEL_CAP_BADGE_4]     = 29, //+3
+    [LEVEL_CAP_BADGE_5]     = 33, //+5
+    [LEVEL_CAP_BADGE_6]     = 37, //+6
+    [LEVEL_CAP_BADGE_7]     = 42, //+6
+    [LEVEL_CAP_BADGE_8]     = 54, //+6
 };
 #define TX_CHALLENGE_LEVEL_CAP_DEBUG 0
 #define KANTO_MAX_LEVEL 70
