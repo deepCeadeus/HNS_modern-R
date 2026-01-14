@@ -38,6 +38,12 @@ static bool32 ShouldDoNearbyMessage(void);
 
 #include "data/text/match_call_messages.h"
 
+static const u8 sMatchCallOptionsNothingToDo[] =
+{
+    MATCH_CALL_OPTION_CANCEL
+};
+
+
 static const u8 sMatchCallOptionsNoCheckPage[] =
 {
     MATCH_CALL_OPTION_CALL,
@@ -96,8 +102,8 @@ static u32 CB2_HandleMatchCallInput(struct Pokenav_MatchCallMenu *state)
 
         if (!state->matchCallEntries[selection].isSpecialTrainer || MatchCall_HasCheckPage(state->matchCallEntries[selection].headerId))
         {
-            state->matchCallOptions = sMatchCallOptionsHasCheckPage;
-            state->maxOptionId = ARRAY_COUNT(sMatchCallOptionsHasCheckPage) - 1;
+            state->matchCallOptions = sMatchCallOptionsNothingToDo;
+            state->maxOptionId = ARRAY_COUNT(sMatchCallOptionsNothingToDo) - 1;
         }
         else
         {
