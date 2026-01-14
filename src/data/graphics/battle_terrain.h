@@ -90,9 +90,12 @@ const u32 gBattleTerrainPalette_Plain_2_Night[] = INCBIN_U32("graphics/battle_te
 
 const u32 gBattleTerrainTiles_Building[] = INCBIN_U32("graphics/battle_terrain/building/tiles.4bpp.lz");
 const u32 gBattleTerrainTiles_Building_2[] = INCBIN_U32("graphics/battle_terrain/building_2/tiles.4bpp.lz");
-const u32 gBattleTerrainPalette_Frontier[] = INCBIN_U32("graphics/battle_terrain/plain/link.gbapal.lz"); // this is also used for link battles
 const u32 gBattleTerrainTilemap_Building[] = INCBIN_U32("graphics/battle_terrain/building/map.bin.lz");
 const u32 gBattleTerrainTilemap_Building_2[] = INCBIN_U32("graphics/battle_terrain/building_2/map.bin.lz");
+
+const u32 gBattleTerrainPalette_Frontier[] = INCBIN_U32("graphics/battle_terrain/building/battle_frontier_emerald.gbapal.lz"); // this is also used for link battles
+const u32 gBattleTerrainTiles_Frontier[] = INCBIN_U32("graphics/battle_terrain/building/tiles_emerald.4bpp.lz");
+const u32 gBattleTerrainTilemap_Frontier[] = INCBIN_U32("graphics/battle_terrain/building/map_emerald.bin.lz");
 
 const u32 gBattleTerrainTiles_Blue_Building[] = INCBIN_U32("graphics/battle_terrain/blue_building/tiles.4bpp.lz");
 const u32 gBattleTerrainTiles_Blue_Building_2[] = INCBIN_U32("graphics/battle_terrain/blue_building_2/tiles.4bpp.lz");
@@ -212,7 +215,10 @@ const u32 gBattleTerrainAnimTiles_Rayquaza_2[] = INCBIN_U32("graphics/battle_ter
 const u32 gBattleTerrainAnimTilemap_Rayquaza_2[] = INCBIN_U32("graphics/battle_terrain/sky_2/anim_map.bin.lz");
 
 //new for modern
-const u32 gBattleTerrainPalette_Frontier_2[] = INCBIN_U32("graphics/battle_terrain/building_2/battle_frontier.gbapal.lz"); // this is also used for link battles
+const u32 gBattleTerrainPalette_Frontier_2[] = INCBIN_U32("graphics/battle_terrain/building_2/battle_frontier_modern.gbapal.lz"); // this is also used for link battles
+const u32 gBattleTerrainTiles_Frontier_2[] = INCBIN_U32("graphics/battle_terrain/building_2/tiles_frontier_modern.4bpp.lz");
+const u32 gBattleTerrainTilemap_Frontier_2[] = INCBIN_U32("graphics/battle_terrain/building_2/map_frontier_modern.bin.lz");
+
 const u32 gBattleTerrainPalette_BuildingAqua[] = INCBIN_U32("graphics/battle_terrain/building_2/palette4.gbapal.lz");
 const u32 gBattleTerrainPalette_BuildingMagma[] = INCBIN_U32("graphics/battle_terrain/building_2/palette5.gbapal.lz");
 const u32 gBattleTerrainPalette_StadiumLeader[] = INCBIN_U32("graphics/battle_terrain/stadium_2/palette8.gbapal.lz");

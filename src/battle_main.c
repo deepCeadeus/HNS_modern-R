@@ -1041,7 +1041,7 @@ static void CB2_InitBattleInternal(void)
     LoadBattleTextboxAndBackground();
     ResetSpriteData();
     ResetTasks();
-    if (gSaveBlock2Ptr->optionsFastIntro == 1)
+    if ((gSaveBlock2Ptr->optionsFastIntro == 1) || (gBattleTypeFlags & BATTLE_TYPE_MULTI && gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER))
     {
         DrawBattleEntryBackground();
     }

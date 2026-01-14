@@ -3799,6 +3799,8 @@ extern const u32 gBattleTerrainPalette_Plain_Night[];
 extern const u32 gBattleTerrainPalette_Plain_2[];
 extern const u32 gBattleTerrainPalette_Plain_2_Night[];
 extern const u32 gBattleTerrainPalette_Frontier[];
+extern const u32 gBattleTerrainTiles_Frontier[];
+extern const u32 gBattleTerrainTilemap_Frontier[];
 extern const u32 gBattleTerrainTiles_Stadium[];
 extern const u32 gBattleTerrainTilemap_Stadium[];
 extern const u32 gBattleTerrainTiles_Stadium_2[];
@@ -3839,6 +3841,8 @@ extern const u32 gBattleTerrainPalette_StadiumLeader[];
 extern const u32 gBattleTerrainTiles_Plain_2[];
 extern const u32 gBattleTerrainTilemap_Plain_2[];
 extern const u32 gBattleTerrainPalette_Frontier_2[];
+extern const u32 gBattleTerrainTiles_Frontier_2[];
+extern const u32 gBattleTerrainTilemap_Frontier_2[];
 
 // Pokédex
 extern const u32 gPokedexInterface_Gfx[];
