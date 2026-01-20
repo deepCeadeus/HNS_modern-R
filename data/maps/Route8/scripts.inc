@@ -18,9 +18,24 @@ Route8_EventScript_Harris::
 	end
 
 Route8_EventScript_Zeke::
-	trainerbattle_single TRAINER_ZEKE, Route8_Text_BikerZekeSeen, Route8_Text_BikerZekeBeaten
+	trainerbattle_single TRAINER_ZEKE, Route8_Text_BikerZekeSeen, Route8_Text_BikerZekeBeaten, Route8_EventScript_Zeke_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route8_EventScript_Zeke_Rematch
 	msgbox Route8_Text_BikerZekeAfter, MSGBOX_AUTOCLOSE
 	end
+
+Route8_EventScript_Zeke_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route8_Text_BikerZeke_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_ZEKE
+	release
+	end
+
+Route8_EventScript_Zeke_Rematch::
+	trainerbattle_rematch TRAINER_ZEKE, Route8_Text_BikerZekeSeen_Rematch, Route8_Text_BikerZekeBeaten
+	msgbox Route8_Text_BikerZekeAfter, MSGBOX_AUTOCLOSE
+	end	
 
 Route8_EventScript_Sam::
 	trainerbattle_single TRAINER_SAM, Route8_Text_SupernerdSamSeen, Route8_Text_SupernerdSamBeaten
@@ -57,9 +72,20 @@ Route8_Text_BikerHarrisAfter:
 	.string "JOHTO…$"
 
 Route8_Text_BikerZekeSeen:
-	.string "We're the KANTO POKéMON FEDERA-\n"
-	.string "TION!\n"
+	.string "We're the KANTO POKéMON\n"
+	.string "FEDERATION!\n"
 	.string "Right on!$"
+
+Route8_Text_BikerZekeSeen_Rematch:
+	.string "We're the KANTO POKéMON\n"
+	.string "FEDERATION!\p"
+	.string "And I'll become the strongest\n"
+	.string "member!$"
+
+Route8_Text_BikerZeke_Register:
+	.string "Don't tell the rest, but\n"
+	.string "here's my number.\p"
+	.string "I want to battle you again!$"
 
 Route8_Text_BikerZekeBeaten:
 	.string "Yikes! Sorry!$"

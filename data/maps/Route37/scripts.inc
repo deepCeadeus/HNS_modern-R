@@ -10,14 +10,40 @@ Route37_OnTransition:
 
 
 Route37_EventScript_TwinAnn::
-	trainerbattle_double TRAINER_ANN_AND_ANNE, Route37_Text_TwinsAnnAndAnne1_Seen, Route37_Text_TwinsAnnAndAnne1_Beaten, Route104_Text_GinaNotEnoughMons
+	trainerbattle_double TRAINER_ANN_AND_ANNE, Route37_Text_TwinsAnnAndAnne1_Seen, Route37_Text_TwinsAnnAndAnne1_Beaten, Route104_Text_GinaNotEnoughMons, Route37_EventScript_TwinAnn_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route37_EventScript_TwinAnn_Rematch
+	special GetPlayerBigGuyGirlString
+	msgbox Route37_Text_TwinsAnnAndAnne1_After, MSGBOX_DEFAULT
+	release
+	end
+
+Route37_EventScript_TwinAnn_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route37_Text_TwinsAnnAndAnne1_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_ANN_AND_ANNE
+	release
+	end
+
+Route37_EventScript_TwinAnn_Rematch::
+	trainerbattle_rematch_double TRAINER_ANN_AND_ANNE, Route37_Text_TwinsAnnAndAnne1_Seen, Route37_Text_TwinsAnnAndAnne1_Beaten, Route104_Text_GinaNotEnoughMons
 	special GetPlayerBigGuyGirlString
 	msgbox Route37_Text_TwinsAnnAndAnne1_After, MSGBOX_DEFAULT
 	release
 	end
 	
 Route37_EventScript_TwinAnne::
-	trainerbattle_double TRAINER_ANN_AND_ANNE, Route37_Text_TwinsAnnAndAnne2_Seen, Route37_Text_TwinsAnnAndAnne2_Beaten, Route104_Text_GinaNotEnoughMons
+	trainerbattle_double TRAINER_ANN_AND_ANNE, Route37_Text_TwinsAnnAndAnne2_Seen, Route37_Text_TwinsAnnAndAnne2_Beaten, Route104_Text_GinaNotEnoughMons, Route37_EventScript_TwinAnn_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route37_EventScript_TwinAnne_Rematch
+	special GetPlayerBigGuyGirlString
+	msgbox Route37_Text_TwinsAnnAndAnne2_After, MSGBOX_DEFAULT
+	release
+	end
+
+Route37_EventScript_TwinAnne_Rematch::
+	trainerbattle_rematch_double TRAINER_ANN_AND_ANNE, Route37_Text_TwinsAnnAndAnne2_Seen, Route37_Text_TwinsAnnAndAnne2_Beaten, Route104_Text_GinaNotEnoughMons,
 	special GetPlayerBigGuyGirlString
 	msgbox Route37_Text_TwinsAnnAndAnne2_After, MSGBOX_DEFAULT
 	release
@@ -91,6 +117,9 @@ Route37_Text_TwinsAnnAndAnne1_Beaten:
 Route37_Text_TwinsAnnAndAnne1_After:
 	.string "ANN: I can tell what my sister and\n"
 	.string "my POKéMON are thinking.$"
+
+Route37_Text_TwinsAnnAndAnne1_Register:
+	.string "Will you play with us again?$"
 
 Route37_Text_TwinsAnnAndAnne2_Seen:
 	.string "ANNE: ANN and I are in this\n"

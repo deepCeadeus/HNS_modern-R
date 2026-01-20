@@ -12,7 +12,22 @@ Route40_MapScript_ClearWeather::
 	end
 
 Route40_EventScript_Simon::
-	trainerbattle_single TRAINER_SIMON, Route40_Text_SwimmermSimonSeen, Route40_Text_SwimmermSimonBeaten
+	trainerbattle_single TRAINER_SIMON, Route40_Text_SwimmermSimonSeen, Route40_Text_SwimmermSimonBeaten, Route40_EventScript_Simon_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route40_EventScript_Simon_Rematch
+	msgbox Route40_Text_SwimmermSimonAfter, MSGBOX_AUTOCLOSE
+	end
+
+Route40_EventScript_Simon_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route40_Text_SwimmermSimon_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_SIMON
+	release
+	end
+
+Route40_EventScript_Simon_Rematch::
+	trainerbattle_rematch TRAINER_SIMON, Route40_Text_SwimmermSimonSeen_Rematch, Route40_Text_SwimmermSimonBeaten
 	msgbox Route40_Text_SwimmermSimonAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -20,6 +35,16 @@ Route40_Text_SwimmermSimonSeen:
 	.string "You have to warm up before\n"
 	.string "going into the water.\p"
 	.string "That's basic.$"
+
+Route40_Text_SwimmermSimonSeen_Rematch:
+	.string "Have you warmed up?\p"
+	.string "I'm not going to go easy on\n"
+	.string "you, like last time.$"
+
+Route40_Text_SwimmermSimon_Register:
+	.string "This battle has been a warm\n"
+	.string "up for me. I'll get you next\l"
+	.string "time. You'll see!$"
 
 Route40_Text_SwimmermSimonBeaten:
 	.string "OK! Uncle! I give!$"

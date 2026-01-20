@@ -23,7 +23,22 @@ Route13_EventScript_Perry::
 	end
 
 Route13_EventScript_Bret::
-	trainerbattle_single TRAINER_BRET Route13_Text_BirdKeeperBretSeen, Route13_Text_BirdKeeperBretBeaten
+	trainerbattle_single TRAINER_BRET Route13_Text_BirdKeeperBretSeen, Route13_Text_BirdKeeperBretBeaten, Route13_EventScript_Bret_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route13_EventScript_Bret_Rematch
+	msgbox Route13_Text_BirdKeeperBretAfterBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route13_EventScript_Bret_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route13_Text_BirdKeeperBret_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_BRET
+	release
+	end
+
+Route13_EventScript_Bret_Rematch::
+	trainerbattle_rematch TRAINER_BRET Route13_Text_BirdKeeperBretSeen, Route13_Text_BirdKeeperBretBeaten
 	msgbox Route13_Text_BirdKeeperBretAfterBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -81,6 +96,12 @@ Route13_Text_BirdKeeperBretSeen:
 	.string "Check out my POKéMON. Just look\n"
 	.string "at their coloring and their\l"
 	.string "plumage.$"
+
+Route13_Text_BirdKeeperBret_Register:
+	.string "Here's my number, so we can\n"
+	.string "battle again in the future.\p"
+	.string "What? You've never seen a\n"
+	.string "feather used as a paper?$"
 
 Route13_Text_BirdKeeperBretBeaten:
 	.string "Shoot! Not good enough!$"

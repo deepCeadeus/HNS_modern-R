@@ -381,70 +381,70 @@
 
 // Trainer Rematch Flags
 #define FLAG_MATCH_CALL_REGISTERED           0x15C
-#define FLAG_REMATCH_ROSE                    0x15D
-#define FLAG_REMATCH_ANDRES                  0x15E
-#define FLAG_REMATCH_DUSTY                   0x15F
-#define FLAG_REMATCH_LOLA                    0x160
-#define FLAG_REMATCH_RICKY                   0x161
-#define FLAG_REMATCH_LILA_AND_ROY            0x162
-#define FLAG_REMATCH_CRISTIN                 0x163
-#define FLAG_REMATCH_BROOKE                  0x164
-#define FLAG_REMATCH_WILTON                  0x165
-#define FLAG_REMATCH_VALERIE                 0x166
-#define FLAG_REMATCH_CINDY                   0x167
-#define FLAG_REMATCH_THALIA                  0x168
-#define FLAG_REMATCH_JESSICA                 0x169
-#define FLAG_REMATCH_WINSTON                 0x16A
-#define FLAG_REMATCH_STEVE                   0x16B
-#define FLAG_REMATCH_TONY                    0x16C
-#define FLAG_REMATCH_NOB                     0x16D
-#define FLAG_REMATCH_KOJI                    0x16E
-#define FLAG_REMATCH_FERNANDO                0x16F
-#define FLAG_REMATCH_DALTON                  0x170
-#define FLAG_REMATCH_BERNIE                  0x171
-#define FLAG_REMATCH_ETHAN                   0x172
-#define FLAG_REMATCH_JOHN_AND_JAY            0x173
-#define FLAG_REMATCH_JEFFREY                 0x174
-#define FLAG_REMATCH_CAMERON                 0x175
-#define FLAG_REMATCH_JACKI                   0x176
-#define FLAG_REMATCH_WALTER                  0x177
-#define FLAG_REMATCH_KAREN                   0x178
-#define FLAG_REMATCH_JERRY                   0x179
-#define FLAG_REMATCH_ANNA_AND_MEG            0x17A
-#define FLAG_REMATCH_ISABEL                  0x17B
-#define FLAG_REMATCH_MIGUEL                  0x17C
-#define FLAG_REMATCH_TIMOTHY                 0x17D
-#define FLAG_REMATCH_SHELBY                  0x17E
-#define FLAG_REMATCH_CALVIN                  0x17F
-#define FLAG_REMATCH_ELLIOT                  0x180
-#define FLAG_REMATCH_ISAIAH                  0x181
-#define FLAG_REMATCH_MARIA                   0x182
-#define FLAG_REMATCH_ABIGAIL                 0x183
-#define FLAG_REMATCH_DYLAN                   0x184
-#define FLAG_REMATCH_KATELYN                 0x185
-#define FLAG_REMATCH_BENJAMIN                0x186
-#define FLAG_REMATCH_PABLO                   0x187
-#define FLAG_REMATCH_NICOLAS                 0x188
-#define FLAG_REMATCH_ROBERT                  0x189
-#define FLAG_REMATCH_LAO                     0x18A
-#define FLAG_REMATCH_CYNDY                   0x18B
-#define FLAG_REMATCH_MADELINE                0x18C
-#define FLAG_REMATCH_JENNY                   0x18D
-#define FLAG_REMATCH_DIANA                   0x18E
-#define FLAG_REMATCH_AMY_AND_LIV             0x18F
-#define FLAG_REMATCH_ERNEST                  0x190
-#define FLAG_REMATCH_CORY                    0x191
-#define FLAG_REMATCH_EDWIN                   0x192
-#define FLAG_REMATCH_LYDIA                   0x193
-#define FLAG_REMATCH_ISAAC                   0x194
-#define FLAG_REMATCH_GABRIELLE               0x195
-#define FLAG_REMATCH_CATHERINE               0x196
-#define FLAG_REMATCH_JACKSON                 0x197
-#define FLAG_REMATCH_HALEY                   0x198
-#define FLAG_REMATCH_JAMES                   0x199
-#define FLAG_REMATCH_TRENT                   0x19A
-#define FLAG_REMATCH_SAWYER                  0x19B
-#define FLAG_REMATCH_KIRA_AND_DAN            0x19C
+#define FLAG_REMATCH_JOEY                    0x15D //Hns Rematch
+#define FLAG_REMATCH_MIKEY                   0x15E //Hns Rematch
+#define FLAG_REMATCH_LIZ                     0x15F //Hns Rematch
+#define FLAG_REMATCH_COLETTE                 0x160 //Hns Rematch
+#define FLAG_REMATCH_BROOKE                  0x161 //Hns Rematch
+#define FLAG_REMATCH_HENRY                   0x162 //Hns Rematch
+#define FLAG_REMATCH_ANTHONY                 0x163 //Hns Rematch
+#define FLAG_REMATCH_BETH                    0x164 //Hns Rematch
+#define FLAG_REMATCH_BRANDON                 0x165 //Hns Rematch
+#define FLAG_REMATCH_TOBY                    0x166 //Hns Rematch
+#define FLAG_REMATCH_JOE                     0x167 //HnS Rematch
+#define FLAG_REMATCH_ROY                     0x168 //Hns Rematch
+#define FLAG_REMATCH_JAMIE                   0x169 //Hns Rematch
+#define FLAG_REMATCH_ANN_AND_ANNE            0x16A //Hns Rematch
+#define FLAG_REMATCH_SIMON                   0x16B //Hns Rematch
+#define FLAG_REMATCH_SHANE                   0x16C //Hns Rematch
+#define FLAG_REMATCH_RON                     0x16D //Hns Rematch
+#define FLAG_REMATCH_ELLIOT                  0x16E //Hns Rematch
+#define FLAG_REMATCH_PHIL                    0x16F //Hns Rematch
+#define FLAG_REMATCH_KATELYN                 0x170 //Hns Rematch
+#define FLAG_REMATCH_BRENT                   0x171 //Hns Rematch
+#define FLAG_REMATCH_BOB                     0x172 //Hns Rematch
+#define FLAG_REMATCH_THOM_AND_KAE            0x173 //Hns Rematch
+#define FLAG_REMATCH_QUINN                   0x174 //Hns Rematch
+#define FLAG_REMATCH_WARREN                  0x175 //Hns Rematch
+#define FLAG_REMATCH_ALLAN                   0x176 //Hns Rematch
+#define FLAG_REMATCH_ZEKE                    0x177 //Hns Rematch
+#define FLAG_REMATCH_TRAINER_SIDNEY          0x178 //Hns Rematch
+#define FLAG_REMATCH_JASON                   0x179 //Hns Rematch
+#define FLAG_REMATCH_JAKE                    0x17A //Hns Rematch
+#define FLAG_REMATCH_BRET                    0x17B //Hns Rematch
+#define FLAG_REMATCH_ANDRES                  0x17C //UnusedTrainer Rematch Flags
+#define FLAG_REMATCH_DUSTY                   0x17D 
+#define FLAG_REMATCH_CRISTIN                 0x17E 
+#define FLAG_REMATCH_CINDY                   0x17F
+#define FLAG_REMATCH_JESSICA                 0x180
+#define FLAG_REMATCH_STEVE                   0x181
+#define FLAG_REMATCH_TONY                    0x182
+#define FLAG_REMATCH_FERNANDO                0x183
+#define FLAG_REMATCH_DALTON                  0x184
+#define FLAG_REMATCH_BERNIE                  0x185
+#define FLAG_REMATCH_ETHAN                   0x186
+#define FLAG_REMATCH_JEFFREY                 0x187
+#define FLAG_REMATCH_CAMERON                 0x188
+#define FLAG_REMATCH_JACKI                   0x189
+#define FLAG_REMATCH_KAREN                   0x18A
+#define FLAG_REMATCH_JERRY                   0x18B
+#define FLAG_REMATCH_ISABEL                  0x18C
+#define FLAG_REMATCH_CALVIN                  0x18D
+#define FLAG_REMATCH_ISAIAH                  0x18E
+#define FLAG_REMATCH_ABIGAIL                 0x18F
+#define FLAG_REMATCH_DYLAN                   0x190
+#define FLAG_REMATCH_CYNDY                   0x191
+#define FLAG_REMATCH_JENNY                   0x192
+#define FLAG_REMATCH_DIANA                   0x193
+#define FLAG_REMATCH_ERNEST                  0x194
+#define FLAG_REMATCH_CORY                    0x195
+#define FLAG_REMATCH_EDWIN                   0x196
+#define FLAG_REMATCH_ISAAC                   0x197
+#define FLAG_REMATCH_GABRIELLE               0x198
+#define FLAG_REMATCH_CATHERINE               0x199
+#define FLAG_REMATCH_JACKSON                 0x19A
+#define FLAG_REMATCH_HALEY                   0x19B
+#define FLAG_REMATCH_JAMES                   0x19C
 #define FLAG_REMATCH_WALLY                   0x19D
 #define FLAG_REMATCH_ROXANNE                 0x19E
 #define FLAG_REMATCH_BRAWLY                  0x19F

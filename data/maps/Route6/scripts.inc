@@ -13,7 +13,22 @@ Route6_EventScript_Rex::
 	end
 
 Route6_EventScript_Allan::
-	trainerbattle_single TRAINER_ALLAN PokefanM_Text_AllanSeen, PokefanM_Text_AllanBeaten
+	trainerbattle_single TRAINER_ALLAN PokefanM_Text_AllanSeen, PokefanM_Text_AllanBeaten, Route6_EventScript_Allan_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route6_EventScript_Allan_Rematch
+	msgbox PokefanM_Text_AllanAfter, MSGBOX_AUTOCLOSE
+	end
+
+Route6_EventScript_Allan_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox PokefanM_Text_Allan_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_ALLAN
+	release
+	end
+
+Route6_EventScript_Allan_Rematch::
+	trainerbattle_rematch TRAINER_ALLAN PokefanM_Text_AllanSeen_Rematch, PokefanM_Text_AllanBeaten
 	msgbox PokefanM_Text_AllanAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -50,6 +65,15 @@ PokefanM_Text_RexAfter:
 PokefanM_Text_AllanSeen:
 	.string "My GRANBULL is the cutest in the\n"
 	.string "world.$"
+
+PokefanM_Text_AllanSeen_Rematch:
+	.string "My GRANBULL is the cutest in the\n"
+	.string "world.\p"
+	.string "And so are the rest of my POKÉMON!$"
+
+PokefanM_Text_Allan_Register::
+	.string "Do you want to see how strong my\n"
+	.string "GRANBULL gets?$"
 
 PokefanM_Text_AllanBeaten:
 	.string "My GRANBULL!$"

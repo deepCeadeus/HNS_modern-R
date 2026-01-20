@@ -313,7 +313,22 @@ Route39_Text_PsychicNormanAfter:
 	.string "potential.$"
 
 Route39_EventScript_Jamie::
-	trainerbattle_single TRAINER_JAMIE, Route39_Text_PokefanFJaimeSeen, Route39_Text_PokefanFJaimeBeaten
+	trainerbattle_single TRAINER_JAMIE, Route39_Text_PokefanFJaimeSeen, Route39_Text_PokefanFJaimeBeaten, Route39_EventScript_Jamie_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route39_EventScript_Jamie_Rematch
+	msgbox Route39_Text_PokefanFJaimeAfter, MSGBOX_AUTOCLOSE
+	end
+
+Route39_EventScript_Jamie_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route39_Text_PokefanFJaime_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_JAMIE
+	release
+	end
+
+Route39_EventScript_Jamie_Rematch::
+	trainerbattle_rematch TRAINER_JAMIE, Route39_Text_PokefanFJaimeSeen, Route39_Text_PokefanFJaimeBeaten
 	msgbox Route39_Text_PokefanFJaimeAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -321,6 +336,10 @@ Route39_Text_PokefanFJaimeSeen:
 	.string "You came at just the right\n"
 	.string "time.\p"
 	.string "Let's battle.$"
+
+Route39_Text_PokefanFJaime_Register:
+	.string "UMBREON and I want a rematch.\n"
+	.string "Here's my number.$"
 
 Route39_Text_PokefanFJaimeBeaten:
 	.string "Oh, how disappointing…$"

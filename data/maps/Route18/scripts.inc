@@ -13,7 +13,22 @@ Route18_EventScript_Boris::
 	end
 
 Route18_EventScript_Bob::
-	trainerbattle_single TRAINER_BOB Route18_Text_BirdKeeperBobSeen, Route18_Text_BirdKeeperBobBeaten
+	trainerbattle_single TRAINER_BOB Route18_Text_BirdKeeperBobSeen, Route18_Text_BirdKeeperBobBeaten, Route18_EventScript_Bob_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route18_EventScript_Bob_Rematch
+	msgbox Route18_Text_BirdKeeperBobAfterBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route18_EventScript_Bob_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route18_Text_BirdKeeperBob_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_BOB
+	release
+	end
+
+Route18_EventScript_Bob_Rematch::
+	trainerbattle_rematch TRAINER_BOB Route18_Text_BirdKeeperBobSeen, Route18_Text_BirdKeeperBobBeaten
 	msgbox Route18_Text_BirdKeeperBobAfterBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -35,6 +50,11 @@ Route18_Text_BirdKeeperBorisAfterBattle:
 Route18_Text_BirdKeeperBobSeen:
 	.string "CYCLING ROAD is a quick shortcut\n"
 	.string "to CELADON.$"
+
+Route18_Text_BirdKeeperBob_Register:
+	.string "I'll stay here for a while.\p"
+	.string "Come back if you want to\n"
+	.string "battle again.$"
 
 Route18_Text_BirdKeeperBobBeaten:
 	.string "…Whew!$"

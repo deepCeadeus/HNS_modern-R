@@ -50,7 +50,22 @@ Route25_EventScript_Ellen::
 	end
 
 Route25_EventScript_Joe::
-	trainerbattle_single TRAINER_JOE Route25_Text_SchoolboyJoeSeen, Route25_Text_SchoolboyJoeBeaten
+	trainerbattle_single TRAINER_JOE Route25_Text_SchoolboyJoeSeen, Route25_Text_SchoolboyJoeBeaten, Route25_EventScript_Joe_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_Joe_Rematch
+	msgbox Route25_Text_SchoolboyJoeAfter, MSGBOX_AUTOCLOSE
+	end
+
+Route25_EventScript_Joe_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route25_Text_SchoolboyJoe_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_JOE
+	release
+	end
+
+Route25_EventScript_Joe_Rematch::
+	trainerbattle_rematch TRAINER_JOE Route25_Text_SchoolboyJoeSeen, Route25_Text_SchoolboyJoeBeaten
 	msgbox Route25_Text_SchoolboyJoeAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -414,6 +429,9 @@ Route25_Text_LassEllenAfter:
 Route25_Text_SchoolboyJoeSeen:
 	.string "Here's No. 3!\n"
 	.string "I won't be easy.$"
+
+Route25_Text_SchoolboyJoe_Register:
+	.string "No. 3 wants a rematch!$"
 
 Route25_Text_SchoolboyJoeBeaten:
 	.string "Ow! Stomped flat!$"

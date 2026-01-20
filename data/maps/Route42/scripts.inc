@@ -172,7 +172,22 @@ Route42_EventScript_Ben::
 	end
 
 Route42_EventScript_Shane::
-	trainerbattle_single TRAINER_SHANE Route42_Text_PokemaniacShaneSeen, Route42_Text_PokemaniacShaneBeaten
+	trainerbattle_single TRAINER_SHANE Route42_Text_PokemaniacShaneSeen, Route42_Text_PokemaniacShaneBeaten, Route42_EventScript_Shane_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route42_EventScript_Shane_Rematch
+	msgbox Route42_Text_PokemaniacShaneAfter, MSGBOX_AUTOCLOSE
+	end
+
+Route42_EventScript_Shane_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route42_Text_PokemaniacShane_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_SHANE
+	release
+	end
+
+Route42_EventScript_Shane_Rematch::
+	trainerbattle_rematch TRAINER_SHANE Route42_Text_PokemaniacShaneSeen_Rematch, Route42_Text_PokemaniacShaneBeaten
 	msgbox Route42_Text_PokemaniacShaneAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -230,6 +245,16 @@ Route42_Text_PokemaniacShaneSeen:
 	.string "HEY!\p"
 	.string "This is my secret place!\n"
 	.string "Get lost, you outsider!$"
+
+Route42_Text_PokemaniacShaneSeen_Rematch:
+	.string "Welcome back!\n"
+	.string "This is my secret place!$"
+
+Route42_Text_PokemaniacShane_Register:
+	.string "You're working on a POKéDEX?\n"
+	.string "May I please see it?\p"
+	.string "Wait, that's my number!\n"
+	.string "Oh well, you can have it.$"
 
 Route42_Text_PokemaniacShaneBeaten:
 	.string "I should have used my\n"

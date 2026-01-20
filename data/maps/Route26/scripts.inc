@@ -8,7 +8,22 @@ Route26_OnTransition:
 	end
 
 Route26_EventScript_Jake::
-	trainerbattle_single TRAINER_JAKE Route26_Text_CooltrainermJakeSeen, Route26_Text_CooltrainermJakeBeaten
+	trainerbattle_single TRAINER_JAKE Route26_Text_CooltrainermJakeSeen, Route26_Text_CooltrainermJakeBeaten, Route26_EventScript_Jake_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route26_EventScript_Jake_Rematch
+	msgbox Route26_Text_CooltrainermJakeAfter, MSGBOX_AUTOCLOSE
+	end
+
+Route26_EventScript_Jake_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route26_Text_CooltrainermJake_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_JAKE
+	release
+	end
+
+Route26_EventScript_Jake_Rematch::
+    trainerbattle_rematch TRAINER_JAKE Route26_Text_CooltrainermJakeSeen, Route26_Text_CooltrainermJakeBeaten
 	msgbox Route26_Text_CooltrainermJakeAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -23,7 +38,22 @@ Route26_EventScript_Joyce::
 	end
 
 Route26_EventScript_Beth::
-	trainerbattle_single TRAINER_BETH Route26_Text_CooltrainerfBethSeen, Route26_Text_CooltrainerfBethBeaten
+	trainerbattle_single TRAINER_BETH Route26_Text_CooltrainerfBethSeen, Route26_Text_CooltrainerfBethBeaten, Route26_EventScript_Beth_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route26_EventScript_Beth_Rematch
+	msgbox Route26_Text_CooltrainerfBethAfter, MSGBOX_AUTOCLOSE
+	end
+
+Route26_EventScript_Beth_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route26_Text_CooltrainerfBeth_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_BETH
+	release
+	end
+
+Route26_EventScript_Beth_Rematch::
+    trainerbattle_rematch TRAINER_BETH Route26_Text_CooltrainerfBethSeen, Route26_Text_CooltrainerfBethBeaten
 	msgbox Route26_Text_CooltrainerfBethAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -35,6 +65,10 @@ Route26_EventScript_Richard::
 Route26_Text_CooltrainermJakeSeen:
     .string "I'm making my final preparations\n"
     .string "for the POKéMON LEAGUE.$"
+
+Route26_Text_CooltrainermJake_Register:
+    .string "I won't challenge the POKéMON\n"
+    .string "LEAGUE until I beat you.$"
 
 Route26_Text_CooltrainermJakeBeaten:
     .string "I blew it!$"
@@ -79,6 +113,11 @@ Route26_Text_CooltrainerfBethSeen:
     .string "It was as if he absolutely had to\n"
     .string "win at any cost.\p"
     .string "I felt sorry for his POKéMON.$"
+
+Route26_Text_CooltrainerfBeth_Register:
+    .string "You are different than him.\p"
+    .string "Let me battle you again in\n"
+    .string "the future.$"
 
 Route26_Text_CooltrainerfBethBeaten:
     .string "POKéMON aren't tools of war.$"

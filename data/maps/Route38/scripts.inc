@@ -8,7 +8,22 @@ Route38_OnTransition:
 	end
 
 Route38_EventScript_Toby::
-	trainerbattle_single TRAINER_TOBY, Route38_Text_BirdKeeperTobySeen, Route38_Text_BirdKeeperTobyBeaten
+	trainerbattle_single TRAINER_TOBY, Route38_Text_BirdKeeperTobySeen, Route38_Text_BirdKeeperTobyBeaten, Route38_EventScript_Toby_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route38_EventScript_Toby_Register_Rematch
+	msgbox Route38_Text_BirdKeeperTobyAfter, MSGBOX_AUTOCLOSE
+	end
+
+Route38_EventScript_Toby_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route38_Text_Toby_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_TOBY
+	release
+	end
+
+Route38_EventScript_Toby_Register_Rematch::
+	trainerbattle_rematch TRAINER_TOBY, Route38_Text_BirdKeeperTobySeen, Route38_Text_BirdKeeperTobyBeaten
 	msgbox Route38_Text_BirdKeeperTobyAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -58,6 +73,10 @@ Route38_EventScript_Item_LaxIncense::
 Route38_Text_BirdKeeperTobySeen:
 	.string "Fly high into the sky,\n"
 	.string "my beloved bird POKéMON!$"
+
+Route38_Text_Toby_Register:
+	.string "Can I fly into your contact\n"
+	.string "list?$"
 
 Route38_Text_BirdKeeperTobyBeaten:
 	.string "I feel like just flying\n"

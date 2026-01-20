@@ -169,7 +169,22 @@ Route14_EventScript_Carter::
 	end
 
 Route14_EventScript_Roy::
-	trainerbattle_single TRAINER_ROY Route14_Text_BirdKeeperRoySeen, Route14_Text_BirdKeeperRoyBeaten
+	trainerbattle_single TRAINER_ROY Route14_Text_BirdKeeperRoySeen, Route14_Text_BirdKeeperRoyBeaten, Route14_EventScript_Roy_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route14_EventScript_Roy_Rematch
+	msgbox Route14_Text_BirdKeeperRoyAfterBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route14_EventScript_Roy_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route14_Text_BirdKeeperRoy_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_ROY
+	release
+	end
+
+Route14_EventScript_Roy_Rematch::
+	trainerbattle_rematch TRAINER_ROY Route14_Text_BirdKeeperRoySeen, Route14_Text_BirdKeeperRoyBeaten
 	msgbox Route14_Text_BirdKeeperRoyAfterBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -215,6 +230,11 @@ Route14_Text_PokefanmCarterAfterBattle:
 Route14_Text_BirdKeeperRoySeen:
 	.string "My dream is to fly with my beloved\n"
 	.string "bird POKéMON.$"
+
+Route14_Text_BirdKeeperRoy_Register:
+	.string "Fly away…!\p"
+	.string "But not too far. I want\n"
+	.string "to win next time.$"
 
 Route14_Text_BirdKeeperRoyBeaten:
 	.string "I can dream, but I can't ever fly…$"

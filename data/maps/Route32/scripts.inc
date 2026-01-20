@@ -22,7 +22,22 @@ Route32_EventScript_FisherRalph::
 	end
 
 Route32_EventScript_FisherHenry::
-	trainerbattle_single TRAINER_HENRY Route32_Text_FisherHenry_Seen, Route32_Text_FisherHenry_Beaten
+	trainerbattle_single TRAINER_HENRY Route32_Text_FisherHenry_Seen, Route32_Text_FisherHenry_Beaten, Route32_EventScript_FisherHenry_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route32_EventScript_FisherHenry_Rematch
+	msgbox Route32_Text_FisherHenry_After, MSGBOX_AUTOCLOSE
+	end
+
+Route32_EventScript_FisherHenry_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route32_Text_FisherHenry_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_HENRY
+	release
+	end
+
+Route32_EventScript_FisherHenry_Rematch::
+	trainerbattle_rematch TRAINER_HENRY Route32_Text_FisherHenry_Seen, Route32_Text_FisherHenry_Beaten
 	msgbox Route32_Text_FisherHenry_After, MSGBOX_AUTOCLOSE
 	end
 
@@ -42,7 +57,22 @@ Route32_EventScript_CamperRoland::
 	end
 
 Route32_EventScript_PicnickerLiz::
-	trainerbattle_single TRAINER_LIZ Route32_Text_PicnickerLiz1_Seen, Route32_Text_PicnickerLiz1_Beaten
+	trainerbattle_single TRAINER_LIZ Route32_Text_PicnickerLiz1_Seen, Route32_Text_PicnickerLiz1_Beaten, Route32_EventScript_PicnickerLiz_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route32_EventScript_PicnickerLiz_Rematch
+	msgbox Route32_Text_PicnickerLiz1_After, MSGBOX_AUTOCLOSE
+	end
+
+Route32_EventScript_PicnickerLiz_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route32_Text_PicnickerLiz_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_LIZ
+	release
+	end
+
+Route32_EventScript_PicnickerLiz_Rematch::
+	trainerbattle_rematch TRAINER_LIZ Route32_Text_PicnickerLiz1_Rematch_Seen, Route32_Text_PicnickerLiz1_Beaten
 	msgbox Route32_Text_PicnickerLiz1_After, MSGBOX_AUTOCLOSE
 	end
 
@@ -409,6 +439,11 @@ Route32_Text_FisherHenry_Seen:
 Route32_Text_FisherHenry_Beaten:
 	.string "SPLASH?$"
 
+Route32_Text_FisherHenry_Register:
+	.string "I'll show you more freshly\n"
+	.string "caught POKéMON, but only if\l"
+	.string "we share our numbers!$"
+
 Route32_Text_FisherHenry_After:
 	.string "Freshly caught POKéMON are\n"
 	.string "no match for properly raised ones.$"
@@ -453,12 +488,24 @@ Route32_Text_PicnickerLiz1_Seen:
 	.string "Pardon? Battle? I'm on the phone.\n"
 	.string "Oh, all right. But make it fast.$"
 
+Route32_Text_PicnickerLiz_Register::
+	.string "Do you have a phone?\p"
+	.string "You do!\p"
+	.string "Here's my number!\n"
+	.string "Next time I won't lose!$"
+
 Route32_Text_PicnickerLiz1_Beaten:
 	.string "Oh! I've got to relieve\n"
 	.string "my anger!$"
 
 Route32_Text_PicnickerLiz1_After:
 	.string "I was having a nice chat too.$"
+
+Route32_Text_PicnickerLiz1_Rematch_Seen:
+	.string "Uh-huh. So, you know…\p"
+	.string "I'm on the phone.\p"
+	.string "But I was waiting for you.\n"
+	.string "They can wait!$"
 
 Route32_Text_BirdKeeperPeter_Seen:
 	.string "That BADGE! It's from VIOLET CITY!\n"

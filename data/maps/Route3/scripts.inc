@@ -13,7 +13,22 @@ Route3_EventScript_Otis::
 	end
 
 Route3_EventScript_Warren::
-	trainerbattle_single TRAINER_WARREN, Route3_Text_YoungsterWarren_Seen, Route3_Text_YoungsterWarren_Beaten
+	trainerbattle_single TRAINER_WARREN, Route3_Text_YoungsterWarren_Seen, Route3_Text_YoungsterWarren_Beaten, Route3_EventScript_Warren_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route3_EventScript_Warren_Rematch
+	msgbox Route3_Text_YoungsterWarren_AfterBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route3_EventScript_Warren_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route3_Text_YoungsterWarren_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_WARREN
+	release
+	end
+
+Route3_EventScript_Warren_Rematch::
+	trainerbattle_rematch TRAINER_WARREN, Route3_Text_YoungsterWarren_Seen, Route3_Text_YoungsterWarren_Beaten
 	msgbox Route3_Text_YoungsterWarren_AfterBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -43,6 +58,10 @@ Route3_Text_FirebreatherOtis_AfterBattle:
 
 Route3_Text_YoungsterWarren_Seen:
 	.string "Hmmm… I don't know what to do…$"
+
+Route3_Text_YoungsterWarren_Register:
+	.string "I know what to do!\p"
+	.string "I'll give you my number!$"
 
 Route3_Text_YoungsterWarren_Beaten:
 	.string "I knew I'd lose…$"

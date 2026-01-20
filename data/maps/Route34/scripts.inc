@@ -42,7 +42,22 @@ Route34_EventScript_OfficerKeith::
 
 
 Route34_EventScript_PokefanMBrandon::
-	trainerbattle_single TRAINER_BRANDON Route34_Text_PokefanBrandon_Seen, Route34_Text_PokefanBrandon_Beaten
+	trainerbattle_single TRAINER_BRANDON Route34_Text_PokefanBrandon_Seen, Route34_Text_PokefanBrandon_Beaten, Route34_EventScript_PokefanMBrandon_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route34_EventScript_PokefanMBrandon_Rematch
+	msgbox Route34_Text_PokefanBrandon_After, MSGBOX_AUTOCLOSE
+	end
+
+Route34_EventScript_PokefanMBrandon_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route34_Text_PokefanBrandon_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_BRANDON
+	release
+	end
+
+Route34_EventScript_PokefanMBrandon_Rematch::
+	trainerbattle_rematch TRAINER_BRANDON Route34_Text_PokefanBrandon_Seen, Route34_Text_PokefanBrandon_Beaten
 	msgbox Route34_Text_PokefanBrandon_After, MSGBOX_AUTOCLOSE
 	end
 
@@ -166,6 +181,11 @@ Route34_Text_PokefanBrandon_Beaten:
 Route34_Text_PokefanBrandon_After:
 	.string "My POKéMON came back with new moves.\p"
 	.string "That confounded me to no end!$"
+
+Route34_Text_PokefanBrandon_Register:
+	.string "I will continue training my\n"
+	.string "POKéMON.\p"
+	.string "Next time you won't win!$"
 
 Route34_Text_Sign_IlexForest:
 	.string "ILEX FOREST\n"

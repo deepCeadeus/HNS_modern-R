@@ -13,7 +13,22 @@ Route11_EventScript_Owen::
 	end
 
 Route11_EventScript_Jason::
-	trainerbattle_single TRAINER_JASON Route11_Text_YoungsterJasonSeen, Route11_Text_YoungsterJasonBeaten
+	trainerbattle_single TRAINER_JASON Route11_Text_YoungsterJasonSeen, Route11_Text_YoungsterJasonBeaten, Route11_EventScript_Jason_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route11_EventScript_Jason_Rematch
+	msgbox Route11_Text_YoungsterJasonAfterBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route11_EventScript_Jason_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route11_Text_YoungsterJason_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_JASON
+	release
+	end
+
+Route11_EventScript_Jason_Rematch::
+	trainerbattle_rematch TRAINER_JASON Route11_Text_YoungsterJasonSeen, Route11_Text_YoungsterJasonBeaten
 	msgbox Route11_Text_YoungsterJasonAfterBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -35,7 +50,7 @@ Route11_EventScript_Engineer::
 Route11_Text_Engineer:
 	.string "I saw a strange POKéMON climbing\n"
 	.string "in the trees, but it didn't\l"
-	.string "look like MANKEY...$"
+	.string "look like MANKEY…$"
 
 Route11_Text_YoungsterOwenSeen:
 	.string "There's no cheating in POKéMON.\p"
@@ -52,6 +67,14 @@ Route11_Text_YoungsterOwenAfterBattle:
 Route11_Text_YoungsterJasonSeen:
 	.string "It itches and tickles a bit when\n"
 	.string "I wear shorts in the grass.$"
+
+Route11_Text_YoungsterJason_Register:
+	.string "Don't move!\p"
+	.string "I'll go to the POKéCENTER and\n"
+	.string "heal my party.\p"
+	.string "Oh, you need to go?\p"
+	.string "Okay, fine. Here's my\n"
+	.string "number.$"
 
 Route11_Text_YoungsterJasonBeaten:
 	.string "Aiyaaah! I got stomped!$"

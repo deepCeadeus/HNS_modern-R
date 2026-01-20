@@ -55,15 +55,45 @@ Route30_EventScript_Youngster_Joey_Fighting::
 
 
 Route30_EventScript_Youngster_Joey::
-	trainerbattle_single TRAINER_JOEY, Route30_Text_YoungsterJoey1Seen, Route30_Text_YoungsterJoey1Beaten
+	trainerbattle_single TRAINER_JOEY, Route30_Text_YoungsterJoey1Seen, Route30_Text_YoungsterJoey1Beaten, Route30_EventScript_Youngster_Joey_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route30_EventScript_Youngster_Joey_Rematch
+	msgbox Route30_Text_YoungsterJoey1After, MSGBOX_AUTOCLOSE
+	end
+
+Route30_EventScript_Youngster_Joey_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route30_Text_YoungsterJoey1Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_JOEY
+	release
+	end
+
+Route30_EventScript_Youngster_Joey_Rematch::
+	trainerbattle_rematch TRAINER_JOEY, Route30_Text_YoungsterJoeyRematchSeen, Route30_Text_YoungsterJoey1Beaten
 	msgbox Route30_Text_YoungsterJoey1After, MSGBOX_AUTOCLOSE
 	end
 
 Route30_EventScript_Youngster_Mikey::
-	trainerbattle_single TRAINER_MIKEY, Route30_Text_YoungsterMikeySeen, Route30_Text_YoungsterMikeyBeaten
+	trainerbattle_single TRAINER_MIKEY, Route30_Text_YoungsterMikeySeen, Route30_Text_YoungsterMikeyBeaten, Route30_EventScript_Youngster_Mikey_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route30_EventScript_Youngster_Mikey_Rematch
 	msgbox Route30_Text_YoungsterMikeyAfter, MSGBOX_AUTOCLOSE
 	end
-	
+
+Route30_EventScript_Youngster_Mikey_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route30_Text_YoungsterMikeyRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_MIKEY
+	release
+	end
+
+Route30_EventScript_Youngster_Mikey_Rematch::
+	trainerbattle_rematch TRAINER_MIKEY, Route30_Text_YoungsterMikeyRematchSeen, Route30_Text_YoungsterMikeyRematchBeaten
+	msgbox Route30_Text_YoungsterMikeyAfter, MSGBOX_AUTOCLOSE
+	end
+
 Route30_EventScript_Bugcatcher_Don::
 	trainerbattle_single TRAINER_DON, Route30_Text_BugCatcherDonSeen, Route30_Text_BugCatcherDonBeaten
 	msgbox Route30_Text_BugCatcherDonAfter, MSGBOX_AUTOCLOSE
@@ -127,6 +157,19 @@ Route30_Text_YoungsterJoey1Beaten:
 	.string "Ack! I lost again!\n"
 	.string "Doggone it!$"
 
+Route30_Text_YoungsterJoeyRematchSeen:
+	.string "I'm tired of losing! So I found\n"
+	.string "new POKéMON.\p"
+	.string "Wait! Don't go! Come on,\n"
+	.string "let's battle again!$"
+
+Route30_Text_YoungsterJoey1Register:
+	.string "Did you know that if I give you my\n"
+	.string "number, we can have a rematch\l"
+	.string "in the future?\p"
+	.string "So you're getting my number!\p"
+	.string "Next time I won't lose!$"
+
 Route30_Text_YoungsterJoey1After:
 	.string "Do I have to have more POKéMON\n"
 	.string "in order to battle better?\p"
@@ -138,15 +181,29 @@ Route30_Text_YoungsterMikeySeen:
 	.string "right?\p"
 	.string "Then you have to battle!$"
 
+Route30_Text_YoungsterMikeyRematchSeen:
+	.string "You're that POKéMON trainer!\n"
+	.string "Then we have to battle again!$"
+
 Route30_Text_YoungsterMikeyBeaten:
 	.string "That's strange.\n"
 	.string "I won before.$"
+
+Route30_Text_YoungsterMikeyRematchBeaten:
+	.string "That's strange.\n"
+	.string "I lost again!$"
 
 Route30_Text_YoungsterMikeyAfter:
 	.string "Becoming a good trainer is\n"
 	.string "really tough.\p"
 	.string "I'm going to battle other\n"
 	.string "people to get better.$"
+
+Route30_Text_YoungsterMikeyRegister:
+	.string "I want a rematch, but not today!\p"
+	.string "If you want to know if I want a rematch\n"
+	.string "or not, check the POKéGEAR after\l"
+	.string "having obtained 5 BADGES.$"
 
 Route30_Text_BugCatcherDonSeen:
 	.string "Instead of a bug POKéMON,\n"

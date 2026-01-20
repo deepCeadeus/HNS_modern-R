@@ -54,7 +54,7 @@ static const struct Fanfare sFanfares[] = {
     [FANFARE_RG_PHOTO]                 = { MUS_RG_PHOTO                ,  90 },
     [FANFARE_RG_POKE_FLUTE]            = { MUS_RG_POKE_FLUTE           , 450 },
     [FANFARE_OBTAIN_B_POINTS]          = { MUS_OBTAIN_B_POINTS         , 313 },
-    [FANFARE_REGISTER_MATCH_CALL]      = { MUS_REGISTER_MATCH_CALL     , 135 },
+    [FANFARE_REGISTER_MATCH_CALL]      = { MUS_HG_POKEGEAR_REGISTERED  , 135 },
     [FANFARE_OBTAIN_SYMBOL]            = { MUS_OBTAIN_SYMBOL           , 318 },
     [FANFARE_DP_TV_END]                = { MUS_DP_TV_END               , 244 },
     [FANFARE_DP_OBTAIN_ITEM]           = { MUS_DP_OBTAIN_ITEM          , 160 },
@@ -128,7 +128,7 @@ static const struct Fanfare sFanfaresDPL[] = {
     [FANFARE_RG_PHOTO]                 = { MUS_RG_PHOTO                ,  90 },
     [FANFARE_RG_POKE_FLUTE]            = { MUS_RG_POKE_FLUTE           , 450 },
     [FANFARE_OBTAIN_B_POINTS]          = { MUS_OBTAIN_B_POINTS         , 313 },
-    [FANFARE_REGISTER_MATCH_CALL]      = { MUS_REGISTER_MATCH_CALL     , 135 },
+    [FANFARE_REGISTER_MATCH_CALL]      = { MUS_HG_POKEGEAR_REGISTERED  , 135 },
     [FANFARE_OBTAIN_SYMBOL]            = { MUS_OBTAIN_SYMBOL           , 318 },
 };
 
@@ -153,7 +153,7 @@ static const struct Fanfare sFanfaresHGSS[] = {
     [FANFARE_RG_PHOTO]                 = { MUS_RG_PHOTO                ,  90 },
     [FANFARE_RG_POKE_FLUTE]            = { MUS_RG_POKE_FLUTE           , 450 },
     [FANFARE_OBTAIN_B_POINTS]          = { MUS_OBTAIN_B_POINTS         , 313 },
-    [FANFARE_REGISTER_MATCH_CALL]      = { MUS_REGISTER_MATCH_CALL     , 135 },
+    [FANFARE_REGISTER_MATCH_CALL]      = { MUS_HG_POKEGEAR_REGISTERED  , 135 },
     [FANFARE_OBTAIN_SYMBOL]            = { MUS_OBTAIN_SYMBOL           , 318 },
 };
 

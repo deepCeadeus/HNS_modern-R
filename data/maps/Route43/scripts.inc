@@ -14,12 +14,42 @@ Route43_EventScript_Ben::
 	end
 
 Route43_EventScript_Brent::
-	trainerbattle_single TRAINER_BRENT Route43_Text_PokemaniacBrentSeen, Route43_Text_PokemaniacBrentBeaten
+	trainerbattle_single TRAINER_BRENT Route43_Text_PokemaniacBrentSeen, Route43_Text_PokemaniacBrentBeaten, Route43_EventScript_Brent_Register
+    specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route43_EventScript_Brent_Rematch
+	msgbox Route43_Text_PokemaniacBrentAfter, MSGBOX_AUTOCLOSE
+	end
+
+Route43_EventScript_Brent_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route43_Text_PokemaniacBrent_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_BRENT
+	release
+	end
+
+Route43_EventScript_Brent_Rematch::
+    trainerbattle_rematch TRAINER_BRENT Route43_Text_PokemaniacBrentSeen, Route43_Text_PokemaniacBrentBeaten
 	msgbox Route43_Text_PokemaniacBrentAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route43_EventScript_Ron::
-	trainerbattle_single TRAINER_RON Route43_Text_PokemaniacRonSeen, Route43_Text_PokemaniacRonBeaten
+	trainerbattle_single TRAINER_RON Route43_Text_PokemaniacRonSeen, Route43_Text_PokemaniacRonBeaten, Route43_EventScript_Ron_Register
+    specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route43_EventScript_Ron_Rematch
+	msgbox Route43_Text_PokemaniacRonAfter, MSGBOX_AUTOCLOSE
+	end
+
+Route43_EventScript_Ron_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route43_Text_PokemaniacRon_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_RON
+	release
+	end
+
+Route43_EventScript_Ron_Rematch::
+    trainerbattle_rematch TRAINER_RON Route43_Text_PokemaniacRonSeen_Rematch, Route43_Text_PokemaniacRonBeaten
 	msgbox Route43_Text_PokemaniacRonAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -68,6 +98,10 @@ Route43_Text_PokemaniacBrentSeen:
     .string "Hey! Do you have any rare\n"
     .string "POKéMON?$"
 
+Route43_Text_PokemaniacBrent_Register:
+    .string "If you find a rare POKéMON,\n"
+    .string "can you show it to me?$"
+
 Route43_Text_PokemaniacBrentBeaten:
     .string "Oh, my poor POKéMON! Darlings!$"
 
@@ -81,6 +115,10 @@ Route43_Text_PokemaniacRonSeen:
     .string "POKéMON!\p"
     .string "Darn it! My POKéMON's great!$"
 
+Route43_Text_PokemaniacRonSeen_Rematch:
+    .string "I'm going to beat you, and you're going to\n"
+    .string "tell {RIVAL} that my POKéMON are great!$"
+
 Route43_Text_PokemaniacRonBeaten:
     .string "My NIDOKING did pretty right on!$"
 
@@ -89,6 +127,11 @@ Route43_Text_PokemaniacRonAfter:
     .string "different types of POKéMON.\p"
     .string "POKéMON isn't just about having the\n"
     .string "most powerful one.$"
+
+Route43_Text_PokemaniacRon_Register:
+    .string "Are you stronger than {RIVAL}?\p"
+    .string "If so, you'll challenge me again\n"
+    .string "in the future.$"
 
 Route43_Text_FisherMarvinSeen:
     .string "I'm in a slump.\p"

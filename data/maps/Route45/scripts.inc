@@ -32,9 +32,24 @@ Route45_EventScript_Ryan::
 	end
 
 Route45_EventScript_Kelly::
-	trainerbattle_single TRAINER_KELLY Route45_Text_CooltrainerfKellySeen, Route45_Text_CooltrainerfKellyBeaten
+	trainerbattle_single TRAINER_KELLY Route45_Text_CooltrainerfKellySeen, Route45_Text_CooltrainerfKellyBeaten, Route45_EventScript_Kelly_Register
+    specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route45_EventScript_Kelly_Rematch
 	msgbox Route45_Text_CooltrainerfKellyAfter, MSGBOX_AUTOCLOSE
 	end
+
+Route45_EventScript_Kelly_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route45_Text_CooltrainerfKelly_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_KELLY
+	release
+	end
+
+Route45_EventScript_Kelly_Rematch::
+    trainerbattle_rematch TRAINER_KELLY Route45_Text_CooltrainerfKellySeen, Route45_Text_CooltrainerfKellyBeaten
+ 	msgbox Route45_Text_CooltrainerfKellyAfter, MSGBOX_AUTOCLOSE
+	end   
 
 Route45_EventScript_Quentin::
 	trainerbattle_single TRAINER_QUENTIN Route45_Text_CamperQuentinSeen, Route45_Text_CamperQuentinBeaten
@@ -157,6 +172,10 @@ Route45_Text_CooltrainerfKellySeen:
     .string "What is your battle strategy?\p"
     .string "It is foolish to use strong moves\n"
     .string "indiscriminately.$"
+
+Route45_Text_CooltrainerfKelly_Register:
+    .string "Foolish would be not having my\n"
+    .string "my revenge next time.$"
 
 Route45_Text_CooltrainerfKellyBeaten:
     .string "Fine. I lost.$"

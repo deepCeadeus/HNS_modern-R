@@ -33,7 +33,22 @@ Route9_EventScript_Tim::
 	end
 
 Route9_EventScript_Sidney::
-	trainerbattle_single TRAINER_SIDNEY Route9_Text_HikerSidneySeen, Route9_Text_HikerSidneyBeaten
+	trainerbattle_single TRAINER_SIDNEY Route9_Text_HikerSidneySeen, Route9_Text_HikerSidneyBeaten, Route9_EventScript_Sidney_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route9_EventScript_Sidney_Rematch
+	msgbox Route9_Text_HikerSidneyAfter, MSGBOX_AUTOCLOSE
+	end
+
+Route9_EventScript_Sidney_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route9_Text_HikerSidney_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_SIDNEY
+	release
+	end
+
+Route9_EventScript_Sidney_Rematch::
+	trainerbattle_rematch TRAINER_SIDNEY Route9_Text_HikerSidneySeen, Route9_Text_HikerSidneyBeaten
 	msgbox Route9_Text_HikerSidneyAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -101,6 +116,11 @@ Route9_Text_HikerTimAfter:
 Route9_Text_HikerSidneySeen:
 	.string "I'll tell you a secret.\p"
 	.string "But first, we battle!$"
+
+Route9_Text_HikerSidney_Register:
+	.string "I'll tell you a secret.\n"
+	.string "My number!\p"
+	.string "I'll win next time.$"
 
 Route9_Text_HikerSidneyBeaten:
 	.string "Oh, dang! I lost that…$"

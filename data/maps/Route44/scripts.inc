@@ -23,8 +23,23 @@ Route44_EventScript_Vance::
 	end
 
 Route44_EventScript_Phil::
-	trainerbattle_single TRAINER_PHIL Route44_Text_PsychicPhilSeen, Route44_Text_PsychicPhilBeaten
+	trainerbattle_single TRAINER_PHIL Route44_Text_PsychicPhilSeen, Route44_Text_PsychicPhilBeaten, Route44_EventScript_Phil_Register
+    specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route44_EventScript_Phil_Rematch
 	msgbox Route44_Text_PsychicPhilAfter, MSGBOX_AUTOCLOSE
+	end
+
+Route44_EventScript_Phil_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route44_Text_PsychicPhil_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_PHIL
+	release
+	end
+
+Route44_EventScript_Phil_Rematch::
+    trainerbattle_rematch TRAINER_PHIL Route44_Text_PsychicPhilSeen, Route44_Text_PsychicPhilBeaten
+    msgbox Route44_Text_PsychicPhilAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route44_EventScript_Zach::
@@ -111,6 +126,10 @@ Route44_Text_PsychicPhilBeaten:
 Route44_Text_PsychicPhilAfter:
     .string "It's important to have conviction\n"
     .string "on your side.$"
+
+Route44_Text_PsychicPhil_Register:
+    .string "XATU's FUTURE SIGHT predicted we're\n"
+    .string "going to have a rematch.$"
 
 Route44_Text_PokemaniacZachSeen:
     .string "I'll do anything to get my hands\n"

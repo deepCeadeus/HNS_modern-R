@@ -8,9 +8,24 @@ Route15_OnTransition:
 	end
 
 Route15_EventScript_Colette::
-	trainerbattle_single TRAINER_COLETTE Route15_Text_TeacherColetteSeen, Route15_Text_TeacherColetteBeaten
+	trainerbattle_single TRAINER_COLETTE Route15_Text_TeacherColetteSeen, Route15_Text_TeacherColetteBeaten, Route15_EventScript_Colette_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route15_EventScript_Colette_Rematch
 	msgbox Route15_Text_TeacherColetteAfterBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route15_EventScript_Colette_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route15_Text_TeacherColette_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_COLETTE
+	release
+	end
+
+Route15_EventScript_Colette_Rematch::
+	trainerbattle_rematch TRAINER_COLETTE Route15_Text_TeacherColetteSeen_Rematch, Route15_Text_TeacherColetteBeaten
+	msgbox Route15_Text_TeacherColetteAfterBattle, MSGBOX_AUTOCLOSE
+	end	
 
 Route15_EventScript_Hillary::
 	trainerbattle_single TRAINER_HILLARY Route15_Text_TeacherHillarySeen, Route15_Text_TeacherHillaryBeaten
@@ -47,6 +62,15 @@ Route15_EventScript_PPup::
 
 Route15_Text_TeacherColetteSeen:
 	.string "Have you forgotten anything?$"
+
+Route15_Text_TeacherColetteSeen_Rematch:
+	.string "I haven't forgotten about you!$"
+
+Route15_Text_TeacherColette_Register:
+	.string "You forgot to give me\n"
+	.string "your number.\p"
+	.string "I want to see how strong\n"
+	.string "you can get.$"
 
 Route15_Text_TeacherColetteBeaten:
 	.string "Kyaaah!$"

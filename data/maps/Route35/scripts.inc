@@ -13,12 +13,42 @@ Route35_EventScript_CamperIvan::
 	end
 
 Route35_EventScript_CamperElliot::
-	trainerbattle_single TRAINER_ELLIOT Route35_Text_CamperElliotSeen, Route35_Text_CamperElliotBeaten
+	trainerbattle_single TRAINER_ELLIOT Route35_Text_CamperElliotSeen, Route35_Text_CamperElliotBeaten, Route35_EventScript_CamperElliot_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route35_EventScript_CamperElliot_Rematch
+	msgbox Route35_Text_CamperElliotAfter, MSGBOX_AUTOCLOSE
+	end
+
+Route35_EventScript_CamperElliot_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route35_Text_CamperElliot_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_ELLIOT
+	release
+	end
+
+Route35_EventScript_CamperElliot_Rematch::
+	trainerbattle_rematch TRAINER_ELLIOT Route35_Text_CamperElliotSeen, Route35_Text_CamperElliotBeaten, 
 	msgbox Route35_Text_CamperElliotAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route35_EventScript_PicnickerBrooke::
-	trainerbattle_single TRAINER_BROOKE Route35_Text_PicnickerBrookeSeen, Route35_Text_PicnickerBrookeBeaten
+	trainerbattle_single TRAINER_BROOKE Route35_Text_PicnickerBrookeSeen, Route35_Text_PicnickerBrookeBeaten, Route35_EventScript_PicnickerBrooke_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route35_EventScript_PicnickerBrooke_Rematch
+	msgbox Route35_Text_PicnickerBrookeAfter, MSGBOX_AUTOCLOSE
+	end
+
+Route35_EventScript_PicnickerBrooke_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route35_Text_PicnickerBrooke_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_BROOKE
+	release
+	end
+
+Route35_EventScript_PicnickerBrooke_Rematch::
+	trainerbattle_rematch TRAINER_BROOKE Route35_Text_PicnickerBrookeSeen, Route35_Text_PicnickerBrookeBeaten
 	msgbox Route35_Text_PicnickerBrookeAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -93,6 +123,11 @@ Route35_Text_CamperElliotSeen:
 	.string "I'm gonna show my girlfriend I'm\n"
 	.string "hot stuff!$"
 
+Route35_Text_CamperElliot_Register:
+	.string "If I want to impress my girlfriend\n"
+	.string "I need to get stronger.\p"
+	.string "Help me!$"
+
 Route35_Text_CamperElliotBeaten:
 	.string "I wish you would have lost for me…$"
 
@@ -103,6 +138,12 @@ Route35_Text_CamperElliotAfter:
 Route35_Text_PicnickerBrookeSeen:
 	.string "My boyfriend's weak, so I can't rely\n"
 	.string "on him.$"
+
+Route35_Text_PicnickerBrooke_Register:
+	.string "Don't tell my boyfriend, but here's\n"
+	.string "my number.\p"
+	.string "Don't get the wrong idea!\n"
+	.string "I want a rematch!$"
 
 Route35_Text_PicnickerBrookeBeaten:
 	.string "Oh, my! You're so strong!$"

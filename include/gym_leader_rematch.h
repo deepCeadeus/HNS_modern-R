@@ -2,71 +2,73 @@
 #define GUARD_TRAINER_REMATCH_H
 
 enum {
-    REMATCH_ROSE,
+    REMATCH_JOEY, //Hns Rematch
+    REMATCH_MIKEY, //Hns Rematch
+    REMATCH_LIZ, //Hns Rematch
+    REMATCH_COLETTE, //Hns Rematch
+    REMATCH_BROOKE, //Hns Rematch
+    REMATCH_HENRY, //Hns Rematch
+    REMATCH_ANTHONY, //Hns Rematch
+    REMATCH_BETH, //Hns Rematch
+    REMATCH_BRANDON, //Hns Rematch    
+    REMATCH_TOBY, //Hns Rematch
+    REMATCH_JOE, //HnS Rematch    
+    REMATCH_ROY, //Hns Rematch    
+    REMATCH_JAMIE, //Hns Rematch    
+    REMATCH_ANN_AND_ANNE, //Hns Rematch
+    REMATCH_SIMON, //Hns Rematch
+    REMATCH_SHANE, //Hns Rematch
+    REMATCH_RON, //Hns Rematch
+    REMATCH_ELLIOT, //Hns Rematch
+    REMATCH_PHIL, //Hns Rematch
+    REMATCH_KELLY, //Hns Rematch
+    REMATCH_BRENT, //Hns Rematch
+    REMATCH_BOB, //Hns Rematch
+    REMATCH_THOM_AND_KAE, //Hns Rematch
+    REMATCH_QUINN, //Hns Rematch
+    REMATCH_WARREN, //Hns Rematch    
+    REMATCH_ALLAN, //Hns Rematch    
+    REMATCH_ZEKE, //Hns Rematch    
+    REMATCH_TRAINER_SIDNEY, //Hns Rematch
+    REMATCH_JASON, //Hns Rematch
+    REMATCH_JAKE, //Hns Rematch
+    REMATCH_BRET, //Hns Rematch    
+    //Unused rematches
     REMATCH_ANDRES,
     REMATCH_DUSTY,
-    REMATCH_LOLA,
-    REMATCH_RICKY,
-    REMATCH_LILA_AND_ROY,
     REMATCH_CRISTIN,
-    REMATCH_BROOKE,
-    REMATCH_WILTON,
-    REMATCH_VALERIE,
     REMATCH_CINDY,
-    REMATCH_THALIA,
     REMATCH_JESSICA,
-    REMATCH_WINSTON,
     REMATCH_STEVE,
     REMATCH_TONY,
-    REMATCH_NOB,
-    REMATCH_KOJI,
     REMATCH_FERNANDO,
     REMATCH_DALTON,
     REMATCH_BERNIE,
     REMATCH_ETHAN,
-    REMATCH_JOHN_AND_JAY,
     REMATCH_JEFFREY,
     REMATCH_CAMERON,
     REMATCH_JACKI,
-    REMATCH_WALTER,
     REMATCH_KAREN,
     REMATCH_JERRY,
-    REMATCH_ANNA_AND_MEG,
     REMATCH_ISABEL,
-    REMATCH_MIGUEL,
-    REMATCH_TIMOTHY,
-    REMATCH_SHELBY,
     REMATCH_CALVIN,
-    REMATCH_ELLIOT,
     REMATCH_ISAIAH,
-    REMATCH_MARIA,
     REMATCH_ABIGAIL,
     REMATCH_DYLAN,
-    REMATCH_KATELYN,
-    REMATCH_BENJAMIN,
-    REMATCH_PABLO,
-    REMATCH_NICOLAS,
-    REMATCH_ROBERT,
-    REMATCH_LAO,
     REMATCH_CYNDY,
-    REMATCH_MADELINE,
     REMATCH_JENNY,
     REMATCH_DIANA,
-    REMATCH_AMY_AND_LIV,
     REMATCH_ERNEST,
     REMATCH_CORY,
     REMATCH_EDWIN,
-    REMATCH_LYDIA,
     REMATCH_ISAAC,
     REMATCH_GABRIELLE,
     REMATCH_CATHERINE,
     REMATCH_JACKSON,
     REMATCH_HALEY,
     REMATCH_JAMES,
-    REMATCH_TRENT,
-    REMATCH_SAWYER,
-    REMATCH_KIRA_AND_DAN,
-    REMATCH_WALLY_VR,  // Entries above WALLY are considered normal trainers, from Wally below are special trainers
+    //Unused, entries above WALLY are considered normal trainers, from Wally below are special trainers
+    REMATCH_WALLY_VR,
     REMATCH_ROXANNE,
     REMATCH_BRAWLY,
     REMATCH_WATTSON,
@@ -75,7 +77,8 @@ enum {
     REMATCH_WINONA,
     REMATCH_TATE_AND_LIZA,
     REMATCH_JUAN,
-    REMATCH_SIDNEY, // Entries from SIDNEY below are considered part of REMATCH_ELITE_FOUR_ENTRIES.
+    //Unused, entries from SIDNEY below are considered part of REMATCH_ELITE_FOUR_ENTRIES.
+    REMATCH_SIDNEY, 
     REMATCH_PHOEBE,
     REMATCH_GLACIA,
     REMATCH_DRAKE,

@@ -38,13 +38,31 @@ Route47_Text_CamperAfter::
 	.string "See ya!$"
 
 Route47_EventScript_Thom::
-	trainerbattle_double TRAINER_THOM_AND_KAE, Route47_Text_Couple1Seen, Route47_Text_Couple1Beaten, Route104_Text_GinaNotEnoughMons
+	trainerbattle_double TRAINER_THOM_AND_KAE, Route47_Text_Couple1Seen, Route47_Text_Couple1Beaten, Route104_Text_GinaNotEnoughMons, Route47_EventScript_Thom_Register
+    specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route47_EventScript_Thom_Rematch
 	special GetPlayerBigGuyGirlString
 	msgbox Route47_Text_Couple1After1, MSGBOX_AUTOCLOSE
 	end
 
+Route47_EventScript_Thom_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route47_Text_Couple_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_THOM_AND_KAE
+	release
+	end
+
+Route47_EventScript_Thom_Rematch::
+	trainerbattle_rematch_double TRAINER_THOM_AND_KAE, Route47_Text_Couple1Seen, Route47_Text_Couple1Beaten, Route104_Text_GinaNotEnoughMons
+	special GetPlayerBigGuyGirlString
+	msgbox Route47_Text_Couple1After2, MSGBOX_AUTOCLOSE
+	end
+
 Route47_EventScript_Kae::
-	trainerbattle_double TRAINER_THOM_AND_KAE, Route47_Text_Couple1Seen, Route47_Text_Couple1Beaten, Route104_Text_GinaNotEnoughMons
+	trainerbattle_double TRAINER_THOM_AND_KAE, Route47_Text_Couple1Seen, Route47_Text_Couple1Beaten, Route104_Text_GinaNotEnoughMons, Route47_EventScript_Thom_Register
+    specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route47_EventScript_Thom_Rematch
 	special GetPlayerBigGuyGirlString
 	msgbox Route47_Text_Couple1After2, MSGBOX_AUTOCLOSE
 	end
@@ -55,6 +73,14 @@ Route47_Text_Couple1Seen::
 	.string "stronger!\p"
 	.string "KAE: The two of us aren't just some\n"
 	.string "boring pair!$"
+
+Route47_Text_Couple_Register::
+	.string "THOM: We want a rematch!\p"
+	.string "KAE: Yeah! Wait, now?\p"
+	.string "THOM: No, KAE! Our POKéMON\n"
+	.string "need to rest!\p"
+	.string "We'll just give them our\n"
+	.string "number.$"
 
 Route47_Text_Couple1Beaten::
 	.string "THOM: That wasn't what I expected.\l"

@@ -41,10 +41,10 @@
 #define TRAINER_GRUNT_33                     37
 #define TRAINER_NORMAN                       38
 #define TRAINER_VIOLET                       39
-#define TRAINER_ROSE_2                       40
-#define TRAINER_ROSE_3                       41
-#define TRAINER_ROSE_4                       42
-#define TRAINER_ROSE_5                       43
+#define TRAINER_JOEY_2                       40 //Rematch
+#define TRAINER_JOEY_3                       41 //Rematch
+#define TRAINER_JOEY_4                       42 //Rematch
+#define TRAINER_JOEY_5                       43 //Rematch
 #define TRAINER_KRISE                        44
 #define TRAINER_GRUNT_16                     45
 #define TRAINER_RAYMOND                      46
@@ -61,17 +61,17 @@
 #define TRAINER_LOLA_1                       57
 #define TRAINER_CODY                         58
 #define TRAINER_GWEN                         59
-#define TRAINER_LOLA_2                       60
-#define TRAINER_LOLA_3                       61
-#define TRAINER_LOLA_4                       62
-#define TRAINER_LOLA_5                       63
+#define TRAINER_MIKEY_2                      60 //Rematch
+#define TRAINER_MIKEY_3                      61 //Rematch
+#define TRAINER_MIKEY_4                      62 //Rematch
+#define TRAINER_MIKEY_5                      63 //Rematch
 #define TRAINER_RICKY_1                      64
 #define TRAINER_SIMON                        65
 #define TRAINER_CHARLIE                      66
-#define TRAINER_RICKY_2                      67
-#define TRAINER_RICKY_3                      68
-#define TRAINER_RICKY_4                      69
-#define TRAINER_RICKY_5                      70
+#define TRAINER_LIZ_2                        67 //Rematch
+#define TRAINER_LIZ_3                        68 //Rematch
+#define TRAINER_LIZ_4                        69 //Rematch
+#define TRAINER_LIZ_5                        70 //Rematch
 #define TRAINER_RANDALL                      71
 #define TRAINER_PARKER                       72
 #define TRAINER_GEORGE                       73
@@ -85,10 +85,10 @@
 #define TRAINER_SAMUEL                       81
 #define TRAINER_VITO                         82
 #define TRAINER_OWEN                         83
-#define TRAINER_WILTON_2                     84
-#define TRAINER_WILTON_3                     85
-#define TRAINER_WILTON_4                     86
-#define TRAINER_WILTON_5                     87
+#define TRAINER_HENRY_2                      84 //Rematch
+#define TRAINER_HENRY_3                      85 //Rematch
+#define TRAINER_HENRY_4                      86 //Rematch
+#define TRAINER_HENRY_5                      87 //Rematch
 #define TRAINER_WARREN                       88
 #define TRAINER_MARY                         89
 #define TRAINER_BARNEY                       90
@@ -111,10 +111,10 @@
 #define TRAINER_TAMMY                       107
 #define TRAINER_VALERIE_1                   108
 #define TRAINER_TASHA                       109
-#define TRAINER_VALERIE_2                   110
-#define TRAINER_VALERIE_3                   111
-#define TRAINER_VALERIE_4                   112
-#define TRAINER_VALERIE_5                   113
+#define TRAINER_ANTHONY_2                   110 //Rematch
+#define TRAINER_ANTHONY_3                   111 //Rematch
+#define TRAINER_ANTHONY_4                   112 //Rematch
+#define TRAINER_ANTHONY_5                   113 //Rematch
 #define TRAINER_GRUNT_18                    114
 #define TRAINER_KIPP                        115
 #define TRAINER_WAI                         116
@@ -140,18 +140,18 @@
 #define TRAINER_WINSTON_1                   136
 #define TRAINER_MOLLIE                      137
 #define TRAINER_GARRET                      138
-#define TRAINER_WINSTON_2                   139
-#define TRAINER_WINSTON_3                   140
-#define TRAINER_WINSTON_4                   141
-#define TRAINER_WINSTON_5                   142
+#define TRAINER_BRANDON_2                   139 //Rematch
+#define TRAINER_BRANDON_3                   140 //Rematch
+#define TRAINER_BRANDON_4                   141 //Rematch
+#define TRAINER_BRANDON_5                   142 //Rematch
 #define TRAINER_STEVE_1                     143
 #define TRAINER_THALIA_1                    144
 #define TRAINER_MARK                        145
 #define TRAINER_TERU                        146
-#define TRAINER_STEVE_2                     147
-#define TRAINER_STEVE_3                     148
-#define TRAINER_STEVE_4                     149
-#define TRAINER_STEVE_5                     150
+#define TRAINER_ELLIOT_2                    147 //Rematch
+#define TRAINER_ELLIOT_3                    148 //Rematch
+#define TRAINER_ELLIOT_4                    149 //Rematch
+#define TRAINER_ELLIOT_5                    150 //Rematch
 #define TRAINER_LUIS                        151
 #define TRAINER_KENNY                       152
 #define TRAINER_DOUGLAS                     153
@@ -176,19 +176,19 @@
 #define TRAINER_JACK                        172
 #define TRAINER_DUDLEY                      173
 #define TRAINER_CHAD                        174
-#define TRAINER_TONY_2                      175
-#define TRAINER_TONY_3                      176
-#define TRAINER_TONY_4                      177
-#define TRAINER_TONY_5                      178
+#define TRAINER_BROOKE_2                    175 //Rematch
+#define TRAINER_BROOKE_3                    176 //Rematch
+#define TRAINER_BROOKE_4                    177 //Rematch
+#define TRAINER_BROOKE_5                    178 //Rematch
 #define TRAINER_TAKAO                       179
 #define TRAINER_JASMINE_1_3                 180
 #define TRAINER_KIYO                        181
 #define TRAINER_KOICHI                      182
 #define TRAINER_NOB_1                       183
-#define TRAINER_NOB_2                       184
-#define TRAINER_NOB_3                       185
-#define TRAINER_NOB_4                       186
-#define TRAINER_NOB_5                       187
+#define TRAINER_TOBY_2                      184 //Rematch
+#define TRAINER_TOBY_3                      185 //Rematch
+#define TRAINER_TOBY_4                      186 //Rematch
+#define TRAINER_TOBY_5                      187 //Rematch
 #define TRAINER_YUJI                        188
 #define TRAINER_JED                         189
 #define TRAINER_CINDY                       190
@@ -258,10 +258,10 @@
 #define TRAINER_WALTER_1                    254
 #define TRAINER_MICAH                       255
 #define TRAINER_THOMAS                      256
-#define TRAINER_WALTER_2                    257
-#define TRAINER_WALTER_3                    258
-#define TRAINER_WALTER_4                    259
-#define TRAINER_WALTER_5                    260
+#define TRAINER_JAMIE_2                     257 //Rematch
+#define TRAINER_JAMIE_3                     258 //Rematch
+#define TRAINER_JAMIE_4                     259 //Rematch
+#define TRAINER_JAMIE_5                     260 //Rematch
 #define TRAINER_SIDNEY                      261
 #define TRAINER_PHOEBE                      262
 #define TRAINER_GLACIA                      263
@@ -289,17 +289,17 @@
 #define TRAINER_KAREN_5                     285
 #define TRAINER_KATE_AND_JOY                286
 #define TRAINER_ANNA_AND_MEG_1              287
-#define TRAINER_ANNA_AND_MEG_2              288
-#define TRAINER_ANNA_AND_MEG_3              289
-#define TRAINER_ANNA_AND_MEG_4              290
-#define TRAINER_ANNA_AND_MEG_5              291
+#define TRAINER_ANN_AND_ANNE_2              288 //Rematch
+#define TRAINER_ANN_AND_ANNE_3              289 //Rematch
+#define TRAINER_ANN_AND_ANNE_4              290 //Rematch
+#define TRAINER_ANN_AND_ANNE_5              291 //Rematch
 #define TRAINER_VICTOR                      292
 #define TRAINER_MIGUEL_1                    293
 #define TRAINER_GRUNT_26                    294
-#define TRAINER_MIGUEL_2                    295
-#define TRAINER_MIGUEL_3                    296
-#define TRAINER_MIGUEL_4                    297
-#define TRAINER_MIGUEL_5                    298
+#define TRAINER_SIMON_2                     295 //Rematch
+#define TRAINER_SIMON_3                     296 //Rematch
+#define TRAINER_SIMON_4                     297 //Rematch
+#define TRAINER_SIMON_5                     298 //Rematch
 #define TRAINER_VICTORIA                    299
 #define TRAINER_VANESSA                     300
 #define TRAINER_BETHANY                     301
@@ -309,16 +309,16 @@
 #define TRAINER_JANINE                      305
 #define TRAINER_BLAINE                      306
 #define TRAINER_TIMOTHY_1                   307
-#define TRAINER_TIMOTHY_2                   308
-#define TRAINER_TIMOTHY_3                   309
-#define TRAINER_TIMOTHY_4                   310
-#define TRAINER_TIMOTHY_5                   311
+#define TRAINER_SHANE_2                     308 //Rematch
+#define TRAINER_SHANE_3                     309 //Rematch
+#define TRAINER_SHANE_4                     310 //Rematch
+#define TRAINER_SHANE_5                     311 //Rematch
 #define TRAINER_VICKY                       312
 #define TRAINER_SHELBY_1                    313
-#define TRAINER_SHELBY_2                    314
-#define TRAINER_SHELBY_3                    315
-#define TRAINER_SHELBY_4                    316
-#define TRAINER_SHELBY_5                    317
+#define TRAINER_RON_2                       314 //Rematch
+#define TRAINER_RON_3                       315 //Rematch
+#define TRAINER_RON_4                       316 //Rematch
+#define TRAINER_RON_5                       317 //Rematch
 #define TRAINER_EUGENE                      318
 #define TRAINER_BILLY                       319
 #define TRAINER_JOSH                        320
@@ -355,10 +355,10 @@
 #define TRAINER_RIVAL_CYNDAQUIL_2           351
 #define TRAINER_ANTHONY                     352
 #define TRAINER_BENJAMIN_1                  353
-#define TRAINER_BENJAMIN_2                  354
-#define TRAINER_BENJAMIN_3                  355
-#define TRAINER_BENJAMIN_4                  356
-#define TRAINER_BENJAMIN_5                  357
+#define TRAINER_BRENT_2                     354 //Rematch
+#define TRAINER_BRENT_3                     355 //Rematch
+#define TRAINER_BRENT_4                     356 //Rematch
+#define TRAINER_BRENT_5                     357 //Rematch
 #define TRAINER_ABE                         358
 #define TRAINER_JASMINE                     359
 #define TRAINER_AL                          360
@@ -371,10 +371,10 @@
 #define TRAINER_LIZ                         367
 #define TRAINER_LLOYD                       368
 #define TRAINER_MARIA_1                     369
-#define TRAINER_MARIA_2                     370
-#define TRAINER_MARIA_3                     371
-#define TRAINER_MARIA_4                     372
-#define TRAINER_MARIA_5                     373
+#define TRAINER_PHIL_2                      370 //Rematch
+#define TRAINER_PHIL_3                      371 //Rematch
+#define TRAINER_PHIL_4                      372 //Rematch
+#define TRAINER_PHIL_5                      373 //Rematch
 #define TRAINER_GARRETT                     374
 #define TRAINER_JULIA                       375
 #define TRAINER_WILL_2                      376
@@ -389,15 +389,15 @@
 #define TRAINER_TALIA                       385
 #define TRAINER_KATELYN_1                   386
 #define TRAINER_BOB                         387
-#define TRAINER_KATELYN_2                   388
-#define TRAINER_KATELYN_3                   389
-#define TRAINER_KATELYN_4                   390
-#define TRAINER_KATELYN_5                   391
+#define TRAINER_KELLY_2                     388 //Rematch
+#define TRAINER_KELLY_3                     389 //Rematch
+#define TRAINER_KELLY_4                     390 //Rematch
+#define TRAINER_KELLY_5                     391 //Rematch
 #define TRAINER_NICOLAS_1                   392
-#define TRAINER_NICOLAS_2                   393
-#define TRAINER_NICOLAS_3                   394
-#define TRAINER_NICOLAS_4                   395
-#define TRAINER_NICOLAS_5                   396
+#define TRAINER_THOM_AND_KAE_2              393 //Rematch
+#define TRAINER_THOM_AND_KAE_3              394 //Rematch
+#define TRAINER_THOM_AND_KAE_4              395 //Rematch
+#define TRAINER_THOM_AND_KAE_5              396 //Rematch
 #define TRAINER_AARON                       397
 #define TRAINER_PERRY                       398
 #define TRAINER_HUGH                        399
@@ -410,10 +410,10 @@
 #define TRAINER_ROBERT_1                    406
 #define TRAINER_BENNY                       407
 #define TRAINER_GRUNT_15                    408
-#define TRAINER_ROBERT_2                    409
-#define TRAINER_ROBERT_3                    410
-#define TRAINER_ROBERT_4                    411
-#define TRAINER_ROBERT_5                    412
+#define TRAINER_QUINN_2                     409 //Rematch
+#define TRAINER_QUINN_3                     410 //Rematch
+#define TRAINER_QUINN_4                     411 //Rematch
+#define TRAINER_QUINN_5                     412 //Rematch
 #define TRAINER_ALEX                        413
 #define TRAINER_DANNY                       414
 #define TRAINER_YASU                        415
@@ -422,10 +422,10 @@
 #define TRAINER_JANI                        418
 #define TRAINER_LAO_1                       419
 #define TRAINER_LUNG                        420
-#define TRAINER_LAO_2                       421
-#define TRAINER_LAO_3                       422
-#define TRAINER_LAO_4                       423
-#define TRAINER_LAO_5                       424
+#define TRAINER_WARREN_2                    421 //Rematch
+#define TRAINER_WARREN_3                    422 //Rematch
+#define TRAINER_WARREN_4                    423 //Rematch
+#define TRAINER_WARREN_5                    424 //Rematch
 #define TRAINER_JOCELYN                     425
 #define TRAINER_LAURA                       426
 #define TRAINER_JASMINE_2                   427
@@ -438,10 +438,10 @@
 #define TRAINER_MADELINE_1                  434
 #define TRAINER_CLARISSA                    435
 #define TRAINER_ANGELICA                    436
-#define TRAINER_MADELINE_2                  437
-#define TRAINER_MADELINE_3                  438
-#define TRAINER_MADELINE_4                  439
-#define TRAINER_MADELINE_5                  440
+#define TRAINER_ALLAN_2                     437 //Rematch
+#define TRAINER_ALLAN_3                     438 //Rematch
+#define TRAINER_ALLAN_4                     439 //Rematch
+#define TRAINER_ALLAN_5                     440 //Rematch
 #define TRAINER_BEVERLY                     441
 #define TRAINER_CHUCK_1_2                   442
 #define TRAINER_KYLA                        443
@@ -486,11 +486,11 @@
 #define TRAINER_ANN_AND_ANNE                482
 #define TRAINER_RUTH                        483
 #define TRAINER_MIU_AND_YUKI                484
-#define TRAINER_AMY_AND_LIV_3               485
+#define TRAINER_ZEKE_2                      485 //Rematch
 #define TRAINER_RYAN                        486
-#define TRAINER_AMY_AND_LIV_4               487
-#define TRAINER_AMY_AND_LIV_5               488
-#define TRAINER_AMY_AND_LIV_6               489
+#define TRAINER_ZEKE_3                      487 //Rematch
+#define TRAINER_ZEKE_4                      488 //Rematch
+#define TRAINER_ZEKE_5                      489 //Rematch
 #define TRAINER_HUEY                        490
 #define TRAINER_EDMOND                      491
 #define TRAINER_MIKE                        492
@@ -549,10 +549,10 @@
 #define TRAINER_LYDIA_1                     545
 #define TRAINER_PRYCE_1                     546
 #define TRAINER_RUSS                        547
-#define TRAINER_LYDIA_2                     548
-#define TRAINER_LYDIA_3                     549
-#define TRAINER_LYDIA_4                     550
-#define TRAINER_LYDIA_5                     551
+#define TRAINER_SIDNEY_2                    548 //Rematch
+#define TRAINER_SIDNEY_3                    549 //Rematch
+#define TRAINER_SIDNEY_4                    550 //Rematch
+#define TRAINER_SIDNEY_5                    551 //Rematch
 #define TRAINER_RIVAL_CHIKORITA_4           552
 #define TRAINER_LORENZO                     553
 #define TRAINER_SEBASTIAN                   554
@@ -637,17 +637,17 @@
 #define TRAINER_LUCAS_2                     633
 #define TRAINER_MIKE_1                      634
 #define TRAINER_MIKE_2                      635
-#define TRAINER_TRENT_2                     636
-#define TRAINER_TRENT_3                     637
-#define TRAINER_TRENT_4                     638
-#define TRAINER_TRENT_5                     639
+#define TRAINER_JASON_2                     636 //Rematch
+#define TRAINER_JASON_3                     637 //Rematch
+#define TRAINER_JASON_4                     638 //Rematch
+#define TRAINER_JASON_5                     639 //Rematch
 #define TRAINER_DEZ_AND_LUKE                640
 #define TRAINER_LEA_AND_JED                 641
 #define TRAINER_KIRA_AND_DAN_1              642
-#define TRAINER_KIRA_AND_DAN_2              643
-#define TRAINER_KIRA_AND_DAN_3              644
-#define TRAINER_KIRA_AND_DAN_4              645
-#define TRAINER_KIRA_AND_DAN_5              646
+#define TRAINER_BRET_2                      643 //Rematch
+#define TRAINER_BRET_3                      644 //Rematch
+#define TRAINER_BRET_4                      645 //Rematch
+#define TRAINER_BRET_5                      646 //Rematch
 #define TRAINER_JOHANNA                     647
 #define TRAINER_RUSSELL                     648
 #define TRAINER_VIVIAN                      649
@@ -683,16 +683,16 @@
 #define TRAINER_TYRA_AND_IVY                679
 #define TRAINER_MEL_AND_PAUL                680
 #define TRAINER_JOHN_AND_JAY_1              681
-#define TRAINER_JOHN_AND_JAY_2              682
-#define TRAINER_JOHN_AND_JAY_3              683
-#define TRAINER_JOHN_AND_JAY_4              684
-#define TRAINER_JOHN_AND_JAY_5              685
+#define TRAINER_ROY_2                       682 //Rematch
+#define TRAINER_ROY_3                       683 //Rematch
+#define TRAINER_ROY_4                       684 //Rematch
+#define TRAINER_ROY_5                       685 //Rematch
 #define TRAINER_RELI_AND_IAN                686
 #define TRAINER_LILA_AND_ROY_1              687
-#define TRAINER_LILA_AND_ROY_2              688
-#define TRAINER_LILA_AND_ROY_3              689
-#define TRAINER_LILA_AND_ROY_4              690
-#define TRAINER_LILA_AND_ROY_5              691
+#define TRAINER_COLETTE_2                   688 //Rematch
+#define TRAINER_COLETTE_3                   689 //Rematch
+#define TRAINER_COLETTE_4                   690 //Rematch
+#define TRAINER_COLETTE_5                   691 //Rematch
 #define TRAINER_LISA_AND_RAY                692
 #define TRAINER_GRUNT_17                    693
 #define TRAINER_JOEL                        694
@@ -821,14 +821,14 @@
 #define TRAINER_HANK                        817
 #define TRAINER_HAROLD                      818
 #define TRAINER_HARRIS                      819
-#define TRAINER_PABLO_2                     820
-#define TRAINER_PABLO_3                     821
-#define TRAINER_PABLO_4                     822
-#define TRAINER_PABLO_5                     823
-#define TRAINER_KOJI_2                      824
-#define TRAINER_KOJI_3                      825
-#define TRAINER_KOJI_4                      826
-#define TRAINER_KOJI_5                      827
+#define TRAINER_BOB_2                       820 //Rematch
+#define TRAINER_BOB_3                       821 //Rematch
+#define TRAINER_BOB_4                       822 //Rematch
+#define TRAINER_BOB_5                       823 //Rematch
+#define TRAINER_JOE_2                       824 //Rematch
+#define TRAINER_JOE_3                       825 //Rematch
+#define TRAINER_JOE_4                       826 //Rematch
+#define TRAINER_JOE_5                       827 //Rematch
 #define TRAINER_HORTON                      828
 #define TRAINER_IAN                         829
 #define TRAINER_IRWIN                       830
@@ -837,18 +837,18 @@
 #define TRAINER_PARRY                       833
 #define TRAINER_PATON                       834
 #define TRAINER_PETER                       835
-#define TRAINER_SAWYER_2                    836
-#define TRAINER_SAWYER_3                    837
-#define TRAINER_SAWYER_4                    838
-#define TRAINER_SAWYER_5                    839
+#define TRAINER_JAKE_2                      836 //Rematch
+#define TRAINER_JAKE_3                      837 //Rematch
+#define TRAINER_JAKE_4                      838 //Rematch
+#define TRAINER_JAKE_5                      839 //Rematch
 #define TRAINER_RON                         840
 #define TRAINER_ROSS                        841
 #define TRAINER_ROXANNE                     842
 #define TRAINER_ROY                         843
-#define TRAINER_THALIA_2                    844
-#define TRAINER_THALIA_3                    845
-#define TRAINER_THALIA_4                    846
-#define TRAINER_THALIA_5                    847
+#define TRAINER_BETH_2                      844 //Rematch
+#define TRAINER_BETH_3                      845 //Rematch
+#define TRAINER_BETH_4                      846 //Rematch
+#define TRAINER_BETH_5                      847 //Rematch
 #define TRAINER_MARIELA                     848
 #define TRAINER_BORIS                       849
 #define TRAINER_NICOLE                      850

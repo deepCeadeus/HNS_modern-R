@@ -8,7 +8,22 @@ Route33_OnTransition:
 	end
 
 Route33_EventScript_HikerAnthony::
-	trainerbattle_single TRAINER_ANTHONY, Route33_Text_HikerAnthony2Seen, Route33_Text_HikerAnthony2Beaten
+	trainerbattle_single TRAINER_ANTHONY, Route33_Text_HikerAnthony2Seen, Route33_Text_HikerAnthony2Beaten, Route33_EventScript_HikerAnthony_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route33_EventScript_HikerAnthony_Rematch
+	msgbox Route33_Text_HikerAnthony2After, MSGBOX_AUTOCLOSE
+	end
+
+Route33_EventScript_HikerAnthony_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route33_Text_HikerAnthony_Register, MSGBOX_DEFAULT
+	register_matchcall TRAINER_ANTHONY
+	release
+	end
+
+Route33_EventScript_HikerAnthony_Rematch::
+	trainerbattle_rematch TRAINER_ANTHONY, Route33_Text_HikerAnthony_Seen_Rematch, Route33_Text_HikerAnthony2Beaten
 	msgbox Route33_Text_HikerAnthony2After, MSGBOX_AUTOCLOSE
 	end
 
@@ -24,6 +39,14 @@ Route33_Text_HikerAnthony2Seen:
 	.string "I came through the tunnel,\n"
 	.string "but I still have plenty\l"
 	.string "of energy left.$"
+
+Route33_Text_HikerAnthony_Seen_Rematch:
+	.string "I still have plenty of energy\n"
+	.string "left for a rematch!$"
+
+Route33_Text_HikerAnthony_Register:
+	.string "You have lots of energy!\p"
+	.string "Will you be up for a rematch?$"
 
 Route33_Text_HikerAnthony2Beaten:
 	.string "Whoa! You've got more zip\n"
