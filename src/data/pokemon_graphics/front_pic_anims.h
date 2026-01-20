@@ -1555,10 +1555,8 @@ static const union AnimCmd sAnim_Magikarp_1[] =
 
 static const union AnimCmd sAnim_Gyarados_1[] =
 {
-    ANIMCMD_FRAME(0, 1),
     ANIMCMD_FRAME(1, 50),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_FRAME(0, 10),
     ANIMCMD_END,
 };
 
