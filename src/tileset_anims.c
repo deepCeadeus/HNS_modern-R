@@ -129,14 +129,14 @@ const u16 *const gTilesetAnims_General_Water[] = {
     gTilesetAnims_General_Water_Current_LandWatersEdge_Frame7
 };
 
-static const u16 gTilesetAnims_General_SandWatersEdge_Frame0[] = INCBIN_U16("data/tilesets/primary/johto_general/anim/sandwatersedge/0.4bpp");
-static const u16 gTilesetAnims_General_SandWatersEdge_Frame1[] = INCBIN_U16("data/tilesets/primary/johto_general/anim/sandwatersedge/1.4bpp");
-static const u16 gTilesetAnims_General_SandWatersEdge_Frame2[] = INCBIN_U16("data/tilesets/primary/johto_general/anim/sandwatersedge/2.4bpp");
-static const u16 gTilesetAnims_General_SandWatersEdge_Frame3[] = INCBIN_U16("data/tilesets/primary/johto_general/anim/sandwatersedge/3.4bpp");
-static const u16 gTilesetAnims_General_SandWatersEdge_Frame4[] = INCBIN_U16("data/tilesets/primary/johto_general/anim/sandwatersedge/4.4bpp");
-static const u16 gTilesetAnims_General_SandWatersEdge_Frame5[] = INCBIN_U16("data/tilesets/primary/johto_general/anim/sandwatersedge/5.4bpp");
-static const u16 gTilesetAnims_General_SandWatersEdge_Frame6[] = INCBIN_U16("data/tilesets/primary/johto_general/anim/sandwatersedge/6.4bpp");
-static const u16 gTilesetAnims_General_SandWatersEdge_Frame7[] = INCBIN_U16("data/tilesets/primary/johto_general/anim/sandwatersedge/7.4bpp");
+static const u16 gTilesetAnims_General_SandWatersEdge_Frame0[] = INCBIN_U16("data/tilesets/primary/johto_general/anim/water_current_landwatersedge/0.4bpp");
+static const u16 gTilesetAnims_General_SandWatersEdge_Frame1[] = INCBIN_U16("data/tilesets/primary/johto_general/anim/water_current_landwatersedge/1.4bpp");
+static const u16 gTilesetAnims_General_SandWatersEdge_Frame2[] = INCBIN_U16("data/tilesets/primary/johto_general/anim/water_current_landwatersedge/2.4bpp");
+static const u16 gTilesetAnims_General_SandWatersEdge_Frame3[] = INCBIN_U16("data/tilesets/primary/johto_general/anim/water_current_landwatersedge/3.4bpp");
+static const u16 gTilesetAnims_General_SandWatersEdge_Frame4[] = INCBIN_U16("data/tilesets/primary/johto_general/anim/water_current_landwatersedge/4.4bpp");
+static const u16 gTilesetAnims_General_SandWatersEdge_Frame5[] = INCBIN_U16("data/tilesets/primary/johto_general/anim/water_current_landwatersedge/5.4bpp");
+static const u16 gTilesetAnims_General_SandWatersEdge_Frame6[] = INCBIN_U16("data/tilesets/primary/johto_general/anim/water_current_landwatersedge/6.4bpp");
+static const u16 gTilesetAnims_General_SandWatersEdge_Frame7[] = INCBIN_U16("data/tilesets/primary/johto_general/anim/water_current_landwatersedge/7.4bpp");
 
 const u16 *const gTilesetAnims_General_SandWaterEdge[] = {
     gTilesetAnims_General_SandWatersEdge_Frame0,
@@ -875,10 +875,10 @@ static void TilesetAnim_JohtoGeneral(u16 timer)
     if (timer % 16 == 4)
         QueueAnimTiles_General_LandWaterEdge(timer / 16);
     */
-    if (timer % 8 == 0)
-        QueueAnimTiles_General_SandWaterEdge(timer >> 3);
+    if (timer % 16 == 0)
+        QueueAnimTiles_General_SandWaterEdge(timer / 16);
     if (timer % 16 == 1)
-        QueueAnimTiles_General_LandWaterEdge(timer >> 4);
+        QueueAnimTiles_General_LandWaterEdge(timer / 16);
     if (timer % 16 == 2)
         QueueAnimTiles_General_Flower(timer >> 4);
     if (timer % 16 == 3)
