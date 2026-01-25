@@ -1206,12 +1206,9 @@ u8 GetScaledLevel(u8 lvl)
             badgeCount++;
     }
 
-    // Might need tweaking in HnS #DIFFICULTY
-    if (FlagGet(FLAG_IS_CHAMPION))
-        levelScaling = 10;
-    else if (badgeCount >= 6)
-        levelScaling = 6;
-    else if (badgeCount >= 5)
+    // #DIFFICULTY HnS scales up to 5 extra levels, as its level curve is better than Emerald's.
+    // 10 extra levels after becoming champion made it very difficult.
+    if (badgeCount >= 5)
         levelScaling = 5;
     else if (badgeCount >= 3)
         levelScaling = 3;
@@ -1245,17 +1242,17 @@ u8 GetScaledLevel(u8 lvl)
             else if ((lvl >= 36) && (badgeCount == 5)) //+5
                 lvl = 36;
             // If the player has 6 badges and the rematched Pokémon are level
-            // higher than 39, set the ones higher than 39 to exactly 39.
-            else if ((lvl >= 39) && (badgeCount == 6)) //+6
-                lvl = 39;
+            // higher than 39, set the ones higher than 38 to exactly 38.
+            else if ((lvl >= 38) && (badgeCount == 6)) //+5
+                lvl = 38;
             // If the player has 7 badges and the rematched Pokémon are level
-            // higher than 42, set the ones higher than 42 to exactly 42.
-            else if ((lvl >= 42) && (badgeCount == 7)) //+6
-                lvl = 42;
+            // higher than 41, set the ones higher than 41 to exactly 41.
+            else if ((lvl >= 41) && (badgeCount == 7)) //+5
+                lvl = 41;
             // If the player has 8 badges and the rematched Pokémon are level
-            // higher than 51, set the ones higher than 51 to exactly 51.
-            else if ((lvl >= 51) && (badgeCount == 8)) //+6
-                lvl = 51;
+            // higher than 50, set the ones higher than 50 to exactly 50.
+            else if ((lvl >= 50) && (badgeCount == 8)) //+5
+                lvl = 50;
         }
         else if ((IsTrainerReadyForRematch() == TRUE)/* || (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_INTERVIEWER) && (gSaveBlock2Ptr->optionsDifficulty == 1)*/) 
         //normal mode rematch level cap

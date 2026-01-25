@@ -21,6 +21,10 @@ int GameClear(void)
     HealPlayerParty();
     if (FlagGet(FLAG_DEFEATED_RED) == 1)
         gSaveBlock1Ptr->tx_Nuzlocke_EasyMode = 0;
+    
+    //Hard Mode exp. reduction gets disabled
+    if (gSaveBlock2Ptr->optionsDifficulty == 2)
+        gSaveBlock1Ptr->tx_Difficulty_HardExp = 1;
 
     if (FlagGet(FLAG_SYS_GAME_CLEAR) == TRUE)
     {
