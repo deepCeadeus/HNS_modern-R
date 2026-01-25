@@ -6528,10 +6528,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
             spAttack /= 2;
     if ((defender->ability != ABILITY_NONE) 
     && (gSaveBlock2Ptr->optionsDifficulty == 2) 
-    && (side == B_SIDE_PLAYER) 
-    //&& !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_EREADER_TRAINER | BATTLE_TYPE_RECORDED_LINK | BATTLE_TYPE_FRONTIER))
-    ) //Damage scaling in HARD MODE. Pokemon take more damage with more badges
-    // HnS might need tweaks #DIFFICULTY
+    && (side == B_SIDE_PLAYER))
+    //Damage scaling in HARD MODE. Pokemon take more damage with more badges
     {
         u32 j;
         u8 badgeCount = 0;
@@ -6542,41 +6540,49 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
                 badgeCount++;
         }
 
-        if (badgeCount > 7)
-        //After deafeating the Eight gym, 25%
+        if ((FlagGet(FLAG_IS_CHAMPION) == TRUE))
+        //After beating the game: 25% scaling
         {
-            defense = (75 * defense) / 100; //+25%
+            defense = (75 * defense) / 100;
             spDefense = (75 * spDefense) / 100;
         }
-        else if (badgeCount == 7)
-        //After defeating 7 gyms, 20%
+        else if (FlagGet(FLAG_IS_CHAMPION) == FALSE)
         {
-            defense = (80 * defense) / 100; //+20%
-            spDefense = (80 * spDefense) / 100;
-        }
-        else if (badgeCount == 4)
-        //After beating the Fouth gym, 15% (includes Fifth, Sixth and Seventh gym)
-        {
-            defense = (85 * defense) / 100; //+15%
-            spDefense = (85 * spDefense) / 100;
-        }
-        else if (badgeCount == 2)
-        //From the Second gym up to the third, 10%
-        {
-            defense = (90 * defense) / 100; //+10%
-            spDefense = (90 * spDefense) / 100;
-        }
-        else if (badgeCount == 1)
-        //From the First gym up to the second, 5%
-        {
-            defense = (95 * defense) / 100; //+5%
-            spDefense = (95 * spDefense) / 100;
-        }
-        //Until the first gym, no dmg scaling
-        else
-        {
-            defense = (100 * defense) / 100; //+0%
-            spDefense = (100 * spDefense) / 100;
+            if ((badgeCount == 7) || (badgeCount == 8))
+            //Eigth Gym: 20% scaling
+            //Pokémon League: 20% scaling
+            {
+                defense = (80 * defense) / 100;
+                spDefense = (80 * spDefense) / 100;
+            }
+            else if ((badgeCount == 4) || (badgeCount == 5) || (badgeCount == 6))
+            //Fifth Gym: 15% scaling
+            //Sixth Gym: 15% scaling
+            //Seventh Gym: 15% scaling
+            {
+                defense = (85 * defense) / 100;
+                spDefense = (85 * spDefense) / 100;
+            }
+            else if ((badgeCount == 2) || (badgeCount == 3))
+            //Third Gym: 10% scaling
+            //Fourth Gym: 10% scaling
+            {
+                defense = (90 * defense) / 100;
+                spDefense = (90 * spDefense) / 100;
+            }
+            else if (badgeCount == 1)
+            //Second Gym: 5% scaling
+            {
+                defense = (95 * defense) / 100;
+                spDefense = (95 * spDefense) / 100;
+            }
+            //First gym: no scaling
+            //No badges: no scaling
+            else
+            {
+                defense = (100 * defense) / 100;
+                spDefense = (100 * spDefense) / 100;
+            }
         }
     }
     if (attacker->ability == ABILITY_HUSTLE)
