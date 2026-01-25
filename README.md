@@ -4,14 +4,18 @@
 
 
 # MODERN Heart & Soul
-**Modern** Heart & Soul is a small modification of the original Pokémon Heart & Soul version 1.2.1 that includes missing options and features from its base game engine, Pokémon Modern Emerald. You can get more information about Modern Emerald at [Pokécommunity](https://www.Pokécommunity.com/showthread.php?t=494005) and at [Github](https://github.com/resetes12/pokeemerald). 
+**Modern** Heart & Soul is a small modification of the original Pokémon Heart & Soul version 1.2.1 that includes missing options and features from its base game engine, Pokémon Modern Emerald. It has been created to become the base game of a future romhack. 
+
+You can get more information about Modern Emerald at [Pokécommunity](https://www.Pokécommunity.com/showthread.php?t=494005) and at [Github](https://github.com/resetes12/pokeemerald). 
 
 The Modern feature list is:
-- Map previews for dungeons, like FRLG and HGSS. Based on HGSS, also contains FRLG (but are unused)
-- FRLG Pokémon sprites for Gen 1, but using double animation (hand-made).
-- FRLG font and Battle Terrain.
+- Updated to the lastest Modern Emerald base (HnS uses 3.2, current Modern Emerald is 3.4).
+- FRLG Pokémon sprites for Gen 1, but using double animation _(mostly hand-made*)_.
+- Map previews for dungeons and special maps, like FRLG and HGSS. Based on HGSS, also contains FRLG (but are unused).
+- FRLG font (with colored text, but unused in this game) and Battle Terrain (including night versions).
+- 31 trainer rematches added throughout Johto and Kanto routes (trainers are registered after battling). They scale with badges, and offer a fair challenge.
 - Difficulty options (Easy, Normal, Hard). Same as Modern Emerald, it is NOT a difficulty hack-rom, it only adjusts levels, catch rates, badge boosts, and some other small stuff.
-- Removed GameFreak intro
+- Removed GameFreak intro.
 - Restored trading: Only in Ecruteak City Pokémon Center. Can trade with: Modern Emerald 3.3+, or original games.
     - Pokémon that have been put in new Pokéballs (Loveball, Lureball, Friendball, Heavyball, Moonball, Levelball or GSball) can't be traded initially, and will show up as BAD EGGs. 
         - In order to fix that, there's an NPC in the Ecruteak Trade Center which will fix (aka, remove from the special Pokéballs) your Pokémon data.
@@ -31,12 +35,13 @@ The Modern feature list is:
     - Pokémon Types (Original / Modern)
     - (Moved from Options Menu) Gen 1 Recharge
     - Lock Difficulty
-    - Hard Mode Exp.
+    - Hard Mode Exp. (80% in Modern HnS)
     - Catch Rate
 - Restored a "Disable challenge NPC after beating the game" in the Battle Frontier, after beating Red.
 - Add missing legendaries:
     - Arceus Egg can be bought for 999BP at a Battle Frontier house.
     - Regis: All six Regis can be caught at Artisan's Cave, in the Battle Frontier.
+- Legendaries do not respawn after beating the Elite Four like in base HnS.
 - EVs are now up to 255 (from 252, for trade compatibility reasons)
 - Added cheating items (Infinite Rare Candies, Infinite Repel, Healing Heart and IV/EV editor in party menu). Talk to the Cheating Girl in Cherrygrove.
 - Added IV setter (includes Hidden Power changer), EV resetter, and EXP. NURSE in Saffron Dojo.
@@ -45,8 +50,19 @@ The Modern feature list is:
 - Pokenav condition menu returns!
 - You can now decorate your Room!
 - TMs affected by modern moves, meaning that choosing Original will use original TM learneset.
-- Restored grass/footprints metatile behaviour from Modern Emerald.
-- Small bugfixes to the base game: mostly tiles and collision to match Gen 3-like map design.
+- Restored grass and footprints and other metatile behaviour from Modern Emerald.
+- Large amount of bugfixes to the HnS base (1.2.1): 
+    - Tons tiles and collision fixes and improvements to match Gen 3-like & FRLG map and tile design.
+    - Text and typo fixes.
+    - Togepi Soft-lock is gone, and Togepi can be found as a starter again.
+    - Nuzlocke encounters work in Faraway Island.
+    - Legendaries are now fateful encounters and can be caught regardless of Nuzlocke rules (like a Shiny clause, but for legendaries).
+    - Rocket Takeover music loop fix.
+    - Pokegear Map fixes.
+    - Tons of bugfixes from Modern Emerald 3.3+.
+
+
+_*Squirtle, Wartortle, Kakuna, Arbok, Nidoqueen, Nidoking, Vileplume, Geodude, Grimer, Muk, Onix, Scyther, Magikarp, Gyarados, Eeevee, Articuno, Mew second frame taken from the "Gen 3 Resource Sprite Project", so credits to them._
 
 # ORIGINAL Heart & Soul _readme.md_
 
