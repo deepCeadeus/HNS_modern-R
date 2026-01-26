@@ -153,8 +153,8 @@ SilphCo_Text_Officer:
 	.string "Only employees are permitted to\n"
 	.string "go upstairs.\p"
 	.string "But since you came such a long\n"
-	.string "way,\p"
-	.string "have this neat little souvenir.$"
+	.string "way, have this neat little\l"
+	.string "souvenir.$"
 
 SilphCo_Text_Officer_GotUpGrade:
 	.string "It's SILPH CO.'s latest product.\p"
