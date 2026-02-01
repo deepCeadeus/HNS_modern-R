@@ -178,9 +178,9 @@
 #define OBJ_EVENT_GFX_GRASS_CUSHION              174
 #define OBJ_EVENT_GFX_FIRE_CUSHION               175
 #define OBJ_EVENT_GFX_WATER_CUSHION              176
-#define OBJ_EVENT_GFX_BIG_SNORLAX           177
+#define OBJ_EVENT_GFX_BIG_SNORLAX_DOLL           177
 #define OBJ_EVENT_GFX_BIG_RHYDON_DOLL            178
-#define OBJ_EVENT_GFX_LAPRAS            179
+#define OBJ_EVENT_GFX_BIG_LAPRAS_DOLL            179
 #define OBJ_EVENT_GFX_BIG_VENUSAUR_DOLL          180
 #define OBJ_EVENT_GFX_BIG_CHARIZARD_DOLL         181
 #define OBJ_EVENT_GFX_BIG_BLASTOISE_DOLL         182
@@ -240,6 +240,8 @@
 #define OBJ_EVENT_GFX_LINK_RS_MAY                236
 #define OBJ_EVENT_GFX_LUGIA                      237
 #define OBJ_EVENT_GFX_HOOH                       238
+#define OBJ_EVENT_GFX_SNORLAX_STATIC             OBJ_EVENT_GFX_ROUND_CUSHION
+#define OBJ_EVENT_GFX_LAPRAS_STATIC              OBJ_EVENT_GFX_WATER_CUSHION
 #define OBJ_EVENT_GFX_POKE_BALL                  OBJ_EVENT_GFX_ITEM_BALL // replaces ITEM_BALL
 #define OBJ_EVENT_GFX_OW_MON                     OBJ_EVENT_GFX_REGICE
 #define OBJ_EVENT_GFX_LIGHT_SPRITE               OBJ_EVENT_GFX_QUINTY_PLUMP
