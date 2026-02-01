@@ -4,12 +4,12 @@
 
 
 # MODERN Heart & Soul
-**Modern** Heart & Soul is a small modification of the original Pokémon Heart & Soul version 1.2.1 that includes missing options and features from its base game engine, Pokémon Modern Emerald. It has been created to become the base game of a future romhack. 
+**Modern** Heart & Soul is a small modification of the original Pokémon Heart & Soul version 1.2.2 that includes missing options and features from its base game engine, Pokémon Modern Emerald. It has been created to become the base game of a future romhack. 
 
 You can get more information about Modern Emerald at [Pokécommunity](https://www.Pokécommunity.com/showthread.php?t=494005) and at [Github](https://github.com/resetes12/pokeemerald). 
 
 The Modern feature list is:
-- Updated to the lastest Modern Emerald base (HnS uses 3.2, current Modern Emerald is 3.4).
+- Updated to the lastest Modern Emerald base (HnS 1.2.2 uses Modern Emerald 3.2 base; current Modern Emerald is 3.4).
 - FRLG Pokémon sprites for Gen 1, but using double animation _(mostly hand-made*)_.
 - Map previews for dungeons and special maps, like FRLG and HGSS. Based on HGSS, also contains FRLG (but are unused).
 - FRLG font (with colored text, but unused in this game) and Battle Terrain (including night versions).
@@ -51,12 +51,9 @@ The Modern feature list is:
 - You can now decorate your Room!
 - TMs affected by modern moves, meaning that choosing Original will use original TM learneset.
 - Restored grass and footprints and other metatile behaviour from Modern Emerald.
-- Large amount of bugfixes to the HnS base (1.2.1): 
+- Large amount of bugfixes to the HnS base (1.2.2): 
     - Tons tiles and collision fixes and improvements to match Gen 3-like & FRLG map and tile design.
     - Text and typo fixes.
-    - Togepi Soft-lock is gone, and Togepi can be found as a starter again.
-    - Nuzlocke encounters work in Faraway Island.
-    - Legendaries are now fateful encounters and can be caught regardless of Nuzlocke rules (like a Shiny clause, but for legendaries).
     - Rocket Takeover music loop fix.
     - Pokegear Map fixes.
     - Tons of bugfixes from Modern Emerald 3.3+.
