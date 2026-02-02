@@ -299,6 +299,10 @@ BattleFrontier_ReceptionGate_EventScript_ExitFrontierPassGuide::
 	end
 
 BattleFrontier_ReceptionGate_Text_FirstTimeHereThisWay:
+	.string "Welcome to the KANTO\n"
+	.string "BATTLE FRONTIER!\p"
+	.string "A 1 to 1 recreation of HOENN's\n"
+	.string "most famous battle island!\p"
 	.string "Is it your first time here?\n"
 	.string "Please step this way!$"
 

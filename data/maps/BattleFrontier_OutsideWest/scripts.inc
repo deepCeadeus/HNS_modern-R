@@ -153,14 +153,7 @@ BattleFrontier_OutsideWest_EventScript_Engineer4::
 	end
 
 BattleFrontier_OutsideWest_EventScript_Fisherman2::
-	lock
-	faceplayer
-	message BattleFrontier_OutsideWest_Text_GotSeasickOnWayHere
-	waitmessage
-	applymovement LOCALID_FISHERMAN_2, Common_Movement_FaceAwayPlayer
-	waitmovement 0
-	waitbuttonpress
-	release
+	msgbox BattleFrontier_OutsideWest_Text_HaventBlinked, MSGBOX_NPC
 	end
 
 BattleFrontier_OutsideWest_EventScript_Man1::
@@ -316,11 +309,11 @@ BattleFrontier_OutsideWest_EventScript_ExpertM::
 	end
 
 BattleFrontier_OutsideWest_EventScript_Man2::
-	msgbox BattleFrontier_OutsideWest_Text_NothingHereNotLongAgo, MSGBOX_NPC
+	msgbox BattleFrontier_OutsideWest_Text_FrontierBrainsSame, MSGBOX_NPC
 	end
 
 BattleFrontier_OutsideWest_EventScript_Woman1::
-	msgbox BattleFrontier_OutsideWest_Text_FinallyArrivedAtFrontier, MSGBOX_NPC
+	msgbox BattleFrontier_OutsideWest_Text_CoolOffTrainers, MSGBOX_NPC
 	end
 
 BattleFrontier_OutsideWest_EventScript_FatMan1::
@@ -420,31 +413,25 @@ BattleFrontier_OutsideWest_Text_CantFindBattleTower:
 	.string "a map of the BATTLE FRONTIER.\p"
 	.string "This place is just too big!$"
 
-BattleFrontier_OutsideWest_Text_GotSeasickOnWayHere:
-	.string "I wanted to take a challenge as soon\n"
-	.string "as I arrived here.\p"
-	.string "But on the way, I got seasick…\n"
-	.string "Urrrrp…$"
+BattleFrontier_OutsideWest_Text_HaventBlinked:
+	.string "I came to watch one battle.\p"
+	.string "That was three hours ago.\n"
+	.string "I think I forgot to blink.$"
 
 BattleFrontier_OutsideWest_Text_OnlyToughTrainersBroughtHere:
-	.string "It's not as if just anyone can come\n"
-	.string "here, you know?\p"
-	.string "Only those TRAINERS who've been\n"
-	.string "recognized as tough are brought here.\p"
-	.string "That's why many TRAINERS don't even\n"
-	.string "know about the BATTLE FRONTIER.$"
+	.string "Back in my day, eight badges\n"
+	.string "meant something.\p"
+	.string "Here? That just gets you\n"
+	.string "through the front door.$"
 
 BattleFrontier_OutsideWest_Text_SureWeCanChallengeWithNoMons:
-	.string "Hey, bro…\p"
-	.string "Are you sure we can make challenges\n"
-	.string "even if we don't have any POKéMON?$"
+	.string "Hey…\p"
+	.string "Isn't that SEVIPER a bit scary?$"
 
 BattleFrontier_OutsideWest_Text_BigGuySaidIllLendYouMons:
-	.string "Uh…\n"
-	.string "I'm sure it'll be okay.\p"
-	.string "I think…\p"
-	.string "But remember that big scary guy?\n"
-	.string "He said, “I'll lend you POKéMON!”$"
+	.string "The FRONTIER BRAIN from the BATTLE\n"
+	.string "PIKE is scarier, trust me!\p"
+	.string "I lost pretty quickly…$"
 
 BattleFrontier_OutsideWest_Text_WhosRaisingThoseRentalMons:
 	.string "That's the BATTLE FACTORY.\n"
@@ -476,15 +463,13 @@ BattleFrontier_OutsideWest_Text_LostIllPutOffPikeChallenge:
 	.string "until tomorrow.$"
 
 BattleFrontier_OutsideWest_Text_ChooseFishingOverBattling:
-	.string "I believe I'm the only person here who,\n"
-	.string "for some unknown reason, would choose\l"
-	.string "fishing over battling.\p"
-	.string "Huh? You can't catch anything here?\n"
-	.string "That's disappointing…$"
+	.string "How is it possible that there are no\n"
+	.string "water POKéMON in a place located in\l"
+	.string "the middle of the sea?$"
 
 BattleFrontier_OutsideWest_Text_KeepBattlingUntilIGetSymbol:
-	.string "Today, I'm going to keep battling, no\n"
-	.string "matter what, until I get a Symbol.$"
+	.string "I wonder if there are more BATTLE\n"
+	.string "FRONTIERS out there.$"
 
 BattleFrontier_OutsideWest_Text_YoureOffToChallengeDome:
 	.string "Oh? You're off to challenge\n"
@@ -503,23 +488,22 @@ BattleFrontier_OutsideWest_Text_WontLetGentlemenBeatMe:
 	.string "I won't let GENTLEMEN beat me!\p"
 	.string "But where is the entrance?$"
 
-BattleFrontier_OutsideWest_Text_NothingHereNotLongAgo:
-	.string "There used to be nothing here not all\n"
-	.string "that long ago.\p"
-	.string "But, now look at this place! Amazing!\n"
-	.string "I'll bring my mother out to see this.$"
+BattleFrontier_OutsideWest_Text_FrontierBrainsSame:
+	.string "If this place is a recreation of\n"
+	.string "HOENN's BATTLE FRONTIER…\p"
+	.string "How did they get the same people\n"
+	.string "to be FRONTIER BRAINS?$"
 
-BattleFrontier_OutsideWest_Text_FinallyArrivedAtFrontier:
-	.string "I've finally arrived at the BATTLE\n"
-	.string "FRONTIER!\p"
-	.string "I'm sure to grab attention with\n"
-	.string "my looks and ability!$"
+BattleFrontier_OutsideWest_Text_CoolOffTrainers:
+	.string "They built this on the coast so trainers\n"
+	.string "could ‘cool off’ after losing.\p"
+	.string "The ocean’s very popular today.$"
 
 BattleFrontier_OutsideWest_Text_SquareFilledWithToughPeople:
-	.string "Munch, munch…\p"
-	.string "It looks like this square's filled with\n"
-	.string "tough people.\p"
-	.string "Munch, munch…$"
+	.string "I saw a kid from PALLET TOWN\n"
+	.string "go on a 42-win streak.\p"
+	.string "Professor Oak hasn’t stopped\n"
+	.string "bragging since.$"
 
 BattleFrontier_OutsideWest_Text_MetOlderGirlAtPike:
 	.string "Crunch, munch…\p"
