@@ -109,7 +109,7 @@ SaffronCity_SilphCo_Text_Steven2:
 	.string "I think I can help you with that.\p"
 	.string "Let's say that you have stones in\n"
 	.string "front of you. Which color would\l"
-	.string " you pick?$"
+	.string "you pick?$"
 SaffronCity_SilphCo_Text_Steven3:
 	.string "You chose correctly! I'll give you\n"
 	.string "{STR_VAR_1}!$"
