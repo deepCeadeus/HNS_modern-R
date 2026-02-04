@@ -213,6 +213,7 @@ TinTower_RoofDay_EventScript_HoOhPostgame::
 	call_if_set FLAG_DIFFICULTY_HARD, TinTower_RoofDay_EventScript_HoOhPostgame_Hard_Stats
 	special BattleSetup_StartLegendaryBattle
 	waitstate
+	calculatemonstats
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	setvar VAR_LAST_TALKED, LOCALID_HO_OH
 	specialvar VAR_RESULT, GetBattleOutcome

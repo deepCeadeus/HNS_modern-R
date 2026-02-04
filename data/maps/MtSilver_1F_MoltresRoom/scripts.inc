@@ -21,6 +21,7 @@ MtSilver_1F_MoltresRoom_EventScript_Moltres::
 	call_if_set FLAG_DIFFICULTY_HARD, MtSilver_1F_EventScript_Moltres_Stats
 	special BattleSetup_StartLegendaryBattle
 	waitstate
+	calculatemonstats
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, MtSilver_1F_MoltresRoom_EventScript_MoltresRan
 	fadescreenswapbuffers FADE_TO_BLACK

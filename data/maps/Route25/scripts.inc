@@ -244,6 +244,7 @@ Route25_EventScript_Suicune::
 	call_if_set FLAG_DIFFICULTY_HARD, Route25_EventScript_Suicune_Battle_Stats
 	special BattleSetup_StartLegendaryBattle
 	waitstate
+	calculatemonstats
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route25_EventScript_SuicuneRan
 	fadescreenswapbuffers FADE_TO_BLACK

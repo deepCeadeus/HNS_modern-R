@@ -216,6 +216,7 @@ WhirlIslands_LugiaChamber_EventScript_LugiaPostgame::
 	call_if_set FLAG_DIFFICULTY_HARD, WhirlIslands_LugiaChamber_EventScript_LugiaPostgame_Hard_Stats
 	special BattleSetup_StartLegendaryBattle
 	waitstate
+	calculatemonstats
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	setvar VAR_LAST_TALKED, LOCALID_LUGIA
 	specialvar VAR_RESULT, GetBattleOutcome

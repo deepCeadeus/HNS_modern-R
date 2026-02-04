@@ -63,6 +63,7 @@ Route10_EventScript_Zapdos::
 	call_if_set FLAG_DIFFICULTY_HARD, Route10_EventScript_Zapdos_Stats
 	special BattleSetup_StartLegendaryBattle
 waitstate
+	calculatemonstats
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route10_EventScript_ZapdosRan
 	fadescreenswapbuffers FADE_TO_BLACK

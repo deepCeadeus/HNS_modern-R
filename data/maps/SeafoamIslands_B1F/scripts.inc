@@ -14,6 +14,7 @@ SeafoamIslands_B1F_EventScript_Articuno::
 	call_if_set FLAG_DIFFICULTY_HARD, SeafoamIslands_B1F_EventScript_Articuno_Stats
 	special BattleSetup_StartLegendaryBattle
 waitstate
+	calculatemonstats
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SeafoamIslands_B1F_EventScript_ArticunoRan
 	fadescreenswapbuffers FADE_TO_BLACK

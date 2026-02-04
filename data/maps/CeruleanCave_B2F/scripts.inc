@@ -11,7 +11,8 @@ CeruleanCave3_EventScript_MewtwoNew::
 	seteventmon SPECIES_MEWTWO, 80
 	call_if_set FLAG_DIFFICULTY_HARD, CeruleanCave3_EventScript_Mewtwo_Hard_Stats
 	special BattleSetup_StartLegendaryBattle
-waitstate
+	waitstate
+	calculatemonstats
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, CeruleanCave3_EventScript_MewtwoRan
 	fadescreenswapbuffers FADE_TO_BLACK
