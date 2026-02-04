@@ -853,14 +853,14 @@
 #define TRAINER_BORIS                       849
 #define TRAINER_NICOLE                      850
 #define TRAINER_RED                         851
-#define TRAINER_NURSE                       852
+#define TRAINER_NURSE                       852 //854
 #define TRAINER_LUCY_BF_BRAIN               853
 #define TRAINER_BRANDON_BF_BRAIN            854
 #define TRAINER_GRUNT_12                    855
 #define TRAINER_TUCKER_BF_BRAIN             856 //858
 #define TRAINER_ANABEL_BF_BRAIN             857 //859
 #define TRAINER_GRETA_BF_BRAIN              858 //85A
-#define TRAINER_CHANSEY5                    859 //85B
+#define TRAINER_NURSE_PRE_RED               859 //85B
 #define TRAINER_SPENSER_BF_BRAIN            860 //85C
 #define TRAINER_NOLAND_BF_BRAIN             861 //85D
 #define TRAINER_PROTON_1                    862 //85E

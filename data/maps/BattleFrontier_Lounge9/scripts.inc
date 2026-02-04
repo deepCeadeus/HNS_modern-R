@@ -1073,15 +1073,28 @@ BattleFrontier_Lounge9_IV_Finish:
 
 BattleFrontier_Lounge9_Nurse::
 	faceplayer
-	goto_if_unset FLAG_DEFEATED_RED, BattleFrontier_Lounge9_NurseChampion
+	goto_if_unset FLAG_DEFEATED_RED, BattleFrontier_Lounge9_NurseNoChampion
 	msgbox BattleFrontier_Lounge9_NurseRepeat2, MSGBOX_YESNO
 	switch VAR_RESULT
 	case NO, BattleFrontier_Lounge9_Chansey1End
 	case YES, BattleFrontier_Lounge9_NurseBattle
 	case MULTI_B_PRESSED, BattleFrontier_Lounge9_Chansey1End
+	end
 
 BattleFrontier_Lounge9_NurseBattle::
 	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT, TRAINER_NURSE, 0, BattleFrontier_Lounge9_NurseIntro, BattleFrontier_Lounge9_NurseDefeat, BattleFrontier_Lounge9_ChanseyBattleAgain
+	end
+
+BattleFrontier_Lounge9_NurseNoChampion:
+	msgbox BattleFrontier_Lounge9_NurseRepeat2, MSGBOX_YESNO
+	switch VAR_RESULT
+	case NO, BattleFrontier_Lounge9_Chansey1End
+	case YES, BattleFrontier_Lounge9_NurseBattle_Pre_Red
+	case MULTI_B_PRESSED, BattleFrontier_Lounge9_Chansey1End
+	end
+
+BattleFrontier_Lounge9_NurseBattle_Pre_Red::
+	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT, TRAINER_NURSE_PRE_RED, 0, BattleFrontier_Lounge9_NurseIntro, BattleFrontier_Lounge9_NurseDefeat, BattleFrontier_Lounge9_ChanseyBattleAgain
 	end
 
 BattleFrontier_Lounge9_Chansey1End::
@@ -1092,12 +1105,7 @@ BattleFrontier_Lounge9_ChanseyBattleAgain::
 	faceplayer
 	msgbox BattleFrontier_Lounge9_NurseRepeat, MSGBOX_AUTOCLOSE
 	clearflag 0x85B
-	end
-
-BattleFrontier_Lounge9_NurseChampion:
-	faceplayer
-	msgbox BattleFrontier_Lounge9_NurseChampionText, MSGBOX_DEFAULT
-	release
+	clearflag 0x854
 	end
 
 BattleFrontier_Lounge9_NurseChampionText:

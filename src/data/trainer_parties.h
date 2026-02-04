@@ -24273,3 +24273,24 @@ static const struct TrainerMonNoItemCustomMoves sParty_Nurse[] = {
     .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     }
 };
+
+static const struct TrainerMonNoItemCustomMoves sParty_Nurse_Pre_Red[] = {
+    {
+    .iv = 0,
+    .lvl = 50,
+    .species = SPECIES_BLISSEY,
+    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 50,
+    .species = SPECIES_BLISSEY,
+    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 50,
+    .species = SPECIES_BLISSEY,
+    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+};

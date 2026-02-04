@@ -6281,6 +6281,19 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_CUSTOM_MOVES(sParty_Nurse),
     },
 
+    //Used for Exp. Farming, before beating Red
+    [TRAINER_NURSE_PRE_RED] =
+    {
+        .trainerClass = TRAINER_CLASS_NURSE,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_NURSE,
+        .trainerName = _("JOLINE"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = 0,
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_Nurse_Pre_Red),
+    },
+
     //Rematch Joey
     [TRAINER_JOEY_2] =
     {
