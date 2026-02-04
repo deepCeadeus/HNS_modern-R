@@ -102,6 +102,8 @@ MrPokemonHouse_EventScript_MrPokemon_RedScale_Accepted::
 	removeitem ITEM_RED_SCALE
 	giveitem ITEM_EXP_SHARE_SMALL
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	msgbox MrPokemonHouse_Text_ExplainExpShareS, MSGBOX_DEFAULT
+	closemessage
 	release
 	end
 
@@ -239,8 +241,13 @@ MrPokemonHouse_Text_GimmeTheScale:
 	.string "That's rare! I, I want it…\p"
 	.string "{PLAYER}, would you care to\n"
 	.string "trade it?\p"
-	.string "I can offer this EXP.SHARE\n"
+	.string "I can offer this EXP.SHARE S\n"
 	.string "that I got from PROF.OAK.$"
+
+MrPokemonHouse_Text_ExplainExpShareS:
+	.string "Remember! The EXP.SHARE S\n"
+	.string "doesn't stack with the\l"
+	.string "EXP. SHARE KEY ITEM!$"
 
 MrPokemonHouse_Text_Disappointed:
 	.string "That's disappointing.\n"
