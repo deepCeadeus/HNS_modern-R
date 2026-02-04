@@ -21,13 +21,6 @@ waitstate
 	release
 	end
 
-CeruleanCave3_EventScript_Mewtwo_Hard_Stats::
-	setvar VAR_0x8000, 500 @HP
-	setvar VAR_0x8003, 500 @SPD
-	special SetHpStat
-	special SetSpdStat
-	return
-
 CeruleanCave3_EventScript_MewtwoRan::
 	release
 	end
