@@ -3910,7 +3910,20 @@ static void Cmd_getexp(void)
                     gExpShareExp = 0;
                 }
             }
-            else if ((FlagGet(FLAG_EXP_SHARE) == TRUE) && (gSaveBlock2Ptr->optionsDifficulty != 2))
+            //In easy mode, exp. share works as it does in Gen VI. It allows for easy griding, if needed. 
+            //50% of exp. is shared to all party members.
+            else if ((FlagGet(FLAG_EXP_SHARE) == TRUE) && (gSaveBlock2Ptr->optionsDifficulty == 0))
+            {
+                *exp = SAFE_DIV(calculatedExp, viaSentIn);
+                if (*exp == 0)
+                    *exp = 1;
+
+                gExpShareExp = calculatedExp / 2;
+                if (gExpShareExp == 0)
+                    gExpShareExp = 1;
+            }
+            //In Normal mode, exp. share behaves like the HnS team tested to be optimal for the whole game. Untouched.
+            else if ((FlagGet(FLAG_EXP_SHARE) == TRUE) && (gSaveBlock2Ptr->optionsDifficulty == 1))
             {
                 // Participants: scale normal share by EXPALL_PARTICIPANT_NUM / EXPALL_PARTICIPANT_DEN
                 *exp = SAFE_DIV(calculatedExp * EXPALL_PARTICIPANT_NUM,
@@ -3923,6 +3936,8 @@ static void Cmd_getexp(void)
                 if (gExpShareExp == 0 && calculatedExp != 0)
                     gExpShareExp = 1;
             }
+            //In Hard Mode, exp. share in HnS follows the same rule as above. 
+            //Leftover from Modern Emerald, but left to be customized by other users.
             else if ((FlagGet(FLAG_EXP_SHARE) == TRUE) && (gSaveBlock2Ptr->optionsDifficulty == 2))
             {
                 // Participants: scale normal share by EXPALL_PARTICIPANT_NUM / EXPALL_PARTICIPANT_DEN
@@ -3936,6 +3951,7 @@ static void Cmd_getexp(void)
                 if (gExpShareExp == 0 && calculatedExp != 0)
                     gExpShareExp = 1;
             }
+
             if (gSaveBlock1Ptr->tx_Challenges_ExpMultiplier == 3)
             {
                 if (TX_EXP_MULTIPLER_ONLY_ON_NUZLOCKE_AND_RANDOMIZER) //special for Jaizu
