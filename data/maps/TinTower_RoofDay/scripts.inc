@@ -210,6 +210,7 @@ TinTower_RoofDay_EventScript_HoOhPostgame::
 	playbgm MUS_HG_VS_HO_OH, 0
 	seteventmon SPECIES_HO_OH, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	call_if_set FLAG_DIFFICULTY_HARD, TinTower_RoofDay_EventScript_HoOhPostgame_Hard_Stats
 	special BattleSetup_StartLegendaryBattle
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
@@ -222,6 +223,13 @@ TinTower_RoofDay_EventScript_HoOhPostgame::
 	setvar VAR_COMPLETED_HO_OH, 3
 	releaseall
 	end
+
+TinTower_RoofDay_EventScript_HoOhPostgame_Hard_Stats::
+	setvar VAR_0x8001, 450 @ATK
+	setvar VAR_0x8003, 500 @SPD
+	special SetAtkStat
+	special SetSpdStat
+	return
 
 TinTower_RoofDay_EventScript_HoohFlewAway::
 	fadescreenswapbuffers FADE_TO_BLACK

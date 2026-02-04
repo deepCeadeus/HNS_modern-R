@@ -241,6 +241,7 @@ Route25_EventScript_Suicune::
 	delay 40
 	waitmoncry
 	seteventmon SPECIES_SUICUNE, 50
+	call_if_set FLAG_DIFFICULTY_HARD, Route25_EventScript_Suicune_Battle_Stats
 	special BattleSetup_StartLegendaryBattle
 	waitstate
 	specialvar VAR_RESULT, GetBattleOutcome
@@ -264,6 +265,13 @@ Route25_EventScript_Suicune::
 	setvar VAR_SUICUNE_ENCOUNTERS, 8
 	release
 	end
+
+Route25_EventScript_Suicune_Battle_Stats::
+	setvar VAR_0x8002, 700 @DEF
+	setvar VAR_0x8006, 700 @SP. DEF
+	special SetDefStat
+	special SetSpDefStat
+	return
 
 Route25_EventScript_SuicuneRan::
 	release

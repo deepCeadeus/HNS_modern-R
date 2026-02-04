@@ -88,6 +88,7 @@ BirthIsland_Exterior_EventScript_Deoxys::
 	setvar VAR_LAST_TALKED, LOCALID_DEOXYS
 	seteventmon SPECIES_DEOXYS, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	call_if_set FLAG_DIFFICULTY_HARD, BirthIsland_Exterior_EventScript_Deoxys_Hard_Stats
 	special BattleSetup_StartLegendaryBattle
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
@@ -98,6 +99,11 @@ BirthIsland_Exterior_EventScript_Deoxys::
 	setflag FLAG_BATTLED_DEOXYS
 	release
 	end
+
+BirthIsland_Exterior_EventScript_Deoxys_Hard_Stats::
+	setvar VAR_0x8000, 500 @HP
+	special SetHpStat
+	return
 
 BirthIsland_Exterior_EventScript_DefeatedDeoxys::
 	setflag FLAG_DEFEATED_DEOXYS

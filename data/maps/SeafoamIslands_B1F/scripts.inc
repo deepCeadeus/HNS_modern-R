@@ -11,6 +11,7 @@ SeafoamIslands_B1F_EventScript_Articuno::
 	delay 40
 	waitmoncry
 	seteventmon SPECIES_ARTICUNO, 50
+	call_if_set FLAG_DIFFICULTY_HARD, SeafoamIslands_B1F_EventScript_Articuno_Stats
 	special BattleSetup_StartLegendaryBattle
 waitstate
 	specialvar VAR_RESULT, GetBattleOutcome
@@ -21,6 +22,13 @@ waitstate
 	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end
+
+SeafoamIslands_B1F_EventScript_Articuno_Stats::
+	setvar VAR_0x8000, 450 @HP
+	setvar VAR_0x8006, 400 @SP. DEF
+	special SetHpStat
+	special SetSpDefStat
+	return
 
 SeafoamIslands_B1F_EventScript_ArticunoRan::
 	release

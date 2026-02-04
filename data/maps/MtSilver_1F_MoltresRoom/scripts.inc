@@ -18,6 +18,7 @@ MtSilver_1F_MoltresRoom_EventScript_Moltres::
 	delay 40
 	waitmoncry
 	seteventmon SPECIES_MOLTRES, 50
+	call_if_set FLAG_DIFFICULTY_HARD, MtSilver_1F_EventScript_Moltres_Stats
 	special BattleSetup_StartLegendaryBattle
 	waitstate
 	specialvar VAR_RESULT, GetBattleOutcome
@@ -28,6 +29,13 @@ MtSilver_1F_MoltresRoom_EventScript_Moltres::
 	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end
+
+MtSilver_1F_EventScript_Moltres_Stats::
+	setvar VAR_0x8000, 450 @HP
+	setvar VAR_0x8005, 350 @SP. ATK
+	special SetHpStat
+	special SetSpAtkStat
+	return
 
 MtSilver_1F_MoltresRoom_EventScript_MoltresRan::
 	release

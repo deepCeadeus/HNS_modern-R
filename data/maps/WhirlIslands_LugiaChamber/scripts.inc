@@ -213,6 +213,7 @@ WhirlIslands_LugiaChamber_EventScript_LugiaPostgame::
 	playbgm MUS_HG_VS_LUGIA, 0
 	seteventmon SPECIES_LUGIA, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	call_if_set FLAG_DIFFICULTY_HARD, WhirlIslands_LugiaChamber_EventScript_LugiaPostgame_Hard_Stats
 	special BattleSetup_StartLegendaryBattle
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
@@ -225,6 +226,15 @@ WhirlIslands_LugiaChamber_EventScript_LugiaPostgame::
 	setvar VAR_COMPLETED_LUGIA, 3
 	releaseall
 	end
+
+WhirlIslands_LugiaChamber_EventScript_LugiaPostgame_Hard_Stats::
+	setvar VAR_0x8000, 555 @HP
+	setvar VAR_0x8002, 350 @DEF
+	setvar VAR_0x8006, 350 @SP. DEF
+	special SetHpStat
+	special SetDefStat
+	special SetSpDefStat
+	return
 
 WhirlIslands_LugiaChamber_EventScript_LugiaFlewAway::
 	fadescreenswapbuffers FADE_TO_BLACK

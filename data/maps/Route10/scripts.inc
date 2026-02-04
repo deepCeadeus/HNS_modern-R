@@ -60,6 +60,7 @@ Route10_EventScript_Zapdos::
 	delay 40
 	waitmoncry
 	seteventmon SPECIES_ZAPDOS, 50
+	call_if_set FLAG_DIFFICULTY_HARD, Route10_EventScript_Zapdos_Stats
 	special BattleSetup_StartLegendaryBattle
 waitstate
 	specialvar VAR_RESULT, GetBattleOutcome
@@ -71,10 +72,16 @@ waitstate
 	release
 	end
 
+Route10_EventScript_Zapdos_Stats::
+	setvar VAR_0x8000, 450 @HP
+	setvar VAR_0x8003, 500 @SPD
+	special SetHpStat
+	special SetSpdStat
+	return
+
 Route10_EventScript_ZapdosRan::
 	release
 	end
-
 
 Route10_Text_HikerJimSeen:
 	.string "Hahahah!$"
