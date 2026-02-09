@@ -132,39 +132,8 @@ Route39_EventScript_BaobaIntro::
 	waitmovement 0
 	setflag FLAG_ENABLE_BAOBA_MATCH_CALL
 	removeobject LOCALID_R39_BAOBA
-	goto_if_set FLAG_ROCKET_TAKEOVER_NOT_STARTED, Route39_EventScript_BaobaIntro_Elm_Calls
 	release
 	end
-
-Route39_EventScript_BaobaIntro_Elm_Calls::
-	lock
-	pokenavcall ElmPhoneRadioTowerRocketTakeoverText2
-	waitmessage
-	setvar VAR_GOLDENROD_CITY_STATE, 6
-	clearflag FLAG_HIDE_GOLDENROD_ROCKETS
-	setflag FLAG_HIDE_GOLDENROD_ROCKET_SCOUT
-	setflag FLAG_HIDE_GOLDENROD_NPCS
-	clearflag FLAG_HIDE_ROCKET_GOLDENROD_RADIOTOWER_1
-	setvar VAR_MAHOGANY_TOWN_STATE, 16
-	delay 10
-	release
-	end
-
-ElmPhoneRadioTowerRocketTakeoverText2:
-	.string "PROF.ELM: {PLAYER}, how are\n"
-	.string "things going?\p"
-	.string "Don't worry about the shadow now!\n"
-	.string "I called because something weird\l"
-	.string "is happening with the radio\l"
-	.string "broadcasts.\p"
-	.string "They were talking about TEAM\n"
-	.string "ROCKET.\p"
-	.string "{PLAYER}, do you know anything\n"
-	.string "about it?\p"
-	.string "Maybe TEAM ROCKET has returned.\n"
-	.string "No, that just can't be true.\p"
-	.string "Sorry to bug you.\n"
-	.string "Take care!$"
 
 Route39_Text_ChooseLegend::
 	.string "BAOBA: GOOD HEAVENS! Did that\n"

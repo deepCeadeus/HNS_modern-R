@@ -19,7 +19,7 @@ Mahoganytown_OnFrame::
 	.2byte 0
 
 Mahoganytown_EventScript_RocketTrigger::
-	goto_if_unset FLAG_ENABLE_BAOBA_MATCH_CALL, Mahoganytown_EventScript_RocketTrigger_NoBaobaButShadowSeen
+	goto_if_unset FLAG_ENABLE_BAOBA_MATCH_CALL, Mahoganytown_EventScript_RocketTrigger_NoBaoba
 	lock
 	pokenavcall ElmPhoneRadioTowerRocketTakeoverText
 	waitmessage
@@ -33,11 +33,7 @@ Mahoganytown_EventScript_RocketTrigger::
 	release
 	end
 
-Mahoganytown_EventScript_RocketTrigger_NoBaobaButShadowSeen::
-	lock
-	pokenavcall ElmPhoneShadowSeenText
-	setflag FLAG_ROCKET_TAKEOVER_NOT_STARTED
-	waitmessage
+Mahoganytown_EventScript_RocketTrigger_NoBaoba:
 	end
 
 MahoganyTown_EventScript_TownTrigger::
@@ -325,15 +321,3 @@ ElmPhoneRadioTowerRocketTakeoverText:
 	.string "Sorry to bug you.\n"
 	.string "Take care!$"
 
-ElmPhoneShadowSeenText:
-	.string "PROF.ELM: {PLAYER}, how is\n"
-	.string "everything going?\p"
-	.string "There has been reports on the\n"
-	.string "radio about a giant, strange\l"
-	.string "shadow around ROUTE 39.\p"
-	.string "It might be a new POKéMON!\n"
-	.string "In any case, I can't go now.\p"
-	.string "Can you go there and report\n"
-	.string "your findings?\p"
-	.string "Yes? Thank you!\n"
-	.string "Take care!$"
