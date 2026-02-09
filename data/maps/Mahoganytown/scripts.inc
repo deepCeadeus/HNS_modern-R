@@ -15,11 +15,15 @@ MahoganyTown_EventScript_FixTree::
 	end
 
 Mahoganytown_OnFrame::
-	map_script_2 VAR_MAHOGANY_TOWN_STATE, 15, Mahoganytown_EventScript_RocketTrigger
+	map_script_2 VAR_MAHOGANY_TOWN_STATE, 15, Mahoganytown_EventScript_DefeatedGym
 	.2byte 0
 
+Mahoganytown_EventScript_DefeatedGym::
+	call_if_eq VAR_LUGIA_OR_HOOH, 0, Mahoganytown_EventScript_LegendaryTrigger
+	call_if_ge VAR_LUGIA_OR_HOOH, 1, Mahoganytown_EventScript_RocketTrigger
+	end
+
 Mahoganytown_EventScript_RocketTrigger::
-	goto_if_unset FLAG_ENABLE_BAOBA_MATCH_CALL, Mahoganytown_EventScript_RocketTrigger_NoBaoba
 	lock
 	pokenavcall ElmPhoneRadioTowerRocketTakeoverText
 	waitmessage
@@ -33,7 +37,13 @@ Mahoganytown_EventScript_RocketTrigger::
 	release
 	end
 
-Mahoganytown_EventScript_RocketTrigger_NoBaoba:
+Mahoganytown_EventScript_LegendaryTrigger::
+	lock
+	pokenavcall ElmPhoneRoute39LegendaryText
+	waitmessage
+	setvar VAR_MAHOGANY_TOWN_STATE, 18
+	delay 10
+	release
 	end
 
 MahoganyTown_EventScript_TownTrigger::
@@ -321,3 +331,16 @@ ElmPhoneRadioTowerRocketTakeoverText:
 	.string "Sorry to bug you.\n"
 	.string "Take care!$"
 
+ElmPhoneRoute39LegendaryText:
+	.string "PROF.ELM: WOAH!\n"
+	.string "{PLAYER}, did you see that?!\p"
+	.string "A massive POKéMON just flew over\n"
+	.string "ECRUTEAK CITY!\l"
+	.string "I could see it from my LAB!\p"
+	.string "Could it be one of the legendary\n"
+	.string "POKéMON??\p"
+	.string "It looked like it was headed West,\n"
+	.string "toward ROUTE 39.\p"
+	.string "{PLAYER}!\n"
+	.string "This may be a rare opportunity\l"
+	.string "to give chase!$"
