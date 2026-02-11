@@ -24,7 +24,7 @@
 enum
 {
     MENU_MAIN,
-    MENU_CUSTOM,
+    MENU_BATTLE,
     MENU_SOUND,
     MENU_COUNT,
 };
@@ -33,6 +33,7 @@ enum
 enum
 {
     MENUITEM_MAIN_TEXTSPEED,
+    MENUITEM_MAIN_FONT,
     MENUITEM_MAIN_BATTLESCENE,
     MENUITEM_MAIN_DIFFICULTY,
     MENUITEM_MAIN_BATTLESTYLE,
@@ -228,6 +229,7 @@ static void DrawChoices_Run_Type(int selection, int y);
 static void DrawChoices_Autorun_Surf(int selection, int y);
 static void DrawChoices_Autorun_Dive(int selection, int y);
 static void DrawChoices_ShowIntroMsg(int selection, int y);
+static void DrawChoices_Font(int selection, int y);
 static void DrawBgWindowFrames(void);
 
 // EWRAM vars
@@ -261,6 +263,7 @@ struct // MENU_MAIN
 } static const sItemFunctionsMain[MENUITEM_MAIN_COUNT] =
 {
     [MENUITEM_MAIN_TEXTSPEED]               = {DrawChoices_TextSpeed,        ProcessInput_Options_Four},
+    [MENUITEM_MAIN_FONT]                    = {DrawChoices_Font,             ProcessInput_Options_Two},
     [MENUITEM_MAIN_BATTLESCENE]             = {DrawChoices_BattleScene,      ProcessInput_Options_Two},
     [MENUITEM_MAIN_DIFFICULTY]              = {DrawChoices_Difficulty,       ProcessInput_Difficulty},
     [MENUITEM_MAIN_BATTLESTYLE]             = {DrawChoices_BattleStyle,      ProcessInput_BattleStyle},
@@ -279,7 +282,7 @@ struct // MENU_MAIN
     [MENUITEM_MAIN_SHOW_INTRO_MSG]          = {DrawChoices_ShowIntroMsg,     ProcessInput_Options_Two},
 };
 
-struct // MENU_CUSTOM
+struct // MENU_BATTLE
 {
     void (*drawChoices)(int selection, int y);
     int (*processInput)(int selection);
@@ -330,9 +333,11 @@ static const u8 sText_OptionRunType[]             = _("QUICK RUN");
 static const u8 sText_AutorunEnable_Surf[]        = _("AUTORUN (SURF)");
 static const u8 sText_AutorunEnable_Dive[]        = _("AUTORUN (DIVE)");
 static const u8 sText_IntroMsg[]                  = _("SHOW INTRO MSG");
+static const u8 sText_FontType[]                  = _("FONT TYPE");
 static const u8 *const sOptionMenuItemsNamesMain[MENUITEM_MAIN_COUNT] =
 {
     [MENUITEM_MAIN_TEXTSPEED]           = gText_TextSpeed,
+    [MENUITEM_MAIN_FONT]                = sText_FontType,
     [MENUITEM_MAIN_BATTLESCENE]         = gText_BattleScene,
     [MENUITEM_MAIN_DIFFICULTY]          = gText_OptionDifficulty,
     [MENUITEM_MAIN_BATTLESTYLE]         = gText_BattleStyle,
@@ -388,7 +393,7 @@ static const u8 *const OptionTextRight(u8 menuItem)
     switch (sOptions->submenu)
     {
     case MENU_MAIN:     return sOptionMenuItemsNamesMain[menuItem];
-    case MENU_CUSTOM:   return sOptionMenuItemsNamesCustom[menuItem];
+    case MENU_BATTLE:   return sOptionMenuItemsNamesCustom[menuItem];
     case MENU_SOUND:    return sOptionMenuItemsNamesSound[menuItem];
     }
 }
@@ -402,6 +407,7 @@ static bool8 CheckConditions(int selection)
         switch(selection)
         {
         case MENUITEM_MAIN_TEXTSPEED:         return TRUE;
+        case MENUITEM_MAIN_FONT:              return TRUE;
         case MENUITEM_MAIN_BATTLESCENE:       return TRUE;
         case MENUITEM_MAIN_DIFFICULTY:        return TRUE;
         case MENUITEM_MAIN_BATTLESTYLE:       return TRUE;
@@ -420,7 +426,7 @@ static bool8 CheckConditions(int selection)
         //case MENUITEM_MAIN_SKIP_INTRO:        return TRUE;
         case MENUITEM_MAIN_UNIT_TYPE:         return TRUE;
         }
-    case MENU_CUSTOM:
+    case MENU_BATTLE:
         switch(selection)
         {
         case MENUITEM_BATTLE_FAST_INTRO:      return TRUE;
@@ -453,6 +459,8 @@ static bool8 CheckConditions(int selection)
 static const u8 sText_Empty[]                   = _("");
 static const u8 sText_Desc_Save[]               = _("Save your settings.");
 static const u8 sText_Desc_TextSpeed[]          = _("Choose one of the four text-display\nspeeds.");
+static const u8 sText_Desc_Font_Em[]            = _("{COLOR 9}{COLOR 10}Emerald{COLOR 2} font type. Exit the Options\nMenu to properly apply the option.");
+static const u8 sText_Desc_Font_FRLG[]          = _("{COLOR 7}{COLOR 8}FR{COLOR 9}{COLOR 10}LG{COLOR 2} font type. Exit the Options Menu\nto properly apply the option.");
 static const u8 sText_Desc_BattleScene_On[]     = _("Show the POKéMON animations\nand attack animations.");
 static const u8 sText_Desc_BattleScene_Off[]    = _("Skip the POKéMON animations\nand attack animations.");
 static const u8 sText_Desc_Difficulty_Easy[]    = _("Change the difficulty to EASY.\nEverything is easier.");
@@ -488,23 +496,24 @@ static const u8 sText_Desc_IntroMsg_On[]           = _("Bug reports {COLOR 7}{CO
 static const u8 sText_Desc_IntroMsg_Off[]          = _("Report issues at\n{COLOR 9}{COLOR 10}github.com/resetes12/HNS{UNDERSCORE}modern");
 static const u8 *const sOptionMenuItemDescriptionsMain[MENUITEM_MAIN_COUNT][3] =
 {
-    [MENUITEM_MAIN_TEXTSPEED]   = {sText_Desc_TextSpeed,            sText_Empty,                sText_Empty},
-    [MENUITEM_MAIN_BATTLESCENE] = {sText_Desc_BattleScene_On,       sText_Desc_BattleScene_Off, sText_Empty},
+    [MENUITEM_MAIN_TEXTSPEED]   = {sText_Desc_TextSpeed,            sText_Empty,                  sText_Empty},
+    [MENUITEM_MAIN_FONT]        = {sText_Desc_Font_Em,              sText_Desc_Font_FRLG,         sText_Empty},
+    [MENUITEM_MAIN_BATTLESCENE] = {sText_Desc_BattleScene_On,       sText_Desc_BattleScene_Off,   sText_Empty},
     [MENUITEM_MAIN_DIFFICULTY]  = {sText_Desc_Difficulty_Easy,      sText_Desc_Difficulty_Normal, sText_Desc_Difficulty_Hard},
-    [MENUITEM_MAIN_BATTLESTYLE] = {sText_Desc_BattleStyle_Shift,    sText_Desc_BattleStyle_Set, sText_Empty},
-    [MENUITEM_MAIN_BUTTONMODE]  = {sText_Desc_ButtonMode,           sText_Desc_ButtonMode_LR,   sText_Desc_ButtonMode_LA},
-    [MENUITEM_MAIN_FRAMETYPE]   = {sText_Desc_FrameType,            sText_Empty,                sText_Empty},
+    [MENUITEM_MAIN_BATTLESTYLE] = {sText_Desc_BattleStyle_Shift,    sText_Desc_BattleStyle_Set,   sText_Empty},
+    [MENUITEM_MAIN_BUTTONMODE]  = {sText_Desc_ButtonMode,           sText_Desc_ButtonMode_LR,     sText_Desc_ButtonMode_LA},
+    [MENUITEM_MAIN_FRAMETYPE]   = {sText_Desc_FrameType,            sText_Empty,                  sText_Empty},
     [MENUITEM_MAIN_FOLLOWER]    = {sText_Desc_FollowerOn,           sText_Desc_FollowerOff},
-    [MENUITEM_MAIN_LARGE_FOLLOWER]    = {sText_Desc_FollowerLargeOn,           sText_Desc_FollowerLargeOff},
-    [MENUITEM_MAIN_AUTORUN]     = {sText_Desc_AutorunOn,            sText_Desc_AutorunOff},
-    [MENUITEM_MAIN_AUTORUN_SURF]     = {sText_Desc_AutorunSurfOn,            sText_Desc_AutorunSurfOff},
-    //[MENUITEM_MAIN_AUTORUN_DIVE]     = {sText_Desc_AutorunDiveOn,            sText_Desc_AutorunDiveOff},
-    //[MENUITEM_MAIN_MATCHCALL]   = {sText_Desc_OverworldCallsOn,     sText_Desc_OverworldCallsOff},
-    [MENUITEM_CUSTOM_FISHING]     = {sText_Desc_FishingOn,            sText_Desc_FishingOff},
-    [MENUITEM_MAIN_EVEN_FASTER_JOY]     = {sText_Desc_EvenFasterJoyOn,            sText_Desc_EvenFasterJoyOff},
+    [MENUITEM_MAIN_LARGE_FOLLOWER]   = {sText_Desc_FollowerLargeOn,        sText_Desc_FollowerLargeOff},
+    [MENUITEM_MAIN_AUTORUN]          = {sText_Desc_AutorunOn,              sText_Desc_AutorunOff},
+    [MENUITEM_MAIN_AUTORUN_SURF]     = {sText_Desc_AutorunSurfOn,          sText_Desc_AutorunSurfOff},
+    //[MENUITEM_MAIN_AUTORUN_DIVE]   = {sText_Desc_AutorunDiveOn,          sText_Desc_AutorunDiveOff},
+    //[MENUITEM_MAIN_MATCHCALL]      = {sText_Desc_OverworldCallsOn,       sText_Desc_OverworldCallsOff},
+    [MENUITEM_CUSTOM_FISHING]        = {sText_Desc_FishingOn,              sText_Desc_FishingOff},
+    [MENUITEM_MAIN_EVEN_FASTER_JOY]  = {sText_Desc_EvenFasterJoyOn,        sText_Desc_EvenFasterJoyOff},
     //[MENUITEM_MAIN_SKIP_INTRO]     = {sText_Desc_SkipIntroOn,            sText_Desc_SkipIntroOff},
-    [MENUITEM_MAIN_UNIT_TYPE]     = {sText_Desc_Units_Metric,            sText_Desc_Units_Imperial},
-    [MENUITEM_MAIN_SHOW_INTRO_MSG]     = {sText_Desc_IntroMsg_On,            sText_Desc_IntroMsg_Off},
+    [MENUITEM_MAIN_UNIT_TYPE]        = {sText_Desc_Units_Metric,           sText_Desc_Units_Imperial},
+    [MENUITEM_MAIN_SHOW_INTRO_MSG]   = {sText_Desc_IntroMsg_On,            sText_Desc_IntroMsg_Off},
 };
 
 // Custom {PKMN}
@@ -579,6 +588,7 @@ static const u8 sText_Desc_Disabled_BattleHPBar[]   = _("Only active if xyz.");
 static const u8 *const sOptionMenuItemDescriptionsDisabledMain[MENUITEM_MAIN_COUNT] =
 {
     [MENUITEM_MAIN_TEXTSPEED]   = sText_Desc_Disabled_Textspeed,
+    [MENUITEM_MAIN_FONT]              = sText_Empty,
     [MENUITEM_MAIN_BATTLESCENE] = sText_Empty,
     [MENUITEM_MAIN_DIFFICULTY]  = sText_Empty,
     [MENUITEM_MAIN_BATTLESTYLE] = sText_Empty,
@@ -637,7 +647,7 @@ static const u8 *const OptionTextDescription(void)
         if (menuItem == MENUITEM_MAIN_TEXTSPEED || menuItem == MENUITEM_MAIN_FRAMETYPE)
             selection = 0;
         return sOptionMenuItemDescriptionsMain[menuItem][selection];
-    case MENU_CUSTOM:
+    case MENU_BATTLE:
         if (!CheckConditions(menuItem))
             return sOptionMenuItemDescriptionsDisabledCustom[menuItem];
         selection = sOptions->sel_battle[menuItem];
@@ -655,7 +665,7 @@ static u8 MenuItemCount(void)
     switch (sOptions->submenu)
     {
     case MENU_MAIN:     return MENUITEM_MAIN_COUNT;
-    case MENU_CUSTOM:   return MENUITEM_BATTLE_COUNT;
+    case MENU_BATTLE:   return MENUITEM_BATTLE_COUNT;
     case MENU_SOUND:    return MENUITEM_SOUND_COUNT;
     }
 }
@@ -692,7 +702,7 @@ static void DrawTopBarText(void)
             AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 105, 1, color, 0, sText_TopBar_Main);
             AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 222, 1, color, 0, sText_TopBar_Main_Right);
             break;
-        case MENU_CUSTOM:
+        case MENU_BATTLE:
             AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 94, 1, color, 0, sText_TopBar_Custom);
             AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 2, 1, color, 0, sText_TopBar_Custom_Left);
             AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 222, 1, color, 0, sText_TopBar_Main_Right);
@@ -785,7 +795,7 @@ static void DrawChoices(u32 id, int y) //right side draw function
             if (sItemFunctionsMain[id].drawChoices != NULL)
                 sItemFunctionsMain[id].drawChoices(sOptions->sel[id], y);
             break;
-        case MENU_CUSTOM:
+        case MENU_BATTLE:
             if (sItemFunctionsCustom[id].drawChoices != NULL)
                 sItemFunctionsCustom[id].drawChoices(sOptions->sel_battle[id], y);
             break;
@@ -859,6 +869,7 @@ void CB2_InitOptionPlusMenu(void)
     case 6:
         sOptions = AllocZeroed(sizeof(*sOptions));
         sOptions->sel[MENUITEM_MAIN_TEXTSPEED]           = gSaveBlock2Ptr->optionsTextSpeed;
+        sOptions->sel[MENUITEM_MAIN_FONT]                = gSaveBlock2Ptr->optionsFontType;
         sOptions->sel[MENUITEM_MAIN_BATTLESCENE]         = gSaveBlock2Ptr->optionsBattleSceneOff;
         sOptions->sel[MENUITEM_MAIN_DIFFICULTY]          = gSaveBlock2Ptr->optionsDifficulty;
         sOptions->sel[MENUITEM_MAIN_BATTLESTYLE]         = gSaveBlock2Ptr->optionsBattleStyle;
@@ -1024,7 +1035,7 @@ static void Task_OptionMenuProcessInput(u8 taskId)
                     DrawChoices(cursor, sOptions->visibleCursor[sOptions->submenu] * Y_DIFF);
             }
         }
-        else if (sOptions->submenu == MENU_CUSTOM)
+        else if (sOptions->submenu == MENU_BATTLE)
         {
             int cursor = sOptions->menuCursor[sOptions->submenu];
             u8 previousOption = sOptions->sel_battle[cursor];
@@ -1099,6 +1110,7 @@ static void Task_OptionMenuProcessInput(u8 taskId)
 static void Task_OptionMenuSave(u8 taskId)
 {
     gSaveBlock2Ptr->optionsTextSpeed             = sOptions->sel[MENUITEM_MAIN_TEXTSPEED];
+    gSaveBlock2Ptr->optionsFontType              = sOptions->sel[MENUITEM_MAIN_FONT];
     gSaveBlock2Ptr->optionsBattleSceneOff        = sOptions->sel[MENUITEM_MAIN_BATTLESCENE];
     gSaveBlock2Ptr->optionsDifficulty            = sOptions->sel[MENUITEM_MAIN_DIFFICULTY];
     gSaveBlock2Ptr->optionsBattleStyle           = sOptions->sel[MENUITEM_MAIN_BATTLESTYLE]; 
@@ -2088,6 +2100,28 @@ static void DrawChoices_ShowIntroMsg(int selection, int y)
     DrawOptionMenuChoice(gText_BattleSceneOn, 104, y, styles[0], active);
     DrawOptionMenuChoice(gText_BattleSceneOff, GetStringRightAlignXOffset(1, gText_BattleSceneOff, 198), y, styles[1], active);
 }
+
+static const u8 sText_Em[]          = _("Emerald");
+static const u8 sText_FRLG[]        = _("FRLG");
+static void DrawChoices_Font(int selection, int y)
+{
+    bool8 active = CheckConditions(MENUITEM_MAIN_FONT);
+    u8 styles[2] = {0};
+    styles[selection] = 1;
+
+    if (selection == 0)
+    {
+        gSaveBlock2Ptr->optionsFontType = 0; //Emerald Font
+    }
+    else
+    {
+        gSaveBlock2Ptr->optionsFontType = 1; //FRLG Font
+    }
+
+    DrawOptionMenuChoice(sText_Em, 104, y, styles[0], active);
+    DrawOptionMenuChoice(sText_FRLG, GetStringRightAlignXOffset(1, sText_FRLG, 198), y, styles[1], active);
+}
+
 
 /*static void DrawChoices_Autorun_Dive(int selection, int y)
 {
