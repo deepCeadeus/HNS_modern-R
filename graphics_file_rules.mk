@@ -266,6 +266,9 @@ $(FONTGFXDIR)/small.latfont: $(FONTGFXDIR)/latin_small.png
 $(FONTGFXDIR)/normal.latfont: $(FONTGFXDIR)/latin_normal.png
 	$(GFX) $< $@
 
+$(FONTGFXDIR)/short.frlg.latfont: $(FONTGFXDIR)/latin_normal_frlg.png
+	$(GFX) $< $@
+
 $(FONTGFXDIR)/short.latfont: $(FONTGFXDIR)/latin_short.png
 	$(GFX) $< $@
 

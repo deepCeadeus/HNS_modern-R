@@ -1901,13 +1901,16 @@ static void DecompressGlyph_Normal(u16 glyphId, bool32 isJapanese)
     }
     else
     {
-        //Emerald font, disabled
-        //glyphs = gFontNormalLatinGlyphs + (0x20 * glyphId);
-        //gCurGlyph.width = gFontNormalLatinGlyphWidths[glyphId];
-
-        //Fire Red font
-        glyphs = gFontShortLatinGlyphs + (0x20 * glyphId);
-        gCurGlyph.width = gFontShortLatinGlyphWidths[glyphId];
+        if (!(gSaveBlock2Ptr->optionsFontType)) //Emerald Font
+        {
+            glyphs = gFontNormalLatinGlyphs + (0x20 * glyphId);
+            gCurGlyph.width = gFontNormalLatinGlyphWidths[glyphId];
+        }
+        else if (gSaveBlock2Ptr->optionsFontType)//FRLG Font
+        {
+            glyphs = gFontShortLatinGlyphs_FRLG + (0x20 * glyphId);
+            gCurGlyph.width = gFontShortLatinGlyphWidths_FRLG[glyphId];
+        }
 
         if (gCurGlyph.width <= 8)
         {
@@ -1930,12 +1933,10 @@ static u32 GetGlyphWidth_Normal(u16 glyphId, bool32 isJapanese)
 {
     if (isJapanese == TRUE)
         return 8;
-    else
-        //Emerald font, disabled
-        //return gFontNormalLatinGlyphWidths[glyphId];
-
-        //Fire Red font
+    else if (gSaveBlock2Ptr->optionsFontType) //FRLG font
         return gFontShortLatinGlyphWidths[glyphId];
+    else //Emerald font
+        return gFontNormalLatinGlyphWidths[glyphId];
 }
 
 static void DecompressGlyph_Bold(u16 glyphId)
