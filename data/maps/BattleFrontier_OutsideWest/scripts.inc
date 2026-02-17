@@ -133,7 +133,7 @@ BattleFrontier_OutsideWest_EventScript_UnusedNPC2::
 	end
 
 BattleFrontier_OutsideWest_EventScript_Boy1::
-	msgbox BattleFrontier_OutsideWest_Text_BestOutOfAllMyFriends, MSGBOX_NPC
+	msgbox BattleFrontier_OutsideWest_Text_MineNeedSnacks, MSGBOX_NPC
 	end
 
 BattleFrontier_OutsideWest_EventScript_Engineer::
@@ -157,7 +157,7 @@ BattleFrontier_OutsideWest_EventScript_Fisherman2::
 	end
 
 BattleFrontier_OutsideWest_EventScript_Man1::
-	msgbox BattleFrontier_OutsideWest_Text_OnlyToughTrainersBroughtHere, MSGBOX_NPC
+	msgbox BattleFrontier_OutsideWest_Text_BadgesMeantSomething, MSGBOX_NPC
 	end
 
 BattleFrontier_OutsideWest_EventScript_Maniac1::
@@ -173,10 +173,10 @@ BattleFrontier_OutsideWest_EventScript_Maniac2::
 BattleFrontier_OutsideWest_EventScript_FactoryChallengersTalk::
 	applymovement LOCALID_MANIAC_1, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
-	msgbox BattleFrontier_OutsideWest_Text_SureWeCanChallengeWithNoMons, MSGBOX_DEFAULT
+	msgbox BattleFrontier_OutsideWest_Text_SeviperScary, MSGBOX_DEFAULT
 	applymovement LOCALID_MANIAC_2, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
-	msgbox BattleFrontier_OutsideWest_Text_BigGuySaidIllLendYouMons, MSGBOX_DEFAULT
+	msgbox BattleFrontier_OutsideWest_Text_PikeFrontierBrain, MSGBOX_DEFAULT
 	closemessage
 	delay 25
 	applymovement LOCALID_MANIAC_1, Common_Movement_WalkInPlaceFasterUp
@@ -193,7 +193,7 @@ BattleFrontier_OutsideWest_EventScript_Camper::
 	call_if_eq VAR_FACING, DIR_SOUTH, BattleFrontier_OutsideWest_EventScript_CamperAlreadyFacingFactory
 	call_if_eq VAR_FACING, DIR_WEST, BattleFrontier_OutsideWest_EventScript_CamperFaceFactory
 	call_if_eq VAR_FACING, DIR_EAST, BattleFrontier_OutsideWest_EventScript_CamperFaceFactory
-	msgbox BattleFrontier_OutsideWest_Text_WhosRaisingThoseRentalMons, MSGBOX_DEFAULT
+	msgbox BattleFrontier_OutsideWest_Text_OneBadSwap, MSGBOX_DEFAULT
 	release
 	end
 
@@ -208,7 +208,7 @@ BattleFrontier_OutsideWest_EventScript_CamperAlreadyFacingFactory::
 BattleFrontier_OutsideWest_EventScript_Girl::
 	lock
 	faceplayer
-	message BattleFrontier_OutsideWest_Text_ScaredOfPikeBecauseSeviper
+	message BattleFrontier_OutsideWest_Text_DoFrontierBrainsDreamOfTrainers
 	waitmessage
 	call_if_eq VAR_FACING, DIR_NORTH, BattleFrontier_OutsideWest_EventScript_GirlShudderNorth
 	call_if_eq VAR_FACING, DIR_SOUTH, BattleFrontier_OutsideWest_EventScript_GirlShudderSouth
@@ -268,17 +268,17 @@ BattleFrontier_OutsideWest_EventScript_Woman2::
 	end
 
 BattleFrontier_OutsideWest_EventScript_WomanWonRockPaperScissors::
-	msgbox BattleFrontier_OutsideWest_Text_WonIllTakePikeChallenge, MSGBOX_DEFAULT
+	msgbox BattleFrontier_OutsideWest_Text_WonIllTakeDomeChallenge, MSGBOX_DEFAULT
 	release
 	end
 
 BattleFrontier_OutsideWest_EventScript_WomanLostRockPaperScissors::
-	msgbox BattleFrontier_OutsideWest_Text_LostIllPutOffPikeChallenge, MSGBOX_DEFAULT
+	msgbox BattleFrontier_OutsideWest_Text_LostIllPutOffDomeChallenge, MSGBOX_DEFAULT
 	release
 	end
 
 BattleFrontier_OutsideWest_EventScript_Fisherman1::
-	msgbox BattleFrontier_OutsideWest_Text_ChooseFishingOverBattling, MSGBOX_NPC
+	msgbox BattleFrontier_OutsideWest_Text_NoPokemonInWater, MSGBOX_NPC
 	end
 
 BattleFrontier_OutsideWest_EventScript_Fisherman_Milotic::
@@ -297,15 +297,15 @@ BattleFrontier_OutsideWest_EventScript_UnusedNPC3::
 	end
 
 BattleFrontier_OutsideWest_EventScript_Gentleman::
-	msgbox BattleFrontier_OutsideWest_Text_YoureOffToChallengeDome, MSGBOX_NPC
+	msgbox BattleFrontier_OutsideWest_Text_IFoughtRegions, MSGBOX_NPC
 	end
 
 BattleFrontier_OutsideWest_EventScript_Lass::
-	msgbox BattleFrontier_OutsideWest_Text_KeepBattlingUntilIGetSymbol, MSGBOX_NPC
+	msgbox BattleFrontier_OutsideWest_Text_AreThereMoreBF, MSGBOX_NPC
 	end
 
 BattleFrontier_OutsideWest_EventScript_ExpertM::
-	msgbox BattleFrontier_OutsideWest_Text_WontLetGentlemenBeatMe, MSGBOX_NPC
+	msgbox BattleFrontier_OutsideWest_Text_CantFindGlasses, MSGBOX_NPC
 	end
 
 BattleFrontier_OutsideWest_EventScript_Man2::
@@ -317,37 +317,27 @@ BattleFrontier_OutsideWest_EventScript_Woman1::
 	end
 
 BattleFrontier_OutsideWest_EventScript_FatMan1::
-	msgbox BattleFrontier_OutsideWest_Text_SquareFilledWithToughPeople, MSGBOX_NPC
+	msgbox BattleFrontier_OutsideWest_Text_PalletTownStreak, MSGBOX_NPC
 	end
 
 BattleFrontier_OutsideWest_EventScript_FatMan2::
-	msgbox BattleFrontier_OutsideWest_Text_MetOlderGirlAtPike, MSGBOX_NPC
+	msgbox BattleFrontier_OutsideWest_Text_LostToALinoone, MSGBOX_NPC
 	end
 
 BattleFrontier_OutsideWest_EventScript_Woman3::
-	lock
-	msgbox BattleFrontier_OutsideWest_Text_LastTimeOurEyesMet, MSGBOX_DEFAULT
-	release
+	msgbox BattleFrontier_OutsideWest_Text_Legends, MSGBOX_NPC
 	end
 
 BattleFrontier_OutsideWest_EventScript_Boy2::
-	lock
-	msgbox BattleFrontier_OutsideWest_Text_DomeAceLookedBecauseOfMyCheering, MSGBOX_DEFAULT
-	release
+	msgbox BattleFrontier_OutsideWest_Text_TerrifyingBrains, MSGBOX_NPC
 	end
 
 BattleFrontier_OutsideWest_EventScript_OldMan::
-	msgbox BattleFrontier_OutsideWest_Text_DomeAceIsMine, MSGBOX_NPC
+	msgbox BattleFrontier_OutsideWest_Text_ChampionOnce, MSGBOX_NPC
 	end
 
 BattleFrontier_OutsideWest_EventScript_Man4::
-	lock
-	faceplayer
-	msgbox BattleFrontier_OutsideWest_Text_FansOverThereUsedToBeTrainers, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_MAN_4, Common_Movement_FaceOriginalDirection
-	waitmovement 0
-	release
+	msgbox BattleFrontier_OutsideWest_Text_FansOverThereUsedToBeTrainers, MSGBOX_NPC
 	end
 
 BattleFrontier_OutsideWest_EventScript_PokefanF::
@@ -402,10 +392,10 @@ BattleFrontier_OutsideWest_Text_PleaseBoardFerry:
 BattleFrontier_OutsideWest_Text_ThenWhereWouldYouLikeToGo:
 	.string "Then, where would you like to go?$"
 
-BattleFrontier_OutsideWest_Text_BestOutOfAllMyFriends:
-	.string "I'm the best out of all my friends.\n"
-	.string "But here…\l"
-	.string "I've been useless!$"
+BattleFrontier_OutsideWest_Text_MineNeedSnacks:
+	.string "That trainer’s Pokémon didn’t even\n"
+	.string "look tired!\p"
+	.string "Mine needs snacks after one battle.$"
 
 BattleFrontier_OutsideWest_Text_CantFindBattleTower:
 	.string "I want to go to the BATTLE TOWER,\n"
@@ -418,75 +408,74 @@ BattleFrontier_OutsideWest_Text_HaventBlinked:
 	.string "That was three hours ago.\n"
 	.string "I think I forgot to blink.$"
 
-BattleFrontier_OutsideWest_Text_OnlyToughTrainersBroughtHere:
+BattleFrontier_OutsideWest_Text_BadgesMeantSomething:
 	.string "Back in my day, eight badges\n"
 	.string "meant something.\p"
 	.string "Here? That just gets you\n"
 	.string "through the front door.$"
 
-BattleFrontier_OutsideWest_Text_SureWeCanChallengeWithNoMons:
+BattleFrontier_OutsideWest_Text_SeviperScary:
 	.string "Hey…\p"
 	.string "Isn't that SEVIPER a bit scary?$"
 
-BattleFrontier_OutsideWest_Text_BigGuySaidIllLendYouMons:
+BattleFrontier_OutsideWest_Text_PikeFrontierBrain:
 	.string "The FRONTIER BRAIN from the BATTLE\n"
 	.string "PIKE is scarier, trust me!\p"
 	.string "I lost pretty quickly…$"
 
-BattleFrontier_OutsideWest_Text_WhosRaisingThoseRentalMons:
-	.string "That's the BATTLE FACTORY.\n"
-	.string "You can rent strong POKéMON there.\p"
-	.string "But it makes me wonder.\n"
-	.string "Who's raising those rental POKéMON?$"
+BattleFrontier_OutsideWest_Text_OneBadSwap:
+	.string "Some trainers leave smiling.\p"
+	.string "Some leave in silence.\p"
+	.string "The difference is usually one bad swap.\p"
+	.string "In the BATTLE FACTORY, you fight\n"
+	.string "uncertainty.$"
 
-BattleFrontier_OutsideWest_Text_ScaredOfPikeBecauseSeviper:
-	.string "I'm scared of going into the BATTLE\n"
-	.string "PIKE because of SEVIPER…\p"
-	.string "B-but I came all the way here, so I will\n"
-	.string "try to conquer everything!\l"
-	.string "…Shudder…$"
+BattleFrontier_OutsideWest_Text_DoFrontierBrainsDreamOfTrainers:
+	.string "I wanna grow up and be a FRONTIER\n"
+	.string "BRAIN!\p"
+	.string "… … …\p"
+	.string "Do they sleep?$"
 
 BattleFrontier_OutsideWest_Text_LetsPlayRockPaperScissors:
 	.string "Let's play rock, paper, scissors!\n"
 	.string "One, two, three!\p"
 	.string "… … … … … …$"
 
-BattleFrontier_OutsideWest_Text_WonIllTakePikeChallenge:
+BattleFrontier_OutsideWest_Text_WonIllTakeDomeChallenge:
 	.string "Yay! I won!\n"
-	.string "I will take the BATTLE PIKE challenge!$"
+	.string "I will take the BATTLE DOME challenge!$"
 
-BattleFrontier_OutsideWest_Text_LostIllPutOffPikeChallenge:
+BattleFrontier_OutsideWest_Text_LostIllPutOffDomeChallenge:
 	.string "Oh, no…\n"
 	.string "I lost.\p"
 	.string "I guess I'm not very lucky today.\n"
-	.string "I'll put off my BATTLE PIKE challenge\l"
+	.string "I'll put off my BATTLE DOME challenge\l"
 	.string "until tomorrow.$"
 
-BattleFrontier_OutsideWest_Text_ChooseFishingOverBattling:
+BattleFrontier_OutsideWest_Text_NoPokemonInWater:
 	.string "How is it possible that there are no\n"
 	.string "water POKéMON in a place located in\l"
 	.string "the middle of the sea?$"
 
-BattleFrontier_OutsideWest_Text_KeepBattlingUntilIGetSymbol:
+BattleFrontier_OutsideWest_Text_AreThereMoreBF:
 	.string "I wonder if there are more BATTLE\n"
 	.string "FRONTIERS out there.$"
 
-BattleFrontier_OutsideWest_Text_YoureOffToChallengeDome:
-	.string "Oh? You're off to challenge\n"
-	.string "the BATTLE DOME?\p"
-	.string "I'll wish you the best of luck.\n"
-	.string "Let us both win our way up and meet\l"
-	.string "in challenges.$"
+BattleFrontier_OutsideWest_Text_IFoughtRegions:
+	.string "I fought through KANTO, JOHTO,\n"
+	.string "and HOENN.\p"
+	.string "This place scares me more than\n"
+	.string "all of them.$"
 
 BattleFrontier_OutsideWest_Text_DomeIsHereGrandpa:
 	.string "Grandpa, over here!\n"
 	.string "The BATTLE DOME is here!\l"
 	.string "Go get 'em, Grandpa!$"
 
-BattleFrontier_OutsideWest_Text_WontLetGentlemenBeatMe:
-	.string "Ah, so this here is the BATTLE DOME?\n"
-	.string "I won't let GENTLEMEN beat me!\p"
-	.string "But where is the entrance?$"
+BattleFrontier_OutsideWest_Text_CantFindGlasses:
+	.string "I lost my glasses!\p"
+	.string "I need them to see the increible\n"
+	.string "battles that happen in the BATTLE DOME!$"
 
 BattleFrontier_OutsideWest_Text_FrontierBrainsSame:
 	.string "If this place is a recreation of\n"
@@ -499,60 +488,37 @@ BattleFrontier_OutsideWest_Text_CoolOffTrainers:
 	.string "could ‘cool off’ after losing.\p"
 	.string "The ocean’s very popular today.$"
 
-BattleFrontier_OutsideWest_Text_SquareFilledWithToughPeople:
+BattleFrontier_OutsideWest_Text_PalletTownStreak:
 	.string "I saw a kid from PALLET TOWN\n"
 	.string "go on a 42-win streak.\p"
 	.string "Professor Oak hasn’t stopped\n"
 	.string "bragging since.$"
 
-BattleFrontier_OutsideWest_Text_MetOlderGirlAtPike:
-	.string "Crunch, munch…\p"
-	.string "A while back, I met this older girl\n"
-	.string "at the BATTLE PIKE.\p"
-	.string "She had these eyes that were scary\n"
-	.string "in a real ornery way.\p"
-	.string "Crunch, munch…\p"
-	.string "She got all furious: “Will you quit\n"
-	.string "eating!” Then she whaled on me.\p"
-	.string "It was a hair-raising kind of\n"
-	.string "scary experience, sure enough.\p"
-	.string "Crunch, munch…$"
+BattleFrontier_OutsideWest_Text_LostToALinoone:
+	.string "I lost to a LINOONE.\p"
+	.string "A.\p"
+	.string "LINOONE.\p"
+	.string "I trained for six months!$"
 
-BattleFrontier_OutsideWest_Text_LastTimeOurEyesMet:
-	.string "Huh? Will you listen to yourself?\n"
-	.string "That's nothing!\p"
-	.string "Why, the last time I cheered for him,\n"
-	.string "our eyes met and sparks flew!$"
+BattleFrontier_OutsideWest_Text_Legends:
+	.string "I didn’t come for symbols.\p"
+	.string "I came for legends.$"
 
-BattleFrontier_OutsideWest_Text_DomeAceLookedBecauseOfMyCheering:
-	.string "Whaaaaaat?!\n"
-	.string "Pfft!\p"
-	.string "That only happened because\n"
-	.string "I happened to be sitting next to you!\p"
-	.string "The DOME ACE only looked our way\n"
-	.string "because my cheering was so loud!$"
+BattleFrontier_OutsideWest_Text_TerrifyingBrains:
+	.string "A Brain only battles when\n"
+	.string "they feel like it.\p"
+	.string "Which is terrifying, if you\n"
+	.string "think about it.$"
 
-BattleFrontier_OutsideWest_Text_DomeAceIsMine:
-	.string "Oh, shush!\n"
-	.string "Keep that racket down!\p"
-	.string "You fair-weather fans should stick\n"
-	.string "to cheering for some GYM LEADER!\p"
-	.string "The DOME ACE is mine!\n"
-	.string "The only idol for me!$"
+BattleFrontier_OutsideWest_Text_ChampionOnce:
+	.string "They say one of the FRONTIER BRAINS\n"
+	.string "once become the CHAMPION without\l"
+	.string "using their ace.$"
 
 BattleFrontier_OutsideWest_Text_FansOverThereUsedToBeTrainers:
-	.string "Those people squabbling over there…\p"
-	.string "It's hard to believe, but they once\n"
-	.string "were TRAINERS, and good ones, too.\p"
-	.string "They used to be incredibly tough,\n"
-	.string "and they were famous, too.\p"
-	.string "But they were obliterated by this\n"
-	.string "certain TRAINER at a tournament.\p"
-	.string "They were so thoroughly whipped,\n"
-	.string "they became smitten by the TRAINER.\p"
-	.string "Now they're just fans of the TRAINER.\n"
-	.string "They go cheer for their idol at the\l"
-	.string "BATTLE DOME every day now.$"
+	.string "I heard they scout trainers in secret.\p"
+	.string "If you trip on the stairs, you’ve\n"
+	.string "already been evaluated.$"
 
 BattleFrontier_OutsideWest_Text_MonWithLongTailInFrontier:
 	.string "Until just a few weeks ago, there used to\n"

@@ -22,8 +22,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY",
-      "x": 26,
-      "y": 38,
+      "x": 28,
+      "y": 33,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
@@ -74,8 +74,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
-      "x": 27,
-      "y": 28,
+      "x": 21,
+      "y": 27,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -87,8 +87,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 33,
-      "y": 41,
+      "x": 38,
+      "y": 42,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -100,8 +100,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
-      "x": 28,
-      "y": 43,
+      "x": 30,
+      "y": 49,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 0,
@@ -113,8 +113,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
-      "x": 23,
-      "y": 18,
+      "x": 36,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -126,7 +126,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 39,
+      "x": 44,
       "y": 40,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -139,7 +139,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN",
-      "x": 40,
+      "x": 45,
       "y": 40,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -152,8 +152,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_JUGGLER",
-      "x": 13,
-      "y": 45,
+      "x": 11,
+      "y": 48,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_LEFT",
       "movement_range_x": 2,
@@ -164,11 +164,11 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
-      "x": 38,
-      "y": 27,
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_3",
+      "x": 41,
+      "y": 15,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -178,8 +178,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F",
-      "x": 45,
-      "y": 18,
+      "x": 26,
+      "y": 16,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 1,
@@ -192,7 +192,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
       "x": 9,
-      "y": 47,
+      "y": 40,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_LEFT",
       "movement_range_x": 1,
@@ -243,8 +243,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CHEF",
-      "x": 42,
-      "y": 48,
+      "x": 47,
+      "y": 52,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
       "movement_range_x": 1,
@@ -269,10 +269,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 12,
-      "y": 9,
+      "x": 18,
+      "y": 4,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -281,11 +281,11 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
-      "x": 12,
-      "y": 10,
+      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+      "x": 9,
+      "y": 15,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -295,7 +295,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_2",
-      "x": 11,
+      "x": 9,
       "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_ROTATE_COUNTERCLOCKWISE",
@@ -322,7 +322,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_WORKER_M",
       "x": 4,
-      "y": 26,
+      "y": 27,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_ROTATE_CLOCKWISE",
       "movement_range_x": 1,
