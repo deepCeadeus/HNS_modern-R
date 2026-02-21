@@ -1467,8 +1467,8 @@ static void SpriteCB_Ball_Capture_Step(struct Sprite *sprite)
 
         sprite->sState = 0;
         sprite->callback = SpriteCB_Ball_FadeOut;
-        if (((gSaveBlock2Ptr->optionsSoundEffects == 2) && (FlagGet(FLAG_SYS_BUG_CONTEST_MODE)))
-        || ((gSaveBlock2Ptr->optionsSoundEffects == 2) && (FlagGet(FLAG_SYS_SAFARI_MODE))))
+        if (((gSaveBlock2Ptr->optionsSoundEffects == 2) && (FlagGet(FLAG_SYS_BUG_CONTEST_MODE) == TRUE))
+        || ((gSaveBlock2Ptr->optionsSoundEffects == 2) && (FlagGet(FLAG_SYS_SAFARI_MODE) == TRUE)))
             PlaySE(MUS_HG_CAUGHT);
     }
 }
