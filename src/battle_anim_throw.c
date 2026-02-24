@@ -5,6 +5,7 @@
 #include "battle_interface.h"
 #include "decompress.h"
 #include "dma3.h"
+#include "event_data.h"
 #include "gpu_regs.h"
 #include "graphics.h"
 #include "m4a.h"
