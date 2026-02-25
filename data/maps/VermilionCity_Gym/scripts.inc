@@ -266,7 +266,6 @@ VermilionCity_Gym_EventScript_Surge::
 	checkitem ITEM_TM_THUNDERBOLT
 	call_if_eq VAR_RESULT, TRUE, VermilionCity_Gym_EventScript_GiveThunderstone
 	call_if_eq VAR_RESULT, FALSE, VermilionCity_Gym_EventScript_GiveTM
-	clearflag FLAG_HIDE_PLANT_SURGE
 	closemessage
 	release
 	end
