@@ -1680,9 +1680,8 @@ bool8 ScrCmd_showmonpic(struct ScriptContext *ctx)
         // then set FLAG_TEMP_X to prevent re-rolls
         if (!FlagGet(flagTemp))
         {
-            u32 fakeOtId = Random32();
             u32 fakePid = Random32();
-            if (GET_SHINY_VALUE(fakeOtId, fakePid) < shinyChance)
+            if (GET_SHINY_VALUE(GetTrainerId(), fakePid) < shinyChance)
                 FlagSet(flagShinyStarter);
 
             FlagSet(flagTemp);
