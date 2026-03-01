@@ -70,7 +70,7 @@
 #include "item_menu.h"
 #include "constants/rgb.h"
 #include "constants/abilities.h"
-#include "constants/rgb.h"
+#include "rogue_voltorbflip.h"
 #include "constants/vars.h"
 #include "dynamic_placeholder_text_util.h"
 
@@ -1334,6 +1334,13 @@ u16 GetSlotMachineId(void)
         return sSlotMachineServiceDayIds[rnd % SLOT_MACHINE_COUNT];
 
     return sSlotMachineIds[rnd % SLOT_MACHINE_COUNT];
+}
+
+void Special_ViewVoltorbFlip(void)
+{
+    gMain.savedCallback = CB2_ReturnToField;
+    SetMainCallback2(CB2_ShowVoltorbFlip);
+    LockPlayerFieldControls();
 }
 
 bool8 FoundAbandonedShipRoom1Key(void)
