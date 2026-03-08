@@ -510,7 +510,7 @@ BattleFrontier_BattleTowerLobby_EventScript_SubmittedFeelings::
 	end
 
 BattleFrontier_BattleTowerLobby_EventScript_Woman::
-	msgbox BattleFrontier_BattleTowerLobby_Text_WinsInRowRecorded, MSGBOX_NPC
+	msgbox BattleFrontier_BattleTowerLobby_Text_BattleRecorded, MSGBOX_NPC
 	end
 
 BattleFrontier_BattleTowerLobby_EventScript_Boy::
@@ -1034,11 +1034,10 @@ BattleFrontier_BattleTowerLobby_Text_ThatsHowYouFeel:
 	.string "That's quite original.\p"
 	.string "Thanks!$"
 
-BattleFrontier_BattleTowerLobby_Text_WinsInRowRecorded:
-	.string "The number of matches you win in a row\n"
-	.string "is recorded.\p"
-	.string "I'd better not get beaten in\n"
-	.string "an embarrassing way!$"
+BattleFrontier_BattleTowerLobby_Text_BattleRecorded:
+	.string "You can record your last battle and\n"
+	.string "review it from the FRONTIER PASS.\p"
+	.string "Did you know about that?$"
 
 BattleFrontier_BattleTowerLobby_Text_CanLeaveUntilLossOrSevenWins:
 	.string "Once you've entered the BATTLE TOWER,\n"

@@ -367,17 +367,17 @@ BattleFrontier_BattleDomeLobby_EventScript_PrevTourneyResultsDoublesLvOpen::
 	msgbox BattleFrontier_BattleDomeLobby_Text_PrevTourneyResultsDoublesLvOpen, MSGBOX_SIGN
 	return
 
-BattleFrontier_BattleDomeLobby_EventScript_Maniac::
+BattleFrontier_BattleDomeLobby_EventScript_Woman::
 	dome_getwinnersname
-	msgbox BattleFrontier_BattleDomeLobby_Text_LastWinnerWasTough, MSGBOX_NPC
+	msgbox BattleFrontier_BattleDomeLobby_Text_SignedMyShirt, MSGBOX_NPC
 	end
 
-BattleFrontier_BattleDomeLobby_EventScript_Lass::
-	msgbox BattleFrontier_BattleDomeLobby_Text_WinnersGainReputation, MSGBOX_NPC
+BattleFrontier_BattleDomeLobby_EventScript_Psychic::
+	msgbox BattleFrontier_BattleDomeLobby_Text_iLikeBattling, MSGBOX_NPC
 	end
 
-BattleFrontier_BattleDomeLobby_EventScript_FatMan::
-	msgbox BattleFrontier_BattleDomeLobby_Text_TrashedInFirstRound, MSGBOX_NPC
+BattleFrontier_BattleDomeLobby_EventScript_OldMan::
+	msgbox BattleFrontier_BattleDomeLobby_Text_OldManDefeated, MSGBOX_NPC
 	end
 
 BattleFrontier_BattleDomeLobby_EventScript_Man::
@@ -594,13 +594,12 @@ BattleFrontier_BattleDomeLobby_Text_PrevTourneyResultsDoublesLvOpen:
 	.string "They're the results of the last\n"
 	.string "HARD LVL DOUBLE BATTLE Tournament.$"
 
-BattleFrontier_BattleDomeLobby_Text_LastWinnerWasTough:
-	.string "Did you see it?\n"
-	.string "The last Battle Tournament?\p"
-	.string "The winner, {STR_VAR_1}, was seriously\n"
-	.string "tough.\p"
-	.string "You should check out the results\n"
-	.string "on the monitor beside the PC.$"
+BattleFrontier_BattleDomeLobby_Text_SignedMyShirt:
+	.string "Did you see it?\p"
+	.string "The winner, {STR_VAR_1}, it signed\n"
+	.string "my shirt last year!\l"
+	.string "Right here on the sleeve!\l"
+	.string "I knew they would rise to the top!$"
 
 BattleFrontier_OutsideWest_Text_LongDreamedAboutBattleFrontier:
 	.string "The BATTLE FRONTIER…\n"
@@ -616,24 +615,23 @@ BattleFrontier_OutsideWest_Text_QuestionMarkUnderConstruction:
 	.string "The ??????\n"
 	.string "Under Construction!$"
 
-BattleFrontier_BattleDomeLobby_Text_WinnersGainReputation:
-	.string "When a TRAINER chains tournament\n"
-	.string "wins at the BATTLE DOME, he or she\l"
-	.string "gains a reputation as a star.\p"
-	.string "Tough TRAINERS are drawn by that\n"
-	.string "reputation to the BATTLE DOME.\p"
-	.string "A true superstar is a TRAINER who\n"
-	.string "can keep winning tournaments.$"
+BattleFrontier_BattleDomeLobby_Text_iLikeBattling:
+	.string "I don't like crowds.\p"
+	.string "Or screens.\p"
+	.string "Or commentators.\p"
+	.string "But I like battling.$"
 
-BattleFrontier_BattleDomeLobby_Text_TrashedInFirstRound:
-	.string "I ran into one of the tournament\n"
-	.string "favorites in the very first round.\p"
-	.string "Of course I got trashed…$"
+BattleFrontier_BattleDomeLobby_Text_OldManDefeated:
+	.string "I've been doing tournaments since\n"
+	.string "before these kids were born.\p"
+	.string "But I was defeated during the\n"
+	.string "second round…$"
 
 BattleFrontier_BattleDomeLobby_Text_NeedToCheckOpponentCarefully:
-	.string "I would've won if I'd kept this POKéMON\n"
-	.string "held in reserve.\p"
-	.string "You need to check your opponent's\n"
+	.string "I don't like talking before battles.\n"
+	.string "It messes with my head.\p"
+	.string "But I'll give you a little hint:\n"
+	.string "You need to check your opponent's\l"
 	.string "POKéMON carefully before choosing\l"
 	.string "your battling POKéMON.$"
 
