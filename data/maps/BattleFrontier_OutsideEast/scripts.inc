@@ -42,7 +42,7 @@ BattleFrontier_OutsideEast_EventScript_BattlePyramidSign::
 	msgbox BattleFrontier_OutsideEast_Text_BattlePyramidSign, MSGBOX_SIGN
 	end
 
-BattleFrontier_OutsideEast_EventScript_NinjaBoy::
+BattleFrontier_OutsideEast_EventScript_ScientistF::
 	msgbox BattleFrontier_OutsideEast_Text_DecidingTeam, MSGBOX_NPC
 	end
 
@@ -261,7 +261,7 @@ BattleFrontier_OutsideEast_EventScript_Girl::
 	msgbox BattleFrontier_OutsideEast_Text_SpencerTaughtMe, MSGBOX_NPC
 	end
 
-BattleFrontier_OutsideEast_EventScript_PsychicM::
+BattleFrontier_OutsideEast_EventScript_CooltrainerF::
 	msgbox BattleFrontier_OutsideEast_Text_LegendOfBattlePyramid, MSGBOX_NPC
 	end
 

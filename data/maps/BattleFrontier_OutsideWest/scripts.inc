@@ -160,12 +160,12 @@ BattleFrontier_OutsideWest_EventScript_Man1::
 	msgbox BattleFrontier_OutsideWest_Text_BadgesMeantSomething, MSGBOX_NPC
 	end
 
-BattleFrontier_OutsideWest_EventScript_Maniac1::
+BattleFrontier_OutsideWest_EventScript_Woman5::
 	lock
 	goto BattleFrontier_OutsideWest_EventScript_FactoryChallengersTalk
 	end
 
-BattleFrontier_OutsideWest_EventScript_Maniac2::
+BattleFrontier_OutsideWest_EventScript_Man3::
 	lock
 	goto BattleFrontier_OutsideWest_EventScript_FactoryChallengersTalk
 	end
@@ -300,7 +300,7 @@ BattleFrontier_OutsideWest_EventScript_Gentleman::
 	msgbox BattleFrontier_OutsideWest_Text_IFoughtRegions, MSGBOX_NPC
 	end
 
-BattleFrontier_OutsideWest_EventScript_Lass::
+BattleFrontier_OutsideWest_EventScript_Psychic::
 	msgbox BattleFrontier_OutsideWest_Text_AreThereMoreBF, MSGBOX_NPC
 	end
 
@@ -308,7 +308,7 @@ BattleFrontier_OutsideWest_EventScript_ExpertM::
 	msgbox BattleFrontier_OutsideWest_Text_CantFindGlasses, MSGBOX_NPC
 	end
 
-BattleFrontier_OutsideWest_EventScript_Man2::
+BattleFrontier_OutsideWest_EventScript_Juggler::
 	msgbox BattleFrontier_OutsideWest_Text_FrontierBrainsSame, MSGBOX_NPC
 	end
 
@@ -328,7 +328,7 @@ BattleFrontier_OutsideWest_EventScript_Woman3::
 	msgbox BattleFrontier_OutsideWest_Text_Legends, MSGBOX_NPC
 	end
 
-BattleFrontier_OutsideWest_EventScript_Boy2::
+BattleFrontier_OutsideWest_EventScript_Woman4::
 	msgbox BattleFrontier_OutsideWest_Text_TerrifyingBrains, MSGBOX_NPC
 	end
 

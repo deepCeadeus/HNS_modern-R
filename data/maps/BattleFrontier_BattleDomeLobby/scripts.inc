@@ -385,7 +385,7 @@ BattleFrontier_BattleDomeLobby_EventScript_Man::
 	end
 
 @ A few OutsideWest event scripts are inserted here instead, two of which are unused
-BattleFrontier_OutsideWest_EventScript_Man3::
+BattleFrontier_OutsideWest_EventScript_BlackBelt::
 	msgbox BattleFrontier_OutsideWest_Text_LongDreamedAboutBattleFrontier, MSGBOX_NPC
 	end
 
@@ -603,7 +603,7 @@ BattleFrontier_BattleDomeLobby_Text_SignedMyShirt:
 
 BattleFrontier_OutsideWest_Text_LongDreamedAboutBattleFrontier:
 	.string "The BATTLE FRONTIER…\n"
-	.string "I've long dreamed about a place like it.$"
+	.string "I've been here before.$"
 
 @ Functionally unused
 BattleFrontier_OutsideWest_Text_BattleDomeSign2:
