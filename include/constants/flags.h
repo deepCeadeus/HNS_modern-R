@@ -714,8 +714,8 @@
 #define FLAG_BF_BRANDON_CAVE_REGIGAS              0x29B
 #define FLAG_ARCEUS_EGG    0x29C
 #define FLAG_MOM_HAS_GIFT  0x29D
-#define FLAG_UNUSED_0x29E  0x29E // Unused Flag
-#define FLAG_UNUSED_0x29F  0x29F // Unused Flag
+#define FLAG_SYS_GBS_ENABLED  0x29E // GB Player Active Flag
+#define FLAG_ITEM_PLAYER_ROOM_GB_PLAYER  0x29F
 #define FLAG_UNUSED_0x2A0  0x2A0 // Unused Flag
 #define FLAG_UNUSED_0x2A1  0x2A1 // Unused Flag
 #define FLAG_UNUSED_0x2A2  0x2A2 // Unused Flag

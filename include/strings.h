@@ -373,6 +373,7 @@ extern const u8 gText_Birch_Challenge[];
 extern const u8 gText_Birch_WhatsYourName[];
 extern const u8 gText_Birch_SoItsPlayer[];
 extern const u8 gText_Birch_YourePlayer[];
+extern const u8 gText_Birch_ChallengesSoundRight[];
 extern const u8 gText_Birch_AreYouReady[];
 extern const u8 gText_ContinueMenuPlayer[];
 extern const u8 gText_ContinueMenuTime[];
@@ -1198,8 +1199,10 @@ extern const u8 gText_Var1CertainlyHowMany2[];
 extern const u8 gText_Var1CertainlyHowMany[];
 extern const u8 gText_Var1IsItThatllBeVar2[];
 extern const u8 gText_YouWantedVar1ThatllBeVar2[];
+extern const u8 gText_YouWantedVar1ThatllBeVar2BP[];
 extern const u8 gText_InBagVar1[];
 extern const u8 gText_Var1AndYouWantedVar2[];
+extern const u8 gText_Var1AndYouWantedVar2BP[];
 extern const u8 gText_HereYouGoThankYou[];
 extern const u8 gText_NoMoreRoomForThis[];
 extern const u8 gText_YouAlreadyHaveThis[];
@@ -2402,6 +2405,9 @@ extern const u8 gText_Trade4[];
 extern const u8 gText_Summary5[];
 extern const u8 gText_Switch2[];
 extern const u8 gText_Item[];
+extern const u8 gText_FieldMoves[];
+extern const u8 gText_UseMove[];
+extern const u8 gText_Restore[];
 extern const u8 gText_NotPkmnOtherTrainerWants[];
 extern const u8 gText_ThatIsntAnEgg[];
 extern const u8 gText_OtherTrainersPkmnCantBeTraded[];
@@ -3315,5 +3321,9 @@ extern const u8 gText_VFHowToPlay[];
 extern const u8 gText_VFHint[];
 extern const u8 gText_VFAboutMemos[];
 extern const u8 gText_VFReturn[];
+
+// GB Player
+extern const u8 gText_GBPlayerOn[];
+extern const u8 gText_GBPlayerOff[];
 
 #endif // GUARD_STRINGS_H

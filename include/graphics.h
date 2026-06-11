@@ -4516,6 +4516,9 @@ extern const u32 gItemIconPalette_GreenMint[];
 extern const u32 gItemIconPalette_LightBlueMint[];
 extern const u32 gItemIconPalette_YellowMint[];
 
+extern const u32 gItemIcon_GBPlayer[];
+extern const u32 gItemIconPalette_GBPlayer[];
+
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u32 gItemIconPalette_ReturnToFieldArrow[];
 
@@ -4721,6 +4724,7 @@ extern const u32 gShopMenu_Gfx[];
 extern const u32 gShopMenu_Tilemap[];
 extern const u32 gShopMenu_Pal[];
 extern const u32 gShopMenuMoney_Gfx[];
+extern const u32 gShopMenuBP_Gfx[];
 
 extern const u32 gBattleInterface_BallStatusBarGfxGen4[];
 extern const u8 gBattleInterface_BallDisplayGfxGen4[];

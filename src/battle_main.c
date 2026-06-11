@@ -2273,7 +2273,7 @@ static void FreeRestoreBattleData(void)
     gScanlineEffect.state = 3;
     gMain.inBattle = FALSE;
     ZeroEnemyPartyMons();
-    m4aSongNumStop(SE_LOW_HEALTH);
+    m4aSongNumStop(SE_LOW_HEALTH, FALSE);
     FreeMonSpritesGfx();
     FreeBattleSpritesData();
     FreeBattleResources();
@@ -3173,7 +3173,7 @@ static void AskRecordBattle(void)
             if (gBattleCommunication[CURSOR_POSITION] != 0)
             {
                 // Moved cursor onto Yes
-                PlaySE(SE_SELECT);
+                PlaySECursorMove(SE_SELECT);
                 BattleDestroyYesNoCursorAt(gBattleCommunication[CURSOR_POSITION]);
                 gBattleCommunication[CURSOR_POSITION] = 0;
                 BattleCreateYesNoCursorAt(0);
@@ -3184,7 +3184,7 @@ static void AskRecordBattle(void)
             if (gBattleCommunication[CURSOR_POSITION] == 0)
             {
                 // Moved cursor onto No
-                PlaySE(SE_SELECT);
+                PlaySECursorMove(SE_SELECT);
                 BattleDestroyYesNoCursorAt(gBattleCommunication[CURSOR_POSITION]);
                 gBattleCommunication[CURSOR_POSITION] = 1;
                 BattleCreateYesNoCursorAt(1);
@@ -6200,7 +6200,7 @@ static void ReturnFromBattleToOverworld(void)
             SetRoamerInactive();
     }
 
-    m4aSongNumStop(SE_LOW_HEALTH);
+    m4aSongNumStop(SE_LOW_HEALTH, FALSE);
     SetMainCallback2(gMain.savedCallback);
 }
 

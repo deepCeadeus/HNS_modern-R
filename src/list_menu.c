@@ -1066,7 +1066,6 @@ bool8 ListMenuChangeSelectionLoop(struct ListMenu *list, bool8 updateCursorAndCa
     return ListMenuChangeSelectionFullLoop(list, updateCursorAndCallCallback, updateCursorAndCallCallback, movingDown);
 }
 
-
 static void ListMenuCallSelectionChangedCallback(struct ListMenu *list, u8 onInit)
 {
     if (list->template.moveCursorFunc != NULL)
@@ -1085,7 +1084,7 @@ void ListMenuOverrideSetColors(u8 cursorPal, u8 fillValue, u8 cursorShadowPal)
 void ListMenuDefaultCursorMoveFunc(s32 itemIndex, bool8 onInit, struct ListMenu *list)
 {
     if (!onInit)
-        PlaySE(SE_SELECT);
+        PlaySECursorMove(SE_SELECT);
 }
 
 // unused
