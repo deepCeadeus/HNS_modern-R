@@ -52,6 +52,7 @@
 #include "debug.h"
 #include "bug_contest.h"
 #include "roamer.h"
+#include "wild_encounter.h"
 
 
 enum {
@@ -724,6 +725,8 @@ static void CB2_EndWildBattle(void)
     CpuFill16(0, (void *)(BG_PLTT), BG_PLTT_SIZE);
     ResetOamRange(0, 128);
 
+    gIsFishing = FALSE;
+
     if (IsPlayerDefeated(gBattleOutcome) == TRUE && !InBattlePyramid() && !InBattlePike())
     {
         SetMainCallback2(CB2_WhiteOut);
@@ -772,6 +775,8 @@ static void CB2_EndScriptedWildBattle(void)
     CpuFill16(0, (void *)(BG_PLTT), BG_PLTT_SIZE);
     ResetOamRange(0, 128);
 
+    gIsFishing = FALSE;
+
     if (IsPlayerDefeated(gBattleOutcome) == TRUE)
     {
         if (InBattlePyramid())
@@ -792,7 +797,11 @@ u8 BattleSetup_GetTerrainId(void)
     u16 tileBehavior;
     s16 x, y;
 
-    PlayerGetDestCoords(&x, &y);
+    if (gIsFishing)
+        GetXYCoordsOneStepInFrontOfPlayer(&x, &y);
+    else
+        PlayerGetDestCoords(&x, &y);
+    
     tileBehavior = MapGridGetMetatileBehaviorAt(x, y);
     if (gSaveBlock2Ptr->optionsNewBackgrounds == 1)
     {
@@ -844,7 +853,7 @@ u8 BattleSetup_GetTerrainId(void)
             }
             if (IS_MAP(FUCHSIA_CITY_SAFARI_ZONE_BEACH, FUCHSIA_CITY_SAFARI_ZONE_BEACH) || IS_MAP(CINNABAR_ISLAND, CINNABAR_ISLAND))
                 return BATTLE_TERRAIN_SAND;
-        return BATTLE_TERRAIN_GRASS;
+            return BATTLE_TERRAIN_GRASS;
         }
         if (MetatileBehavior_IsLongGrass(tileBehavior)) {
             if(IS_MAP(FUCHSIA_CITY_SAFARI_ZONE_MOUNTAIN, FUCHSIA_CITY_SAFARI_ZONE_MOUNTAIN)) {
@@ -902,7 +911,8 @@ u8 BattleSetup_GetTerrainId(void)
             {
                 return BATTLE_TERRAIN_GRAY_CAVE;
             }
-        return BATTLE_TERRAIN_CAVE;
+
+            return BATTLE_TERRAIN_CAVE;
         
         case MAP_TYPE_INDOOR:
                 if (
@@ -931,13 +941,11 @@ u8 BattleSetup_GetTerrainId(void)
             {
                 return BATTLE_TERRAIN_BLUE_BUILDING;
             }
+
+            return BATTLE_TERRAIN_BUILDING;
+
         case MAP_TYPE_SECRET_BASE:
             return BATTLE_TERRAIN_BUILDING;
-            if (
-                    IS_MAP(BLACKTHORN_CITY_GYM, BLACKTHORN_CITY_GYM))
-                {
-                    return BATTLE_TERRAIN_CAVE;
-                }
         case MAP_TYPE_UNDERWATER:
             return BATTLE_TERRAIN_GRAY_CAVE;
         case MAP_TYPE_OCEAN_ROUTE:
@@ -1108,7 +1116,7 @@ static u8 GetBattleTransitionTypeByMap(void)
     if (GetFlashLevel())
         return TRANSITION_TYPE_FLASH;
 
-    if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
+    if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior) || gIsFishing)
         return TRANSITION_TYPE_WATER;
 
     switch (gMapHeader.mapType)
@@ -1590,6 +1598,8 @@ static void CB2_StartFirstBattle(void)
 
 static void CB2_EndFirstBattle(void)
 {
+    gIsFishing = FALSE;
+    
     Overworld_ClearSavedMusic();
     SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
 }
