@@ -2046,11 +2046,6 @@ void CB2_BugContestWhiteOut(void){
     {
         FieldClearVBlankHBlankCallbacks();
         StopMapMusic();
-        if (gSaveBlock1Ptr->tx_Challenges_NuzlockeHardcore && !FlagGet(FLAG_DEFEATED_RED)) //tx_randomizer_and_challenges
-        {
-            ClearSaveData();
-            DoSoftReset();
-        }
         ResetSafariZoneFlag_();
 
         ResetInitialPlayerAvatarState();
