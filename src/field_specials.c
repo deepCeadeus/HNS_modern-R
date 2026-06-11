@@ -70,7 +70,7 @@
 #include "item_menu.h"
 #include "constants/rgb.h"
 #include "constants/abilities.h"
-#include "rogue_voltorbflip.h"
+#include "voltorb_flip.h"
 #include "constants/vars.h"
 #include "dynamic_placeholder_text_util.h"
 
