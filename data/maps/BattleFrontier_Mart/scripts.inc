@@ -61,6 +61,12 @@ BattleFrontier_Mart_EventScript_Clerk2::
 	.align 2
 BattleFrontier_Mart_Pokemart:
 	.2byte ITEM_SAFARI_BALL
+	.2byte ITEM_NET_BALL
+    .2byte ITEM_DIVE_BALL
+    .2byte ITEM_NEST_BALL
+    .2byte ITEM_REPEAT_BALL
+    .2byte ITEM_TIMER_BALL
+    .2byte ITEM_LUXURY_BALL
 	.2byte ITEM_MAX_REVIVE
 	.2byte ITEM_PP_UP
 	.2byte ITEM_ETHER
