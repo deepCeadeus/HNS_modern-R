@@ -369,7 +369,7 @@ SaffronCity_FightingDojoVIP_EventScript_Kingdra::
 	release
 	end
 SaffronCity_FightingDojoVIP_Text_Kingdra:
-	.string "KINGDRA: Draaa...$"
+	.string "KINGDRA: Draaa…$"
 
 SaffronCity_FightingDojoVIP_EventScript_Onix::
 	lock
@@ -425,7 +425,7 @@ SaffronCity_FightingDojoVIP_EventScript_Muk::
 	release
 	end
 SaffronCity_FightingDojoVIP_Text_Muk:
-	.string "MUK: Muuuk...$"
+	.string "MUK: Muuuk…$"
 
 SaffronCity_FightingDojoVIP_EventScript_Kadabra::
 	lock
@@ -521,7 +521,7 @@ SaffronCity_FightingDojoVIP_Text_Bugsy_Rematch:
 
 SaffronCity_FightingDojoVIP_Text_Bugsy_RematchDefeat:
 	.string "Wow, you must be an expert\n"
-	.string "trainer.\p"
+	.string "TRAINER.\p"
 	.string "My research must not be\n"
 	.string "complete…$"
 
@@ -573,7 +573,7 @@ SaffronCity_FightingDojoVIP_Text_Jasmine_Rematch:
 	.string "Want to have a rematch with me?$"
 
 SaffronCity_FightingDojoVIP_Text_Jasmine_RematchDefeat:
-	.string "…You are a better trainer than\n"
+	.string "…You are a better TRAINER than\n"
 	.string "me,\p"
 	.string "in both skill and kindness.$"
 
@@ -584,7 +584,7 @@ SaffronCity_FightingDojoVIP_Text_Pryce_Rematch:
 	.string "I am impressed.\p"
 	.string "But even now, there is much to\n"
 	.string "learn from each other.\p"
-	.string "I, PRYCE--the winter trainer--\p"
+	.string "I, PRYCE--the winter TRAINER--\p"
 	.string "still have a few tricks left.\p"
 	.string "Want to have a rematch with me?$"
 
@@ -658,7 +658,7 @@ SaffronCity_FightingDojoVIP_Text_Erika_RematchDefeat:
 	.string "ERIKA: Losing still leaves a\n"
 	.string "bitter aftertaste…\p"
 	.string "But knowing that there are strong\n"
-	.string "trainers spurs me to do better…$"
+	.string "TRAINERS spurs me to do better…$"
 
 SaffronCity_FightingDojoVIP_Text_Sabrina_Rematch:
 	.string "SABRINA: Ah, the CHAMPION.\p"
