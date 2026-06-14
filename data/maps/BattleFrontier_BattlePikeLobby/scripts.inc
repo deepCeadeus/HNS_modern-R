@@ -215,16 +215,16 @@ BattleFrontier_BattlePikeLobby_Movement_AttendantWalkToCorridor:
 	set_invisible
 	step_end
 
-BattleFrontier_BattlePikeLobby_EventScript_Hiker::
-	msgbox BattleFrontier_BattlePikeLobby_Text_OneRoomAwayFromGoal, MSGBOX_NPC
+BattleFrontier_BattlePikeLobby_EventScript_Boy::
+	msgbox BattleFrontier_BattlePikeLobby_Text_LucysSeviper, MSGBOX_NPC
 	end
 
-BattleFrontier_BattlePikeLobby_EventScript_Twin::
-	msgbox BattleFrontier_BattlePikeLobby_Text_NeverHadToBattleTrainer, MSGBOX_NPC
+BattleFrontier_BattlePikeLobby_EventScript_OldMan::
+	msgbox BattleFrontier_BattlePikeLobby_Text_CantBeThatEasy, MSGBOX_NPC
 	end
 
-BattleFrontier_BattlePikeLobby_EventScript_Beauty::
-	msgbox BattleFrontier_BattlePikeLobby_Text_ThinkAbilitiesUsefulHere, MSGBOX_NPC
+BattleFrontier_BattlePikeLobby_EventScript_Woman::
+	msgbox BattleFrontier_BattlePikeLobby_Text_SoClose, MSGBOX_NPC
 	end
 
 BattleFrontier_BattlePikeLobby_EventScript_RulesBoard::
@@ -387,22 +387,25 @@ BattleFrontier_BattlePikeLobby_Text_AwardYouTheseBattlePoints:
 	.string "In recognition of your amazing luck,\n"
 	.string "we award you these Battle Point(s)…$"
 
-BattleFrontier_BattlePikeLobby_Text_OneRoomAwayFromGoal:
-	.string "Arrgh! I blew my chance!\n"
-	.string "I was one room away from the goal!\p"
-	.string "In this place, you'd better watch out\n"
-	.string "for poison, freezing, and so on.$"
+BattleFrontier_BattlePikeLobby_Text_LucysSeviper:
+	.string "LUCY's SEVIPER has never lost.\n"
+	.string "That thing is undefeated.\p"
+	.string "Why am I excited about that?\n"
+	.string "I don't know.$"
 
-BattleFrontier_BattlePikeLobby_Text_NeverHadToBattleTrainer:
-	.string "I've completed the challenge 10 times\n"
-	.string "now, but I've never had to battle\l"
-	.string "a TRAINER once.$"
+BattleFrontier_BattlePikeLobby_Text_CantBeThatEasy:
+	.string "Three doors.\n"
+	.string "Pick one.\p"
+	.string "That's it?\n"
+	.string "That's the whole thing?\p"
+	.string "It can't be that easy…$"
 
-BattleFrontier_BattlePikeLobby_Text_ThinkAbilitiesUsefulHere:
-	.string "Listen! Listen!\p"
-	.string "Don't you think that the special\n"
-	.string "abilities of POKéMON will be useful\l"
-	.string "here?$"
+BattleFrontier_BattlePikeLobby_Text_SoClose:
+	.string "One more run. Just one more…\n"
+	.string "I know I can get the Symbol…\p"
+	.string "I've been close…\p"
+	.string "So close…\p"
+	.string "One more…$"
 
 @ Unused
 BattleFrontier_BattlePikeLobby_Text_TrainersWhicheverPathIChoose:
