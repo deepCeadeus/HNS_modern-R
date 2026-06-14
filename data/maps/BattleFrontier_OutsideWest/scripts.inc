@@ -206,57 +206,8 @@ BattleFrontier_OutsideWest_EventScript_CamperAlreadyFacingFactory::
 	return
 
 BattleFrontier_OutsideWest_EventScript_Girl::
-	lock
-	faceplayer
-	message BattleFrontier_OutsideWest_Text_DoFrontierBrainsDreamOfTrainers
-	waitmessage
-	call_if_eq VAR_FACING, DIR_NORTH, BattleFrontier_OutsideWest_EventScript_GirlShudderNorth
-	call_if_eq VAR_FACING, DIR_SOUTH, BattleFrontier_OutsideWest_EventScript_GirlShudderSouth
-	call_if_eq VAR_FACING, DIR_WEST, BattleFrontier_OutsideWest_EventScript_GirlShudderWest
-	call_if_eq VAR_FACING, DIR_EAST, BattleFrontier_OutsideWest_EventScript_GirlShudderEast
-	waitbuttonpress
-	release
+	msgbox BattleFrontier_OutsideWest_Text_DoFrontierBrainsDreamOfTrainers, MSGBOX_NPC
 	end
-
-BattleFrontier_OutsideWest_EventScript_GirlShudderNorth::
-	applymovement LOCALID_GIRL, BattleFrontier_OutsideWest_Movement_GirlShudderNorth
-	waitmovement 0
-	return
-
-BattleFrontier_OutsideWest_EventScript_GirlShudderSouth::
-	applymovement LOCALID_GIRL, BattleFrontier_OutsideWest_Movement_GirlShudderSouth
-	waitmovement 0
-	return
-
-BattleFrontier_OutsideWest_EventScript_GirlShudderWest::
-	applymovement LOCALID_GIRL, BattleFrontier_OutsideWest_Movement_GirlShudderWest
-	waitmovement 0
-	return
-
-BattleFrontier_OutsideWest_EventScript_GirlShudderEast::
-	applymovement LOCALID_GIRL, BattleFrontier_OutsideWest_Movement_GirlShudderEast
-	waitmovement 0
-	return
-
-BattleFrontier_OutsideWest_Movement_GirlShudderNorth:
-	walk_in_place_faster_down
-	walk_in_place_faster_down
-	step_end
-
-BattleFrontier_OutsideWest_Movement_GirlShudderSouth:
-	walk_in_place_faster_up
-	walk_in_place_faster_up
-	step_end
-
-BattleFrontier_OutsideWest_Movement_GirlShudderWest:
-	walk_in_place_faster_right
-	walk_in_place_faster_right
-	step_end
-
-BattleFrontier_OutsideWest_Movement_GirlShudderEast:
-	walk_in_place_faster_left
-	walk_in_place_faster_left
-	step_end
 
 BattleFrontier_OutsideWest_EventScript_Woman2::
 	lock
