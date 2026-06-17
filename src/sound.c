@@ -746,9 +746,7 @@ void PlaySE(u16 songNum)
 
 void PlaySECursorMove(u16 songNum)
 {
-    if (FlagGet(FLAG_SYS_GBS_ENABLED))
-        return;
-    m4aSongNumStart(songNum, FALSE);
+    m4aSongNumStart(songNum, FlagGet(FLAG_SYS_GBS_ENABLED));
 }
 
 void PlaySE12WithPanning(u16 songNum, s8 pan)
