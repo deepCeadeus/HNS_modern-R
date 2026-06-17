@@ -312,20 +312,20 @@ BattleFrontier_BattlePalaceLobby_EventScript_ShowDoublesResults::
 	releaseall
 	end
 
-BattleFrontier_BattlePalaceLobby_EventScript_BlackBelt::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_LadyCanTellWhatMonsThink, MSGBOX_NPC
+BattleFrontier_BattlePalaceLobby_EventScript_Youngster::
+	msgbox BattleFrontier_BattlePalaceLobby_Text_FiftyPercent, MSGBOX_NPC
 	end
 
-BattleFrontier_BattlePalaceLobby_EventScript_Man::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_NatureAndMovesKeyHere, MSGBOX_NPC
+BattleFrontier_BattlePalaceLobby_EventScript_OldMan::
+	msgbox BattleFrontier_BattlePalaceLobby_Text_PalaceInfo1, MSGBOX_NPC
 	end
 
-BattleFrontier_BattlePalaceLobby_EventScript_Beauty::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_MonDocileButTransforms, MSGBOX_NPC
+BattleFrontier_BattlePalaceLobby_EventScript_Woman::
+	msgbox BattleFrontier_BattlePalaceLobby_Text_SpenserCheats, MSGBOX_NPC
 	end
 
-BattleFrontier_BattlePalaceLobby_EventScript_Maniac::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_WhatNatureFavorsChippingAway, MSGBOX_NPC
+BattleFrontier_BattlePalaceLobby_EventScript_Psychic::
+	msgbox BattleFrontier_BattlePalaceLobby_Text_Alakazam, MSGBOX_NPC
 	end
 
 BattleFrontier_BattlePalaceLobby_EventScript_RulesBoard::
@@ -501,49 +501,33 @@ BattleFrontier_BattlePalaceLobby_Text_ReceivedPrize:
 	.string "{PLAYER} received the prize\n"
 	.string "{STR_VAR_1}.$"
 
-BattleFrontier_BattlePalaceLobby_Text_LadyCanTellWhatMonsThink:
-	.string "For a hardy fellow like me,\n"
-	.string "hardy POKéMON are the best.\p"
-	.string "Offense is the best defense!\n"
-	.string "A relentless attack is the ultimate!\p"
-	.string "But that's not what I wanted to chat\n"
-	.string "about.\p"
-	.string "Every so often a really cute lady\n"
-	.string "swings by here.\p"
-	.string "She says that she can tell what\n"
-	.string "POKéMON are thinking.\p"
-	.string "I don't know about that part,\n"
-	.string "but she is really cute.\p"
-	.string "Huh?\n"
-	.string "Why are you looking at me like that?$"
+BattleFrontier_BattlePalaceLobby_Text_FiftyPercent:
+	.string "There's a 50% chance your POKéMON just\n"
+	.string "does nothing if it doesn't have a move\l"
+	.string "in the category it picks.$"
 
-BattleFrontier_BattlePalaceLobby_Text_NatureAndMovesKeyHere:
-	.string "Hmm…\p"
-	.string "It appears that the nature of POKéMON\n"
-	.string "and the moves that they have been\l"
-	.string "taught are the keys to battle here.\p"
-	.string "To be more precise, it's how well\n"
-	.string "the moves match the nature of\l"
-	.string "the POKéMON.\p"
-	.string "If your POKéMON is in trouble and\n"
-	.string "unable to live up to its potential,\l"
-	.string "you may need to examine how well\l"
-	.string "its moves match its nature.$"
+BattleFrontier_BattlePalaceLobby_Text_PalaceInfo1:
+	.string "Your POKéMON's nature determines\n"
+	.string "everything here.\p"
+	.string "ADAMANT? It'll mostly attack.\n"
+	.string "BOLD? Expect a lot of support moves.\p" 
+	.string "And when their HP drops below half,\n"
+	.string "their whole strategy changes.$"
 
-BattleFrontier_BattlePalaceLobby_Text_MonDocileButTransforms:
-	.string "My POKéMON is usually very docile.\p"
-	.string "But when it's in a BATTLE HALL,\n"
-	.string "it sometimes seems to become\l"
-	.string "transformed into something wicked!\p"
-	.string "It becomes totally intimidating.\n"
-	.string "It's shocking, even.$"
+BattleFrontier_BattlePalaceLobby_Text_SpenserCheats:
+	.string "SPENSER talks about trust and harmony\n"
+	.string "and nature. But his SLAKING literally\l"
+	.string "used HYPER BEAM twice in a row without\l"
+	.string "recharging!\p"
+	.string "That's not 'nature.'\p"
+	.string "That's cheating!$"
 
-BattleFrontier_BattlePalaceLobby_Text_WhatNatureFavorsChippingAway:
-	.string "I wonder what sort of nature a POKéMON\n"
-	.string "would have if it favored enfeebling its\l"
-	.string "opponents and chipping away slowly.\p"
-	.string "I'd be surprised if it was a LAX nature.\p"
-	.string "But, nah, that can't be right.$"
+BattleFrontier_BattlePalaceLobby_Text_Alakazam:
+	.string "My TIMID ALAKAZAM should be using\n"
+	.string "PSYCHIC.\p"
+	.string "That's what I taught it for.\n"
+	.string "But it keeps using REFLECT and\l"
+	.string "LIGHT SCREEN.$"
 
 BattleFrontier_BattlePalaceLobby_Text_WelcomeForDoubleBattle:
 	.string "Where the hearts of TRAINERS\n"
