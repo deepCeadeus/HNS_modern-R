@@ -478,11 +478,11 @@ BattleFrontier_BattlePyramidLobby_EventScript_PartyStillHasHeldItems::
 	end
 
 BattleFrontier_BattlePyramidLobby_EventScript_Woman::
-	msgbox BattleFrontier_BattlePyramidLobby_Text_TrainersNoticeRunning, MSGBOX_NPC
+	msgbox BattleFrontier_BattlePyramidLobby_Text_WhoDesignedThis, MSGBOX_NPC
 	end
 
-BattleFrontier_BattlePyramidLobby_EventScript_FatMan::
-	msgbox BattleFrontier_BattlePyramidLobby_Text_LostLotOfItems, MSGBOX_NPC
+BattleFrontier_BattlePyramidLobby_EventScript_Chef::
+	msgbox BattleFrontier_BattlePyramidLobby_Text_Items, MSGBOX_NPC
 	end
 
 BattleFrontier_BattlePyramidLobby_EventScript_RulesBoard::
@@ -839,19 +839,25 @@ BattleFrontier_BattlePyramidLobby_Text_BelieveMyFortunesOrNot:
 	.string "The future can be changed anytime…\n"
 	.string "I wish you safe passage…$"
 
-BattleFrontier_BattlePyramidLobby_Text_TrainersNoticeRunning:
-	.string "Did you know?\p"
-	.string "If you run fast, TRAINERS may notice\n"
-	.string "and come after you for a battle.\p"
-	.string "So, if you want to avoid TRAINERS,\n"
-	.string "don't catch their eyes, but sneak\l"
-	.string "cautiously and quietly past them.$"
+BattleFrontier_BattlePyramidLobby_Text_WhoDesignedThis:
+	.string "So let me get this straight.\p"
+	.string "I go in.\n"
+	.string "No items.\l"
+	.string "No escape.\l"
+	.string "Wild POKéMON everywhere.\l"
+	.string "And if I faint, I get kicked out.\l"
+	.string "And floors RANDOMLY CHANGE every time?\p"
+	.string "Who designed this?$"
 
-BattleFrontier_BattlePyramidLobby_Text_LostLotOfItems:
-	.string "Awaaaaaaarrrrgh!\p"
-	.string "I had a whole lot of items, but I lost\n"
-	.string "them all when I lost!\p"
-	.string "Awaaaaaaarrrrgh!$"
+BattleFrontier_BattlePyramidLobby_Text_Items:
+	.string "I bought 30 different items, including\n"
+	.string "MAX POTIONS, RESTORES, and REVIVES.\p"
+	.string "I have a spreadsheet of every wild\n"
+	.string "POKéMON on every floor and I know the\l"
+	.string "layout patterns. I AM READY.\p"
+	.string "…\p"
+	.string "What do you mean you can't bring your\n"
+	.string "own items inside the PYRAMID?$"
 
 BattleFrontier_BattlePyramidLobby_Text_YouveDefeatedPyramidKing:
 	.string "Welcome back!\n"
