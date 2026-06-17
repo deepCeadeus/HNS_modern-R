@@ -308,8 +308,8 @@ BattleFrontier_BattleArenaLobby_EventScript_Camper::
 	msgbox BattleFrontier_BattleArenaLobby_Text_MatchWasDeclaredDraw, MSGBOX_NPC
 	end
 
-BattleFrontier_BattleArenaLobby_EventScript_Woman::
-	msgbox BattleFrontier_BattleArenaLobby_Text_OrderOfMonsImportant, MSGBOX_NPC
+BattleFrontier_BattleArenaLobby_EventScript_CoolTrainer::
+	msgbox BattleFrontier_BattleArenaLobby_Text_Versatility, MSGBOX_NPC
 	end
 
 BattleFrontier_BattleArenaLobby_EventScript_RulesBoard::
@@ -501,16 +501,13 @@ BattleFrontier_BattleArenaLobby_Text_MatchWasDeclaredDraw:
 	.string "POKéMON and the opponent's had about\l"
 	.string "the same amount of HP left.$"
 
-BattleFrontier_BattleArenaLobby_Text_OrderOfMonsImportant:
-	.string "In the BATTLE ARENA, the order of\n"
-	.string "POKéMON is totally important.\p"
-	.string "For example, if your first POKéMON\n"
-	.string "has certain type disadvantages,\l"
-	.string "try making your second POKéMON one\l"
-	.string "with moves that are super effective\l"
-	.string "against the first one.\p"
-	.string "I think that will be a good way of\n"
-	.string "making an effective team.$"
+BattleFrontier_BattleArenaLobby_Text_Versatility:
+	.string "The key here is versatility.\p" 
+	.string "Your lead POKéMON needs moves\n"
+	.string "that cover multiple types.\p"
+	.string "You have to be ready for anything\n"
+	.string "because you can't change your mind.\p"
+	.string "One wrong move and you're done!$"
 
 BattleFrontier_BattleArenaLobby_Text_RulesAreListed:
 	.string "The Set KO Tourney's rules are listed.$"
