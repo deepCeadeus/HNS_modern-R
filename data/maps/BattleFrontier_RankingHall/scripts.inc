@@ -82,22 +82,12 @@ BattleFrontier_RankingHall_EventScript_PalaceArenaPyramidRecordsSIgn::
 	msgbox BattleFrontier_RankingHall_Text_PalaceArenaPyramidRecords, MSGBOX_SIGN
 	end
 
-BattleFrontier_RankingHall_EventScript_NinjaBoy::
-	lock
-	faceplayer
-	msgbox BattleFrontier_RankingHall_Text_IsYourNameOnThisList, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, BattleFrontier_RankingHall_EventScript_NinjaBoyNameOnList
-	msgbox BattleFrontier_RankingHall_Text_WorkHarderIfYouSawFriendsName, MSGBOX_DEFAULT
-	release
-	end
-
-BattleFrontier_RankingHall_EventScript_NinjaBoyNameOnList::
-	msgbox BattleFrontier_RankingHall_Text_WowThatsSuper, MSGBOX_DEFAULT
-	release
+BattleFrontier_RankingHall_EventScript_Scientist::
+	msgbox BattleFrontier_RankingHall_Text_MuchHiger, MSGBOX_NPC
 	end
 
 BattleFrontier_RankingHall_EventScript_Boy::
-	msgbox BattleFrontier_RankingHall_Text_MyNamesNotUpThere, MSGBOX_NPC
+	msgbox BattleFrontier_RankingHall_Text_Embarrassing, MSGBOX_NPC
 	end
 
 BattleFrontier_RankingHall_Text_ExplainRankingHall:
@@ -114,21 +104,16 @@ BattleFrontier_RankingHall_Text_PalaceArenaPyramidRecords:
 	.string "BATTLE PALACE, BATTLE ARENA,\n"
 	.string "and BATTLE PYRAMID Records$"
 
-BattleFrontier_RankingHall_Text_IsYourNameOnThisList:
-	.string "Hi, is your name on this list?$"
+BattleFrontier_RankingHall_Text_MuchHiger:
+	.string "That's not right.\n"
+	.string "That can't be right.\l" 
+	.string "The system must be glitched.\p"
+	.string "I should be higher. MUCH higher.$"
 
-BattleFrontier_RankingHall_Text_WowThatsSuper:
-	.string "Wow, that's super!\n"
-	.string "I'll have to try harder, too!$"
-
-BattleFrontier_RankingHall_Text_WorkHarderIfYouSawFriendsName:
-	.string "Oh, is that right?\p"
-	.string "If you saw your friend's name up here,\n"
-	.string "I bet it would make you work harder!$"
-
-BattleFrontier_RankingHall_Text_MyNamesNotUpThere:
-	.string "Hmm…\n"
-	.string "My name's not up there…\p"
-	.string "Well, it's only natural since I haven't\n"
-	.string "taken any challenges yet.$"
+BattleFrontier_RankingHall_Text_Embarrassing:
+	.string "Wait, I have to check my rank HERE?\n"
+	.string "Like... in person?\l"
+	.string "With other people watching?\p"
+	.string "That's so embarrassing.\n"
+	.string "Can't I just check online?$"
 
