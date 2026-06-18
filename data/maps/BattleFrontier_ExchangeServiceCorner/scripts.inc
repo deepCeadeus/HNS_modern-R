@@ -426,25 +426,27 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ScopeLens::
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
 	end
 
-BattleFrontier_ExchangeServiceCorner_EventScript_Man::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_GoGetYourOwnDoll, MSGBOX_NPC
+BattleFrontier_ExchangeServiceCorner_EventScript_DollGirl::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_TotodileDollGirl, MSGBOX_NPC
 	end
 
-BattleFrontier_ExchangeServiceCorner_EventScript_Sailor::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_ItemsWillGetMonTougher, MSGBOX_NPC
+BattleFrontier_ExchangeServiceCorner_EventScript_TotodileDollSitting::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_Totodile, MSGBOX_NPC
 	end
 
-BattleFrontier_ExchangeServiceCorner_EventScript_PokefanF::
-	lock
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_GetYouAnythingYouWant, MSGBOX_DEFAULT
-	release
+BattleFrontier_ExchangeServiceCorner_EventScript_Sage::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_NoHotel, MSGBOX_NPC
 	end
 
-BattleFrontier_ExchangeServiceCorner_EventScript_RichBoy::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_WishIHadAllDolls, MSGBOX_NPC
+BattleFrontier_ExchangeServiceCorner_EventScript_Policeman::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_SeeBurglar, MSGBOX_NPC
 	end
 
-BattleFrontier_ExchangeServiceCorner_EventScript_Girl::
+BattleFrontier_ExchangeServiceCorner_EventScript_Fisher::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_WaterDolls, MSGBOX_NPC
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_Camper::
 	msgbox BattleFrontier_ExchangeServiceCorner_Text_MoreBattlePointsForRecord, MSGBOX_NPC
 	end
 
@@ -615,38 +617,37 @@ BattleFrontier_ExchangeServiceCorner_Text_ThankYouVisitWithPoints:
 	.string "Please visit us when you have\n"
 	.string "saved up Battle Points.$"
 
-BattleFrontier_ExchangeServiceCorner_Text_WishIHadAllDolls:
-	.string "Oh, they're so nice!\n"
-	.string "I wish I had them!\l"
-	.string "Cute cushions!\l"
-	.string "Big plush DOLLS!\l"
-	.string "Little plush DOLLS!\l"
-	.string "I wish I had them all!$"
+BattleFrontier_ExchangeServiceCorner_Text_WaterDolls:
+	.string "I wish they had a GYARADOS DOLL…\n"
+	.string "I'll have to buy a TOTODILE,\l"
+	.string "MUDKIP, LAPRAS or a BLASTOISE DOLL.\p"
+	.string "I only like WATER-types!$"
 
-BattleFrontier_ExchangeServiceCorner_Text_GetYouAnythingYouWant:
-	.string "Leave it to your mommy!\p"
-	.string "If it's anything you want, I'll go\n"
-	.string "through anything to get it, honey!$"
+BattleFrontier_ExchangeServiceCorner_Text_SeeBurglar:
+	.string "Phew! I'm really thankful there are\n"
+	.string "no BURGLARS in this place!\p"
+	.string "Wait, you've seen one?\n"
+	.string "Ah, whatever. It's probably a costume.$"
 
-BattleFrontier_ExchangeServiceCorner_Text_ItemsWillGetMonTougher:
-	.string "If I can get hold of the items here,\n"
-	.string "my POKéMON will get tougher.\p"
-	.string "You bet they will!\n"
-	.string "No question about it!$"
+BattleFrontier_ExchangeServiceCorner_Text_NoHotel:
+	.string "I find it hard to relax in this place.\n"
+	.string "Why isn't there a hotel to rest?$"
 
-BattleFrontier_ExchangeServiceCorner_Text_GoGetYourOwnDoll:
-	.string "Hah?\n"
-	.string "What are you gawking at?\p"
-	.string "I don't like you staring at my plush\n"
-	.string "doll like that.\p"
-	.string "If you want it, go get one yourself!\n"
-	.string "Isn't that right, SMOOCHUM?$"
+BattleFrontier_ExchangeServiceCorner_Text_TotodileDollGirl:
+	.string "My TOTODILE plushie is so cute!\n"
+	.string "It really looks like a real one!\p"
+	.string "Isn't that right, TOTODILE?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_Totodile:
+	.string "This isn't a real TOTODILE,\n"
+	.string "it's a DOLL!$"
 
 BattleFrontier_ExchangeServiceCorner_Text_MoreBattlePointsForRecord:
-	.string "Did you know?\p"
-	.string "If you stretch your record at any of\n"
-	.string "the BATTLE facilities, they start\l"
-	.string "giving you more and more Battle Points.$"
+	.string "I've heard there are new items being\n"
+	.string "created in labs, right now!\p"
+	.string "Supposedly, there is an orb that\n"
+	.string "instantly poisons your POKéMON.\p"
+	.string "Why would you do that, I do wonder…$"
 
 BattleFrontier_ExchangeServiceCorner_Text_TreeckoDollDesc::
 	.string "A TREECKO DOLL.\n"
