@@ -258,38 +258,36 @@ EventScript_MultichoiceDisableChallenge_Text_Challenge_PokecenterChal:
 EventScript_MultichoiceDisableChallenge_Text_Challenge_PokecenterChal_Disable:
 	.string "Disable POKéCENTER CHALLENGE?$"
 
-BattleFrontier_PokemonCenter_1F_EventScript_SchoolKid::
-	msgbox BattleFrontier_PokemonCenter_1F_Text_NeverSeenPokemon, MSGBOX_NPC
+BattleFrontier_PokemonCenter_1F_EventScript_Woman::
+	msgbox BattleFrontier_PokemonCenter_1F_Text_CopyPaste, MSGBOX_NPC
 	end
 
-BattleFrontier_PokemonCenter_1F_EventScript_Man::
-	msgbox BattleFrontier_PokemonCenter_1F_Text_NextStopBattleArena, MSGBOX_NPC
+BattleFrontier_PokemonCenter_1F_EventScript_Hiker::
+	msgbox BattleFrontier_PokemonCenter_1F_Text_NextStopPyramid, MSGBOX_NPC
 	end
 
-BattleFrontier_PokemonCenter_1F_EventScript_Picnicker::
+BattleFrontier_PokemonCenter_1F_EventScript_ScientistF::
 	msgbox BattleFrontier_PokemonCenter_1F_Text_GoingThroughEveryChallenge, MSGBOX_NPC
 	end
 
-BattleFrontier_PokemonCenter_1F_EventScript_Skitty::
+BattleFrontier_PokemonCenter_1F_EventScript_Magnezone::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_SKITTY, CRY_MODE_NORMAL
-	msgbox BattleFrontier_PokemonCenter_1F_Text_Skitty, MSGBOX_DEFAULT
+	playmoncry SPECIES_MAGNEZONE, CRY_MODE_NORMAL
+	msgbox BattleFrontier_PokemonCenter_1F_Text_Magnezone, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
 
-BattleFrontier_PokemonCenter_1F_Text_NeverSeenPokemon:
-	.string "There was someone here using a \n"
-	.string "POKéMON I've never seen before.\p"
-	.string "I never learned about it at\n"
-	.string "TRAINER'S SCHOOL at least.\p"
-	.string "I wonder where you can catch POKéMON\n"
-	.string "like that.$"
+BattleFrontier_PokemonCenter_1F_Text_CopyPaste:
+	.string "Even if the original BATTLE FRONTIER\n"
+	.string "is located in HOENN, SCOTT tried to\l"
+	.string "copy and paste the whole thing into\l"
+	.string "KANTO and JOHTO, and it succeeded.$"
 
-BattleFrontier_PokemonCenter_1F_Text_NextStopBattleArena:
-	.string "Okay! Next stop, the BATTLE ARENA!\n"
+BattleFrontier_PokemonCenter_1F_Text_NextStopPyramid:
+	.string "Okay! Next stop, the BATTLE PYRAMID!\n"
 	.string "I'd better get the right POKéMON from\l"
 	.string "the PC Storage System.$"
 
@@ -297,6 +295,6 @@ BattleFrontier_PokemonCenter_1F_Text_GoingThroughEveryChallenge:
 	.string "Giggle… I'm going to go through every\n"
 	.string "challenge with just this baby!$"
 
-BattleFrontier_PokemonCenter_1F_Text_Skitty:
-	.string "SKITTY: Mya myaaah!$"
+BattleFrontier_PokemonCenter_1F_Text_Magnezone:
+	.string "MAGNEZONE: Bzzzz-Bzzzz!$"
 
