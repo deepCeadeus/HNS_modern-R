@@ -143,11 +143,11 @@ BattleFrontier_Lounge1_EventScript_CancelMonSelect::
 	end
 
 BattleFrontier_Lounge1_EventScript_Boy1::
-	msgbox BattleFrontier_Lounge1_Text_SaidMyMonIsOutstanding, MSGBOX_NPC
+	msgbox BattleFrontier_Lounge1_Text_ToughestBattles, MSGBOX_NPC
 	end
 
 BattleFrontier_Lounge1_EventScript_Boy2::
-	msgbox BattleFrontier_Lounge1_Text_DidntDoAnythingSpecialRaisingIt, MSGBOX_NPC
+	msgbox BattleFrontier_Lounge1_Text_PyramidOpressivee, MSGBOX_NPC
 	end
 
 BattleFrontier_Lounge1_Text_PokemonBreederIntro:
@@ -247,12 +247,14 @@ BattleFrontier_Lounge1_Text_EvenICantTell:
 	.string "Show me a POKéMON!\n"
 	.string "A POKéMON is what I need to see!$"
 
-BattleFrontier_Lounge1_Text_SaidMyMonIsOutstanding:
-	.string "He said my POKéMON is outstanding!\n"
-	.string "I'm glad I raised it carefully!$"
+BattleFrontier_Lounge1_Text_ToughestBattles:
+	.string "The FRONTIER is beautiful, isn't it?\p"
+	.string "A perfect paradise…\n"
+	.string "for the toughest battles in the world.$"
 
-BattleFrontier_Lounge1_Text_DidntDoAnythingSpecialRaisingIt:
-	.string "He said my POKéMON is outstanding!\n"
-	.string "But I didn't do anything special\l"
-	.string "raising it…$"
+BattleFrontier_Lounge1_Text_PyramidOpressivee:
+	.string "The BATTLE PYRAMID is…\n"
+	.string "oppressive.\p"
+	.string "No items, just you, your team,\n"
+	.string "and the dark.$"
 
