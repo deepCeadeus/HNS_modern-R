@@ -1,30 +1,32 @@
 BattleFrontier_Lounge4_MapScripts::
 	.byte 0
 
-BattleFrontier_Lounge4_EventScript_Woman::
-	msgbox BattleFrontier_Lounge4_Text_WonderIfInterviewsAiring, MSGBOX_NPC
+BattleFrontier_Lounge4_EventScript_FatMan::
+	msgbox BattleFrontier_Lounge4_Text_Challenge, MSGBOX_NPC
 	end
 
-BattleFrontier_Lounge4_EventScript_Cook::
-	msgbox BattleFrontier_Lounge4_Text_IfIOpenedRestaurantHere, MSGBOX_NPC
+BattleFrontier_Lounge4_EventScript_Youngster::
+	msgbox BattleFrontier_Lounge4_Text_IcyVeins, MSGBOX_NPC
 	end
 
 BattleFrontier_Lounge4_EventScript_Man::
-	msgbox BattleFrontier_Lounge4_Text_NeedBreatherAfterBattles, MSGBOX_NPC
+	msgbox BattleFrontier_Lounge4_Text_AmbitionInTheAir, MSGBOX_NPC
 	end
 
-BattleFrontier_Lounge4_Text_WonderIfInterviewsAiring:
-	.string "I wonder if they'll be airing interviews\n"
-	.string "with tough TRAINERS today?$"
+BattleFrontier_Lounge4_Text_Challenge:
+	.string "The view from the top of the BATTLE\n" 
+	.string "TOWER must be something else.\p"
+	.string "But it's not the view I'm after,\n" 
+	.string "it's the challenge that comes\l"
+	.string "with earning it.$"
 
-BattleFrontier_Lounge4_Text_IfIOpenedRestaurantHere:
-	.string "If I opened a restaurant here,\n"
-	.string "it'd make money for sure.$"
+BattleFrontier_Lounge4_Text_IcyVeins:
+	.string "My big sis says this place is for\n"
+	.string "trainers with ice in their veins.\p"
+	.string "I want to be that cool one day, too.$"
 
-BattleFrontier_Lounge4_Text_NeedBreatherAfterBattles:
-	.string "Whew…\p"
-	.string "I need to take a breather after\n"
-	.string "some intense battles…\p"
-	.string "But even now, I never take a break\n"
-	.string "from plotting strategy and combos.$"
-
+BattleFrontier_Lounge4_Text_AmbitionInTheAir:
+	.string "I don't battle much, but I\n"
+	.string "love the atmosphere.\p"
+	.string "You can feel the ambition and\n"
+	.string "tension in the air.$"
