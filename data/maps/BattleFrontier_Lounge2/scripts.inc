@@ -108,8 +108,8 @@ BattleFrontier_Lounge2_EventScript_Maniac3::
 	release
 	end
 
-BattleFrontier_Lounge2_EventScript_TriathleteF::
-	msgbox BattleFrontier_Lounge2_Text_ThisPlaceIsScaringMe, MSGBOX_NPC
+BattleFrontier_Lounge2_EventScript_Beauty::
+	msgbox BattleFrontier_Lounge2_Text_AreTheySiblings, MSGBOX_NPC
 	end
 
 BattleFrontier_Lounge2_Text_FrontierManiacIntro::
@@ -363,7 +363,11 @@ BattleFrontier_Lounge2_Text_AmazingPowerOfPersuasion::
 	.string "What amazing power of persuasion!\n"
 	.string "My mentor's like none other!$"
 
-BattleFrontier_Lounge2_Text_ThisPlaceIsScaringMe::
-	.string "…What is this place?\n"
-	.string "It's scaring me…$"
+BattleFrontier_Lounge2_Text_AreTheySiblings::
+	.string "These guys come from another BATTLE\n"
+	.string "FRONTIER located in HOENN, and it\l"
+	.string "seems they always give some kind of\l"
+	.string "advice to trainers, for free.\p"
+	.string "…\p"
+	.string "Are they siblings?$"
 
