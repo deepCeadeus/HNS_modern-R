@@ -398,7 +398,7 @@ BattleFrontier_OutsideEast_Text_TrustTheirNature:
 
 BattleFrontier_OutsideEast_Text_TrainsOrTrainers:
 	.string "Some trains never come back.\n"
-	.string "Neither do some trainers.$"
+	.string "Neither do some TRAINERS.$"
 
 BattleFrontier_OutsideEast_Text_SuspiciousMe:
 	.string "Suspicious? Me?\p"

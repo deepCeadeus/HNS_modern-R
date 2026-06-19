@@ -345,12 +345,12 @@ BattleFrontier_Lounge7_EventScript_ChooseNewMove::
 	goto BattleFrontier_Lounge7_EventScript_ChooseNewRightTutorMove
 	end
 
-BattleFrontier_Lounge7_EventScript_Sailor::
-	msgbox BattleFrontier_Lounge7_Text_ThinkLadiesDontGetAlong, MSGBOX_NPC
+BattleFrontier_Lounge7_EventScript_CooltrainerF::
+	msgbox BattleFrontier_Lounge7_Text_BPInvestment, MSGBOX_NPC
 	end
 
-BattleFrontier_Lounge7_EventScript_Gentleman::
-	msgbox BattleFrontier_Lounge7_Text_LadiesWereStrongAndBeautiful, MSGBOX_NPC
+BattleFrontier_Lounge7_EventScript_OldMan2::
+	msgbox BattleFrontier_Lounge7_Text_ElementalTutorSeenItAll, MSGBOX_NPC
 	end
 
 BattleFrontier_Lounge7_Text_LeftTutorIntro:
@@ -425,24 +425,18 @@ BattleFrontier_Lounge7_Text_RightTutorWelcomeBack:
 	.string "Have you come to learn hard and\n"
 	.string "yet pretty POKéMON moves?$"
 
-BattleFrontier_Lounge7_Text_ThinkLadiesDontGetAlong:
-	.string "Those ladies, the way they bad-mouth\n"
-	.string "each other, you probably think that\l"
-	.string "they don't get along.\p"
-	.string "But if that were true, they wouldn't\n"
-	.string "stay out here together, would they?$"
+BattleFrontier_Lounge7_Text_BPInvestment:
+	.string "BP spent on moves?\n"
+	.string "That's an investment.\p" 
+	.string "BP spent on healing items?\n"
+	.string "That's just survival.$"
 
-BattleFrontier_Lounge7_Text_LadiesWereStrongAndBeautiful:
-	.string "When I was just a wee YOUNGSTER,\n"
-	.string "those ladies were strong and beautiful.\p"
-	.string "They were idols among us TRAINERS.\p"
-	.string "Even now, age hasn't dulled their\n"
-	.string "abilities.\p"
-	.string "In fact, their POKéMON moves have\n"
-	.string "grown even more polished.\p"
-	.string "But… For some reason, I can't help\n"
-	.string "but feel this…\p"
-	.string "Time is so cruel…$"
+BattleFrontier_Lounge7_Text_ElementalTutorSeenItAll:
+	.string "The ELEMENTAL TUTOR has seen\n"
+	.string "everything.\p"
+	.string "Every move.\n"
+	.string "Every mistake.\l" 
+	.string "He's seen it all.$"
 
 BattleFrontier_Lounge7_Text_SoftboiledDesc::
 	.string "Recovers up to\n"
