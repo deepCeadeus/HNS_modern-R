@@ -165,8 +165,8 @@ BattleFrontier_Lounge3_EventScript_CancelBet::
 	goto BattleFrontier_Lounge3_EventScript_DeclineChallenge
 	end
 
-BattleFrontier_Lounge3_EventScript_Man::
-	msgbox BattleFrontier_Lounge3_Text_ShouldBeTakingChallenges, MSGBOX_NPC
+BattleFrontier_Lounge3_EventScript_Sailor::
+	msgbox BattleFrontier_Lounge3_Text_IDontBattleForSymbols, MSGBOX_NPC
 	end
 
 BattleFrontier_Lounge3_EventScript_Woman::
@@ -183,11 +183,8 @@ BattleFrontier_Lounge3_EventScript_PokefanF::
 	goto BattleFrontier_Lounge3_EventScript_FaceOriginalDirection
 	end
 
-BattleFrontier_Lounge3_EventScript_FatMan::
-	lock
-	faceplayer
-	msgbox BattleFrontier_Lounge3_Text_TrainerGoodButRattled, MSGBOX_DEFAULT
-	goto BattleFrontier_Lounge3_EventScript_FaceOriginalDirection
+BattleFrontier_Lounge3_EventScript_Rocker::
+	msgbox BattleFrontier_Lounge3_Text_BattlePalace, MSGBOX_NPC
 	end
 
 BattleFrontier_Lounge3_EventScript_FaceOriginalDirection::
@@ -453,16 +450,19 @@ BattleFrontier_Lounge3_Text_BackedWrongTrainer::
 	.string "Maybe I should be battling normally\n"
 	.string "like everyone else…$"
 
-BattleFrontier_Lounge3_Text_TrainerGoodButRattled::
-	.string "That TRAINER…\p"
-	.string "He's good, but he gets rattled too\n"
-	.string "easily to survive the BATTLE DOME…$"
+BattleFrontier_Lounge3_Text_BattlePalace::
+	.string "The BATTLE PALACE taught me trust.\n"
+	.string "My POKéMON taught me patience.\p"
+	.string "The losing streak taught me humility.$"
 
 BattleFrontier_Lounge3_Text_KnowWinnerWhenISeeOne::
 	.string "Giggle!\n"
 	.string "I know a winner when I see one!$"
 
-BattleFrontier_Lounge3_Text_ShouldBeTakingChallenges::
-	.string "Those TRAINERS…\n"
-	.string "What are they doing?\l"
-	.string "They should be taking challenges.$"
+BattleFrontier_Lounge3_Text_IDontBattleForSymbols::
+	.string "I don't battle for the SYMBOLS\n"
+	.string "anymore.\p"
+	.string "I battle because it's the only\n" 
+	.string "thing that makes sense.\p"
+	.string "That sounds dramatic.\n"
+	.string "But it's true.$"
