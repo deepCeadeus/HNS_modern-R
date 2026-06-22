@@ -144,37 +144,31 @@ BattleFrontier_Mart_PokemartTMs:
 	end
 
 BattleFrontier_Mart_EventScript_OldMan::
-	msgbox BattleFrontier_Mart_Text_ChaperonGrandson, MSGBOX_NPC
+	msgbox BattleFrontier_Mart_Text_ScienceGrandson, MSGBOX_NPC
 	end
 
 BattleFrontier_Mart_EventScript_OldWoman::
-	lock
-	applymovement LOCALID_OLD_WOMAN, Common_Movement_FaceDown
-	waitmovement 0
-	msgbox BattleFrontier_Mart_Text_ProteinMakeNiceGift, MSGBOX_DEFAULT
-	release
+	msgbox BattleFrontier_Mart_Text_GoDefeatRed, MSGBOX_NPC
 	end
 
 BattleFrontier_Mart_EventScript_Boy::
-	msgbox BattleFrontier_Mart_Text_FacilitiesDontAllowItems, MSGBOX_NPC
+	msgbox BattleFrontier_Mart_Text_InfiniteMoney, MSGBOX_NPC
 	end
 
-BattleFrontier_Mart_Text_ChaperonGrandson:
-	.string "We came here to chaperon our\n"
-	.string "grandson.\p"
-	.string "But since we're here, we thought\n"
-	.string "we should get some souvenirs.$"
+BattleFrontier_Mart_Text_ScienceGrandson:
+	.string "My grandson works in the BATTLE DOME.\n"
+	.string "He's one of the scientists.$"
 
-BattleFrontier_Mart_Text_ProteinMakeNiceGift:
-	.string "Dear, what do you think of this?\n"
-	.string "Wouldn't this make a nice gift?\p"
-	.string "It's…PRO…TE…IN?\n"
-	.string "It sounds delicious, doesn't it?$"
+BattleFrontier_Mart_Text_GoDefeatRed:
+	.string "Did you know there's a second CLERK?\p"
+	.string "If you haven't seen him, that means\n"
+	.string "you haven't defeated the strongest\l"
+	.string "trainer in JOHTO.\p"
+	.string "Or so they say.$"
 
-BattleFrontier_Mart_Text_FacilitiesDontAllowItems:
-	.string "A lot of the BATTLE FRONTIER's\n"
-	.string "facilities don't allow the use of items\l"
-	.string "during battles.\p"
-	.string "That rule makes things tougher than\n"
-	.string "they already are!$"
+BattleFrontier_Mart_Text_InfiniteMoney:
+	.string "You can find items in the BATTLE\n"
+	.string "PYRAMID, but you can't take them\l"
+	.string "out of the facility.\p"
+	.string "That would be a free money glitch!$"
 
