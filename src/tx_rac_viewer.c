@@ -22,6 +22,8 @@
 #include "event_data.h"
 #include "tx_randomizer_and_challenges.h"
 
+extern struct MusicPlayerInfo *gMPlay_PokemonCry;
+
 // ---- Paging ----
 enum
 {
@@ -1226,6 +1228,8 @@ void CB2_InitChallengeViewer(void)
     case 2:
         ResetPaletteFade();
         ScanlineEffect_Stop();
+        if (gMPlay_PokemonCry != NULL)
+            StopCryAndClearCrySongs();
         ResetTasks();
         ResetSpriteData();
         gMain.state++;

@@ -23,6 +23,8 @@
 #include "pokemon.h"
 #include "event_data.h"
 
+extern struct MusicPlayerInfo *gMPlay_PokemonCry;
+
 enum
 {
     MENU_MODE,
@@ -1451,6 +1453,8 @@ void CB2_InitTxRandomizerChallengesMenu(void)
     case 2:
         ResetPaletteFade();
         ScanlineEffect_Stop();
+        if (gMPlay_PokemonCry != NULL)
+            StopCryAndClearCrySongs();
         ResetTasks();
         ResetSpriteData();
         gMain.state++;
