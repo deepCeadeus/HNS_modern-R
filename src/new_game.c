@@ -246,7 +246,8 @@ void NewGameInitData(void)
     WipeTrainerNameRecords();
     ResetTrainerHillResults();
     ResetContestLinkResults();
-    RandomizeTypeEffectivenessListEWRAM(Random32());
+    gSaveBlock1Ptr->typeRandomizerSeed = Random32() & 0xFFFF;
+    RandomizeTypeEffectivenessListEWRAM(gSaveBlock1Ptr->typeRandomizerSeed);
     InitMomSavings();
     //Below is unused, but set just in case. Easy Mode nuzlocke and Normal Mode nuzlocke can't be on together. 
     //Hard Mode nuzlocke forces Normal Mode nuzlocke too, so no need to check.

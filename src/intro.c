@@ -35,6 +35,7 @@
 #include "window.h"
 #include "blit.h"
 #include "string_util.h"
+#include "pokemon.h"
 
 u32 gIntroFrameCounter;
 struct GcmbStruct gMultibootProgramStruct;
@@ -905,6 +906,7 @@ void c2_copyright_1(void)
         LoadGameSave(SAVE_NORMAL);
         if (gSaveFileStatus == SAVE_STATUS_EMPTY || gSaveFileStatus == SAVE_STATUS_CORRUPT)
             Sav2_ClearSetDefault();
+        RandomizeTypeEffectivenessListEWRAM(gSaveBlock1Ptr->typeRandomizerSeed);
         SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
         InitHeap(gHeap, HEAP_SIZE);
     }
