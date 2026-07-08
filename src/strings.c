@@ -2093,6 +2093,8 @@ const u8 gText_Berry[] = _("BERRY");
 const u8 gText_Berries[] = _("BERRIES");
 const u8 gText_StatEditor[] = _("EDIT IVs/EVs");
 const u8 gText_AshQty[] = _("ASH QTY:\n{STR_VAR_1}{PAUSE_UNTIL_PRESS}");
+const u8 gText_Follow[] = _("Follow");
+const u8 gText_PkmnWillFollowYou[] = _("{STR_VAR_1} will now follow\nyou!{PAUSE_UNTIL_PRESS}");
 
 // Exp. Share
 const u8 gText_ExpShareOn[] = _("Turned on the Exp. Share.\pParty will now gain a portion\nof the Experience Points.{PAUSE_UNTIL_PRESS}");

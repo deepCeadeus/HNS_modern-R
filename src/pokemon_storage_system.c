@@ -6470,7 +6470,11 @@ static void RefreshDisplayMon(void)
 static void SetMovingMonData(u8 boxId, u8 position)
 {
     if (boxId == TOTAL_BOXES_COUNT)
+    {
+        if (gSaveBlock1Ptr->designatedFollower == position + 1)
+            gSaveBlock1Ptr->designatedFollower = 0;
         sStorage->movingMon = gPlayerParty[sCursorPosition];
+    }
     else
         BoxMonAtToMon(boxId, position, &sStorage->movingMon);
 
@@ -7007,6 +7011,10 @@ s16 CompactPartySlots(void)
 {
     s16 retVal = -1;
     u16 i, last;
+    u8 slotMap[PARTY_SIZE];
+
+    for (i = 0; i < PARTY_SIZE; i++)
+        slotMap[i] = PARTY_SIZE; // Mark as removed
 
     for (i = 0, last = 0; i < PARTY_SIZE; i++)
     {
@@ -7015,6 +7023,7 @@ s16 CompactPartySlots(void)
         {
             if (i != last)
                 gPlayerParty[last] = gPlayerParty[i];
+            slotMap[i] = last;
             last++;
         }
         else if (retVal == -1)
@@ -7025,6 +7034,18 @@ s16 CompactPartySlots(void)
     for (; last < PARTY_SIZE; last++)
         ZeroMonData(&gPlayerParty[last]);
 
+    // Update designated follower slot to track compaction (0=none, 1-6=slot+1)
+    {
+        u8 df = gSaveBlock1Ptr->designatedFollower;
+        if (df != 0 && df <= PARTY_SIZE)
+        {
+            if (slotMap[df - 1] >= PARTY_SIZE)
+                gSaveBlock1Ptr->designatedFollower = 0; // Mon was removed
+            else
+                gSaveBlock1Ptr->designatedFollower = slotMap[df - 1] + 1;
+        }
+    }
+    
     return retVal;
 }
 
