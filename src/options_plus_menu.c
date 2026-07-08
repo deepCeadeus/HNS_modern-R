@@ -34,9 +34,7 @@ enum
 {
     MENUITEM_MAIN_TEXTSPEED,
     MENUITEM_MAIN_FONT,
-    MENUITEM_MAIN_BATTLESCENE,
     MENUITEM_MAIN_DIFFICULTY,
-    MENUITEM_MAIN_BATTLESTYLE,
     MENUITEM_MAIN_BUTTONMODE,
     MENUITEM_MAIN_FOLLOWER,
     MENUITEM_MAIN_LARGE_FOLLOWER,
@@ -56,6 +54,8 @@ enum
 //Menu options 2
 enum
 {
+    MENUITEM_BATTLE_BATTLESCENE,
+    MENUITEM_BATTLE_BATTLESTYLE,
     MENUITEM_BATTLE_KO_ANIMS,
     MENUITEM_BATTLE_SPLIT,
     MENUITEM_BATTLE_FAST_INTRO,
@@ -268,9 +268,7 @@ struct // MENU_MAIN
 {
     [MENUITEM_MAIN_TEXTSPEED]               = {DrawChoices_TextSpeed,        ProcessInput_Options_Four},
     [MENUITEM_MAIN_FONT]                    = {DrawChoices_Font,             ProcessInput_Options_Two},
-    [MENUITEM_MAIN_BATTLESCENE]             = {DrawChoices_BattleScene,      ProcessInput_Options_Two},
     [MENUITEM_MAIN_DIFFICULTY]              = {DrawChoices_Difficulty,       ProcessInput_Difficulty},
-    [MENUITEM_MAIN_BATTLESTYLE]             = {DrawChoices_BattleStyle,      ProcessInput_BattleStyle},
     [MENUITEM_MAIN_BUTTONMODE]              = {DrawChoices_ButtonMode,       ProcessInput_Options_Three},
     [MENUITEM_MAIN_FOLLOWER]                = {DrawChoices_Follower,         ProcessInput_Options_Two},
     [MENUITEM_MAIN_LARGE_FOLLOWER]          = {DrawChoices_LargeFollower,    ProcessInput_Options_Two},
@@ -292,7 +290,8 @@ struct // MENU_BATTLE
     int (*processInput)(int selection);
 } static const sItemFunctionsCustom[MENUITEM_BATTLE_COUNT] =
 {
-
+    [MENUITEM_BATTLE_BATTLESCENE]      = {DrawChoices_BattleScene,        ProcessInput_Options_Two},
+    [MENUITEM_BATTLE_BATTLESTYLE]      = {DrawChoices_BattleStyle,        ProcessInput_BattleStyle},
     [MENUITEM_BATTLE_FAST_INTRO]       = {DrawChoices_FastIntro,          ProcessInput_Options_Two},
     [MENUITEM_BATTLE_SPLIT]            = {DrawChoices_Style,              ProcessInput_Options_Two},
     [MENUITEM_BATTLE_TYPE_EFFECTIVE]   = {DrawChoices_TypeEffective,      ProcessInput_Options_Two},
@@ -344,9 +343,7 @@ static const u8 *const sOptionMenuItemsNamesMain[MENUITEM_MAIN_COUNT] =
 {
     [MENUITEM_MAIN_TEXTSPEED]           = gText_TextSpeed,
     [MENUITEM_MAIN_FONT]                = sText_FontType,
-    [MENUITEM_MAIN_BATTLESCENE]         = gText_BattleScene,
     [MENUITEM_MAIN_DIFFICULTY]          = gText_OptionDifficulty,
-    [MENUITEM_MAIN_BATTLESTYLE]         = gText_BattleStyle,
     [MENUITEM_MAIN_BUTTONMODE]          = gText_ButtonMode,
     [MENUITEM_MAIN_FOLLOWER]            = gText_FollowerEnable,
     [MENUITEM_MAIN_LARGE_FOLLOWER]      = sText_OptionLargeFollower,
@@ -366,6 +363,8 @@ static const u8 sText_CursorMemory[]              = _("CURSOR MEMORY");
 static const u8 sText_KOAnims[]                   = _("KO ANIMS");
 static const u8 *const sOptionMenuItemsNamesCustom[MENUITEM_BATTLE_COUNT] =
 {
+    [MENUITEM_BATTLE_BATTLESCENE]      = gText_BattleScene,
+    [MENUITEM_BATTLE_BATTLESTYLE]      = gText_BattleStyle,
     [MENUITEM_BATTLE_FAST_INTRO]       = sText_OptionFastIntro,
     [MENUITEM_BATTLE_SPLIT]            = gText_OptionStyle,
     [MENUITEM_BATTLE_TYPE_EFFECTIVE]   = sText_OptionTypeEffective,
@@ -417,10 +416,8 @@ static bool8 CheckConditions(int selection)
         switch(selection)
         {
         case MENUITEM_MAIN_TEXTSPEED:         return TRUE;
-        case MENUITEM_MAIN_FONT:              return TRUE;
-        case MENUITEM_MAIN_BATTLESCENE:       return TRUE;
-        case MENUITEM_MAIN_DIFFICULTY:        return TRUE;
-        case MENUITEM_MAIN_BATTLESTYLE:       return TRUE;
+        case MENUITEM_MAIN_FONT:              return TRUE; 
+        case MENUITEM_MAIN_DIFFICULTY:        return TRUE; 
         case MENUITEM_MAIN_BUTTONMODE:        return TRUE;
         case MENUITEM_MAIN_FRAMETYPE:         return TRUE;
         case MENUITEM_MAIN_FOLLOWER:          return TRUE;
@@ -439,6 +436,8 @@ static bool8 CheckConditions(int selection)
     case MENU_BATTLE:
         switch(selection)
         {
+        case MENUITEM_BATTLE_BATTLESCENE:     return TRUE;
+        case MENUITEM_BATTLE_BATTLESTYLE:     return TRUE;
         case MENUITEM_BATTLE_FAST_INTRO:      return TRUE;
         case MENUITEM_BATTLE_SPLIT:           return TRUE;
         case MENUITEM_BATTLE_TYPE_EFFECTIVE:  return TRUE;
@@ -473,13 +472,9 @@ static const u8 sText_Desc_Save[]               = _("Save your settings.");
 static const u8 sText_Desc_TextSpeed[]          = _("Choose one of the four text-display\nspeeds.");
 static const u8 sText_Desc_Font_Em[]            = _("{COLOR 9}{COLOR 10}Emerald{COLOR 2} font type. Exit the Options\nMenu to properly apply the option.");
 static const u8 sText_Desc_Font_FRLG[]          = _("{COLOR 7}{COLOR 8}FR{COLOR 9}{COLOR 10}LG{COLOR 2} font type. Exit the Options Menu\nto properly apply the option.");
-static const u8 sText_Desc_BattleScene_On[]     = _("Show the POKéMON animations\nand attack animations.");
-static const u8 sText_Desc_BattleScene_Off[]    = _("Skip the POKéMON animations\nand attack animations.");
 static const u8 sText_Desc_Difficulty_Easy[]    = _("Change the difficulty to EASY.\nEverything is easier.");
 static const u8 sText_Desc_Difficulty_Normal[]  = _("Change the difficulty to NORMAL.\nVanilla experience.");
 static const u8 sText_Desc_Difficulty_Hard[]    = _("Change the difficulty to HARD.\nIncludes extra challenges.");
-static const u8 sText_Desc_BattleStyle_Shift[]  = _("Get the option to switch your\nPOKéMON after the enemies faints.");
-static const u8 sText_Desc_BattleStyle_Set[]    = _("No free switch after fainting the\nenemies POKéMON.");
 static const u8 sText_Desc_ButtonMode[]         = _("All buttons work as normal.");
 static const u8 sText_Desc_ButtonMode_LR[]      = _("On some screens the L and R buttons\nact as left and right.");
 static const u8 sText_Desc_ButtonMode_LA[]      = _("The L button acts as another A\nbutton for one-handed play.");
@@ -510,9 +505,7 @@ static const u8 *const sOptionMenuItemDescriptionsMain[MENUITEM_MAIN_COUNT][3] =
 {
     [MENUITEM_MAIN_TEXTSPEED]   = {sText_Desc_TextSpeed,            sText_Empty,                  sText_Empty},
     [MENUITEM_MAIN_FONT]        = {sText_Desc_Font_Em,              sText_Desc_Font_FRLG,         sText_Empty},
-    [MENUITEM_MAIN_BATTLESCENE] = {sText_Desc_BattleScene_On,       sText_Desc_BattleScene_Off,   sText_Empty},
     [MENUITEM_MAIN_DIFFICULTY]  = {sText_Desc_Difficulty_Easy,      sText_Desc_Difficulty_Normal, sText_Desc_Difficulty_Hard},
-    [MENUITEM_MAIN_BATTLESTYLE] = {sText_Desc_BattleStyle_Shift,    sText_Desc_BattleStyle_Set,   sText_Empty},
     [MENUITEM_MAIN_BUTTONMODE]  = {sText_Desc_ButtonMode,           sText_Desc_ButtonMode_LR,     sText_Desc_ButtonMode_LA},
     [MENUITEM_MAIN_FRAMETYPE]   = {sText_Desc_FrameType,            sText_Empty,                  sText_Empty},
     [MENUITEM_MAIN_FOLLOWER]    = {sText_Desc_FollowerOn,           sText_Desc_FollowerOff},
@@ -529,6 +522,10 @@ static const u8 *const sOptionMenuItemDescriptionsMain[MENUITEM_MAIN_COUNT][3] =
 };
 
 // Custom {PKMN}
+static const u8 sText_Desc_BattleScene_On[]        = _("Show the POKéMON animations\nand attack animations.");
+static const u8 sText_Desc_BattleScene_Off[]       = _("Skip the POKéMON animations\nand attack animations.");
+static const u8 sText_Desc_BattleStyle_Shift[]     = _("Get the option to switch your\nPOKéMON after the enemies faints.");
+static const u8 sText_Desc_BattleStyle_Set[]       = _("No free switch after fainting the\nenemies POKéMON.");
 static const u8 sText_Desc_StyleOn[]               = _("PHYSICAL and SPECIAL MOVES\nare MOVE specific.");
 static const u8 sText_Desc_StyleOff[]              = _("PHYSICAL and SPECIAL MOVES\ndepend on the POKéMON TYPE.");
 static const u8 sText_Desc_TypeEffectiveOn[]       = _("Show effectiveness and STAB ({COLOR 3}{COLOR 4}Same\n{COLOR 3}{COLOR 4}Type Attack Bonus{COLOR 2}) in battles.");
@@ -555,7 +552,8 @@ static const u8 sText_Desc_KOAnimsOn[]             = _("Play {PKMN}'s animation 
 static const u8 sText_Desc_KOAnimsOff[]            = _("No animation or cry when defeating\nan opponent.");
 static const u8 *const sOptionMenuItemDescriptionsCustom[MENUITEM_BATTLE_COUNT][4] =
 {
-
+    [MENUITEM_BATTLE_BATTLESCENE]         = {sText_Desc_BattleScene_On,           sText_Desc_BattleScene_Off},
+    [MENUITEM_BATTLE_BATTLESTYLE]         = {sText_Desc_BattleStyle_Shift,        sText_Desc_BattleStyle_Set},
     [MENUITEM_BATTLE_FAST_INTRO]          = {sText_Desc_FastIntroOn,              sText_Desc_FastIntroOff},
     [MENUITEM_BATTLE_FAST_BATTLES]        = {sText_Desc_FastBattleOn,             sText_Desc_FastBattleOff},
     [MENUITEM_BATTLE_SPLIT]               = {sText_Desc_StyleOn,                  sText_Desc_StyleOff},
@@ -607,9 +605,7 @@ static const u8 *const sOptionMenuItemDescriptionsDisabledMain[MENUITEM_MAIN_COU
 {
     [MENUITEM_MAIN_TEXTSPEED]   = sText_Desc_Disabled_Textspeed,
     [MENUITEM_MAIN_FONT]              = sText_Empty,
-    [MENUITEM_MAIN_BATTLESCENE] = sText_Empty,
     [MENUITEM_MAIN_DIFFICULTY]  = sText_Empty,
-    [MENUITEM_MAIN_BATTLESTYLE] = sText_Empty,
     [MENUITEM_MAIN_BUTTONMODE]  = sText_Empty,
     [MENUITEM_MAIN_FRAMETYPE]   = sText_Empty,
     [MENUITEM_MAIN_FOLLOWER]    = sText_Desc_Disabled_BattleHPBar,
@@ -628,6 +624,8 @@ static const u8 *const sOptionMenuItemDescriptionsDisabledMain[MENUITEM_MAIN_COU
 static const u8 sText_Desc_Disabled_LR_Run[]   = _("Only active if L+R is selected above.");
 static const u8 *const sOptionMenuItemDescriptionsDisabledCustom[MENUITEM_BATTLE_COUNT] =
 {
+    [MENUITEM_BATTLE_BATTLESCENE]         = sText_Empty,
+    [MENUITEM_BATTLE_BATTLESTYLE]         = sText_Empty,
     [MENUITEM_BATTLE_FAST_INTRO]          = sText_Empty,
     [MENUITEM_BATTLE_FAST_BATTLES]        = sText_Empty,
     [MENUITEM_BATTLE_SPLIT]               = sText_Empty,
@@ -890,9 +888,7 @@ void CB2_InitOptionPlusMenu(void)
         sOptions = AllocZeroed(sizeof(*sOptions));
         sOptions->sel[MENUITEM_MAIN_TEXTSPEED]           = gSaveBlock2Ptr->optionsTextSpeed;
         sOptions->sel[MENUITEM_MAIN_FONT]                = gSaveBlock2Ptr->optionsFontType;
-        sOptions->sel[MENUITEM_MAIN_BATTLESCENE]         = gSaveBlock2Ptr->optionsBattleSceneOff;
         sOptions->sel[MENUITEM_MAIN_DIFFICULTY]          = gSaveBlock2Ptr->optionsDifficulty;
-        sOptions->sel[MENUITEM_MAIN_BATTLESTYLE]         = gSaveBlock2Ptr->optionsBattleStyle;
         sOptions->sel[MENUITEM_MAIN_BUTTONMODE]          = gSaveBlock2Ptr->optionsButtonMode;
         sOptions->sel[MENUITEM_MAIN_FOLLOWER]            = gSaveBlock2Ptr->optionsfollowerEnable;
         sOptions->sel[MENUITEM_MAIN_LARGE_FOLLOWER]      = gSaveBlock2Ptr->optionsfollowerLargeEnable;
@@ -907,6 +903,8 @@ void CB2_InitOptionPlusMenu(void)
         sOptions->sel[MENUITEM_MAIN_UNIT_TYPE]           = gSaveBlock2Ptr->optionsUnitSystem;
         sOptions->sel[MENUITEM_MAIN_SHOW_INTRO_MSG]      = gSaveBlock2Ptr->ModernMessage;
 
+        sOptions->sel_battle[MENUITEM_BATTLE_BATTLESCENE]       = gSaveBlock2Ptr->optionsBattleSceneOff;
+        sOptions->sel_battle[MENUITEM_BATTLE_BATTLESTYLE]       = gSaveBlock2Ptr->optionsBattleStyle;
         sOptions->sel_battle[MENUITEM_BATTLE_FAST_INTRO]        = gSaveBlock2Ptr->optionsFastIntro;
         sOptions->sel_battle[MENUITEM_BATTLE_FAST_BATTLES]      = gSaveBlock2Ptr->optionsFastBattle;
         sOptions->sel_battle[MENUITEM_BATTLE_SPLIT]             = gSaveBlock2Ptr->optionStyle;
@@ -1133,9 +1131,7 @@ static void Task_OptionMenuSave(u8 taskId)
 {
     gSaveBlock2Ptr->optionsTextSpeed             = sOptions->sel[MENUITEM_MAIN_TEXTSPEED];
     gSaveBlock2Ptr->optionsFontType              = sOptions->sel[MENUITEM_MAIN_FONT];
-    gSaveBlock2Ptr->optionsBattleSceneOff        = sOptions->sel[MENUITEM_MAIN_BATTLESCENE];
     gSaveBlock2Ptr->optionsDifficulty            = sOptions->sel[MENUITEM_MAIN_DIFFICULTY];
-    gSaveBlock2Ptr->optionsBattleStyle           = sOptions->sel[MENUITEM_MAIN_BATTLESTYLE]; 
     gSaveBlock2Ptr->optionsButtonMode            = sOptions->sel[MENUITEM_MAIN_BUTTONMODE];
     gSaveBlock2Ptr->optionsfollowerEnable        = sOptions->sel[MENUITEM_MAIN_FOLLOWER];
     gSaveBlock2Ptr->optionsfollowerLargeEnable   = sOptions->sel[MENUITEM_MAIN_LARGE_FOLLOWER];
@@ -1150,6 +1146,8 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsUnitSystem            = sOptions->sel[MENUITEM_MAIN_UNIT_TYPE];
     gSaveBlock2Ptr->ModernMessage                = sOptions->sel[MENUITEM_MAIN_SHOW_INTRO_MSG];
 
+    gSaveBlock2Ptr->optionsBattleSceneOff   = sOptions->sel_battle[MENUITEM_BATTLE_BATTLESCENE];
+    gSaveBlock2Ptr->optionsBattleStyle      = sOptions->sel_battle[MENUITEM_BATTLE_BATTLESTYLE]; 
     gSaveBlock2Ptr->optionsFastIntro        = sOptions->sel_battle[MENUITEM_BATTLE_FAST_INTRO];
     gSaveBlock2Ptr->optionsFastBattle       = sOptions->sel_battle[MENUITEM_BATTLE_FAST_BATTLES];
     gSaveBlock2Ptr->optionStyle             = sOptions->sel_battle[MENUITEM_BATTLE_SPLIT];
@@ -1489,7 +1487,7 @@ static void DrawChoices_TextSpeed(int selection, int y)
 
 static void DrawChoices_BattleScene(int selection, int y)
 {
-    bool8 active = CheckConditions(MENUITEM_MAIN_BATTLESCENE);
+    bool8 active = CheckConditions(MENUITEM_BATTLE_BATTLESCENE);
     u8 styles[2] = {0};
     styles[selection] = 1;
 
@@ -1651,7 +1649,7 @@ static void DrawChoices_Sound_Effects(int selection, int y)
 
 static void DrawChoices_BattleStyle(int selection, int y)
 {
-    bool8 active = CheckConditions(MENUITEM_MAIN_BATTLESTYLE);
+    bool8 active = CheckConditions(MENUITEM_BATTLE_BATTLESTYLE);
     u8 styles[2] = {0};
     styles[selection] = 1;
 
