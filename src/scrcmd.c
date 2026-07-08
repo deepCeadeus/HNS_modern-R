@@ -2934,8 +2934,8 @@ bool8 ScrCmd_givenamedmon(struct ScriptContext *ctx)
             CalculateMonStats(mon);
 
             u16 dexNum = SpeciesToNationalPokedexNum(species);
-            HandleSetPokedexFlag(dexNum, FLAG_SET_SEEN, personality);
-            HandleSetPokedexFlag(dexNum, FLAG_SET_CAUGHT, personality);
+            HandleSetPokedexFlag(dexNum, FLAG_SET_SEEN, personality, otId);
+            HandleSetPokedexFlag(dexNum, FLAG_SET_CAUGHT, personality, otId);
 
             gSpecialVar_Result = MON_GIVEN_TO_PARTY;
             return FALSE;

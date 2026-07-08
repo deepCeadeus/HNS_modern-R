@@ -15,6 +15,7 @@
 #include "agb_flash.h"
 #include "tx_randomizer_and_challenges.h"
 #include "constants/event_objects.h"
+#include "pokedex.h"
 
 static void ApplyNewEncryptionKeyToAllEncryptedData(u32 encryptionKey);
 
@@ -232,6 +233,7 @@ void CopyPartyAndObjectsFromSave(void)
     PrintTXSaveData(); //tx_randomizer_and_challenges
     LoadPlayerParty();
     LoadObjectEvents();
+    ScanOwnedMonsForShinies(); // Retroactively set shiny flags for existing party/PC mons
 }
 
 void LoadPlayerBag(void)
