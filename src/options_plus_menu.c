@@ -375,6 +375,8 @@ static const u8 *const sOptionMenuItemsNamesCustom[MENUITEM_BATTLE_COUNT] =
     [MENUITEM_BATTLE_BALL_PROMPT]      = sText_OptionBallPrompt,
     [MENUITEM_BATTLE_NEW_BACKGROUNDS]  = sText_OptionNewBackgrounds,
     [MENUITEM_BATTLE_NEW_BATTLEUI]     = sText_OptionNewBattleUI,
+    [MENUITEM_BATTLE_CURSOR_MEMORY]    = sText_CursorMemory,
+    [MENUITEM_BATTLE_KO_ANIMS]         = sText_KOAnims,
 };
 
 static const u8 sText_OptionMusic[]                  = _("MUSIC");
