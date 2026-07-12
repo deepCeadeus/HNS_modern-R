@@ -28,6 +28,7 @@
 #include "constants/trainers.h"
 #include "constants/trainer_hill.h"
 #include "constants/weather.h"
+#include "field_specials.h"
 
 struct BattleWindowText
 {
