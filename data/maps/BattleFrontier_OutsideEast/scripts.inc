@@ -1,5 +1,5 @@
 .set LOCALID_SUDOWOODO, 14
-.set LOCALID_BRANDON, 41
+.set LOCALID_BRANDON, 40
 
 BattleFrontier_OutsideEast_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, BattleFrontier_OutsideEast_OnResume
