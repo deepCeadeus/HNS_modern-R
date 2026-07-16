@@ -105,9 +105,7 @@ static void LoadObjectReflectionPalette(struct ObjectEvent *objectEvent, struct 
         // If player is surfing (flag set or surfing graphics), use normal water reflection
         if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING)
             || objectEvent->graphicsId == OBJ_EVENT_GFX_BRENDAN_SURFING
-            || objectEvent->graphicsId == OBJ_EVENT_GFX_MAY_SURFING
-            || objectEvent->graphicsId == OBJ_EVENT_GFX_BRENDAN_SURFING_RS
-            || objectEvent->graphicsId == OBJ_EVENT_GFX_MAY_SURFING_RS)
+            || objectEvent->graphicsId == OBJ_EVENT_GFX_MAY_SURFING)
         {
             LoadObjectRegularReflectionPalette(objectEvent, reflectionSprite);
         }
