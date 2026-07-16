@@ -1,6 +1,8 @@
 #ifndef GUARD_OVERWORLD_H
 #define GUARD_OVERWORLD_H
 
+struct BlendSettings;
+
 #define LINK_KEY_CODE_NULL 0x00
 #define LINK_KEY_CODE_EMPTY 0x11
 #define LINK_KEY_CODE_DPAD_DOWN 0x12
@@ -153,6 +155,7 @@ bool32 IsOverworldLinkActive(void);
 void CB1_Overworld(void);
 void CB2_OverworldBasic(void);
 u8 UpdateTimeOfDay(void);
+const struct BlendSettings *GetTimeOfDayBlend(void);
 bool8 MapHasNaturalLight(u8 mapType);
 void UpdateAltBgPalettes(u16 palettes);
 void UpdatePalettesWithTime(u32);

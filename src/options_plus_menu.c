@@ -45,6 +45,7 @@ enum
     MENUITEM_CUSTOM_FISHING,
     MENUITEM_MAIN_EVEN_FASTER_JOY,
     MENUITEM_MAIN_UNIT_TYPE,
+    MENUITEM_MAIN_BRIGHTER_NIGHTS,
     MENUITEM_MAIN_SHOW_INTRO_MSG,
     //MENUITEM_MAIN_SKIP_INTRO,
     MENUITEM_MAIN_FRAMETYPE,
@@ -234,6 +235,7 @@ static void DrawChoices_ShowIntroMsg(int selection, int y);
 static void DrawChoices_Font(int selection, int y);
 static void DrawChoices_CursorMemory(int selection, int y);
 static void DrawChoices_BattleSpeed(int selection, int y);
+static void DrawChoices_BrighterNights(int selection, int y);
 static void DrawBgWindowFrames(void);
 
 // EWRAM vars
@@ -279,7 +281,8 @@ struct // MENU_MAIN
     [MENUITEM_CUSTOM_FISHING]               = {DrawChoices_Fishing,          ProcessInput_Options_Two},
     [MENUITEM_MAIN_EVEN_FASTER_JOY]         = {DrawChoices_EvenFasterJoy,    ProcessInput_Options_Two},
     //[MENUITEM_MAIN_SKIP_INTRO]              = {DrawChoices_Skip_Intro,       ProcessInput_Options_Two}, 
-    [MENUITEM_MAIN_UNIT_TYPE]               = {DrawChoices_Unit_Type,        ProcessInput_Options_Two},  
+    [MENUITEM_MAIN_UNIT_TYPE]               = {DrawChoices_Unit_Type,        ProcessInput_Options_Two}, 
+    [MENUITEM_MAIN_BRIGHTER_NIGHTS]         = {DrawChoices_BrighterNights,   ProcessInput_Options_Two},
     [MENUITEM_MAIN_FRAMETYPE]               = {DrawChoices_FrameType,        ProcessInput_FrameType},
     [MENUITEM_MAIN_SHOW_INTRO_MSG]          = {DrawChoices_ShowIntroMsg,     ProcessInput_Options_Two},
 };
@@ -340,6 +343,7 @@ static const u8 sText_AutorunEnable_Surf[]        = _("AUTORUN (SURF)");
 static const u8 sText_AutorunEnable_Dive[]        = _("AUTORUN (DIVE)");
 static const u8 sText_IntroMsg[]                  = _("SHOW INTRO MSG");
 static const u8 sText_FontType[]                  = _("FONT TYPE");
+static const u8 sText_BrighterNights[]            = _("BRIGHT NIGHTS");
 static const u8 *const sOptionMenuItemsNamesMain[MENUITEM_MAIN_COUNT] =
 {
     [MENUITEM_MAIN_TEXTSPEED]           = gText_TextSpeed,
@@ -356,6 +360,7 @@ static const u8 *const sOptionMenuItemsNamesMain[MENUITEM_MAIN_COUNT] =
     [MENUITEM_MAIN_EVEN_FASTER_JOY]     = sText_OptionEvenFasterJoy,
     //[MENUITEM_MAIN_SKIP_INTRO]          = sText_OptionSkipIntro,
     [MENUITEM_MAIN_UNIT_TYPE]           = sText_OptionUnitType,
+    [MENUITEM_MAIN_BRIGHTER_NIGHTS]     = sText_BrighterNights,
     [MENUITEM_MAIN_SHOW_INTRO_MSG]      = sText_IntroMsg,
     [MENUITEM_MAIN_FRAMETYPE]           = gText_Frame,
 };
@@ -432,6 +437,7 @@ static bool8 CheckConditions(int selection)
         case MENUITEM_MAIN_SHOW_INTRO_MSG:    return TRUE;
         //case MENUITEM_MAIN_SKIP_INTRO:        return TRUE;
         case MENUITEM_MAIN_UNIT_TYPE:         return TRUE;
+        case MENUITEM_MAIN_BRIGHTER_NIGHTS:   return TRUE;
         }
     case MENU_BATTLE:
         switch(selection)
@@ -501,6 +507,8 @@ static const u8 sText_Desc_Units_Imperial[]        = _("Display BERRY and POKéM
 static const u8 sText_Desc_Units_Metric[]          = _("Display BERRY and POKéMON weight\nand size in kilograms and meters.");
 static const u8 sText_Desc_IntroMsg_On[]           = _("Bug reports {COLOR 7}{COLOR 8}MUST NOT{COLOR 2} be sent\nto the original HEART & SOUL devs.");
 static const u8 sText_Desc_IntroMsg_Off[]          = _("Report issues at\n{COLOR 9}{COLOR 10}github.com/resetes12/HNS{UNDERSCORE}modern");
+static const u8 sText_Desc_BrighterNightsOn[]           = _("Night shading is less dark.\nEasier to see at night.");
+static const u8 sText_Desc_BrighterNightsOff[]          = _("Night shading at full darkness.\nOriginal intensity.");
 static const u8 *const sOptionMenuItemDescriptionsMain[MENUITEM_MAIN_COUNT][3] =
 {
     [MENUITEM_MAIN_TEXTSPEED]   = {sText_Desc_TextSpeed,            sText_Empty,                  sText_Empty},
@@ -518,6 +526,7 @@ static const u8 *const sOptionMenuItemDescriptionsMain[MENUITEM_MAIN_COUNT][3] =
     [MENUITEM_MAIN_EVEN_FASTER_JOY]  = {sText_Desc_EvenFasterJoyOn,        sText_Desc_EvenFasterJoyOff},
     //[MENUITEM_MAIN_SKIP_INTRO]     = {sText_Desc_SkipIntroOn,            sText_Desc_SkipIntroOff},
     [MENUITEM_MAIN_UNIT_TYPE]        = {sText_Desc_Units_Metric,           sText_Desc_Units_Imperial},
+    [MENUITEM_MAIN_BRIGHTER_NIGHTS]   = {sText_Desc_BrighterNightsOff,     sText_Desc_BrighterNightsOn},
     [MENUITEM_MAIN_SHOW_INTRO_MSG]   = {sText_Desc_IntroMsg_On,            sText_Desc_IntroMsg_Off},
 };
 
@@ -618,6 +627,7 @@ static const u8 *const sOptionMenuItemDescriptionsDisabledMain[MENUITEM_MAIN_COU
     [MENUITEM_CUSTOM_FISHING]     = sText_Empty,
     [MENUITEM_MAIN_EVEN_FASTER_JOY]     = sText_Empty,
     [MENUITEM_MAIN_SHOW_INTRO_MSG]     = sText_Empty,
+    [MENUITEM_MAIN_BRIGHTER_NIGHTS]   = sText_Empty,
     //[MENUITEM_MAIN_SKIP_INTRO]     = sText_Empty,
 };
 
@@ -738,9 +748,10 @@ static void DrawTopBarText(void)
 static void DrawOptionMenuTexts(void) //left side text
 {
     u8 i;
+    u8 optionsToDraw = min(OPTIONS_ON_SCREEN, MenuItemCount());
 
     FillWindowPixelBuffer(WIN_OPTIONS, PIXEL_FILL(1));
-    for (i = 0; i < MenuItemCount(); i++)
+    for (i = 0; i < optionsToDraw; i++)
         DrawLeftSideOptionText(i, (i * Y_DIFF) + 1);
     CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
 }
@@ -903,6 +914,7 @@ void CB2_InitOptionPlusMenu(void)
         //sOptions->sel[MENUITEM_MAIN_SKIP_INTRO]          = gSaveBlock2Ptr->optionsSkipIntro;
         sOptions->sel[MENUITEM_MAIN_UNIT_TYPE]           = gSaveBlock2Ptr->optionsUnitSystem;
         sOptions->sel[MENUITEM_MAIN_SHOW_INTRO_MSG]      = gSaveBlock2Ptr->ModernMessage;
+        sOptions->sel[MENUITEM_MAIN_BRIGHTER_NIGHTS]     = gSaveBlock2Ptr->optionsBrighterNights;
 
         sOptions->sel_battle[MENUITEM_BATTLE_BATTLESCENE]       = gSaveBlock2Ptr->optionsBattleSceneOff;
         sOptions->sel_battle[MENUITEM_BATTLE_BATTLESTYLE]       = gSaveBlock2Ptr->optionsBattleStyle;
@@ -1146,6 +1158,7 @@ static void Task_OptionMenuSave(u8 taskId)
     //gSaveBlock2Ptr->optionsSkipIntro             = sOptions->sel[MENUITEM_MAIN_SKIP_INTRO];
     gSaveBlock2Ptr->optionsUnitSystem            = sOptions->sel[MENUITEM_MAIN_UNIT_TYPE];
     gSaveBlock2Ptr->ModernMessage                = sOptions->sel[MENUITEM_MAIN_SHOW_INTRO_MSG];
+    gSaveBlock2Ptr->optionsBrighterNights        = sOptions->sel[MENUITEM_MAIN_BRIGHTER_NIGHTS];
 
     gSaveBlock2Ptr->optionsBattleSceneOff   = sOptions->sel_battle[MENUITEM_BATTLE_BATTLESCENE];
     gSaveBlock2Ptr->optionsBattleStyle      = sOptions->sel_battle[MENUITEM_BATTLE_BATTLESTYLE]; 
@@ -2205,6 +2218,25 @@ static void DrawChoices_BattleSpeed(int selection, int y)
 
     DrawOptionMenuChoice(sText_BattleSpeed1x, 104, y, styles[0], active);
     DrawOptionMenuChoice(sText_BattleSpeed2x, GetStringRightAlignXOffset(1, sText_BattleSpeed2x, 198), y, styles[1], active);
+}
+
+static void DrawChoices_BrighterNights(int selection, int y)
+{
+    bool8 active = CheckConditions(MENUITEM_MAIN_BRIGHTER_NIGHTS);
+    u8 styles[2] = {0};
+    styles[selection] = 1;
+
+    if (selection == 0)
+    {
+        gSaveBlock2Ptr->optionsBrighterNights = 0; // Off (original)
+    }
+    else
+    {
+        gSaveBlock2Ptr->optionsBrighterNights = 1; // On (brighter)
+    }
+
+    DrawOptionMenuChoice(gText_BattleSceneOff, 104, y, styles[0], active);
+    DrawOptionMenuChoice(gText_BattleSceneOn, GetStringRightAlignXOffset(1, gText_BattleSceneOn, 198), y, styles[1], active);
 }
 
 // Background tilemap
