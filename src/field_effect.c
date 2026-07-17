@@ -420,6 +420,14 @@ static const struct SpriteFrameImage sPicTable_PokeballGlowFull[] =
     overworld_frame(sPokeballGlowFull_Gfx, 1, 1, 9),
     overworld_frame(sPokeballGlowFull_Gfx, 1, 1, 10),
     overworld_frame(sPokeballGlowFull_Gfx, 1, 1, 11),
+    overworld_frame(sPokeballGlowFull_Gfx, 1, 1, 12),
+    overworld_frame(sPokeballGlowFull_Gfx, 1, 1, 13),
+    overworld_frame(sPokeballGlowFull_Gfx, 1, 1, 14),
+    overworld_frame(sPokeballGlowFull_Gfx, 1, 1, 15),
+    overworld_frame(sPokeballGlowFull_Gfx, 1, 1, 16),
+    overworld_frame(sPokeballGlowFull_Gfx, 1, 1, 17),
+    overworld_frame(sPokeballGlowFull_Gfx, 1, 1, 18),
+    overworld_frame(sPokeballGlowFull_Gfx, 1, 1, 19),
 };
 
 // Maps BALL_* enum value to frame index in sPicTable_PokeballGlowFull
@@ -437,6 +445,14 @@ static const u8 sBallIdToGlowFrame[POKEBALL_COUNT] =
     [BALL_TIMER]   = 3,
     [BALL_LUXURY]  = 5,
     [BALL_PREMIER] = 4,
+    [BALL_LOVE]    = 12,
+    [BALL_LURE]    = 13,
+    [BALL_FRIEND]  = 14,
+    [BALL_HEAVY]   = 15,
+    [BALL_MOON]    = 16,
+    [BALL_LEVEL]   = 17,
+    [BALL_FAST]    = 18,
+    [BALL_GS]      = 19,
 };
 
 static const struct SpriteFrameImage sPicTable_PokecenterMonitor[] = {
