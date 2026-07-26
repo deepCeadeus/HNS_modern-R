@@ -869,3 +869,4 @@ gCryTable_Reverse::
 	cry_reverse Cry_Ursaluna_BloodMoon
 	cry_reverse Cry_Kleavor
 	cry_reverse Cry_Test
+
