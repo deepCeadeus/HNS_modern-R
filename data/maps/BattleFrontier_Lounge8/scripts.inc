@@ -1,45 +1,37 @@
 BattleFrontier_Lounge8_MapScripts::
 	.byte 0
 
-BattleFrontier_Lounge8_EventScript_Man::
-	msgbox BattleFrontier_Lounge8_Text_WhatATrainerNeeds, MSGBOX_NPC
+BattleFrontier_Lounge8_EventScript_Old_Man::
+	msgbox BattleFrontier_Lounge8_Text_TrainersComeBack, MSGBOX_NPC
 	end
 
-BattleFrontier_Lounge8_EventScript_Woman::
-	msgbox BattleFrontier_Lounge8_Text_KnowAboutFrontierBrains, MSGBOX_NPC
+BattleFrontier_Lounge8_EventScript_LittleGirl::
+	msgbox BattleFrontier_Lounge8_Text_BeatMyBrother, MSGBOX_NPC
 	end
 
-BattleFrontier_Lounge8_EventScript_NinjaBoy::
-	msgbox BattleFrontier_Lounge8_Text_ToldMeIHaveTalentForBattling, MSGBOX_NPC
+BattleFrontier_Lounge8_EventScript_Policeman::
+	msgbox BattleFrontier_Lounge8_Text_ThievesLurk, MSGBOX_NPC
 	end
 
-BattleFrontier_Lounge8_Text_WhatATrainerNeeds:
-	.string "What a TRAINER needs…\p"
-	.string "Knowledge…\n"
-	.string "Strategy…\l"
-	.string "Luck…\l"
-	.string "Guts…\l"
-	.string "Spirit…\l"
-	.string "Bravery…\l"
-	.string "And ability…\p"
-	.string "Well, I'm all set in every way!\n"
-	.string "I'll be unstoppable at every building!\p"
-	.string "Huh? POKéMON?\n"
-	.string "What's that?$"
+BattleFrontier_Lounge8_Text_TrainersComeBack:
+	.string "I've been coming here since the\n"
+	.string "FRONTIER opened.\p"
+	.string "Seen trainers come and go.\n"
+	.string "Some win.\l"
+	.string "Most lose.\p"
+	.string "The ones who keep coming back?\n"
+	.string "Those are the real champions.$"
 
-BattleFrontier_Lounge8_Text_KnowAboutFrontierBrains:
-	.string "Do you know about the FRONTIER\n"
-	.string "BRAINS?\p"
-	.string "That's what SCOTT calls the seven\n"
-	.string "special TRAINERS that run the seven\l"
-	.string "facilities in the BATTLE FRONTIER.$"
+BattleFrontier_Lounge8_Text_BeatMyBrother:
+	.string "My big brother said I'm too young\n"
+	.string "for the FRONTIER.\p"
+	.string "But I beat him in a battle yesterday.\n"
+	.string "So I think I'm ready!\p"
+	.string "Maybe.\p"
+	.string "Probably not.$"
 
-BattleFrontier_Lounge8_Text_ToldMeIHaveTalentForBattling:
-	.string "At the BATTLE TOWER, an older girl\n"
-	.string "told me that I have a lot of talent\l"
-	.string "for battling!\p"
-	.string "I like POKéMON CONTESTS more!\p"
-	.string "But I'm no good at CONTESTS!\p"
-	.string "I guess having talent and liking\n"
-	.string "something aren't the same.$"
-
+BattleFrontier_Lounge8_Text_ThievesLurk:
+	.string "Be careful around here, trainer. We've\n"
+	.string "had reports of thieves lurking about.\l"
+	.string "They target distracted battlers.\p"
+	.string "Stay sharp.$"
