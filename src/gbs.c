@@ -868,12 +868,12 @@ static u32 GetMasterVolumeFromFade(u32 volX)
     }
     else
     {
-        masterVolume = 7;
+        masterVolume = 5;
     }
 
-    if (masterVolume > 7)
+    if (masterVolume > 5)
     {
-        masterVolume = 7;
+        masterVolume = 5;
     }
 
     return (masterVolume << 4) | masterVolume;
