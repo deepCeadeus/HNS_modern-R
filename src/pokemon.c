@@ -10766,15 +10766,21 @@ u16 GetBattleBGM(void)
                 else if (gSaveBlock2Ptr->optionsFrontierTrainerBattleMusic == 4)
                     return MUS_HG_VS_TRAINER_KANTO;
                 else if (gSaveBlock2Ptr->optionsFrontierTrainerBattleMusic == 5)
+                    return BW_SEQ_BGM_VS_SUBWAY_TRAINER;
+                else if (gSaveBlock2Ptr->optionsFrontierTrainerBattleMusic == 6)
                 {
-                    if((Random() % 5) == 1)
+                    if((Random() % 7) == 1)
                         return MUS_DP_VS_TRAINER;
-                    else if((Random() % 5) == 2)
+                    else if((Random() % 7) == 2)
                         return MUS_RG_VS_TRAINER;
-                    else if((Random() % 5) == 3)
+                    else if((Random() % 7) == 3)
                         return MUS_HG_VS_TRAINER;
-                    else if((Random() % 5) == 4)
+                    else if((Random() % 7) == 4)
                         return MUS_HG_VS_TRAINER_KANTO;
+                    else if((Random() % 7) == 5)
+                        return BW_SEQ_BGM_VS_SUBWAY_TRAINER;
+                    else if((Random() % 7) == 6)
+                        return BW_SEQ_BGM_VS_TRAINER;
                     else
                         return MUS_VS_TRAINER;
                 }

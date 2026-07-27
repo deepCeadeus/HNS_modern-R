@@ -5934,9 +5934,9 @@ static void HandleEndTurn_BattleWon(void)
                 PlayBGM(MUS_VICTORY_GYM_LEADER);
             else if (gSaveBlock2Ptr->optionsFrontierTrainerBattleMusic == 2)
                 PlayBGM(MUS_PL_VICTORY_FRONTIER_BRAIN);
-            else if((gSaveBlock2Ptr->optionsFrontierTrainerBattleMusic == 3) || (gSaveBlock2Ptr->optionsFrontierTrainerBattleMusic == 4))
+            else if((gSaveBlock2Ptr->optionsFrontierTrainerBattleMusic == 3) || (gSaveBlock2Ptr->optionsFrontierTrainerBattleMusic == 4)  || (gSaveBlock2Ptr->optionsFrontierTrainerBattleMusic == 5))
                 PlayBGM(MUS_HG_VICTORY_FRONTIER_BRAIN);
-            else if (gSaveBlock2Ptr->optionsFrontierTrainerBattleMusic == 5)
+            else if (gSaveBlock2Ptr->optionsFrontierTrainerBattleMusic == 6)
             {
                 if((Random() % 3) == 1)
                     PlayBGM(MUS_PL_VICTORY_FRONTIER_BRAIN);
@@ -5955,11 +5955,15 @@ static void HandleEndTurn_BattleWon(void)
             else if((gSaveBlock2Ptr->optionsFrontierTrainerBattleMusic == 3) || (gSaveBlock2Ptr->optionsFrontierTrainerBattleMusic == 4))
                 PlayBGM(MUS_HG_VICTORY_TRAINER);
             else if (gSaveBlock2Ptr->optionsFrontierTrainerBattleMusic == 5)
+                PlayBGM(BW_SEQ_BGM_WIN2);
+            else if (gSaveBlock2Ptr->optionsFrontierTrainerBattleMusic == 6)
             {
-                if((Random() % 3) == 1)
+                if((Random() % 4) == 1)
                     PlayBGM(MUS_DP_VICTORY_TRAINER);
-                else if((Random() % 3) == 2)
+                else if((Random() % 4) == 2)
                     PlayBGM(MUS_HG_VICTORY_TRAINER);
+                else if((Random() % 4) == 3)
+                    PlayBGM(BW_SEQ_BGM_WIN2);
                 else
                     PlayBGM(MUS_VICTORY_TRAINER);
             }  
