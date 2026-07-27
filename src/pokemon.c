@@ -10835,15 +10835,19 @@ u16 GetBattleBGM(void)
 			   return MUS_HG_VS_WILD;
 			}
         else if (gSaveBlock2Ptr->optionsWildBattleMusic == 4)
+            return BW_SEQ_BGM_VS_NORAPOKE;
+        else if (gSaveBlock2Ptr->optionsWildBattleMusic == 5)
         {
-            if((Random() % 5) == 1)
+            if((Random() % 6) == 1)
                 return MUS_HG_VS_WILD_KANTO;
-            else if((Random() % 5) == 2)
+            else if((Random() % 6) == 2)
                 return MUS_RG_VS_WILD;
-            else if((Random() % 5) == 3)
+            else if((Random() % 6) == 3)
                 return MUS_DP_VS_WILD;
-            else if((Random() % 5) == 4)
+            else if((Random() % 6) == 4)
                 return MUS_HG_VS_WILD;
+            else if((Random() % 6) == 5)
+                return BW_SEQ_BGM_VS_NORAPOKE;
             else
                 return MUS_VS_WILD;
         }
