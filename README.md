@@ -6,9 +6,8 @@
 **Modern** Heart & Soul is a small modification of the original Pokémon Heart & Soul version 1.2.1+(more recent than 1.2.1, "unofficially" called 1.2.2, but unreleased nonetheless) that includes missing options and features from its base game engine, Pokémon Modern Emerald. It has been created to become the base game of a future romhack: Modern Fire Red & Leaf Green.
 
 The version indicator shows the Pokémon Heart&Soul version (currently "1.2.1"), plus its modded "Modern" version (currently "m1") -> v1.2.1m1
-Future releases, if any, will only update the modded "Modern" version, as Heart&Soul 2.0 will use a newer version that is NOT build using Modern Emerald and **CANNOT** (and will not, at least not by me) be easily backported.
 
-Players will need to choose between playing the original 1.2.1 plus the "Modern" enhancements made by me, or the 2.0 version by the HnS team. Versions will **NOT** be compatible, **AT ALL,** since HnS 2.0 uses the "Pokeemerald_Expansion" base.
+Future releases, if any, will only update the modded "Modern" version, as Heart&Soul 2.0 will use a better engine that is NOT built using Modern Emerald and **CANNOT** (and will not, at least not by me) be easily backported. Players will need to choose between playing the original 1.2.1 plus the "Modern" enhancements made by me, or the 2.0 version by the HnS team. Versions will **NOT** be compatible, **AT ALL,** since HnS 2.0 uses the "Pokeemerald_Expansion" base.
 
 You can get more information about Modern Emerald at [Pokécommunity](https://www.Pokécommunity.com/showthread.php?t=494005) and at [Github](https://github.com/resetes12/pokeemerald). 
 
@@ -17,7 +16,7 @@ The **Modern** feature list is:
 - FRLG Pokémon sprites for Gen 1, but using double animation _(mostly hand-made*)_.
 - Map previews for dungeons and special maps, like FRLG and HGSS. Based on HGSS, also contains FRLG (but are unused).
 - Optional FRLG or Emerald font (with colored text, but unused in this game), and FRLG Battle Terrain instead of Emerald (including night versions).
-- 31 trainer rematches added throughout Johto and Kanto routes (trainers are registered after battling). They scale with badges, and offer a fair challenge.
+- 31 trainer rematches added throughout Johto and Kanto routes (trainers are registered after battling). They scale with badges and offer a fair challenge.
 - Difficulty options (Easy, Normal, Hard). Same as Modern Emerald, it is NOT a difficulty hack-rom, it only adjusts levels, catch rates, badge boosts, and some other small stuff.
 - Removed GameFreak intro.
 - Restored trading: Only in Ecruteak City Pokémon Center. Can trade with: Modern Emerald 3.3+, or original games.
