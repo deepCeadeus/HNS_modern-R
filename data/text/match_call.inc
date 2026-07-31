@@ -832,11 +832,11 @@ MatchCall_PersonalizedText17::
 MatchCall_PersonalizedText18::
 	.string "This is {STR_VAR_1}…\n"
 	.string "Hear my new song.\p"
-	.string "Lalala, {Str_Var_2}, {STR_VAR_2}!\n"
+	.string "Lalala, {STR_VAR_2}, {STR_VAR_2}!\n"
 	.string "Why are you that {STR_VAR_2}?\l"
 	.string "Why can't I be you, {STR_VAR_2}?\l"
-	.string "Lala, {Str_Var_2} and {STR_VAR_1},\l"
-	.string "{Str_Var_1} and {STR_VAR_2}…\p"
+	.string "Lala, {STR_VAR_2} and {STR_VAR_1},\l"
+	.string "{STR_VAR_1} and {STR_VAR_2}…\p"
 	.string "Repeat chorus, fade…$"
 
 MatchCall_PersonalizedText19::
@@ -1642,7 +1642,7 @@ MatchCall_BattleDomeText1::
 	.string "Hello, this is {STR_VAR_1}!\l"
 	.string "I heard the news!\p"
 	.string "You became the champion at\n"
-	.string "the {Str_Var_2} {STR_VAR_3} times?\p"
+	.string "the {STR_VAR_2} {STR_VAR_3} times?\p"
 	.string "It's awesome! I have to do better!\n"
 	.string "See you!$"
 
@@ -1667,7 +1667,7 @@ MatchCall_BattleDomeText4::
 	.string "Hey, {PLAYER}{KUN}.\n"
 	.string "{STR_VAR_1} here.\p"
 	.string "I heard you became the champion\n"
-	.string "at the {Str_Var_2} {STR_VAR_3} times.\p"
+	.string "at the {STR_VAR_2} {STR_VAR_3} times.\p"
 	.string "Sounds like you're working hard.\n"
 	.string "I'll try to keep up!$"
 
@@ -1712,7 +1712,7 @@ MatchCall_BattleDomeText9::
 	.string "Oh, {PLAYER}{KUN}, hi there!\n"
 	.string "This is {STR_VAR_1}!\p"
 	.string "I heard! You took the title\n"
-	.string "{Str_Var_3} times at the {STR_VAR_2}!\p"
+	.string "{STR_VAR_3} times at the {STR_VAR_2}!\p"
 	.string "That is so cool!\n"
 	.string "I'd better try harder, too!$"
 
@@ -1776,7 +1776,7 @@ MatchCall_BattlePikeText2::
 	.string "Hello, it's {STR_VAR_1}!\n"
 	.string "I heard about you!\p"
 	.string "They said you won your way through\n"
-	.string "{Str_Var_3} rooms at the {STR_VAR_2}.\p"
+	.string "{STR_VAR_3} rooms at the {STR_VAR_2}.\p"
 	.string "I have to try much harder!\n"
 	.string "Bye!$"
 
@@ -1809,7 +1809,7 @@ MatchCall_BattlePikeText6::
 	.string "Hey, {PLAYER}{KUN}?\n"
 	.string "{STR_VAR_1} here. How are you?\p"
 	.string "By the way, I heard you got through\n"
-	.string "{Str_Var_3} rooms at the {STR_VAR_2}.\p"
+	.string "{STR_VAR_3} rooms at the {STR_VAR_2}.\p"
 	.string "I'd better raise my Pokémon before\n"
 	.string "you pull further ahead.$"
 
@@ -1828,7 +1828,7 @@ MatchCall_BattlePikeText8::
 	.string "I hope you're doing well.\l"
 	.string "Oh, but, you are.\p"
 	.string "I've heard that you got through\n"
-	.string "{Str_Var_3} rooms at the {STR_VAR_2}.\p"
+	.string "{STR_VAR_3} rooms at the {STR_VAR_2}.\p"
 	.string "That's quite impressive!\n"
 	.string "I must raise my Pokémon like you.\l"
 	.string "See you again.$"
@@ -1837,7 +1837,7 @@ MatchCall_BattlePikeText9::
 	.string "Oh, {PLAYER}{KUN}, hi there!\n"
 	.string "This is {STR_VAR_1}!\p"
 	.string "I heard! You won your way through\n"
-	.string "{Str_Var_3} rooms at the {STR_VAR_2}!\p"
+	.string "{STR_VAR_3} rooms at the {STR_VAR_2}!\p"
 	.string "That is so cool!\n"
 	.string "I'd better try harder, too!$"
 
@@ -1901,7 +1901,7 @@ MatchCall_BattlePyramidText2::
 	.string "Hello, it's {STR_VAR_1}!\n"
 	.string "I heard about you!\p"
 	.string "They said you won your way through\n"
-	.string "{Str_Var_3} floors in the {STR_VAR_2}.\p"
+	.string "{STR_VAR_3} floors in the {STR_VAR_2}.\p"
 	.string "Wow, that's fantastic!\n"
 	.string "I'd better raise my Pokémon, too!$"
 
@@ -1934,7 +1934,7 @@ MatchCall_BattlePyramidText6::
 	.string "Hey, {PLAYER}{KUN}?\n"
 	.string "{STR_VAR_1} here. How are you?\p"
 	.string "By the way, I heard you got through\n"
-	.string "{Str_Var_3} floors in the {STR_VAR_2}.\p"
+	.string "{STR_VAR_3} floors in the {STR_VAR_2}.\p"
 	.string "I'd better raise my Pokémon before\n"
 	.string "you pull further ahead.$"
 
@@ -1954,7 +1954,7 @@ MatchCall_BattlePyramidText8::
 	.string "I hope you're doing well.\l"
 	.string "Oh, but, you are.\p"
 	.string "I've heard that you got through\n"
-	.string "{Str_Var_3} floors in the {STR_VAR_2}.\p"
+	.string "{STR_VAR_3} floors in the {STR_VAR_2}.\p"
 	.string "That's quite impressive!\n"
 	.string "I must raise my Pokémon like you.\l"
 	.string "See you again.$"
@@ -1963,7 +1963,7 @@ MatchCall_BattlePyramidText9::
 	.string "Oh, {PLAYER}{KUN}, hi there!\n"
 	.string "This is {STR_VAR_1}!\p"
 	.string "I heard! You won your way through\n"
-	.string "{Str_Var_3} floors in the {STR_VAR_2}!\p"
+	.string "{STR_VAR_3} floors in the {STR_VAR_2}!\p"
 	.string "That is so cool!\n"
 	.string "I'd better try harder, too!$"
 

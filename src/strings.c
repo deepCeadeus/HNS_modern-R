@@ -2094,6 +2094,8 @@ const u8 gText_Berry[] = _("Berry");
 const u8 gText_Berries[] = _("Berries");
 const u8 gText_StatEditor[] = _("Edit IVs/EVs");
 const u8 gText_AshQty[] = _("Ash Qty:\n{STR_VAR_1}{PAUSE_UNTIL_PRESS}");
+const u8 gText_Follow[] = _("Follow");
+const u8 gText_PkmnWillFollowYou[] = _("{STR_VAR_1} will now follow\nyou!{PAUSE_UNTIL_PRESS}");
 
 // Exp. Share
 const u8 gText_ExpShareOn[] = _("Turned on the Exp. Share.\pParty will now gain a portion\nof the Experience Points.{PAUSE_UNTIL_PRESS}");
@@ -2238,3 +2240,14 @@ const u8 gText_CheckSavings[] = _("Check savings");
 const u8 gText_Deposit[] = _("Deposit");
 const u8 gText_Withdraw[] = _("Withdraw");
 const u8 gText_SavingOption[] = _("Toggle savings");
+
+// Voltorb Flip menu labels
+const u8 gText_VFPlay[] = _("Play");
+const u8 gText_VFGameInfo[] = _("Game info");
+const u8 gText_VFHowToPlay[] = _("How to play");
+const u8 gText_VFHint[] = _("Hint");
+const u8 gText_VFAboutMemos[] = _("About Notes");
+const u8 gText_VFReturn[] = _("Return");
+
+const u8 gText_GBPlayerOn[] = _("The GB Player was turned on.\nSounds from the past fill the air.{PAUSE_UNTIL_PRESS}");
+const u8 gText_GBPlayerOff[] = _("The GB Player was turned off.\nSounds of nostalgia fade away.{PAUSE_UNTIL_PRESS}");
