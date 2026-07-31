@@ -383,13 +383,13 @@ static const u8 *const sOptionMenuItemsNamesCustom[MENUITEM_BATTLE_COUNT] =
     [MENUITEM_BATTLE_CURSOR_MEMORY]    = sText_CursorMemory,
 };
 
-static const u8 sText_OptionMusic[]                  = _("Music");
-static const u8 sText_OptionSurfMusic[]              = _("Surf Music");
-static const u8 sText_OptionBikeMusic[]              = _("Bike Music");
-static const u8 sText_OptionWildMonMusic[]           = _("Wild Music");
-static const u8 sText_OptionTrainerBattleMusic[]     = _("Trainer Music");
-static const u8 sText_OptionFrontierTrainerBattleMusic[]     = _("Frontier Music");
-static const u8 sText_OptionSoundEffects[]           = _("Sound Effects");
+static const u8 sText_OptionMusic[]                  = _("MUSIC");
+static const u8 sText_OptionSurfMusic[]              = _("SURF MUSIC");
+static const u8 sText_OptionBikeMusic[]              = _("BIKE MUSIC");
+static const u8 sText_OptionWildMonMusic[]           = _("WILD MUSIC");
+static const u8 sText_OptionTrainerBattleMusic[]     = _("TRAINER MUSIC");
+static const u8 sText_OptionFrontierTrainerBattleMusic[]     = _("FRONTIER MUSIC");
+static const u8 sText_OptionSoundEffects[]           = _("SOUND EFFECTS");
 static const u8 *const sOptionMenuItemsNamesSound[MENUITEM_SOUND_COUNT] =
 {
     [MENUITEM_SOUND_SOUND]                           = gText_Sound,
