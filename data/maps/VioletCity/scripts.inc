@@ -31,11 +31,11 @@ VioletCity_EventScript_Trigger::
 	clearflag FLAG_GOT_POISON_BARB
 	clearflag FLAG_HIDE_UNION_CAVE_LAPRAS
 	clearflag FLAG_GOT_BLACK_GLASSES
-	
+
 	setvar VAR_SLOWPOKE_TAIL, 0
 	setvar VAR_VIOLET_CITY_KIMONO_GIRL, 0
 	setvar VAR_RUINSOFALPH_STATE, 0
-	
+
 	setflag FLAG_ITEM_GS_BALL
 	setflag FLAG_ITEM_DOME_FOSSIL
 	setflag FLAG_ITEM_HELIX_FOSSIL
@@ -44,7 +44,7 @@ VioletCity_EventScript_Trigger::
 	setflag FLAG_HIDE_VIOLET_CITY_AIDE
 	setflag FLAG_VISITED_VIOLET_CITY
 	setflag FLAG_HIDE_VIOLET_CITY_KIMONO_GIRL
-	
+
 	setvar VAR_SPROUT_TOWER, 0
 	setvar VAR_VIOLET_CITY_STATE, 1
 	end
@@ -381,7 +381,7 @@ VioletCity_Movement_Kimono_Girl_5:
 	walk_up
 	walk_up
 	walk_up
-	step_end	
+	step_end
 
 VioletCity_EventScript_LiquidJustice::
 	msgbox VioletCity_Text_LiquidJustice, MSGBOX_NPC
@@ -393,15 +393,15 @@ VioletCity_EventScript_GymSign::
 
 VioletCity_Text_LiquidJustice:
 	.string "Look around!\p"
-	.string "It's easy to see what POKéMON\n"
+	.string "It's easy to see what Pokémon\n"
 	.string "you can catch in an area without\l"
 	.string "having to run around in tall\l"
 	.string "grass all day!$"
 
 VioletCity_Text_EarlAsksIfYouBeatFalkner:
 	.string "Hello!\n"
-	.string "You are TRAINER?\p"
-	.string "Battle GYM LEADER,\n"
+	.string "You are trainer?\p"
+	.string "Battle Gym Leader,\n"
 	.string "win you did?$"
 
 VioletCity_Text_VeryNiceIndeed:
@@ -418,20 +418,20 @@ VioletCity_Text_HereTeacherIAm:
 
 VioletCity_Text_Lass:
 	.string "Ghosts are rumored to appear\n"
-	.string "in SPROUT TOWER.\p"
-	.string "They say that GHOST-type\n"
+	.string "in Sprout Tower.\p"
+	.string "They say that Ghost-type\n"
 	.string "moves can bypass the defenses\p"
-	.string "of tough POKéMON like ONIX\n"
-	.string "and GEODUDE.$"
+	.string "of tough Pokémon like Onix\n"
+	.string "and Geodude.$"
 
 VioletCity_Text_Boy:
-	.string "Hey, you're a POKéMON TRAINER?\p"
-	.string "If you head to the ACADEMY,\n"
+	.string "Hey, you're a Pokémon trainer?\p"
+	.string "If you head to the Academy,\n"
 	.string "you might learn something new!$"
 
 VioletCity_Text_Gramps:
-	.string "FALKNER, from the VIOLET\n"
-	.string "POKéMON GYM, is a fine TRAINER!\p"
+	.string "Falkner, from the Violet\n"
+	.string "Pokémon Gym, is a fine trainer!\p"
 	.string "He inherited his father's gym\n"
 	.string "and has done a great job with\l"
 	.string "it.$"
@@ -442,50 +442,51 @@ VioletCity_Text_Youngster:
 	.string "and dances! Cool!$"
 
 VioletCity_Text_Sign:
-	.string "VIOLET CITY\p"
+	.string "Violet City\p"
 	.string "The City of Nostalgic Scents$"
 
 VioletCity_Text_GymSign:
-	.string "VIOLET CITY POKéMON GYM\n"
-	.string "LEADER: FALKNER,\p"
-	.string "The Elegant Master of Flying POKéMON$"
+	.string "Violet City Pokémon Gym\p"
+	.string "Leader: Falkner\p"
+	.string "The Elegant Master\n"
+	.string "of Flying Pokémon$"
 
 VioletCity_Text_SproutTowerSign:
-	.string "SPROUT TOWER\p"
-	.string "Experience the Way of POKéMON$"
+	.string "Sprout Tower\p"
+	.string "Experience the Way of Pokémon$"
 
 VioletCity_Text_EarlsAcademySign:
-	.string "EARL'S POKéMON ACADEMY$"
+	.string "Earl'S Pokémon Academy$"
 
 VioletCity_Text_Pichu:
-	.string "PICHU: Chuuuu!$"
+	.string "Pichu: Chuuuu!$"
 
 VioletCity_Text_Bellsprout:
-	.string "BELLSPROUT: Sprouuuut.$"
+	.string "Bellsprout: Sprouuuut.$"
 
 VioletCity_Text_Rattata:
-	.string "RATTATA: RATTATARATTA!$"
+	.string "Rattata: Rattataratta!$"
 
 VioletCity_Text_Elm_Call:
-	.string "PROF. ELM: Hello, {PLAYER}? We\n"
-	.string "discovered something about the EGG!\p"
-	.string "My assistant is at the POKéMON\n"
-	.string "CENTER in VIOLET CITY.\p"
+	.string "Prof. Elm: Hello, {PLAYER}? We\n"
+	.string "discovered something about the Egg!\p"
+	.string "My assistant is at the Pokémon\n"
+	.string "Center in Violet City.\p"
 	.string "Could you talk to him?$"
 
 VioletCity_Text_Kimono_Girl1:
 .string "Me oh my…\n"
-.string "That EGG must be…!$"
+.string "That Egg must be…!$"
 
 VioletCity_Text_Kimono_Girl2:
 .string "I see…\p"
-.string "So it was handed from MR. POKéMON\n"
-.string "to PROF. ELM, then from \l"
-.string "PROF. ELM to you.\p"
+.string "So it was handed from Mr. Pokémon\n"
+.string "to Prof.Elm, then from \l"
+.string "Prof.Elm to you.\p"
 .string "Now I get it…$"
 
 VioletCity_Text_Kimono_Girl3:
-.string "That EGG is truly an important EGG.\p"
+.string "That Egg is truly an important Egg.\p"
 .string "Please do take good care of it\n"
 .string "for me. Is that understood?$"
 

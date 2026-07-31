@@ -56,7 +56,7 @@ VioletCity_House1_EventScript_TradeCompleted::
 	end
 
 VioletCity_House1_Text_YouWillTradeWontYou:
-	.string "I collect POKéMON!\n"
+	.string "I collect Pokémon!\n"
 	.string "Do you have a {STR_VAR_1}?\p"
 	.string "Want to trade it for my\n"
 	.string "{STR_VAR_2}?$"
@@ -73,10 +73,10 @@ VioletCity_House1_Text_YouWontTradeMe:
 	.string "You don't want to trade? Aww…$"
 
 VioletCity_House1_Text_After:
-	.string "Hi, how's my old ONIX doing?$"
+	.string "Hi, how's my old Onix doing?$"
 
 VioletCity_House1_Text_PokefanM:
-	.string "A POKéMON you get in a trade\n"
+	.string "A Pokémon you get in a trade\n"
 	.string "grows quickly.\p"
 	.string "But if you don't have the right\n"
-	.string "GYM BADGE, they may disobey you.$"
+	.string "Gym Badge, they may disobey you.$"
