@@ -7,7 +7,7 @@ BattleFrontier_Lounge6_EventScript_Trader::
 	end
 
 BattleFrontier_Lounge6_Text_WouldYouLikeToTrade:
-	.string "My POKéMON is a SKITTY.\n"
+	.string "My Pokémon is a Skitty.\n"
 	.string "Do you know it?\l"
 	.string "It's quite cute and rather nice.\p"
 	.string "This little one, I couldn't trade with\n"
@@ -158,24 +158,24 @@ BattleFrontier_Lounge6_Text_Hiker:
 	.string "you can find literal gold around here!\p"
 	.string "I love money, so I had to come here to\n"
 	.string "take a good look. Then…\l"
-	.string "I found a strange, sturdy EGG!\p"
-	.string "It was under the rubble. I say EGG, but\n"
-	.string "it looks more like a fossil than an EGG,\l"
+	.string "I found a strange, sturdy Egg!\p"
+	.string "It was under the rubble. I say Egg, but\n"
+	.string "it looks more like a fossil than an Egg,\l"
 	.string "to be honest.\p"
 	.string "Would you like to have it?$"
 
 BattleFrontier_Lounge6_Text_Hiker_Yes:
 	.string "I see…\p"
-	.string "So you see value in this strange EGG?\p"
+	.string "So you see value in this strange Egg?\p"
 	.string "Then it must mean that it's valuable!\p"
 	.string "Hmmm…"
 	.string "Then, I'll give it to you for the\n"
-	.string "low price of 999 BATTLE POINTS!\p"
+	.string "low price of 999 Battle Points!\p"
 	.string "That's surely a good price, right?$"
 
 BattleFrontier_Lounge6_Text_Hiker_No:
 	.string "Of course you don't.\n"
-	.string "This EGG has no value, right?$"
+	.string "This Egg has no value, right?$"
 
 BattleFrontier_Lounge6_Text_Hiker_No_Pay:
 	.string "The price is non-negotiable.\n"
@@ -190,11 +190,11 @@ BattleFrontier_Lounge6_Text_Hiker_Yes_Pay:
 	.string "There, for you.$"
 
 BattleFrontier_Lounge6_Text_Hiker_Yes_AcceptedEgg:
-	.string "Who knows which POKéMON might hatch,\n"
-	.string "if it's really a POKéMON EGG.$"
+	.string "Who knows which Pokémon might hatch,\n"
+	.string "if it's really a Pokémon Egg.$"
 
 BattleFrontier_Lounge6_Text_Hiker_PostEvent:
-	.string "BATTLE POINTS are a worldwide\n"
+	.string "Battle Points are a worldwide\n"
 	.string "currency.\p"
 	.string "There are places where you can exchange\n"
 	.string "them for real money.\p"

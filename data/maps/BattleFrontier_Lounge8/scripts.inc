@@ -15,7 +15,7 @@ BattleFrontier_Lounge8_EventScript_Policeman::
 
 BattleFrontier_Lounge8_Text_TrainersComeBack:
 	.string "I've been coming here since the\n"
-	.string "FRONTIER opened.\p"
+	.string "Frontier opened.\p"
 	.string "Seen trainers come and go.\n"
 	.string "Some win.\l"
 	.string "Most lose.\p"
@@ -24,7 +24,7 @@ BattleFrontier_Lounge8_Text_TrainersComeBack:
 
 BattleFrontier_Lounge8_Text_BeatMyBrother:
 	.string "My big brother said I'm too young\n"
-	.string "for the FRONTIER.\p"
+	.string "for the Frontier.\p"
 	.string "But I beat him in a battle yesterday.\n"
 	.string "So I think I'm ready!\p"
 	.string "Maybe.\p"
