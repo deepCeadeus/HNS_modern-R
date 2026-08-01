@@ -2757,7 +2757,7 @@ const struct Item gItems[] =
 
     [ITEM_SEA_INCENSE] =
     {
-        .name = _("Blue Incense"),
+        .name = _("Sea Incense"),
         .itemId = ITEM_SEA_INCENSE,
         .price = 9600,
         .holdEffect = HOLD_EFFECT_WATER_POWER,
@@ -7633,7 +7633,7 @@ const struct Item gItems2[] =
 
     [ITEM_SEA_INCENSE] =
     {
-        .name = _("Blue Incense"),
+        .name = _("Sea Incense"),
         .itemId = ITEM_SEA_INCENSE,
         .price = 9600,
         .holdEffect = HOLD_EFFECT_WATER_POWER,
