@@ -54,6 +54,10 @@ CeladonMansion2F_EventScript_DaniRainbow::
     msgbox CeladonMansion2F_Text_DaniRaibow, MSGBOX_NPC
     end
 
+CeladonMansion2F_EventScript_Restes::
+	msgbox CeladonMansion2F_Text_Restes, MSGBOX_NPC
+	end
+
 CeladonMansion2F_Text_LilDill:
 	.string "Hi all, Patch 15--\p"
 	.string "Sorry, I mean…\p"
@@ -100,3 +104,13 @@ CeladonMansion2F_Text_DaniRaibow:
     .string "However, Dragonite was moving too\n"
     .string "fast from Extreme Speed; it couldn't\l"
     .string "catch it!$"
+
+CeladonMansion2F_Text_Restes::
+	.string "Hi! I'm Resetes12, but you can call\n"
+	.string "me Restes.\p"
+	.string "I'm the creator of Pokémon Modern\n"
+	.string "Emerald, which is the base of\l"
+	.string "Pokémon Heart & Soul.\p"
+	.string "I also edited that game and created\n"
+	.string "Pokémon Modern Heart & Soul!\p"
+	.string "I hope you enjoy all three games!$"
