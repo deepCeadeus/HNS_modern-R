@@ -11,8 +11,11 @@ Future releases, if any, will only update the modded "Modern" version, as Heart&
 
 You can get more information about Modern Emerald at [Pokécommunity](https://www.Pokécommunity.com/showthread.php?t=494005) and at [Github](https://github.com/resetes12/pokeemerald). 
 
+[More information about Heart and Soul here.](https://github.com/PokemonHnS-Development/pokemonHnS)
+
 The **Modern** feature list is:
 - Updated to the lastest Modern Emerald base (HnS 1.2.1 uses Modern Emerald 3.2 base; current Modern Emerald is 3.5). Includes tons of fixes and QOL features.
+- Full game decapitalization.
 - FRLG Pokémon sprites for Gen 1, but using double animation _(mostly hand-made*)_.
 - Map previews for dungeons and special maps, like FRLG and HGSS. Based on HGSS, also contains FRLG (but are unused).
 - Optional FRLG or Emerald font (with colored text, but unused in this game), and FRLG Battle Terrain instead of Emerald (including night versions).
@@ -50,7 +53,7 @@ The **Modern** feature list is:
 - Legendaries do not respawn after beating the Elite Four like in base HnS.
 - EVs are now up to 255 (from 252, for trade compatibility reasons)
 - Added cheating items (Infinite Rare Candies, Infinite Repel, Healing Heart and IV/EV editor in party menu). Talk to the Cheating Girl in Cherrygrove.
-- Added IV setter (includes Hidden Power changer), EV resetter, and EXP. NURSE in Saffron Dojo.
+- Added IV setter (includes Hidden Power changer), EV resetter, and Exp. Nurse in Saffron Dojo.
 - Revert Hold B to Run, instead of being able to run just by pressing.
 - Safari Zone is now NOT infinite in Nuzlocke modes, and it has been divided in different zones (Johto -> 6 zones; Kanto -> 4 zones). Each zone is one encounter when playing Nuzlocke.
 - Pokenav condition menu returns!
@@ -64,7 +67,7 @@ The **Modern** feature list is:
 - The Battle Frontier has been customized, with 95% new NPCs and text (nothing special, just to give it a new flavour).
 - Voltorb Flip in casinos!
 - "GBS Sounds" object to listen to the original music!
-- Large amount of bugfixes to the HnS base (1.2.2): 
+- Large amount of bugfixes to the HnS base (1.2.1): 
     - Tons tiles and collision fixes and improvements to match Gen 3-like & FRLG map and tile design.
     - Text and typo fixes.
     - Rocket Takeover music loop fix.
