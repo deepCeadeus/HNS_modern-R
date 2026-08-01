@@ -558,7 +558,7 @@ BattleFrontier_ExchangeServiceCorner_Text_ConfirmUpgrade:
 	.string "Is that correct?$"
 
 BattleFrontier_ExchangeServiceCorner_Text_ConfirmBrightpowder:
-	.string "You've chosen the Brightpowder.\n"
+	.string "You've chosen the BrightPowder.\n"
 	.string "Is that correct?$"
 
 BattleFrontier_ExchangeServiceCorner_Text_ConfirmWhiteHerb:
@@ -892,7 +892,7 @@ EventScript_DoWonderTrade_Text_Welcome:
 
 EventScript_NoMoreForToday_Text:
 	.string "Oh! Seems that you have\n"
-	.string "used all 3 Daily Trades.\p"
+	.string "used all 3 daily Trades.\p"
 	.string "Come back tomorrow!$"
 
 EventScript_FirstTimeWonder_Text:
@@ -909,7 +909,7 @@ EventScript_FirstTimeWonder_Text:
 	.string "show up. And that is the fun of\p"
 	.string "WonderTrade! Oh, also, to not\n"
 	.string "overload the server, there is a\p"
-	.string "maximum of 3 Daily WonderTrades.\p"
+	.string "maximum of 3 daily WonderTrades.\p"
 	.string "We hope you have a great\n"
 	.string "WonderTrade experience!$"
 

@@ -522,7 +522,7 @@ AzaleaTown_Gym_EventScript_Amy::
 	msgbox AzaleaTown_Gym_Text_TwinsAmyMay1After, MSGBOX_DEFAULT
 	release
 	end
-	
+
 AzaleaTown_Gym_EventScript_May::
 	trainerbattle_double TRAINER_AMY_AND_MAY, AzaleaTown_Gym_Text_TwinsAmyMay2Seen, AzaleaTown_Gym_Text_TwinsAmyMay2Beaten, Route104_Text_GinaNotEnoughMons
 	special GetPlayerBigGuyGirlString
@@ -695,11 +695,11 @@ AzaleaTown_Gym_Text_BugsyBeaten:
 	.string "Badge.$"
 
 AzaleaTown_Gym_Text_ReceivedHiveBadge:
-	.string "{PLAYER} received Hive Badge.$"
+	.string "{PLAYER} received the Hive Badge.$"
 
 AzaleaTown_Gym_Text_HiveBadgeSpeech:
 	.string "Do you know the benefits\n"
-	.string "of Hive Badge?\p"
+	.string "of the Hive Badge?\p"
 	.string "If you have it, Pokémon up\n"
 	.string "to Level 30 will obey you,\l"
 	.string "even traded ones.\p"

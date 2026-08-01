@@ -22,7 +22,7 @@ BlackthornCity_OnFrame::
 	map_script_2 VAR_BLACKTHORN_CITY_STATE, 4, BlackthornCity_EventScript_Call
 	.2byte 0
 
-BlackthornCity_EventScript_CityEnter:: 
+BlackthornCity_EventScript_CityEnter::
 	setflag FLAG_VISITED_BLACKTHORN_CITY
 	callnative SetTimeBasedEncounters
 	end
@@ -86,7 +86,7 @@ BlackthornCity_EventScript_GymBoy::
 	msgbox BlackthornCity_Text_ClairIsBeaten, MSGBOX_DEFAULT
 	closemessage
 	release
-	end	
+	end
 
 BlackThornCity_EventScript_GymBoyNotReady::
 	msgbox BlackthornCity_Text_ClairNotReady, MSGBOX_DEFAULT
@@ -98,7 +98,7 @@ BlackThornCity_EventScript_GymBoyBefore::
 	msgbox BlackthornCity_Text_ClairIsIn, MSGBOX_DEFAULT
 	closemessage
 	release
-	end	
+	end
 
 BlackthornCity_EventScript_BlackBelt::
 	msgbox BlackBeltText_VoicesInMyHead, MSGBOX_NPC
@@ -240,12 +240,12 @@ BlackthornCity_SantosNopeText:
 	.string "Santos: No.$"
 
 BlackthornCooltrainerF2Text:
-	.string "Wow, you came through the Ice PATH?\p"
+	.string "Wow, you came through the Ice Path?\p"
 	.string "You must be a real hotshot Trainer!$"
 
 BlackthornCitySignText:
 	.string "Blackthorn City\p"
-	.string "A Quiet Mountain Retreat$"
+	.string "A quiet mountain retreat$"
 
 BlackthornGymSignText:
 	.string "Blackthorn City Pokémon Gym\n"

@@ -15,7 +15,7 @@ CeruleanCity_Gym_EventScript_RocketGrunt::
 	delay 20
 	playse SE_BANG
 	waitmovement 0
-	
+
 	msgbox CeruleanGym_Text_GruntIntro, MSGBOX_DEFAULT
 	closemessage
 	playse SE_PIN
@@ -129,7 +129,7 @@ CeruleanCity_Gym_EventScript_Statue::
 
 CeruleanCity_Gym_EventScript_StatueDuringRocket::
 	msgbox CeruleanGym_Text_Note, MSGBOX_SIGN
-	end 
+	end
 
 CeruleanCity_Gym_EventScript_GymStatuePostVictory::
 	msgbox CeruleanCity_Gym_Text_GymStatuePlayerWon
@@ -256,10 +256,10 @@ CeruleanGym_Text_MistyIntro:
 CeruleanGym_Text_MistyWinLoss:
 	.string "Misty: You really are good…\p"
 	.string "I'll admit that you are skilled…\p"
-	.string "Here you go. It's CascadeBadge.$"
+	.string "Here you go. It's the Cascade Badge.$"
 
 CeruleanGym_Text_ReceivedBadge:
-	.string "{PLAYER} received CascadeBadge.$"
+	.string "{PLAYER} received the Cascade Badge.$"
 
 CeruleanGym_Text_MistyFightDone:
 	.string "Misty: Are there many strong\n"

@@ -98,7 +98,7 @@ Route45_Text_HikerMichaelBeaten:
     .string "My Pokémon weren't spunky enough!$"
 
 Route45_Text_HikerMichaelAfter:
-    .string "Boy, do I love Hp Up! Mmmm, yum!\p"
+    .string "Boy, do I love HP Up! Mmmm, yum!\p"
     .string "I keep drinking my Pokémon's!\p"
     .string "I can't help it!$"
 

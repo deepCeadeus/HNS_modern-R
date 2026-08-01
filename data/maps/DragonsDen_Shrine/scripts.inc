@@ -102,7 +102,7 @@ DragonsDen_Shrine_EventScript_ElderOfferQuiz::
 
 DragonsDen_Shrine_EventScript_ElderQuiz1::
 	message DragonsDen_Shrine_Text_Question1
-	multichoice 20, 6, MULTI_ELDERQUIIZ1, FALSE 
+	multichoice 20, 6, MULTI_ELDERQUIIZ1, FALSE
 	switch VAR_RESULT
 	case 0, DragonsDen_Shrine_EventScript_ElderQuiz1Correct
 	case 2, DragonsDen_Shrine_EventScript_ElderQuiz1Correct
@@ -116,7 +116,7 @@ DragonsDen_Shrine_EventScript_ElderQuiz1Correct::
 
 DragonsDen_Shrine_EventScript_ElderQuiz2::
 	message DragonsDen_Shrine_Text_Question2
-	multichoice 20, 6, MULTI_ELDERQUIIZ2, FALSE 
+	multichoice 20, 6, MULTI_ELDERQUIIZ2, FALSE
 	switch VAR_RESULT
 	case 0, DragonsDen_Shrine_EventScript_ElderQuiz2Correct
 	case 1, DragonsDen_Shrine_EventScript_ElderQuiz2Correct
@@ -130,7 +130,7 @@ DragonsDen_Shrine_EventScript_ElderQuiz2Correct::
 
 DragonsDen_Shrine_EventScript_ElderQuiz3::
 	message DragonsDen_Shrine_Text_Question3
-	multichoice 20, 6, MULTI_ELDERQUIIZ3, FALSE 
+	multichoice 20, 6, MULTI_ELDERQUIIZ3, FALSE
 	switch VAR_RESULT
 	case 1, DragonsDen_Shrine_EventScript_ElderQuiz3Correct
 	case 2, DragonsDen_Shrine_EventScript_ElderQuiz3Correct
@@ -144,7 +144,7 @@ DragonsDen_Shrine_EventScript_ElderQuiz3Correct::
 
 DragonsDen_Shrine_EventScript_ElderQuiz4::
 	message DragonsDen_Shrine_Text_Question4
-	multichoice 20, 6, MULTI_ELDERQUIIZ4, FALSE 
+	multichoice 20, 6, MULTI_ELDERQUIIZ4, FALSE
 	switch VAR_RESULT
 	case 0, DragonsDen_Shrine_EventScript_ElderQuiz4Correct
 	case 2, DragonsDen_Shrine_EventScript_ElderQuiz4Correct
@@ -158,7 +158,7 @@ DragonsDen_Shrine_EventScript_ElderQuiz4Correct::
 
 DragonsDen_Shrine_EventScript_ElderQuiz5::
 	message DragonsDen_Shrine_Text_Question5
-	multichoice 20, 6, MULTI_ELDERQUIIZ5, FALSE 
+	multichoice 20, 6, MULTI_ELDERQUIIZ5, FALSE
 	switch VAR_RESULT
 	case 2, DragonsDen_Shrine_EventScript_ElderQuizFinish
 	case MULTI_B_PRESSED, DragonsDen_Shrine_EventScript_ElderQuiz5
@@ -237,7 +237,7 @@ DragonsDen_Shrine_EventScript_ClairEnter::
 	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_SOUTH
 	applymovement2 LOCALID_DRAGONSDEN3_CLAIR, DragonsDen_Shrine_Movement_ClairEnter
 	waitmovement 0
-	turnobject LOCALID_DRAGONSDEN3_ELDER, DIR_WEST	
+	turnobject LOCALID_DRAGONSDEN3_ELDER, DIR_WEST
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_NORTH
 	msgbox DragonsDen_Shrine_Text_ClairYouPassed, MSGBOX_DEFAULT
@@ -355,21 +355,21 @@ DragonsDen_Shrine_Text_MustIInformLance:
     .string "This child is impeccable,\n"
     .string "in skill and spirit!\p"
     .string "Admit defeat and confer the\n"
-    .string "RisingBadge!\p"
+    .string "Rising Badge!\p"
     .string "…Or must I inform Lance of this?$"
 
 DragonsDen_Shrine_Text_IUnderstand:
     .string "I-I understand…$"
 
 DragonsDen_Shrine_Text_HereRisingBadge:
-    .string "Here, this is the RisingBadge…\p"
+    .string "Here, this is the Rising Badge…\p"
     .string "Hurry up! Take it!$"
 
 DragonsDen_Shrine_Text_PlayerReceivedRisingBadge:
-    .string "{PLAYER} received RisingBadge.$"
+    .string "{PLAYER} received the Rising Badge.$"
 
 DragonsDen_Shrine_Text_RisingBadgeExplanation:
-    .string "RisingBadge will enable your\n"
+    .string "The Rising Badge will enable your\n"
     .string "Pokémon to use the move for\l"
     .string "climbing waterfalls.\p"
     .string "Also, all Pokémon will recognize\n"

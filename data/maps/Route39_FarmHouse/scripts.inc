@@ -91,7 +91,7 @@ Route39_Text_FarmerMSickCow:
 Route39_Text_FarmerMBuyMilk:
 	.string "How'd you like my Moomoo Milk?\p"
 	.string "It's my pride and joy, there.\p"
-	.string "Give it to Pokémon to restore Hp!\p"
+	.string "Give it to Pokémon to restore HP!\p"
 	.string "I'll give it to ya fer just\n"
 	.string "¥500.$"
 

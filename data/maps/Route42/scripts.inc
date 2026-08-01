@@ -145,7 +145,7 @@ Route42_Text_EusineJealous:
 	.string "{PLAYER}!\p"
 	.string "You seem to be around where\n"
 	.string "Suicune would appear.\p"
-	.string "Well, that's Ok.\l"
+	.string "Well, that's OK.\l"
 	.string "My desire to search for\n"
 	.string "Suicune is far beyond yours…\p"
 	.string "My grandpa was… quite into\n"

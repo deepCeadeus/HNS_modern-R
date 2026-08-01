@@ -56,7 +56,7 @@ GoldenrodCity_BikeShop_Text_Clerk2:
 
 GoldenrodCity_BikeShop_Text_ClerkIntro:
     .string "…sigh… I moved here, but I can't\n"
-    .string "sell my Bicycles. Why is that?\p"
+    .string "sell my bicycles. Why is that?\p"
     .string "Could you ride a bicycle and\n"
     .string "advertise for me?$"
 
@@ -84,7 +84,7 @@ GoldenrodCity_BikeShop_Text_Refused:
 
 GoldenrodCity_BikeShop_Text_JustReleasedCompact:
     .string "Just released!\p"
-    .string "First-rate compact Bicycles!$"
+    .string "First-rate compact bicycles!$"
 
 GoldenrodCity_BikeShop_Text_Bicycle:
     .string "It's a shiny new bicycle!$"

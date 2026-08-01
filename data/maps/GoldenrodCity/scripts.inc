@@ -13,7 +13,7 @@ GoldenrodCity_EventScript_Trigger:: @flagheap
 	setflag FLAG_HIDE_ROCKET_GOLDENROD_RADIOTOWER_1
 	setflag FLAG_HIDE_GOLDENROD_RADIOTOWER_PETREL
 	setflag FLAG_HIDE_GOLDENROD_RADIOTOWER_DIRECTOR_2
-	
+
 	clearflag FLAG_HIDE_GOLDENROD_BEAUTY
 	clearflag FLAG_HIDE_GOLDENROD_ROCKET_SCOUT
 	clearflag FLAG_HIDE_GOLDENROD_NPCS
@@ -53,7 +53,7 @@ GoldenrodCity_Trigger_Music::
 	goto_if_ge VAR_GOLDENROD_CITY_STATE, 11, GoldenrodCity_Trigger_MusicNotYet
 	fadenewbgm MUS_HG_ROCKET_TAKEOVER
 	mappopup
-	setvar VAR_TEMP_0, 1 
+	setvar VAR_TEMP_0, 1
 	end
 
 GoldenrodCity_Trigger_Music2::
@@ -412,7 +412,7 @@ GoldenrodCity_Text_GymSign:
 
 GoldenrodCity_Text_CitySign:
 	.string "Goldenrod City\p"
-	.string "The Festive City of Opulent Charm$"
+	.string "The festive city of opulent charm!$"
 
 GoldenrodCity_Text_BikeShopSign:
 	.string "The World is a Cycle Path!\n"

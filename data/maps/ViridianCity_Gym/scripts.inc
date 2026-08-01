@@ -66,13 +66,13 @@ ViridianCity_Gym_Text_LeaderBlue_Win:
 	.string "How the heck did I lose to you?\p"
 	.string "…\p"
 	.string "Tch, all right… Here, take this--it's\n"
-	.string "Earthbadge.$"
+	.string "the Earth Badge.$"
 
 ViridianCity_Gym_Text_ReceivedEarthBadge:
-	.string "{PLAYER} received Earthbadge.$"
+	.string "{PLAYER} received the Earth Badge.$"
 
 ViridianCity_Gym_Text_BulkUpSpeech:
-    .string "That Tm contains Bulk Up.\p"
+    .string "That TM contains Bulk Up.\p"
     .string "It lets a Pokémon become an\n"
     .string "unstoppable force and an\l"
 	.string "immovable object all at once!\p"

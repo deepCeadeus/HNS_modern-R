@@ -91,7 +91,7 @@ GoldenrodCity_Gym_EventScript_WhitneyDefeated::
 	release
 	end
 
-GoldenrodCity_Gym_EventScript_Trigger::	
+GoldenrodCity_Gym_EventScript_Trigger::
 	turnobject LOCALID_GOLDENROD_CITY_GYM_BRIDGET DIR_WEST
 	msgbox GoldenrodCity_Gym_Text_BridgetWhitneyCries, MSGBOX_DEFAULT
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp1
@@ -147,13 +147,13 @@ GoldenrodCity_Gym_Text_WhitneyWhatDoYouWant:
     .string "…Sniff…\p"
     .string "What? What do you want? A Badge?\p"
     .string "Oh, right. I forgot. Here's\n"
-    .string "PlainBadge.$"
+    .string "the Plain Badge.$"
 
 GoldenrodCity_Gym_Text_PlayerReceivedPlainBadge:
-    .string "{PLAYER} received PlainBadge.$"
+    .string "{PLAYER} received the Plain Badge.$"
 
 GoldenrodCity_Gym_Text_WhitneyPlainBadge:
-    .string "PlainBadge lets your Pokémon use\n"
+    .string "The Plain Badge lets your Pokémon use\n"
     .string "Strength outside of battle.\p"
     .string "It also boosts your Pokémon's\n"
 	.string "Defense.\p"

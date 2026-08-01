@@ -1417,7 +1417,7 @@ SootopolisCity_Text_GymSign:
 
 SootopolisCity_Text_CitySign:
 	.string "Sootopolis City\p"
-	.string "“The mystical City where history\n"
+	.string "“The mystical city where history\n"
 	.string "slumbers.”$"
 
 SootopolisCity_Text_DoorIsClosed:
@@ -1431,7 +1431,7 @@ SootopolisCity_Text_PhysicallyFitLivingHere:
 
 SootopolisCity_Text_GiantPokemonSuddenlyAppeared:
 	.string "These giant Pokémon suddenly appeared\n"
-	.string "in the middle of the City!\p"
+	.string "in the middle of the city!\p"
 	.string "And, I've never seen them before!\p"
 	.string "Why are they smashing into each\n"
 	.string "other like that?\p"
@@ -1460,7 +1460,7 @@ SootopolisCity_Text_FlyingMonStoppedRampage:
 	.string "Pokémon…$"
 
 SootopolisCity_Text_WonderWhatWorldIsLike:
-	.string "I… I've never been out of this City.\p"
+	.string "I… I've never been out of this city.\p"
 	.string "I wonder what the world is like on\n"
 	.string "the other side of this round sky?$"
 
@@ -1529,11 +1529,11 @@ SootopolisCity_Text_NoOrdinaryTourist:
 	.string "an extraordinary tourist, either.$"
 
 SootopolisCity_Text_CityRegainedCalm:
-	.string "The City has regained its calm…$"
+	.string "The city has regained its calm…$"
 
 SootopolisCity_Text_CaveOfOriginPleaseLeave:
 	.string "Who might you be?\p"
-	.string "This is the Cave Of Origin.\p"
+	.string "This is the Cave of Origin.\p"
 	.string "The spirits of Pokémon, becalmed at\n"
 	.string "Mt. Pyre, are said to be revived here.\p"
 	.string "Please leave.$"
@@ -1554,7 +1554,7 @@ SootopolisCity_Text_AwakenedPokemonClash:
 	.string "of a third Pokémon…$"
 
 SootopolisCity_Text_CaveOfOriginSleepsToo:
-	.string "This is the Cave Of Origin…\p"
+	.string "This is the Cave of Origin…\p"
 	.string "With the passing of the crisis,\n"
 	.string "the cave, too, shall sleep…$"
 
@@ -1716,7 +1716,7 @@ SootopolisCity_Text_ExplainWaterfallGoToGym:
 	.string "That Hidden Machine contains\n"
 	.string "Waterfall.\p"
 	.string "If you have the Rain Badge, a Pokémon\n"
-	.string "that has learned that Hm move can\l"
+	.string "that has learned that HM move can\l"
 	.string "force its way up waterfalls.\p"
 	.string "And where does one get the Rain Badge?\n"
 	.string "You know, don't you?\p"

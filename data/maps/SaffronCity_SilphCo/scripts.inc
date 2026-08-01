@@ -143,7 +143,7 @@ SilphCo_Text_Sign1:
 
 SilphCo_Text_Sign2:
 	.string "Silph Co.\n"
-	.string "Elevator Out Of Service$"
+	.string "Elevator out of Service$"
 
 SilphCo_Text_Receptionist:
 	.string "Welcome. This is Silph Co.'s Head\n"

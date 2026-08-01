@@ -28,7 +28,7 @@ CeladonMansion2F_Text_Computer:
 	.string "…$"
 
 CeladonMansion2F_Text_DevOfficeSign:
-	.string "HEART & SOUL DEVELOPMENT OFFICE$"
+	.string "Heart & Soul Development Office$"
 
 CeladonMansion2F_EventScript_LilDill::
 	msgbox CeladonMansion2F_Text_LilDill, MSGBOX_NPC
@@ -102,7 +102,7 @@ CeladonMansion2F_Text_DaniRaibow:
     .string "Lance tried to teach Dragonite the\n"
     .string "move Dragon Breath.\p"
     .string "However, Dragonite was moving too\n"
-    .string "fast from Extreme Speed; it couldn't\l"
+    .string "fast from ExtremeSpeed; it couldn't\l"
     .string "catch it!$"
 
 CeladonMansion2F_Text_Restes::

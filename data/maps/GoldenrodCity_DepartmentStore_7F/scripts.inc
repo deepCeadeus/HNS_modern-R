@@ -101,7 +101,7 @@ GoldenrodDeptStore_Text_RoofPokefanM:
 
 GoldenrodDeptStore_Text_RoofTeacher:
     .string "Oh, everything is so cheap!\p"
-    .string "I bought so much, my PACK's crammed!$"
+    .string "I bought so much, my Pack's crammed!$"
 
 GoldenrodDeptStore_Text_RoofBugCatcher:
     .string "My Pokémon always get paralyzed or\n"

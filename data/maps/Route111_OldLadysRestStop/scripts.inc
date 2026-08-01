@@ -37,8 +37,8 @@ Route111_OldLadysRestStop_EventScript_DeclineRest::
 
 Route111_OldLadysRestStop_Text_PokecenterChallenge:
 	.string "Sorry, you are playing\n"
-	.string "with the PokéCENTER challenge!$"
-	
+	.string "with the PokéCenter challenge!$"
+
 Route111_OldLadysRestStop_Text_RestUpHere:
 	.string "Oh, dear, dear.\n"
 	.string "Aren't your Pokémon exhausted?\p"

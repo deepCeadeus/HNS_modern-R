@@ -109,7 +109,7 @@ GoldenrodCity_FlowerShop_Text_Owner2:
 	.string "on Route 36.\p"
 	.string "They say it dances when you water\n"
 	.string "it…\p"
-	.string "Oh, that's a PlainBadge from\n"
+	.string "Oh, that's a Plain Badge from\n"
 	.string "The Goldenrod Gym!\p"
 	.string "Did you defeat Whitney?!\p"
 	.string "Well, then there's nothing to worry\n"

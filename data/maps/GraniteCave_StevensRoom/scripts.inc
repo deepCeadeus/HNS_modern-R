@@ -95,7 +95,7 @@ GraniteCave_StevensRoom_Text_ThankYouTakeThis:
 	.string "Let me see…\n"
 	.string "I'll give you this TM.\p"
 	.string "It contains my favorite move,\n"
-	.string "Steel WING.$"
+	.string "Steel Wing.$"
 
 GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister:
 	.string "Steven: Your Pokémon appear quite\n"
@@ -105,17 +105,17 @@ GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister:
 	.string "League one day. That's what I think.\p"
 	.string "I know, since we've gotten to know each\n"
 	.string "other, let's register one another in\l"
-	.string "our PokéNAVS.\p"
+	.string "our PokéNavs.\p"
 	.string "… … … … … …$"
 
 GraniteCave_StevensRoom_Text_RegisteredSteven:
 	.string "Registered Steven\n"
-	.string "in the PokéNAV.$"
+	.string "in the PokéNav.$"
 
 GraniteCave_StevensRoom_Text_IveGotToHurryAlong:
 	.string "Now, I've got to hurry along.$"
 
 GraniteCave_StevensRoom_Text_OhBagIsFull:
-	.string "Oh, your BAG is full…\n"
+	.string "Oh, your Bag is full…\n"
 	.string "That's too bad, then.$"
 

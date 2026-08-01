@@ -340,7 +340,7 @@ Route22_Text_Silver4:
 	.string "by myself!$"
 
 Route22_Text_Silver5:
-	.string "ALL BY MYSELF!$"
+	.string "All by myself!$"
 
 Route22_Text_Silver6:
 	.string "{RIVAL}: … What are you staring at?$"

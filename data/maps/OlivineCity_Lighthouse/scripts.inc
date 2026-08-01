@@ -170,7 +170,7 @@ OlivineLighthouse_Text_SailorKentAfter:
 	.string "a good Pharmacy in Cianwood.$"
 
 OlivineLighthouse_Text_LassConnieSeen:
-	.string "Jasmine is this City's Gym Leader.\p"
+	.string "Jasmine is this city's Gym Leader.\p"
 	.string "I mean to bring her back with me.\p"
 	.string "Nobody had better get in my way!$"
 

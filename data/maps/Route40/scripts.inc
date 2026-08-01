@@ -129,7 +129,7 @@ Route40_Text_Lass2:
 	.string "the sights and soak up the\l"
 	.string "atmosphere.\p"
 	.string "Being a port, it feels so\n"
-	.string "different from a big City.$"
+	.string "different from a big city.$"
 
 Route40_EventScript_Youngster::
 	lock

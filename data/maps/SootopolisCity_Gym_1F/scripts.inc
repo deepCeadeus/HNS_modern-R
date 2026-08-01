@@ -241,7 +241,7 @@ SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis:
 	.string "the full obedience of all your Pokémon\l"
 	.string "to your every command.\p"
 	.string "The Rain Badge also allows the use\n"
-	.string "of the Hm move Waterfall to scale\l"
+	.string "of the HM move Waterfall to scale\l"
 	.string "walls of cascading water.\p"
 	.string "And, so that you never forget the\n"
 	.string "battle we shared, take this…$"
@@ -255,7 +255,7 @@ SootopolisCity_Gym_1F_Text_ExplainWaterPulse:
 
 SootopolisCity_Gym_1F_Text_RegisteredJuan:
 	.string "Registered Gym Leader Juan\n"
-	.string "in the Pokénav.$"
+	.string "in the PokéNav.$"
 
 SootopolisCity_Gym_1F_Text_JuanPostBattle:
 	.string "The Trainers who have gathered all\n"

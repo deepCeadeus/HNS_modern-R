@@ -34,9 +34,9 @@ RustboroCity_CuttersHouse_Text_YouCanPutThisHMToGoodUse:
 	.string "Go on, take it!$"
 
 RustboroCity_CuttersHouse_Text_ExplainCut:
-	.string "That Hidden Machine, or Hm for\n"
+	.string "That Hidden Machine, or HM for\n"
 	.string "short, is Cut.\p"
-	.string "An Hm move is one that can be used\n"
+	.string "An HM move is one that can be used\n"
 	.string "by Pokémon outside of battle.\p"
 	.string "Any Pokémon that can learn Cut can\n"
 	.string "chop down thin trees if the Trainer\l"
@@ -45,7 +45,7 @@ RustboroCity_CuttersHouse_Text_ExplainCut:
 	.string "have to teach the move. It just works.$"
 
 RustboroCity_CuttersHouse_Text_DadHelpedClearLandOfTrees:
-	.string "When they were expanding the City of\n"
+	.string "When they were expanding the city of\n"
 	.string "Rustboro, my dad helped out.\p"
 	.string "He made his Pokémon use Cut to clear\n"
 	.string "the land of trees.$"

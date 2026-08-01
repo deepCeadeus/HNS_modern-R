@@ -212,7 +212,7 @@ Route29_Text_Boy_WaitingForNight:
 	.string "appear only at night.$"
 
 Route29_Text_MeetTuscany:
-	.string "Tuscany:I do believe that this\n"
+	.string "Tuscany: I do believe that this\n"
 	.string "is the first time we've met?\p"
 	.string "I'm Tuscany of the Weekday Family.\p"
 	.string "If you can guess my favorite day,\n"
@@ -227,14 +227,14 @@ Route29_Text_TuscanyGivesGift:
 	.string "Scarf.$"
 
 Route29_Text_TuscanyGaveGift:
-	.string "Tuscany:Wouldn't you agree\n"
+	.string "Tuscany: Wouldn't you agree\n"
 	.string "that it is most adorable?\p"
 	.string "It strengthens Normal-type\n"
 	.string "moves.\p"
 	.string "I am certain it will be of use.$"
 
 Route29_Text_TuscanyTuesday:
-	.string "Tuscany:Have you met Monica,\n"
+	.string "Tuscany: Have you met Monica,\n"
 	.string "my older sister?\p"
 	.string "Or my younger brother, Wesley?\p"
 	.string "I am the third of seven\n"

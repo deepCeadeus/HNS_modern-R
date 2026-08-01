@@ -41,7 +41,7 @@ FortreeCity_Mart_EventScript_Boy::
 	end
 
 FortreeCity_Mart_Text_SuperRepelBetter:
-	.string "SUPER Repel lasts a long time,\n"
+	.string "Super Repel lasts a long time,\n"
 	.string "and it gets the job done.\p"
 	.string "It's much better than an ordinary\n"
 	.string "Repel.$"
@@ -53,6 +53,6 @@ FortreeCity_Mart_Text_StockUpOnItems:
 	.string "Better to be safe than sorry!$"
 
 FortreeCity_Mart_Text_RareCandyMakesMonGrow:
-	.string "A RARE CANDY makes a Pokémon grow\n"
+	.string "A Rare Candy makes a Pokémon grow\n"
 	.string "immediately by one level.$"
 

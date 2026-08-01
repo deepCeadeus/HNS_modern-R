@@ -25,4 +25,4 @@ CeladonDeptStore4F_Text_Youngster:
 
 CeladonDeptStore4F_Text_Directory:
 	.string "Express Yourself With Gifts!\p"
-	.string "4F: WISEMAN GIFTS$"
+	.string "4F: Wiseman Gifts$"

@@ -77,7 +77,7 @@ Route20_EventScript_Headlocker::
 	end
 
 Route20_Text_Dennis:
-	.string "Dennis: SHAAAAAAAA!$"
+	.string "Dennis: Shaaaaaaaa!$"
 
 Route20_Text_Headlocker:
 	.string "There's a rare Pokémon on this\n"
@@ -132,3 +132,4 @@ Route20_Text_SwimmermCameronAfterBattle:
 Route20_Text_CinnabarIsland_GymUnusedSign:
 	.string "What does this sign say?\p"
 	.string "Cinnabar Gym Leader: Blaine$"
+

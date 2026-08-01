@@ -128,7 +128,7 @@ SlowpokeWell_B1F_Text_ProtonSeen:
 	.string "don't expect any mercy!$"
 
 SlowpokeWell_B1F_Text_ProtonBeaten:
-	.string "You did Ok today,\n"
+	.string "You did OK today,\n"
 	.string "but wait till next time!$"
 
 SlowpokeWell_B1F_Text_ProtonAfter:

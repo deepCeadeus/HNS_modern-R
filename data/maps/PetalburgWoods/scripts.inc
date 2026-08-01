@@ -145,19 +145,19 @@ Text_PetalburgWoods_Celebi1:
 	.string ". . . \p"
 	.string ". . . \p"
 	.string "You can hear a dim voice.\p"
-	.string "S..w .. ..e . . .ER . K. ON\p"
+	.string "S..w .. ..e . . .er . k. on\p"
 	.string ". . . \p"
-	.string "S..w me the THUND.R PO..MON…$"
+	.string "S..w me the Thund.r Po..mon…$"
 
 Text_PetalburgWoods_Celebi2:
 	.string ". . . \p"
 	.string ". . . \p"
-	.string "Sh.. me .he .OLCANO . ..MON$"
+	.string "Sh.. me .he .olcano . ..mon$"
 
 Text_PetalburgWoods_Celebi3:
 	.string ". . . \p"
 	.string ". . . \p"
-	.string "Sho.. me t.. AU.ORA …éMON.$"
+	.string "Sho.. me t.. Au.ora …émon.$"
 
 Text_PetalburgWoods_Celebi4:
 	.string ". . . \p"
@@ -188,7 +188,7 @@ PetalburgWoods_Dusclops::
 	end
 
 PetalburgWoods_Text_Dusclops:
-	.string "DUSKY: Dusk, dusk!$"
+	.string "Dusky: Dusk, dusk!$"
 
 PetalburgWoods_Celebi_Sign::
 	faceplayer
@@ -217,7 +217,7 @@ PetalburgWoods_Celebi_SignChampion::
 Text_PetalburgWoods_Celebi_Sign:
 	.string "Hi trainer.\p"
 	.string "Dangerous? No, no. Do not worry.\l"
-	.string "DUSKY is patrolling around.\p"
+	.string "Dusky is patrolling around.\p"
 	.string "And you? How is your adventure\n"
 	.string "going?$"
 
@@ -234,19 +234,19 @@ Text_PetalburgWoods_Celebi_SignFirstTime:
 	.string "an innocent looking tree in the middle\l"
 	.string "of some woods, right?\p"
 	.string "But you see, this tree is special.\n"
-	.string "In these woods, a MYTHICAL Pokémon\l"
-	.string "lives. It is the Forest GUARDIAN.\p"
+	.string "In these woods, a Mythical Pokémon\l"
+	.string "lives. It is the Forest Guardian.\p"
 	.string "I have been watering this tree for\n"
 	.string "over twenty years of my life.\p"
 	.string "And I can assure you that this story\n"
 	.string "is as real as the air we breath.\l"
-	.string "The Forest GUARDIAN is small, Green,\l"
+	.string "The Forest Guardian is small, Green,\l"
 	.string "and just gazing at it feels…\p"
 	.string "Like I am watching a spirit from the\n"
-	.string "forest. Sadly, last time I saw it\l" 
+	.string "forest. Sadly, last time I saw it\l"
 	.string "was many, many years ago…\p"
-	.string "Where could the GUARDIAN be?\p"
-	.string "Maybe I need to be STRONGER to make\n"
+	.string "Where could the Guardian be?\p"
+	.string "Maybe I need to be Stronger to make\n"
 	.string "it appear…\p"
 	.string "It really makes me unhappy how weak\n"
 	.string "I have become with the years.\p"
@@ -256,7 +256,7 @@ Text_PetalburgWoods_Celebi_SignFirstTime:
 Text_PetalburgWoods_Celebi_SignEventFinished:
 	.string ". . . \p"
 	.string "I truly cannot believe my eyes!\n"
-	.string "You battled with the GUARDIAN!?\p"
+	.string "You battled with the Guardian!?\p"
 	.string "I will never forget this moment.\n"
 	.string "I will keep watering this shrine\l"
 	.string "until it comes back in the future.$"
@@ -264,15 +264,15 @@ Text_PetalburgWoods_Celebi_SignEventFinished:
 Text_PetalburgWoods_Celebi_SignEventChampion:
 	.string "Hi again, young one.\p"
 	.string "Something has been going on with the\n"
-	.string "GUARDIAN tree.\p"
+	.string "Guardian tree.\p"
 	.string "I have been hearing a small muttering\n"
 	.string "around it for many hours.\p"
-	.string "Something about a Thunder, VOLCANO\n"
-	.string "and AURORA Pokémon…\p"
+	.string "Something about a Thunder, Volcano\n"
+	.string "and Aurora Pokémon…\p"
 	.string "Wait… I know those descriptions…\n"
 	.string "Something about three beasts? But…\p"
 	.string "Not from this region…? Where were\n"
-	.string "they from? GIOTO? HOJO? JONO? Johto?\p"
+	.string "they from? Gioto? Hojo? Jono? Johto?\p"
 	.string "And if they are here, in Hoenn…\n"
 	.string "Maybe they are hiding in places related\l"
 	.string "to their descriptions?\p"
@@ -599,17 +599,17 @@ PetalburgWoods_Text_NotAOneToBeFound:
 
 PetalburgWoods_Text_HaveYouSeenShroomish:
 	.string "Hello, have you seen any Pokémon\n"
-	.string "called SHROOMISH around here?\p"
+	.string "called Shroomish around here?\p"
 	.string "I really love that Pokémon.$"
 
 PetalburgWoods_Text_IWasGoingToAmbushYou:
 	.string "I was going to ambush you, but you\n"
-	.string "had to dawdle in PETALBURG WOODS\l"
+	.string "had to dawdle in Petalburg Woods\l"
 	.string "forever, didn't you?\p"
 	.string "I got sick of waiting, so here I am!$"
 
 PetalburgWoods_Text_HandOverThosePapers:
-	.string "You! DEVON RESEARCHER!\p"
+	.string "You! Devon Researcher!\p"
 	.string "Hand over those papers!$"
 
 PetalburgWoods_Text_YouHaveToHelpMe:
@@ -634,7 +634,7 @@ PetalburgWoods_Text_YouveGotSomeNerve:
 	.string "I wish I could say that, but I'm out of\n"
 	.string "Pokémon…\p"
 	.string "And, hey, we of Team Aqua are also\n"
-	.string "after something in RUSTBORO.\p"
+	.string "after something in Rustboro.\p"
 	.string "I'll let you go today!$"
 
 PetalburgWoods_Text_ThatWasAwfullyClose:
@@ -648,7 +648,7 @@ PetalburgWoods_Text_ThatWasAwfullyClose:
 PetalburgWoods_Text_TeamAquaAfterSomethingInRustboro:
 	.string "Didn't that Team Aqua thug say\n"
 	.string "they were after something in\l"
-	.string "RUSTBORO, too?$"
+	.string "Rustboro, too?$"
 
 PetalburgWoods_Text_ICantBeWastingTime:
 	.string "Uh-oh! It's a crisis!\n"
@@ -685,12 +685,12 @@ PetalburgWoods_Text_PeopleRespectYou:
 PetalburgWoods_Text_IWantRematch1:
 	.string "I want a rematch when my Bug\n"
 	.string "Pokémon grow up!\p"
-	.string "I'm registering you in my PokéNAV!$"
+	.string "I'm registering you in my PokéNav!$"
 
 PetalburgWoods_Text_IWantRematch2:
 	.string "I want a rematch when my Bug \n"
 	.string "Pokémon grow up!\p"
-	.string "I'm registering you in my PokéNAV!$"
+	.string "I'm registering you in my PokéNav!$"
 
 PetalburgWoods_Text_MyPokemonHaveGrown:
 	.string "My Bug Pokémon have grown.\n"
@@ -719,15 +719,15 @@ PetalburgWoods_Text_HiddenItemsExplanation:
 
 PetalburgWoods_Text_TryUsingThisItem:
 	.string "Oh, neat!\n"
-	.string "That's the Badge from RUSTBORO Gym!\p"
+	.string "That's the Badge from Rustboro Gym!\p"
 	.string "You must be a Trainer.\n"
 	.string "You should try using this item.$"
 
 PetalburgWoods_Text_MiracleSeedExplanation:
-	.string "It's a MIRACLE SEED.\n"
+	.string "It's a Miracle Seed.\n"
 	.string "If a Pokémon holds that item, its\l"
 	.string "Grass-type moves become stronger.\p"
-	.string "Besides MIRACLE SEED, I think there are\n"
+	.string "Besides Miracle Seed, I think there are\n"
 	.string "other convenient items for Pokémon\l"
 	.string "to hold.$"
 

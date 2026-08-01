@@ -29,7 +29,7 @@ EcruteakCity_EventScript_Trigger::
 	clearflag FLAG_DEFEATED_LUGIA
 	clearflag FLAG_CAUGHT_LUGIA
 	clearflag FLAG_HIDE_ECRUTEAK_ROCKET
-	clearflag FLAG_HIDE_BURNED_TOWER_NPCS  
+	clearflag FLAG_HIDE_BURNED_TOWER_NPCS
 	clearflag FLAG_HIDE_BURNED_TOWER_BEASTS
 	clearflag FLAG_HIDE_BURNED_TOWER_B1F_EUSINE
 	clearflag FLAG_HIDE_ECRUTEAK_CITY_SAGE
@@ -57,7 +57,7 @@ EcruteakCity_EventScript_Trigger::
 	setflag FLAG_HIDE_ECRUTEAK_SILVER
 	setvar VAR_COMPLETED_HO_OH, 0
 	setvar VAR_COMPLETED_LUGIA, 0
-	setvar VAR_ECRUTEAK_CITY_THEATER, 0 
+	setvar VAR_ECRUTEAK_CITY_THEATER, 0
 	setvar VAR_ECRUTEAK_CITY_STATE, 1
 	end
 
@@ -73,7 +73,7 @@ EcruteakCity_Trigger_Silver::
 	applymovement LOCALID_ECRUTEK_SILVER, EcruteakCity_Movement_Silver1
 	applymovement OBJ_EVENT_ID_PLAYER, EcruteakCity_Movement_Silver1
 	message EcruteakCity_Text_Silver1
-	
+
 	waitmovement OBJ_EVENT_ID_PLAYER
 	waitmovement LOCALID_ECRUTEK_SILVER
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -152,7 +152,7 @@ EcruteakCity_EventScript_Gramps::
 	closemessage
 	release
 	end
-		
+
 EcruteakCity_EventScript_Lass::
 	lock
 	faceplayer
@@ -228,28 +228,28 @@ EcruteakCity_EventScript_TheaterSign::
 	msgbox EcruteakCity_Text_DanceTheaterSign, MSGBOX_SIGN
 	closemessage
 	release
-	end	
+	end
 
 EcruteakCity_EventScript_OfficeSign::
 	lock
 	msgbox EcruteakCity_Text_OfficeSign, MSGBOX_SIGN
 	closemessage
 	release
-	end	
+	end
 
 EcruteakCity_EventScript_BurnedSign::
 	lock
 	msgbox EcruteakCity_Text_BurnedTowerSign, MSGBOX_SIGN
 	closemessage
 	release
-	end	
+	end
 
 EcruteakCity_EventScript_CitySign::
 	lock
 	msgbox EcruteakCity_Text_Sign, MSGBOX_SIGN
 	closemessage
 	release
-	end	
+	end
 
 EcruteakCity_EventScript_GymSign::
 	lock
@@ -359,8 +359,8 @@ EcruteakCity_Text_SageGym:
 
 EcruteakCity_Text_Sign:
 	.string "Ecruteak City\n"
-	.string "A Historical City\p"
-	.string "Where the Past Meets the Present$"
+	.string "A historical city\p"
+	.string "where the past meets the present$"
 
 EcruteakCity_Text_TinTowerSign:
 	.string "Tin Tower\p"

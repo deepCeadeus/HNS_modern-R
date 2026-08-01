@@ -257,11 +257,11 @@ RadioTower1F_Text_GruntM3After:
     .string "warn the others…$"
 
 RadioTower1F_Text_Directory:
-    .string "1F RECEPTION\n"
-    .string "2F SALES\p"
-    .string "3F PERSONNEL\n"
-    .string "4F PRODUCTION\p"
-    .string "5F DIRECTOR'S OFFICE$"
+    .string "1F Reception\n"
+    .string "2F Sales\p"
+    .string "3F Personnel\n"
+    .string "4F Production\p"
+    .string "5F Director's Office$"
 
 
 GoldenrodCity_RadioTower_1F_EventScript_LotteryClerk::

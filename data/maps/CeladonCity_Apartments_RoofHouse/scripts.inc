@@ -53,7 +53,7 @@ CeladonMansionRoofHouse_Text_PharmacistStory:
 	.string "oblivion!\p"
 	.string "…\p"
 	.string "…\p"
-	.string "SHRIEEEEK!\p"
+	.string "Shrieeeek!\p"
 	.string "The boy had been riding uphill on\n"
 	.string "Cycling Road!\p"
 	.string "…\n"

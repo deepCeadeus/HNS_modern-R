@@ -1,7 +1,7 @@
 LilycoveCity_DepartmentStore_1F_Text_LotteryCornerDrawTicket:
 	.string "This is the Pokémon Lottery Corner.\p"
 	.string "If the Loto Ticket's number matches\n"
-	.string "the Id number of any of your Pokémon,\l"
+	.string "the ID number of any of your Pokémon,\l"
 	.string "you will receive a fabulous gift.\p"
 	.string "Would you like to draw a Pokémon\n"
 	.string "Loto Ticket?$"
@@ -20,17 +20,17 @@ LilycoveCity_DepartmentStore_1F_Text_TicketNumberIsXPleaseWait:
 	.string "The Loto Ticket number is {STR_VAR_1}.\p"
 	.string "I need to run a check on this number\n"
 	.string "to see if it matches any of your\l"
-	.string "Pokémon's Id numbers. Please wait.$"
+	.string "Pokémon's ID numbers. Please wait.$"
 
 LilycoveCity_DepartmentStore_1F_Text_TicketMatchesPartyMon:
 	.string "Congratulations!\p"
-	.string "The Id number of your team's\n"
+	.string "The ID number of your team's\n"
 	.string "{STR_VAR_1} matches your\l"
 	.string "Loto Ticket's number!$"
 
 LilycoveCity_DepartmentStore_1F_Text_TicketMatchesPCMon:
 	.string "Congratulations!\p"
-	.string "The Id number of your Pc-boxed\n"
+	.string "The ID number of your PC-boxed\n"
 	.string "{STR_VAR_1} matches your\l"
 	.string "Loto Ticket's number!$"
 
