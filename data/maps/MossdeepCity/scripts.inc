@@ -26,10 +26,10 @@ MossdeepCity_EventScript_Evo::
 	end
 
 MossdeepCity_EventScript_Evo_Text:
-	.string "The POKéMON EEVEEE evolves\n"
+	.string "The Pokémon EEVEEE evolves\n"
 	.string "in many different ways.\p"
-	.string "Using a THUNDER STONE, FIRE STONE,\n"
-	.string "WATER STONE… Just like, for\l"
+	.string "Using a Thunder Stone, Fire Stone,\n"
+	.string "Water Stone… Just like, for\l"
 	.string "example, ELECTABUZZ and MAGMAR.\p"
 	.string "They also evolve with STONES.$"
 
@@ -38,15 +38,15 @@ MossdeepCity_EventScript_Evo2::
 	end
 
 MossdeepCity_EventScript_Evo2_Text:
-	.string "My wife loves the POKéMON EEVEE.\p"
+	.string "My wife loves the Pokémon EEVEE.\p"
 	.string "She knows all the ways they can\n"
-	.string "evolve. Like, when HOLDING a WATER\l"
-	.string "STONE, or a LEAF STONE.\p"
+	.string "evolve. Like, when HOLDING a Water\l"
+	.string "Stone, or a LEAF Stone.\p"
 	.string "Yes, HOLDING, not using!\n"
 	.string "Did you know about it? I didn't.\p"
 	.string "Or being HAPPY during day or night.\p"
 	.string "Or being cute whilst using a\n"
-	.string "FAIRY TYPE move!\p"
+	.string "Fairy Type move!\p"
 	.string "…\p"
 	.string "Do you know where EEVEE are?\n"
 	.string "Maybe I should capture one for her.\p"
@@ -449,19 +449,19 @@ MossdeepCity_Movement_ScottExitEast:
 	step_end
 
 MossdeepCity_Text_WantKingsRockStevenGaveMe:
-	.string "I got this from STEVEN, but I don't\n"
+	.string "I got this from Steven, but I don't\n"
 	.string "know what it's good for.\p"
-	.string "I think it's called KING'S ROCK.\n"
+	.string "I think it's called KING's Rock.\n"
 	.string "Do you want it?$"
 
 MossdeepCity_Text_YouCanKeepIt:
 	.string "Why would you want it?\n"
 	.string "You're weird.\p"
 	.string "You can keep it, but keep it a secret\n"
-	.string "from STEVEN.$"
+	.string "from Steven.$"
 
 MossdeepCity_Text_StevensHouseOverThere:
-	.string "STEVEN's house is right over there!$"
+	.string "Steven's house is right over there!$"
 
 MossdeepCity_Text_WhatToDoWithWeirdRock:
 	.string "Yeah, you think so, too! What are you\n"
@@ -476,24 +476,24 @@ MossdeepCity_Text_WailmerWatching:
 	.string "WAILMER watching!$"
 
 MossdeepCity_Text_SpaceCenterReceivedLetter:
-	.string "The island's SPACE CENTER has been\n"
+	.string "The island's Space Center has been\n"
 	.string "launching huge rockets.\p"
 	.string "There's been some kind of an uproar\n"
 	.string "over a letter they received recently.$"
 
 MossdeepCity_Text_SpaceCenterLaunchingRockets:
-	.string "The island's SPACE CENTER has been\n"
+	.string "The island's Space Center has been\n"
 	.string "launching huge rockets.$"
 
 MossdeepCity_Text_MossdeepTargetedByMagma:
 	.string "I heard from a SAILOR buddy that\n"
-	.string "TEAM AQUA set up shop in LILYCOVE.\p"
+	.string "Team Aqua set up shop in LILYCOVE.\p"
 	.string "I also heard that someone came along\n"
 	.string "and wiped the floor with them!\p"
 	.string "But MOSSDEEP here's been targeted\n"
-	.string "by that TEAM MAGMA.\p"
+	.string "by that Team Magma.\p"
 	.string "If you want to know what they're up to,\n"
-	.string "go visit the SPACE CENTER.$"
+	.string "go visit the Space Center.$"
 
 MossdeepCity_Text_FeelReliefOnLand:
 	.string "I'm a SAILOR, so the sea's obviously\n"
@@ -517,14 +517,14 @@ MossdeepCity_Text_LifeNeedsSeaToLive:
 
 MossdeepCity_Text_SurfExhilarating:
 	.string "A voyage on a ship is fine.\p"
-	.string "But crossing the sea with POKéMON\n"
-	.string "using SURF…\p"
+	.string "But crossing the sea with Pokémon\n"
+	.string "using Surf…\p"
 	.string "Now that's an exhilarating trip!\n"
 	.string "Wouldn't you agree, youngster?$"
 
 MossdeepCity_Text_SpecialSpaceCenterRock:
 	.string "This rock has a special meaning to\n"
-	.string "the people at the SPACE CENTER.\p"
+	.string "the people at the Space Center.\p"
 	.string "They put it here as their wish for\n"
 	.string "their rockets to fly safely.\p"
 	.string "When you make a wish, what do you use?\n"
@@ -540,28 +540,28 @@ MossdeepCity_Text_ItsAWhiteRock:
 	.string "It emanates a mysterious energy…$"
 
 MossdeepCity_Text_GymSign:
-	.string "MOSSDEEP CITY POKéMON GYM\n"
-	.string "LEADERS: LIZA & TATE\p"
+	.string "MOSSDEEP City Pokémon Gym\n"
+	.string "Leaders: LIZA & TATE\p"
 	.string "“The mystic combination!”$"
 
 MossdeepCity_Text_CitySign:
-	.string "MOSSDEEP CITY\n"
-	.string "“Our slogan: Cherish POKéMON!”$"
+	.string "MOSSDEEP City\n"
+	.string "“Our slogan: Cherish Pokémon!”$"
 
 MossdeepCity_Text_SpaceCenterSign:
-	.string "MOSSDEEP SPACE CENTER\n"
+	.string "MOSSDEEP Space Center\n"
 	.string "“The closest place to space.”$"
 
 MossdeepCity_Text_ScottSomethingWrongWithTown:
-	.string "SCOTT: {PLAYER}{KUN}, feeling good?\n"
+	.string "Scott: {PLAYER}{KUN}, feeling good?\n"
 	.string "I'm doing great!\p"
-	.string "I'd heard MOSSDEEP's GYM LEADER is\n"
+	.string "I'd heard MOSSDEEP's Gym Leader is\n"
 	.string "pretty strong, so I decided to come\l"
 	.string "take a look-see for myself.\p"
 	.string "But there's something wrong about\n"
 	.string "this town.\p"
 	.string "People are going on about a warning\n"
-	.string "letter and the SPACE CENTER…\p"
+	.string "letter and the Space Center…\p"
 	.string "I don't think it concerns me in any\n"
 	.string "way, though.$"
 
@@ -569,8 +569,8 @@ MossdeepCity_Text_SootopolisNewGymLeader:
 	.string "Ahh… It feels great letting the waves\n"
 	.string "wash over my feet…\p"
 	.string "Speaking of the waves, you know that\n"
-	.string "island city SOOTOPOLIS?\p"
-	.string "I think the GYM there had a new\n"
-	.string "LEADER come in.\p"
-	.string "People tell me the new LEADER once\n"
+	.string "island City SOOTOPOLIS?\p"
+	.string "I think the Gym there had a new\n"
+	.string "Leader come in.\p"
+	.string "People tell me the new Leader once\n"
 	.string "mentored WALLACE.$"

@@ -28,7 +28,7 @@ Route47_EventScript_Camper::
 Route47_Text_CamperSeen::
 	.string "I'm not good with large crowds, so\n"
 	.string "I'm camping out here with my\l"
-	.string "POKéMON!$"
+	.string "Pokémon!$"
 
 Route47_Text_CamperBeaten::
 	.string "I should be headed deeper into the\n"
@@ -68,31 +68,31 @@ Route47_EventScript_Kae::
 	end
 
 Route47_Text_Couple1Seen::
-	.string "THOM: One plus one is two. But the\n"
+	.string "Thom: One plus one is two. But the\n"
 	.string "two of us together is much\l"
 	.string "stronger!\p"
-	.string "KAE: The two of us aren't just some\n"
+	.string "Kae: The two of us aren't just some\n"
 	.string "boring pair!$"
 
 Route47_Text_Couple_Register::
-	.string "THOM: We want a rematch!\p"
-	.string "KAE: Yeah! Wait, now?\p"
-	.string "THOM: No, KAE! Our POKéMON\n"
+	.string "Thom: We want a rematch!\p"
+	.string "Kae: Yeah! Wait, now?\p"
+	.string "Thom: No, Kae! Our Pokémon\n"
 	.string "need to rest!\p"
 	.string "We'll just give them our\n"
 	.string "number.$"
 
 Route47_Text_Couple1Beaten::
-	.string "THOM: That wasn't what I expected.\l"
-	.string "KAE: You're unusual too!$"
+	.string "Thom: That wasn't what I expected.\l"
+	.string "Kae: You're unusual too!$"
 
 Route47_Text_Couple1After1::
-	.string "THOM: It seems your power is\n"
+	.string "Thom: It seems your power is\n"
 	.string "impossible to predict!$"
 
 Route47_Text_Couple1After2::
-	.string "KAE: I figured you were an ordinary\n"
-	.string "lone TRAINER. Boy was I wrong!$"
+	.string "Kae: I figured you were an ordinary\n"
+	.string "lone trainer. Boy was I wrong!$"
 
 Route47_EventScript_Duff::
 	trainerbattle_double TRAINER_DUFF_AND_EDA, Route47_Text_Couple2Seen, Route47_Text_Couple2Beaten, Route104_Text_GinaNotEnoughMons
@@ -106,22 +106,22 @@ Route47_EventScript_Eda::
 	end
 
 Route47_Text_Couple2Seen::
-	.string "DUFF: Watching over my girlfriend\n"
+	.string "Duff: Watching over my girlfriend\n"
 	.string "makes my heart soar!\p"
-	.string "EDA: My heart's feelings for my\n"
+	.string "Eda: My heart's feelings for my\n"
 	.string "boyfriend are as wide and deep\l"
 	.string "the ocean!$"
 
 Route47_Text_Couple2Beaten::
-	.string "DUFF: I was no match for you…\l"
-	.string "EDA: You are really something…$"
+	.string "Duff: I was no match for you…\l"
+	.string "Eda: You are really something…$"
 
 Route47_Text_Couple2After1::
-	.string "DUFF: Thank you for the awe-\n"
+	.string "Duff: Thank you for the awe-\n"
 	.string "inspiring battle! Bye!$"
 
 Route47_Text_Couple2After2::
-	.string "EDA: You should really find a\n"
+	.string "Eda: You should really find a\n"
 	.string "wonderful partner, too!$"
 
 Route47_EventScript_Sage::
@@ -184,4 +184,4 @@ Route47_EventScript_Chinchou::
 	end
 
 Route47_Text_Chinchou:
-	.string "CHINCHOU: Chou!$"
+	.string "Chinchou: Chou!$"

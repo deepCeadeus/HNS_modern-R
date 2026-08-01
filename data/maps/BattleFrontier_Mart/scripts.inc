@@ -156,19 +156,19 @@ BattleFrontier_Mart_EventScript_Boy::
 	end
 
 BattleFrontier_Mart_Text_ScienceGrandson:
-	.string "My grandson works in the BATTLE DOME.\n"
+	.string "My grandson works in the Battle Dome.\n"
 	.string "He's one of the scientists.$"
 
 BattleFrontier_Mart_Text_GoDefeatRed:
-	.string "Did you know there's a second CLERK?\p"
+	.string "Did you know there's a second Clerk?\p"
 	.string "If you haven't seen him, that means\n"
 	.string "you haven't defeated the strongest\l"
-	.string "trainer in JOHTO.\p"
+	.string "trainer in Johto.\p"
 	.string "Or so they say.$"
 
 BattleFrontier_Mart_Text_InfiniteMoney:
-	.string "You can find items in the BATTLE\n"
-	.string "PYRAMID, but you can't take them\l"
+	.string "You can find items in the Battle\n"
+	.string "Pyramid, but you can't take them\l"
 	.string "out of the facility.\p"
 	.string "That would be a free money glitch!$"
 

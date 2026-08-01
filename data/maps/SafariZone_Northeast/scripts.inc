@@ -8,7 +8,7 @@ SafariZone_Northeast_AmbipomEvo::
 	end
 
 SafariZone_Northeast_AmbipomEvo_Text:
-	.string "I love the POKéMON AIPOM!\n"
+	.string "I love the Pokémon Aipom!\n"
 	.string "They are so cute!\l"
 	.string "But did you know that they can evolve?\p"
 	.string "If you use a move that makes\n"

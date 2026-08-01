@@ -15,18 +15,18 @@ RustboroCity_PokemonCenter_1F_ProbopassEvo::
 	end
 
 RustboroCity_PokemonCenter_1F_ProbopassEvo_Text:
-	.string "NOSEPASS evolves and changes\n"
-	.string "its typing to ROCK and STEEL.\p"
+	.string "Nosepass evolves and changes\n"
+	.string "its typing to Rock and Steel.\p"
 	.string "But in order to evolve, it needs\n"
 	.string "to be exposed to a strong\l"
 	.string "magnetic field.\p"
 	.string "It's difficult finding a place\n"
-	.string "like this in HOENN, so scientists\l"
-	.string "discovered that making NOSEPASS\l"
-	.string "hold a THUNDER STONE makes him\l"
+	.string "like this in Hoenn, so scientists\l"
+	.string "discovered that making Nosepass\l"
+	.string "hold a Thunder Stone makes him\l"
 	.string "evolve easier by multiplying\l"
 	.string "its own magnetic field by two!\p"
-	.string "I wonder what THUNDER STONES are\n"
+	.string "I wonder what Thunder Stones are\n"
 	.string "made of.$"
 
 RustboroCity_PokemonCenter_1F_EventScript_Nurse::
@@ -50,19 +50,19 @@ RustboroCity_PokemonCenter_1F_EventScript_Girl::
 	end
 
 RustboroCity_PokemonCenter_1F_Text_PokemonHavePersonalities:
-	.string "My POKéMON has a NAIVE nature, and my\n"
-	.string "friend's has a JOLLY nature.\p"
-	.string "It's fascinating how POKéMON have\n"
+	.string "My Pokémon has a Naive nature, and my\n"
+	.string "friend's has a Jolly nature.\p"
+	.string "It's fascinating how Pokémon have\n"
 	.string "personalities!$"
 
 RustboroCity_PokemonCenter_1F_Text_MaleAndFemalePokemon:
 	.string "Just like people, there are male and\n"
-	.string "female POKéMON.\p"
+	.string "female Pokémon.\p"
 	.string "But no one seems to have any idea how\n"
 	.string "they're different.$"
 
 RustboroCity_PokemonCenter_1F_Text_HMCutNextDoor:
-	.string "The man next door gave me an HM!\p"
-	.string "I used it to teach my POKéMON how to\n"
-	.string "CUT down skinny trees.$"
+	.string "The man next door gave me an Hm!\p"
+	.string "I used it to teach my Pokémon how to\n"
+	.string "Cut down skinny trees.$"
 

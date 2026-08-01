@@ -39,13 +39,13 @@ GoldenrodDeptStore1_EventScript_Directory::
 	end
 
 GoldenrodDeptStor1_Text_Receptionist:
-    .string "Welcome to GOLDENROD DEPT. STORE.$"
+    .string "Welcome to Goldenrod Dept. Store.$"
 
 GoldenrodDeptStore1_Text_Gentleman:
-    .string "The DEPT. STORE has a decent\n"
+    .string "The Dept. Store has a decent\n"
     .string "selection.\p"
     .string "But some items are only available\n"
-    .string "as GAME CORNER prizes.$"
+    .string "as Game Corner prizes.$"
 
 GoldenrodDeptStore1_Text_PokefanF:
     .string "I'm raring to shop again today!$"

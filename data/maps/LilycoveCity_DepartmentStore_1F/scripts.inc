@@ -209,10 +209,10 @@ SCRIPT_SelfTrade_DeclineTrade::
 SCRIPT_SelfTrade_Text_IllTradeIfYouWant:
 	.string "Welcome to the DEVON CORPORATION\n"
 	.string "SELF-TRADER app.\p"
-	.string "One of your POKéMON will be self-traded.\n"
+	.string "One of your Pokémon will be self-traded.\n"
 	.string "A single operation costs 10.000¥.\p"
 	.string "Do you want to continue to\n"
-	.string "the POKéMON selection?$"
+	.string "the Pokémon selection?$"
 
 SCRIPT_SelfTrade_Text_ComeBack:
 	.string "Thank you using\n"
@@ -229,12 +229,12 @@ LilycoveCity_DepartmentStore_1F_Machine_NoMoney_Text:
 	.string "DEVON CORP. products.$"
 
 LilycoveCity_DepartmentStore_1F_TraderWoman_Text:
-	.string "Welcome to LILYCOVE DEPARTMENT STORE!\p"
+	.string "Welcome to LILYCOVE DEPARTMENT Store!\p"
 	.string "Would you like to know about the new\n"
 	.string "technology developed by DEVON CORP.?\p"
 	.string "It's a SELF-TRADER app!\p"
 	.string "With the help of a simple computer\n"
-	.string "program, you can send one POKéMON to\l"
+	.string "program, you can send one Pokémon to\l"
 	.string "a DEVON CORP. server and get it back\l"
 	.string "in just a few seconds!\p"
 	.string "This can trigger the EVOLUTION\n"
@@ -251,11 +251,11 @@ LilycoveCity_DepartmentStore_1F_TraderWoman_Text:
 	.string "CORP. products!$"
 
 LilycoveCity_DepartmentStore_1F_Text_WelcomeToDeptStore:
-	.string "Welcome to LILYCOVE DEPARTMENT STORE.$"
+	.string "Welcome to LILYCOVE DEPARTMENT Store.$"
 
 LilycoveCity_DepartmentStore_1F_Text_IBuyAllSortsOfThings:
 	.string "Whenever I come to the DEPARTMENT\n"
-	.string "STORE, I always end up buying all sorts\l"
+	.string "Store, I always end up buying all sorts\l"
 	.string "of things because it's so fun.$"
 
 LilycoveCity_DepartmentStore_1F_Text_MomBuyingMeFurniture:
@@ -272,10 +272,10 @@ LilycoveCity_DepartmentStore_1F_Text_Azumarill:
 LilycoveCity_DepartmentStore_1F_Text_FloorNamesSign:
 	.string "1F: SERVICE COUNTER\n"
 	.string "    LOTTERY CORNER\p"
-	.string "2F: TRAINER'S ZONE\p"
+	.string "2F: Trainer's Zone\p"
 	.string "3F: BATTLE COLLECTION\p"
 	.string "4F: TM CORNER\p"
-	.string "5F: POKé DOLL FLOOR\p"
+	.string "5F: Poké Doll FLOOR\p"
 	.string "ROOFTOP: ROOFTOP PLAZA$"
 
 @ Unused

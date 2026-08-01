@@ -40,7 +40,7 @@ CaveOfOrigin_UnusedRubySapphireMap1_Kirlia::
 
 CaveOfOrigin_UnusedRubySapphireMap1_Scientist1_Text:
 	.string "I have seen this kind of rock structure\n"
-	.string "in other places, like in ROUTE 132.\p"
+	.string "in other places, like in Route 132.\p"
 	.string "What is the meaning of these rock\n"
 	.string "formations?\p"
 	.string "I'm totally sure that they are man-made.\n"
@@ -50,7 +50,7 @@ CaveOfOrigin_UnusedRubySapphireMap1_Scientist2_Text:
 	.string "Every time there's a thunderstorm, some\n"
 	.string "lighting strikes end up hitting this\l"
 	.string "small island. Isn't that suspicious?\p"
-	.string "We think there's a POKéMON living\n"
+	.string "We think there's a Pokémon living\n"
 	.string "here whose only nourishment are\l"
 	.string "lightning strikes.$"
 

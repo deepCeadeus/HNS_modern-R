@@ -55,7 +55,7 @@ SSAqua_1F_EventScript_LeaveBoat::
 	setflag FLAG_HIDE_VIRIDIAN_BLUE
 	setflag FLAG_HIDE_ROUTE14_EUSINE
 	setflag FLAG_HIDE_ROUTE14_SUICUNE
-	
+
 	clearflag FLAG_BADGE09_GET
 	clearflag FLAG_BADGE10_GET
 	clearflag FLAG_BADGE11_GET
@@ -118,15 +118,15 @@ SSAqua_1F_EventScript_LeaveBoat::
 	setvar VAR_NUM_BADGES, 8
 	setvar VAR_VERMILION_CITY_STATE, 1
 
-	setvar VAR_KANTO_SAFARI_ZONE_PROGRESS, 0 
-	clearflag FLAG_IN_KANTO_SAFARI_ZONE 
-	clearflag FLAG_IS_KANTO_CHAMPION 
-	setvar VAR_BAOBA_QUEST_STATE, 0 
-	setvar VAR_CINNABAR_ISLAND_STATE, 0 
-	setvar VAR_MT_SILVER_STATE, 0, 
-	setvar VAR_PALLETTOWN_LABSTATE, 0 
-	clearflag FLAG_HIDE_LEAGUE_BLACKBELT 
-	
+	setvar VAR_KANTO_SAFARI_ZONE_PROGRESS, 0
+	clearflag FLAG_IN_KANTO_SAFARI_ZONE
+	clearflag FLAG_IS_KANTO_CHAMPION
+	setvar VAR_BAOBA_QUEST_STATE, 0
+	setvar VAR_CINNABAR_ISLAND_STATE, 0
+	setvar VAR_MT_SILVER_STATE, 0,
+	setvar VAR_PALLETTOWN_LABSTATE, 0
+	clearflag FLAG_HIDE_LEAGUE_BLACKBELT
+
 	setflag FLAG_HIDE_DOJO_FALKNER
 	setflag FLAG_HIDE_DOJO_BUGSY
 	setflag FLAG_HIDE_DOJO_WHITNEY
@@ -173,7 +173,7 @@ SSAqua_1F_Trigger_Grandpa::
 	waitmovement 0
 	playse SE_DOOR
 	removeobject LOCALID_SSAQUA_1F_GRANDPA
-	
+
 	setflag FLAG_HIDE_SSAQUA_1F_GRANDPA		@flagheap
 	setflag FLAG_HIDE_SSAQUA_ROOM_SSE_GRANDDAUGHTER
 
@@ -240,25 +240,25 @@ SSAqua_1F_Movement_GrandpaLeave:
 	step_end
 
 SSAqua_1F_Text_Sailor1_ToVermilion:
-    .string "FAST SHIP S.S.AQUA is en route to\n"
-    .string "VERMILION CITY.\p"
+    .string "Fast Ship S.S.Aqua is en route to\n"
+    .string "Vermilion City.\p"
     .string "We will make an announcement when\n"
     .string "we arrive.$"
 
 SSAqua_1F_Text_Sailor1_ToOlivine:
-    .string "FAST SHIP S.S.AQUA is en route to\n"
-    .string "OLIVINE CITY.\p"
+    .string "Fast Ship S.S.Aqua is en route to\n"
+    .string "Olivine City.\p"
     .string "We will make an announcement when\n"
     .string "we arrive.$"
 
 SSAqua_1F_Text_Sailor2_FirstTime:
     .string "Here's your cabin.\p"
-    .string "If your POKéMON are hurt, take a\n"
+    .string "If your Pokémon are hurt, take a\n"
     .string "nap in the bed.\p"
     .string "That will heal them.$"
 
 SSAqua_1F_Text_Sailor3:
-    .string "The passengers are all TRAINERS.\p"
+    .string "The passengers are all Trainers.\p"
     .string "They're all itching to battle in\n"
     .string "their cabins.$"
 
@@ -269,14 +269,14 @@ SSAqua_1F_Text_Grandpa:
     .string "her, please let me know!$"
 
 SSAqua_1F_Text_Sailor1_InOlivine:
-    .string "FAST SHIP S.S.AQUA has arrived in\n"
-    .string "OLIVINE CITY.$"
+    .string "Fast Ship S.S.Aqua has arrived in\n"
+    .string "Olivine City.$"
 
 SSAqua_1F_Text_Sailor1_InVermilion:
-    .string "FAST SHIP S.S.AQUA has arrived in\n"
-    .string "VERMILION CITY.$"
+    .string "Fast Ship S.S.Aqua has arrived in\n"
+    .string "Vermilion City.$"
 
 
 SSAqua_1F_Text_SailorDoorArrived:
-    .string "We have arrived in VERMILION CITY.\n"
+    .string "We have arrived in Vermilion City.\n"
     .string "Would you like to disembark?$"

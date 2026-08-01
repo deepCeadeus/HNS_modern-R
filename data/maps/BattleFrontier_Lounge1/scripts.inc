@@ -151,17 +151,17 @@ BattleFrontier_Lounge1_EventScript_Boy2::
 	end
 
 BattleFrontier_Lounge1_Text_PokemonBreederIntro:
-	.string "For 70 years I have raised POKéMON!\n"
+	.string "For 70 years I have raised Pokémon!\n"
 	.string "I am the man they revere as\l"
-	.string "the legendary top POKéMON BREEDER!\p"
+	.string "the legendary top Pokémon Breeder!\p"
 	.string "If you ever become as seasoned as me,\n"
-	.string "you'll see the abilities of POKéMON\l"
+	.string "you'll see the abilities of Pokémon\l"
 	.string "at a glance.\p"
-	.string "You're a TRAINER. Doesn't it interest\n"
-	.string "you to know your own POKéMON's\l"
+	.string "You're a Trainer. Doesn't it interest\n"
+	.string "you to know your own Pokémon's\l"
 	.string "abilities?\p"
 	.string "Here!\n"
-	.string "Let's have a look at your POKéMON!$"
+	.string "Let's have a look at your Pokémon!$"
 
 BattleFrontier_Lounge1_Text_AverageAbility:
 	.string "…Hmm…\p"
@@ -189,23 +189,23 @@ BattleFrontier_Lounge1_Text_BestAspectHP:
 
 BattleFrontier_Lounge1_Text_BestAspectAtk:
 	.string "Incidentally, the best aspect of it,\n"
-	.string "I would say, is its ATTACK…$"
+	.string "I would say, is its Attack…$"
 
 BattleFrontier_Lounge1_Text_BestAspectDef:
 	.string "Incidentally, the best aspect of it,\n"
-	.string "I would say, is its DEFENSE…$"
+	.string "I would say, is its Defense…$"
 
 BattleFrontier_Lounge1_Text_BestAspectSpAtk:
 	.string "Incidentally, the best aspect of it,\n"
-	.string "I would say, is its SPECIAL ATTACK…$"
+	.string "I would say, is its Special Attack…$"
 
 BattleFrontier_Lounge1_Text_BestAspectSpDef:
 	.string "Incidentally, the best aspect of it,\n"
-	.string "I would say, is its SPECIAL DEFENSE…$"
+	.string "I would say, is its Special Defense…$"
 
 BattleFrontier_Lounge1_Text_BestAspectSpeed:
 	.string "Incidentally, the best aspect of it,\n"
-	.string "I would say, is its SPEED…$"
+	.string "I would say, is its Speed…$"
 
 BattleFrontier_Lounge1_Text_StatRelativelyGood:
 	.string "That stat is relatively good.\n"
@@ -236,24 +236,24 @@ BattleFrontier_Lounge1_Text_HaveBusinessNeedsTending:
 	.string "Save it for next time!$"
 
 BattleFrontier_Lounge1_Text_LetsLookAtYourPokemon:
-	.string "Ah, youngster! Do your POKéMON's\n"
+	.string "Ah, youngster! Do your Pokémon's\n"
 	.string "abilities intrigue you?\p"
 	.string "Here, here!\n"
-	.string "Let's have a look at your POKéMON!$"
+	.string "Let's have a look at your Pokémon!$"
 
 BattleFrontier_Lounge1_Text_EvenICantTell:
 	.string "An expert I am, but even I can't tell\n"
-	.string "anything about an unhatched POKéMON!\p"
-	.string "Show me a POKéMON!\n"
-	.string "A POKéMON is what I need to see!$"
+	.string "anything about an unhatched Pokémon!\p"
+	.string "Show me a Pokémon!\n"
+	.string "A Pokémon is what I need to see!$"
 
 BattleFrontier_Lounge1_Text_ToughestBattles:
-	.string "The FRONTIER is beautiful, isn't it?\p"
+	.string "The Frontier is beautiful, isn't it?\p"
 	.string "A perfect paradise…\n"
 	.string "for the toughest battles in the world.$"
 
 BattleFrontier_Lounge1_Text_PyramidOpressivee:
-	.string "The BATTLE PYRAMID is…\n"
+	.string "The Battle Pyramid is…\n"
 	.string "oppressive.\p"
 	.string "No items, just you, your team,\n"
 	.string "and the dark.$"

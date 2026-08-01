@@ -229,7 +229,7 @@ AzaleaTown_KurtsHouse_EventScript_KurtGsBall3::
 	release
 	end
 KurtsHouse_Text_BallAnyway:
-	.string "Anyway, can I make you some BALLS?$"
+	.string "Anyway, can I make you some Balls?$"
 
 AzaleaTown_KurtsHouse_EventScript_OakPhoto::
 	msgbox KurtsHouse_Text_OakPhoto, MSGBOX_SIGN
@@ -279,69 +279,69 @@ AzaleaTown_KurtsHouse_Movement_KurtWalkDown:
 	step_end
 
 KurtsHouse_Text_KurtGetStarted:
-	.string "KURT: I'll get started right now!$"
+	.string "Kurt: I'll get started right now!$"
 
 KurtsHouse_Text_KurtMakingBallsMustWait:
 	.string "Hm? Who are you?\p"
 	.string "{PLAYER}, eh? You want me to make\n"
-	.string "some BALLS?\p"
+	.string "some Balls?\p"
 	.string "Sorry, but that'll have to wait.\p"
-	.string "Do you know TEAM ROCKET?\n"
+	.string "Do you know Team Rocket?\n"
 	.string "Ah, don't worry.\p"
 	.string "I'll tell you anyhow.\p"
-	.string "TEAM ROCKET's an evil gang that\n"
-	.string "uses POKéMON for their dirty work.\p"
+	.string "Team Rocket's an evil gang that\n"
+	.string "uses Pokémon for their dirty work.\p"
 	.string "They're supposed to have disbanded\n"
 	.string "three years ago.\p"
-	.string "Anyway, they're at the WELL,\n"
-	.string "cutting off SLOWPOKETAILS to sell!\p"
+	.string "Anyway, they're at the Well,\n"
+	.string "cutting off Slowpoketails to sell!\p"
 	.string "So I'm going to go give them a\n"
 	.string "lesson in pain!\p"
-	.string "Hang on, SLOWPOKE! Old KURT\n"
+	.string "Hang on, Slowpoke! Old Kurt\n"
 	.string "is on his way!$"
 
 KurtsHouse_Text_KurtHonoredToMakeBalls:
-	.string "KURT: Hi, {PLAYER}!\p"
+	.string "Kurt: Hi, {PLAYER}!\p"
 	.string "You handled yourself like a\n"
-	.string "real hero at the WELL.\p"
+	.string "real hero at the Well.\p"
 	.string "I like your style!\p"
 	.string "I would be honored to make\n"
-	.string "POKé BALLS for a TRAINER like you.\p"
+	.string "Poké Balls for a Trainer like you.\p"
 	.string "This is all I have now, \n"
 	.string "but take it.$"
 
 KurtsHouse_Text_KurtBallsFromApricorns:
-	.string "KURT: I make POKé BALLS from BERRIES.\p"
+	.string "Kurt: I make Poké Balls from Berries.\p"
 	.string "Collect them from trees and bring\n"
 	.string "'em to me.\p"
-	.string "I'll make POKé BALLS out of them.$"
+	.string "I'll make Poké Balls out of them.$"
 
 KurtsHouse_Text_KurtAskYouHaveAnApricorn:
-	.string "KURT: You have BERRIES for me?\p"
-	.string "Fine! I'll turn them into POKé BALLS.$"
+	.string "Kurt: You have Berries for me?\p"
+	.string "Fine! I'll turn them into Poké Balls.$"
 
 KurtsHouse_Text_KurtThatsALetdown:
-	.string "KURT: I don't see any {STR_VAR_1}s!$"
+	.string "Kurt: I don't see any {STR_VAR_1}s!$"
 
 KurtsHouse_Text_KurtJustFinishedYourBallPlural:
-	.string "KURT: {PLAYER}!\n"
-	.string "Your {STR_VAR_1}S are done. Here!$"
+	.string "Kurt: {PLAYER}!\n"
+	.string "Your {STR_VAR_1}s are done. Here!$"
 
 KurtsHouse_Text_KurtJustFinishedYourBallSingular:
-	.string "KURT: {PLAYER}!\n"
+	.string "Kurt: {PLAYER}!\n"
 	.string "Your {STR_VAR_1} is done. Here!$"
 
 KurtsHouse_Text_KurtTurnedOutGreatPlural:
 	.string "They turned out great.\n"
-	.string "Try catching some POKéMON with 'em!$"
+	.string "Try catching some Pokémon with 'em!$"
 
 KurtsHouse_Text_KurtTurnedOutGreatSingular:
 	.string "It turned out great.\n"
-	.string "Try catching a POKéMON with it!$"
+	.string "Try catching a Pokémon with it!$"
 
 KurtsHouse_Text_ObtainedPlural:
 	.string "{PLAYER} obtained\n"
-	.string "{STR_VAR_2} {STR_VAR_1}S!$"
+	.string "{STR_VAR_2} {STR_VAR_1}s!$"
 
 KurtsHouse_Text_ObtainedSingular:
 	.string "{PLAYER} obtained\n"
@@ -350,7 +350,7 @@ KurtsHouse_Text_ObtainedSingular:
 KurtsHouse_Text_KurtWhatIsThat:
 	.string "Wh-what is that?\p"
 	.string "I've never seen one before.\p"
-	.string "It looks a like a POKé BALL, but\n"
+	.string "It looks a like a Poké Ball, but\n"
 	.string "it appears to be something else.\p"
 	.string "Let me check it for you.$"
 
@@ -362,7 +362,7 @@ KurtsHouse_Text_KurtAhHaISee:
 
 KurtsHouse_Text_KurtThisBallStartedToShake:
 	.string "{PLAYER}!\p"
-	.string "This BALL started to shake\n"
+	.string "This Ball started to shake\n"
 	.string "while I was checking it.\p"
 	.string "There must be something to this!$"
 
@@ -371,43 +371,43 @@ KurtsHouse_Text_Kurt_Whatwasthat:
 	.string "Let's go outside to investigate!$"
 
 KurtsHouse_Text_GranddaughterSlowpokeGone:
-	.string "The SLOWPOKE are gone… \n"
+	.string "The Slowpoke are gone… \n"
 	.string "Were they taken away by bad people?$"
 
 KurtsHouse_Text_GranddaughterLonely:
 	.string "Grandpa's gone… I'm so lonely…$"
 
 KurtsHouse_Text_GranddaughterSlowpokeBack:
-	.string "The SLOWPOKE my dad gave me came back!\p"
-	.string "Its TAIL is growing back too!$"
+	.string "The Slowpoke my dad gave me came back!\p"
+	.string "Its Tail is growing back too!$"
 
 KurtsHouse_Text_GranddaughterDad:
-	.string "Dad works at SILPH where\n"
-	.string "he studies POKé BALLS.\p"
+	.string "Dad works at Silph where\n"
+	.string "he studies Poké Balls.\p"
 	.string "I have to stay home\n"
-	.string "with Grandpa and SLOWPOKE.$"
+	.string "with Grandpa and Slowpoke.$"
 
 KurtsHouse_Text_GranddaughterHelp:
 	.string "I get to help Grandpa now!\p"
-	.string "We'll make good BALLS\n"
+	.string "We'll make good Balls\n"
 	.string "for you, so please wait!$"
 
 KurtsHouse_Text_GranddaughterFun:
-	.string "It's fun to make BALLS!$"
+	.string "It's fun to make Balls!$"
 
 KurtsHouse_Text_GranddaughterSound:
 	.string "Did that sound come from\n"
-	.string "ILEX FOREST????$"
+	.string "Ilex Forest????$"
 
 KurtsHouse_Text_Forest:
-	.string "Did you check ILEX FOREST yet?\n"
+	.string "Did you check Ilex Forest yet?\n"
 	.string "It sounds very restless.$"
 
 KurtsHouse_Text_Slowpoke:
-	.string "SLOWPOKE: … Yawn?$"
+	.string "Slowpoke: … Yawn?$"
 
 KurtsHouse_Text_OakPhoto:
-	.string "…A young PROF. OAK?$"
+	.string "…A young Prof. Oak?$"
 
 KurtsHouse_Text_CelebiStatue:
 	.string "It's a statue of the forest's\n"

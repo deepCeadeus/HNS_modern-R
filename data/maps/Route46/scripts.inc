@@ -3,7 +3,7 @@ Route46_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
 	.byte 0
 
-Route46_OnTransition: 
+Route46_OnTransition:
 	callnative SetTimeBasedEncounters
 	end
 
@@ -35,7 +35,7 @@ Route46_EventScript_Item_Revive::
 
 Route46_Text_HikerBaileySeen:
 	.string "Awright! I'll show you the\n"
-	.string "power of mountain POKéMON!$"
+	.string "power of mountain Pokémon!$"
 
 Route46_Text_HikerBaileyBeaten:
 	.string "Mercy! You showed me your\n"
@@ -43,10 +43,10 @@ Route46_Text_HikerBaileyBeaten:
 
 Route46_Text_HikerBaileyAfterBattle:
 	.string "It's over. I don't mind.\n"
-	.string "We HIKERS are like that.$"
+	.string "We Hikers are like that.$"
 
 Route46_Text_CamperTedSeen:
-	.string "I'm raising POKéMON too!\p"
+	.string "I'm raising Pokémon too!\p"
 	.string "Will you battle with me?$"
 
 Route46_Text_CamperTedBeaten:
@@ -58,15 +58,15 @@ Route46_Text_CamperTedAfterBattle:
 	.string "No excuses--I admit I lost.$"
 
 Route46_Text_PicnickerErinSeen:
-	.string "I raise POKéMON too!\p"
+	.string "I raise Pokémon too!\p"
 	.string "Will you battle with me?$"
 
 Route46_Text_PicnickerErinBeaten:
 	.string "Oh, rats!$"
 
 Route46_Text_PicnickerErinAfterBattle:
-	.string "I've been to many GYMS, but the\n"
-	.string "GYM in GOLDENROD is my favorite.\p"
+	.string "I've been to many Gyms, but the\n"
+	.string "Gym in Goldenrod is my favorite.\p"
 	.string "It's filled with pretty flowers!$"
 
 Route46_Text_PicnickerErin2Beaten:
@@ -78,5 +78,5 @@ Route46_Text_PicnickerErin2Beaten:
 	.string "other time.$"
 
 Route46_Text_Sign:
-	.string "ROUTE 46\n"
-	.string "MOUNTAIN RD. AHEAD$"
+	.string "Route 46\n"
+	.string "Mountain Rd. Ahead$"

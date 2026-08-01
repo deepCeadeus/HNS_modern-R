@@ -21,8 +21,8 @@ GoldenrodCity_NameRatersHouse_Text_AskToggleShinies:
 
 GoldenrodCity_NameRatersHouse_Text_ToggleShinies:
 	.string "Shiny Colors Toggled!\p"
-	.string "View your setting at the CHALLENGE\n"
-	.string "VIEWER at any PC.$"
+	.string "View your setting at the Challenge\n"
+	.string "Viewer at any PC.$"
 
 GoldenrodCity_NameRatersHouse_EventScript_RenameRival::
 	msgbox GoldenrodCity_NameRatersHouse_Text_RenameRival, MSGBOX_DEFAULT
@@ -33,8 +33,8 @@ GoldenrodCity_NameRatersHouse_EventScript_RenameRival::
 
 GoldenrodCity_NameRatersHouse_Text_RenameRival:
 	.string "It's the news…\p"
-	.string "The POLICE are looking for this\n"
-	.string "REDHEADED BOY!\p"
+	.string "The Police are looking for this\n"
+	.string "Redheaded boy!\p"
 	.string "Do YOU know his name?$"
 
 GoldenrodCity_NameRatersHouse_EventScript_NameRater::
@@ -102,10 +102,10 @@ GoldenrodCity_NameRatersHouse_Text_PleasedToRateMonNickname:
 	.string "Hi, hi! I'm the NAME RATER!\n"
 	.string "I'm the fortune-teller of names!\p"
 	.string "I shall be pleased to rate your\n"
-	.string "POKéMON's nickname.$"
+	.string "Pokémon's nickname.$"
 
 GoldenrodCity_NameRatersHouse_Text_CritiqueWhichMonNickname:
-	.string "Which POKéMON's nickname should\n"
+	.string "Which Pokémon's nickname should\n"
 	.string "I critique?$"
 
 GoldenrodCity_NameRatersHouse_Text_FineNameSuggestBetterOne:
@@ -119,7 +119,7 @@ GoldenrodCity_NameRatersHouse_Text_WhatShallNewNameBe:
 	.string "nickname be?$"
 
 GoldenrodCity_NameRatersHouse_Text_MonShallBeKnownAsName:
-	.string "Done! From now on, this POKéMON\n"
+	.string "Done! From now on, this Pokémon\n"
 	.string "shall be known as {STR_VAR_1}!\p"
 	.string "It is a better name than before!\n"
 	.string "How fortunate for you!$"
@@ -129,7 +129,7 @@ GoldenrodCity_NameRatersHouse_Text_DoVisitAgain:
 	.string "Do come visit again.$"
 
 GoldenrodCity_NameRatersHouse_Text_NameNoDifferentYetSuperior:
-	.string "Done! From now on, this POKéMON\n"
+	.string "Done! From now on, this Pokémon\n"
 	.string "shall be known as {STR_VAR_1}!\p"
 	.string "It looks no different from before,\n"
 	.string "and yet, this is vastly superior!\p"
@@ -144,6 +144,6 @@ GoldenrodCity_NameRatersHouse_Text_MagnificentName:
 
 GoldenrodCity_NameRatersHouse_Text_ThatIsMerelyAnEgg:
 	.string "Now, now.\n"
-	.string "That is merely an EGG!$"
+	.string "That is merely an Egg!$"
 
 

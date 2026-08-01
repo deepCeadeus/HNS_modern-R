@@ -219,32 +219,32 @@ NewBarkTown_Movement_FaceDown:
 	step_end
 
 NewBarkTown_Text_LabSign:
-	.string "PROF. ELM'S LAB$"
+	.string "Prof. Elm's Lab$"
 
 NewBarkTown_Text_Door:
 	.string "The door is locked.$"
 
 NewBarkTown_Text_Wooper:
-	.string "WOOPER: Woooooop.$"
+	.string "Wooper: Woooooop.$"
 
 NewBarkTown_Text_FatManState2:
-	.string "Wow, your POKéGEAR is impressive!\n"
+	.string "Wow, your PokéGear is impressive!\n"
 	.string "Did your mom get it for you?$"
 
 NewBarkTown_Text_FatManState3:
 	.string "Yo, {PLAYER}!\p"
-	.string "I hear PROF. ELM discovered\n"
-	.string "some new POKéMON.$"
+	.string "I hear Prof. Elm discovered\n"
+	.string "some new Pokémon.$"
 
 NewBarkTown_Text_LassState2:
 	.string "Wait, {PLAYER}!\p"
 	.string "It's dangerous to go out\n"
-	.string "without a POKéMON!\p"
-	.string "Wild POKéMON jump out of the grass\n"
+	.string "without a Pokémon!\p"
+	.string "Wild Pokémon jump out of the grass\n"
 	.string "on the way to the next town.$"
 
 NewBarkTown_Text_LassState3:
-	.string "Oh! Your POKéMON is adorable!\n"
+	.string "Oh! Your Pokémon is adorable!\n"
 	.string "I wish I had one!$"
 
 NewBarkTown_Text_LassState4:
@@ -253,19 +253,19 @@ NewBarkTown_Text_LassState4:
 	.string "you are leaving.$"
 
 NewBarkTown_Text_LassState5:
-	.string "Call your mom on your POKéGEAR\n"
+	.string "Call your mom on your PokéGear\n"
 	.string "to let her know how you're doing.$\p"
 
 NewBarkTown_Text_Silver1:
 	.string ". . .\p"
-	.string "So this is the famous ELM\n"
-	.string "POKéMON LAB…$"
+	.string "So this is the famous Elm\n"
+	.string "Pokémon Lab…$"
 
 NewBarkTown_Text_Silver2:
 	.string "…What are you staring at?$"
 
 NewBarkTown_Text_Sign:
-	.string "NEW BARK TOWN\p"
+	.string "New Bark Town\p"
 	.string "The Town Where the Winds of\n"
 	.string "a New Beginning Blow$"
 
@@ -278,7 +278,7 @@ NewBarkTown_EventScript_ElmsHouseMailbox::
 	end
 
 NewBarkTown_Text_PlayersHouse:
-	.string "{PLAYER}'S HOUSE$"
+	.string "{PLAYER}'s House$"
 
 NewBarkTown_Text_ElmsHouse:
-	.string "PROF. ELM'S HOUSE$"
+	.string "Prof. Elm's House$"

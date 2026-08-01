@@ -70,9 +70,10 @@ enum
 // Category headers
 
 static const u8 sCreditsText_EmptyString[]                     = _("");
-static const u8 sCreditsText_PkmnHnS[]                         = _("POKéMON HEART & SOUL");
+static const u8 sCreditsText_PkmnHnS[]                         = _("Modern Heart & Soul");
 static const u8 sCreditsText_LeadDeveloper[]                   = _("Lead Developer");
 static const u8 sCreditsText_LilDill[]                         = _("LIL DILL");
+static const u8 sCreditsText_ModernVersion[]                   = _("Modern version by Resetes12");
 static const u8 sCreditsText_Assets[]                          = _("Assets Sourced");
 static const u8 sCreditsText_Developers[]                      = _("Developers");
 static const u8 sCreditsText_InfiniteBacon42[]                 = _("InfiniteBacon42");
@@ -80,7 +81,7 @@ static const u8 sCreditsText_Exclsior[]                        = _("Exclsior");
 static const u8 sCreditsText_TixoRebel[]                       = _("TixoRebel");
 static const u8 sCreditsText_Phantonomy[]                      = _("Phantonomy");
 static const u8 sCreditsText_DaniRainbow[]                     = _("DaniRainbow");
-static const u8 sCreditsText_Resetes[]                         = _("Resetes");
+static const u8 sCreditsText_Resetes[]                         = _("Resetes12");
 static const u8 sCreditsText_Jozuno[]                          = _("Jozuno");
 
 
@@ -179,7 +180,7 @@ static const struct CreditsEntry sCreditsEntry_l1ghtt = {11, FALSE, sCreditsText
 
 
 
-static const u8 sCreditsText_PkmnEmeraldVersion[]             = _("POKéMON EMERALD VERSION");
+static const u8 sCreditsText_PkmnEmeraldVersion[]             = _("Pokémon Emerald Version");
 static const u8 sCreditsText_Credits[]                        = _("Credits");
 static const u8 sCreditsText_ExecutiveDirector[]              = _("Executive Director");
 static const u8 sCreditsText_Director[]                       = _("Director");
@@ -191,9 +192,9 @@ static const u8 sCreditsText_FieldSystemPgrms[]               = _("Field System 
 static const u8 sCreditsText_Programmers[]                    = _("Programmers");
 static const u8 sCreditsText_MainGraphicDesigner[]            = _("Main Graphic Designer");
 static const u8 sCreditsText_GraphicDesigners[]               = _("Graphic Designers");
-static const u8 sCreditsText_PkmnDesigners[]                  = _("POKéMON Designers");
+static const u8 sCreditsText_PkmnDesigners[]                  = _("Pokémon Designers");
 static const u8 sCreditsText_MusicComposition[]               = _("Music Composition");
-static const u8 sCreditsText_SoundEffectsAndPkmnVoices[]      = _("Sound Effects & POKéMON Voices");
+static const u8 sCreditsText_SoundEffectsAndPkmnVoices[]      = _("Sound Effects & Pokémon Voices");
 static const u8 sCreditsText_GameDesigners[]                  = _("Game Designers");
 static const u8 sCreditsText_ScenarioPlot[]                   = _("Scenario Plot");
 static const u8 sCreditsText_Scenario[]                       = _("Scenario");
@@ -201,7 +202,7 @@ static const u8 sCreditsText_ScriptDesigners[]                = _("Script Design
 static const u8 sCreditsText_MapDesigners[]                   = _("Map Designers");
 static const u8 sCreditsText_MapDataDesigners[]               = _("Map Data Designers");
 static const u8 sCreditsText_ParametricDesigners[]            = _("Parametric Designers");
-static const u8 sCreditsText_PokedexText[]                    = _("POKéDEX Text");
+static const u8 sCreditsText_PokedexText[]                    = _("Pokédex Text");
 static const u8 sCreditsText_EnvAndToolPgrms[]                = _("Environment & Tool Programmers");
 static const u8 sCreditsText_NCLProductTesting[]              = _("NCL Product Testing");
 static const u8 sCreditsText_SpecialThanks[]                  = _("Special Thanks");
@@ -345,6 +346,7 @@ static const struct CreditsEntry sCreditsEntry_Credits                          
 // Executive Director
 static const struct CreditsEntry sCreditsEntry_ExecutiveDirector                = {8,  TRUE, sCreditsText_ExecutiveDirector};
 static const struct CreditsEntry sCreditsEntry_LilDill                            = {11, FALSE, sCreditsText_LilDill};
+static const struct CreditsEntry sCreditsEntry_ModernVersion                      = {11, FALSE, sCreditsText_ModernVersion};
 
 static const struct CreditsEntry sCreditsEntry_LeadDeveloper    = {8, TRUE, sCreditsText_LeadDeveloper};
 static const struct CreditsEntry sCreditsEntry_Developers    = {8, TRUE, sCreditsText_Developers};
@@ -602,6 +604,7 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         &sCreditsEntry_Director,
         &sCreditsEntry_LeadDeveloper,
         &sCreditsEntry_LilDill,
+        &sCreditsEntry_ModernVersion,
         _,
         _,
     },

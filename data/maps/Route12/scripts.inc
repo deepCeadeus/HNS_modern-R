@@ -55,7 +55,7 @@ Route12_Text_NewFisher:
 
 Route12_Text_FisherMartinSeen:
 	.string "Patience is the key to both\n"
-	.string "fishing and POKéMON.$"
+	.string "fishing and Pokémon.$"
 
 Route12_Text_FisherMartinBeaten:
 	.string "Gwaaah!$"
@@ -72,7 +72,7 @@ Route12_Text_FisherStephenBeaten:
 	.string "My stupid radio distracted me!$"
 
 Route12_Text_FisherStephenAfterBattle:
-	.string "Have you checked out KANTO's radio\n"
+	.string "Have you checked out Kanto's radio\n"
 	.string "programs? We get a good variety\l"
 	.string "here.$"
 
@@ -89,7 +89,7 @@ Route12_Text_FisherBarneyAfterBattle:
 	.string "lives.\p"
 	.string "If it weren't, people wouldn't\n"
 	.string "have made such a fuss when the\l"
-	.string "POWER PLANT went out of\l"
+	.string "Power Plant went out of\l"
 	.string "commission.$"
 
 Route12_Text_FisherKyleSeen:
@@ -100,7 +100,7 @@ Route12_Text_FisherKyleBeaten:
 
 Route12_Text_FisherKyleAfterBattle:
 	.string "The tug you feel on the ROD when\n"
-	.string "you hook a POKéMON…\p"
+	.string "you hook a Pokémon…\p"
 	.string "That's the best feeling ever for\n"
 	.string "an angler like me.$"
 
@@ -113,9 +113,9 @@ Route12_EventScript_FishingSign::
 	end
 
 Route12_Text_Sign:
-	.string "ROUTE 12\p"
-	.string "NORTH TO LAVENDER TOWN$"
+	.string "Route 12\p"
+	.string "North to Lavender Town$"
 
 Route12_Text_FishingSpotSign:
-	.string "FISHING SPOT$"
+	.string "Fishing Spot$"
 

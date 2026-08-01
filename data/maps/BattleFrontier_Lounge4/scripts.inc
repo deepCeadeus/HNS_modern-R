@@ -14,8 +14,8 @@ BattleFrontier_Lounge4_EventScript_Man::
 	end
 
 BattleFrontier_Lounge4_Text_Challenge:
-	.string "The view from the top of the BATTLE\n" 
-	.string "TOWER must be something else.\p"
+	.string "The view from the top of the Battle\n" 
+	.string "Tower must be something else.\p"
 	.string "But it's not the view I'm after,\n" 
 	.string "it's the challenge that comes\l"
 	.string "with earning it.$"

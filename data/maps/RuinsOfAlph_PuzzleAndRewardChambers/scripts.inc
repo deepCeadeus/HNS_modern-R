@@ -33,16 +33,16 @@ RuinsOfAlph_PuzzleAndRewardChambers_MapScript_HoohHole::
 
 
 RuinsOfAlph_PuzzleAndRewardChambers_MapScript_KabutoDoor::
-	setmetatile 21, 1, 0x308, FALSE 
+	setmetatile 21, 1, 0x308, FALSE
 	return
 RuinsOfAlph_PuzzleAndRewardChambers_MapScript_OmanyteDoor::
-	setmetatile 5, 18, 0x308, FALSE 
+	setmetatile 5, 18, 0x308, FALSE
 	return
 RuinsOfAlph_PuzzleAndRewardChambers_MapScript_AerodactylDoor::
-	setmetatile 21, 18, 0x308, FALSE 
+	setmetatile 21, 18, 0x308, FALSE
 	return
 RuinsOfAlph_PuzzleAndRewardChambers_MapScript_HoohDoor::
-	setmetatile 5, 1, 0x308, FALSE 
+	setmetatile 5, 1, 0x308, FALSE
 	return
 
 
@@ -278,7 +278,7 @@ RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardHooh::
 	msgbox RuinsOfAlph_PuzzleAndRewardChambers_Text_Reward, MSGBOX_DEFAULT
 	closemessage
 	playse SE_CLICK
-	setmetatile 5, 1, 0x308, FALSE 
+	setmetatile 5, 1, 0x308, FALSE
 	special DrawWholeMapView
 	setflag FLAG_HOOH_BROUGHT
 	release
@@ -303,7 +303,7 @@ RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardAerodactyl::
 	msgbox RuinsOfAlph_PuzzleAndRewardChambers_Text_Reward, MSGBOX_DEFAULT
 	closemessage
 	playse SE_CLICK
-	setmetatile 21, 18, 0x308, FALSE 
+	setmetatile 21, 18, 0x308, FALSE
 	special DrawWholeMapView
 	setflag FLAG_AERODACTYL_BROUGHT
 	release
@@ -328,7 +328,7 @@ RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardKabuto::
 	msgbox RuinsOfAlph_PuzzleAndRewardChambers_Text_Reward, MSGBOX_DEFAULT
 	closemessage
 	playse SE_CLICK
-	setmetatile 21, 1, 0x308, FALSE 
+	setmetatile 21, 1, 0x308, FALSE
 	special DrawWholeMapView
 	setflag FLAG_KABUTO_BROUGHT
 	release
@@ -353,7 +353,7 @@ RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardOmanyte::
 	msgbox RuinsOfAlph_PuzzleAndRewardChambers_Text_Reward, MSGBOX_DEFAULT
 	closemessage
 	playse SE_CLICK
-	setmetatile 5, 18, 0x308, FALSE 
+	setmetatile 5, 18, 0x308, FALSE
 	special DrawWholeMapView
 	setflag FLAG_OMANYTE_BROUGHT
 	release
@@ -379,11 +379,11 @@ RuinsOfAlph_PuzzleAndRewardChambers_Text_Solved:
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Receptionist1:
 	.string "Welcome to this chamber.\p"
 	.string "There are sliding panels that depict\n"
-	.string "a POKéMON drawn by the ancients.\p"
+	.string "a Pokémon drawn by the ancients.\p"
 	.string "Slide the panels around to form\n"
 	.string "the picture.\p"
 	.string "To the left is a description of\n"
-	.string "the POKéMON.\p"
+	.string "the Pokémon.\p"
 	.string "Scientists in the lab are examin-\n"
 	.string "-ing some newly found patterns.$"
 
@@ -397,26 +397,26 @@ RuinsOfAlph_PuzzleAndRewardChambers_Text_Receptionist3:
 
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Kabuto:
-	.string "A POKéMON that hid on the sea floor.\n"
+	.string "A Pokémon that hid on the sea floor.\n"
 	.string "Eyes on its back scanned the area.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_UnownText:
-	.string "It's UNOWN text!$"
+	.string "It's Unown text!$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Statue:
 	.string "It's a replica of an ancient\n"
-	.string "POKéMON.$"
+	.string "Pokémon.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Aerodactyl:
-	.string "This flying POKéMON attacked its\n"
+	.string "This flying Pokémon attacked its\n"
 	.string "prey with saw-like fangs.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Omanyte:
-	.string "This POKéMON drifted in the sea\n"
+	.string "This Pokémon drifted in the sea\n"
 	.string "by twisting its ten tentacles.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Hooh:
-	.string "A POKéMON that flew gracefully on\n"
+	.string "A Pokémon that flew gracefully on\n"
 	.string "rainbow-colored wings.$"
 
 @==========================================================================================================================================================

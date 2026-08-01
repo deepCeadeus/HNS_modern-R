@@ -130,13 +130,13 @@ VictoryRoadKanto_1F_Movement_SilverLeave:
 
 VictoryRoad_Text_RivalBefore:
     .string "Hold it.\p"
-    .string "…Are you going to take the POKéMON\n"
-    .string "LEAGUE challenge?\p"
+    .string "…Are you going to take the Pokémon\n"
+    .string "League challenge?\p"
     .string "…Don't make me laugh.\p"
     .string "You're so much weaker than I am.\p"
     .string "I'm not like I was before.\p"
     .string "I now have the best and strongest\n"
-    .string "POKéMON with me.\p"
+    .string "Pokémon with me.\p"
     .string "I'm invincible!\p"
     .string "{PLAYER}!\n"
     .string "I challenge you!$"
@@ -150,7 +150,7 @@ VictoryRoad_Text_RivalDefeat:
 
 VictoryRoad_Text_RivalAfter:
     .string "…I haven't given up on becoming the\n"
-    .string "greatest TRAINER…\p"
+    .string "greatest Trainer…\p"
     .string "I'm going to find out why I can't\n"
     .string "win and become stronger…\p"
     .string "When I do, I will challenge you.\p"

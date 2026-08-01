@@ -42,7 +42,7 @@ BattleFrontier_OutsideWest_AsYouLike::
 	end
 
 BattleFrontierOutsideWest_Text_SailorReturn:
-	.string "Do you want to return to VERMILION?$"
+	.string "Do you want to return to Vermilion?$"
 
 BattleFrontier_OutsideWest_EventScript_FerryAttendant::
 	lock
@@ -296,42 +296,42 @@ BattleFrontier_OutsideWest_EventScript_PokefanF::
 	end
 
 BattleFrontier_OutsideWest_Text_BattleDomeSign:
-	.string "This is the BATTLE DOME!\n"
+	.string "This is the Battle Dome!\n"
 	.string "Your path to the invincible superstar!$"
 
 BattleFrontier_OutsideWest_Text_BattleFactorySign:
-	.string "This is the BATTLE FACTORY!\n"
-	.string "Seek out the toughest POKéMON!$"
+	.string "This is the Battle Factory!\n"
+	.string "Seek out the toughest Pokémon!$"
 
 BattleFrontier_OutsideWest_Text_BattlePikeSign:
-	.string "This is the BATTLE PIKE!\n"
+	.string "This is the Battle Pike!\n"
 	.string "Choose one of three paths!$"
 
 BattleFrontier_OutsideWest_Text_ThisIsBattleTower:
-	.string "This is the BATTLE TOWER.\p"
-	.string "TRAINERS bring their best-raised\n"
-	.string "POKéMON for elimination-style matches.$"
+	.string "This is the Battle Tower.\p"
+	.string "Trainers bring their best-raised\n"
+	.string "Pokémon for elimination-style matches.$"
 
 BattleFrontier_OutsideWest_Text_MayISeeYourTicket:
 	.string "Hello, are you here for the ferry?\n"
-	.string "May I see your TICKET?$"
+	.string "May I see your Ticket?$"
 
 BattleFrontier_OutsideWest_Text_MustHaveTicketToBoard:
-	.string "{PLAYER} doesn't have the TICKET…\p"
+	.string "{PLAYER} doesn't have the Ticket…\p"
 	.string "I'm terribly sorry.\p"
-	.string "You must have a TICKET to board\n"
+	.string "You must have a Ticket to board\n"
 	.string "the ferry.$"
 
 BattleFrontier_OutsideWest_Text_WhereWouldYouLikeToGo:
-	.string "{PLAYER} flashed the TICKET.\p"
+	.string "{PLAYER} flashed the Ticket.\p"
 	.string "Perfect! That's all you need!\p"
 	.string "And where would you like to go?$"
 
 BattleFrontier_OutsideWest_Text_SlateportItIs:
-	.string "SLATEPORT CITY it is, then!$"
+	.string "Slateport City it is, then!$"
 
 BattleFrontier_OutsideWest_Text_LilycoveItIs:
-	.string "LILYCOVE CITY it is, then!$"
+	.string "Lilycove City it is, then!$"
 
 BattleFrontier_OutsideWest_Text_SailWithUsAnotherTime:
 	.string "Please sail with us another time!$"
@@ -344,14 +344,14 @@ BattleFrontier_OutsideWest_Text_ThenWhereWouldYouLikeToGo:
 	.string "Then, where would you like to go?$"
 
 BattleFrontier_OutsideWest_Text_MineNeedSnacks:
-	.string "That trainer’s Pokémon didn’t even\n"
+	.string "That trainer's Pokémon didn't even\n"
 	.string "look tired!\p"
 	.string "Mine needs snacks after one battle.$"
 
 BattleFrontier_OutsideWest_Text_CantFindBattleTower:
-	.string "I want to go to the BATTLE TOWER,\n"
+	.string "I want to go to the Battle Tower,\n"
 	.string "but I can't find it even though I have\l"
-	.string "a map of the BATTLE FRONTIER.\p"
+	.string "a map of the Battle Frontier.\p"
 	.string "This place is just too big!$"
 
 BattleFrontier_OutsideWest_Text_HaventBlinked:
@@ -367,23 +367,23 @@ BattleFrontier_OutsideWest_Text_BadgesMeantSomething:
 
 BattleFrontier_OutsideWest_Text_SeviperScary:
 	.string "Hey…\p"
-	.string "Isn't that SEVIPER a bit scary?$"
+	.string "Isn't that Seviper a bit scary?$"
 
 BattleFrontier_OutsideWest_Text_PikeFrontierBrain:
-	.string "The FRONTIER BRAIN from the BATTLE\n"
-	.string "PIKE is scarier, trust me!\p"
+	.string "The Frontier Brain from the Battle\n"
+	.string "Pike is scarier, trust me!\p"
 	.string "I lost pretty quickly…$"
 
 BattleFrontier_OutsideWest_Text_OneBadSwap:
 	.string "Some trainers leave smiling.\p"
 	.string "Some leave in silence.\p"
 	.string "The difference is usually one bad swap.\p"
-	.string "In the BATTLE FACTORY, you fight\n"
+	.string "In the Battle Factory, you fight\n"
 	.string "uncertainty.$"
 
 BattleFrontier_OutsideWest_Text_DoFrontierBrainsDreamOfTrainers:
-	.string "I wanna grow up and be a FRONTIER\n"
-	.string "BRAIN!\p"
+	.string "I wanna grow up and be a Frontier\n"
+	.string "Brain!\p"
 	.string "… … …\p"
 	.string "Do they sleep?$"
 
@@ -394,65 +394,65 @@ BattleFrontier_OutsideWest_Text_LetsPlayRockPaperScissors:
 
 BattleFrontier_OutsideWest_Text_WonIllTakeDomeChallenge:
 	.string "Yay! I won!\n"
-	.string "I will take the BATTLE DOME challenge!$"
+	.string "I will take the Battle Dome challenge!$"
 
 BattleFrontier_OutsideWest_Text_LostIllPutOffDomeChallenge:
 	.string "Oh, no…\n"
 	.string "I lost.\p"
 	.string "I guess I'm not very lucky today.\n"
-	.string "I'll put off my BATTLE DOME challenge\l"
+	.string "I'll put off my Battle Dome challenge\l"
 	.string "until tomorrow.$"
 
 BattleFrontier_OutsideWest_Text_NoPokemonInWater:
 	.string "How is it possible that there are no\n"
-	.string "water POKéMON in a place located in\l"
+	.string "water Pokémon in a place located in\l"
 	.string "the middle of the sea?$"
 
 BattleFrontier_OutsideWest_Text_AreThereMoreBF:
-	.string "I wonder if there are more BATTLE\n"
-	.string "FRONTIERS out there.$"
+	.string "I wonder if there are more Battle\n"
+	.string "Frontiers out there.$"
 
 BattleFrontier_OutsideWest_Text_IFoughtRegions:
-	.string "I fought through KANTO, JOHTO,\n"
-	.string "and HOENN.\p"
+	.string "I fought through Kanto, Johto,\n"
+	.string "and Hoenn.\p"
 	.string "This place scares me more than\n"
 	.string "all of them.$"
 
 BattleFrontier_OutsideWest_Text_DomeIsHereGrandpa:
 	.string "Grandpa, over here!\n"
-	.string "The BATTLE DOME is here!\l"
+	.string "The Battle Dome is here!\l"
 	.string "Go get 'em, Grandpa!$"
 
 BattleFrontier_OutsideWest_Text_CantFindGlasses:
 	.string "I lost my glasses!\p"
-	.string "I need them to see the increible\n"
-	.string "battles that happen in the BATTLE DOME!$"
+	.string "I need them to see the incredible\n"
+	.string "battles that happen in the Battle Dome!$"
 
 BattleFrontier_OutsideWest_Text_FrontierBrainsSame:
 	.string "If this place is a recreation of\n"
-	.string "HOENN's BATTLE FRONTIER…\p"
+	.string "Hoenn's Battle Frontier…\p"
 	.string "How did they get the same people\n"
-	.string "to be FRONTIER BRAINS?$"
+	.string "to be Frontier Brains?$"
 
 BattleFrontier_OutsideWest_Text_CoolOffTrainers:
 	.string "They built this on the coast so trainers\n"
-	.string "could ‘cool off’ after losing.\p"
-	.string "The ocean’s very popular today.$"
+	.string "could 'cool off' after losing.\p"
+	.string "The ocean's very popular today.$"
 
 BattleFrontier_OutsideWest_Text_PalletTownStreak:
-	.string "I saw a kid from PALLET TOWN\n"
+	.string "I saw a kid from Pallet Town\n"
 	.string "go on a 42-win streak.\p"
-	.string "Professor Oak hasn’t stopped\n"
+	.string "Professor Oak hasn't stopped\n"
 	.string "bragging since.$"
 
 BattleFrontier_OutsideWest_Text_LostToALinoone:
-	.string "I lost to a LINOONE.\p"
+	.string "I lost to a Linoone.\p"
 	.string "A.\p"
-	.string "LINOONE.\p"
+	.string "Linoone.\p"
 	.string "I trained for six months!$"
 
 BattleFrontier_OutsideWest_Text_Legends:
-	.string "I didn’t come for symbols.\p"
+	.string "I didn't come for symbols.\p"
 	.string "I came for legends.$"
 
 BattleFrontier_OutsideWest_Text_TerrifyingBrains:
@@ -462,8 +462,8 @@ BattleFrontier_OutsideWest_Text_TerrifyingBrains:
 	.string "think about it.$"
 
 BattleFrontier_OutsideWest_Text_ChampionOnce:
-	.string "They say one of the FRONTIER BRAINS\n"
-	.string "once become the CHAMPION without\l"
+	.string "They say one of the Frontier Brains\n"
+	.string "once became the Champion without\l"
 	.string "using their ace.$"
 
 BattleFrontier_OutsideWest_Text_FansOverThereUsedToBeTrainers:
@@ -473,8 +473,8 @@ BattleFrontier_OutsideWest_Text_FansOverThereUsedToBeTrainers:
 
 BattleFrontier_OutsideWest_Text_MonWithLongTailInFrontier:
 	.string "Until just a few weeks ago, there used to\n"
-	.string "be a cave here in the BATTLE FRONTIER!\p"
-	.string "Inside, you could find strange POKéMON\n"
+	.string "be a cave here in the Battle Frontier!\p"
+	.string "Inside, you could find strange Pokémon\n"
 	.string "with unusually long tails!\p"
 	.string "But not long ago, the cave suddenly\n"
 	.string "collapsed for no clear reason…\p"
@@ -483,16 +483,16 @@ BattleFrontier_OutsideWest_Text_MonWithLongTailInFrontier:
 
 BattleFrontier_OutsideWest_Text_Reparations:
     .string "Careful there!\p"
-    .string "The cave below the BATTLE FRONTIER\n"
+    .string "The cave below the Battle Frontier\n"
     .string "collapsed not long ago.\p"
     .string "We’re reinforcing the structure so it\n"
     .string "won’t happen again.\p"
-    .string "Until repairs are finished, you’ll need\n"
+    .string "Until repairs are finished, you'll need\n"
     .string "to move around using wooden bridges.$"
 
 BattleFrontier_OutsideWest_Text_Reparations2:
     .string "Watch your step!\p"
-    .string "We’re still fixing the damage from\n"
+    .string "We're still fixing the damage from\n"
     .string "the cave collapse.\p"
     .string "These wooden bridges are just\n"
     .string "temporary, so be careful!$"
@@ -504,10 +504,10 @@ BattleFrontier_OutsideWest_Text_Reparations3:
     .string "until we finish the job.$"
 
 BattleFrontier_OutsideWest_Text_Reparations4:
-    .string "These MACHOKE and MACHAMP are a\n"
+    .string "These Machoke and Machamp are a\n"
     .string "huge help with the repairs!\p"
     .string "Without them, rebuilding after the\n"
     .string "collapse would take forever!$"
 
 BattleFrontier_OutsideWest_Text_Milotic:
-	.string "MILOTIC: Milooo!$"
+	.string "Milotic: Milooo!$"

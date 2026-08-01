@@ -261,36 +261,36 @@ NewBarkTown_PlayersHouse_1F_MovementFaceLeft:
 
 NewBarkTown_PlayersHouse_1F_Text_ElmsLookingForYou:
 	.string "Oh, {PLAYER}…! Our neighbor,\n"
-	.string "PROF. ELM, was looking for you.\p"
+	.string "Prof. Elm, was looking for you.\p"
 	.string "He said he wanted you to do\n"
 	.string "something for him.\p"
-	.string "Oh! I almost forgot! Your POKéGEAR\n"
+	.string "Oh! I almost forgot! Your PokéGear\n"
 	.string "is back from the repair shop.\p"
 	.string "Here you go!$"
 
 NewBarkTown_PlayersHouse_1F_Text_ObtainedPokeGear:
-	.string "{PLAYER} obtained the POKéGEAR.$"
+	.string "{PLAYER} obtained the PokéGear.$"
 
 NewBarkTown_PlayersHouse_1F_Text_ExplainPokeGear:
-	.string "MOM: Phone numbers are stored\n"
+	.string "Mom: Phone numbers are stored\n"
 	.string "in memory.\p"
 	.string "Just choose a name you want to call.\p"
 	.string "Gee, isn't that convenient?$"
 
 NewBarkTown_PlayersHouse_1F_Text_WearTheseRunningShoes:
 	.string "Oh, and don't forget your\n"
-	.string "RUNNING SHOES!$"
+	.string "Running Shoes!$"
 
 NewBarkTown_PlayersHouse_1F_Text_SwitchShoesWithRunningShoes:
 	.string "{PLAYER} switched shoes with the\n"
-	.string "RUNNING SHOES.$"
+	.string "Running Shoes.$"
 
 NewBarkTown_PlayersHouse_1F_Text_ExplainRunningShoes:
-	.string "MOM: {PLAYER}, press the B Button\n"
+	.string "Mom: {PLAYER}, press the B Button\n"
 	.string "while wearing these to run fast!$"
 
 NewBarkTown_PlayersHouse_1F_Text_MomHurryUpElmIsWaiting:
-	.string "MOM: PROF. ELM is waiting for you.\p"
+	.string "Mom: Prof. Elm is waiting for you.\p"
 	.string "Hurry up, baby!$"
 
 NewBarkTown_PlayersHouse_1F_Text_MomsFriend:
@@ -298,11 +298,11 @@ NewBarkTown_PlayersHouse_1F_Text_MomsFriend:
 	.string "I'm visiting!\p"
 	.string "Have you heard?\p"
 	.string "My daughter is adamant about\n"
-	.string "becoming PROF. ELM's assistant.\p"
-	.string "She really loves POKéMON!$"
+	.string "becoming Prof. Elm's assistant.\p"
+	.string "She really loves Pokémon!$"
 
 NewBarkTown_PlayersHouse_1F_Text_MomLeaving1:
-	.string "MOM: Wow, that's a cute POKéMON.\n"
+	.string "Mom: Wow, that's a cute Pokémon.\n"
 	.string "Where did you get it?\p"
 	.string "…\p"
 	.string "So, you're leaving on an adventure…\p"
@@ -312,7 +312,7 @@ NewBarkTown_PlayersHouse_1F_Text_MomLeaving1:
 
 NewBarkTown_PlayersHouse_1F_Text_MomLeaving2:
 	.string "Just be careful.\p"
-	.string "POKéMON are your friends.\n"
+	.string "Pokémon are your friends.\n"
 	.string "You need to work as a team.\p"
 	.string "Now, go on!\n"
 	.string "I'm behind you all the way!$"
@@ -344,16 +344,16 @@ NewBarkTown_PlayersHouse_1F_Text_Goodbye:
 	.string "Take care, sweetie!$"
 
 NewBarkTown_PlayersHouse_1F_Text_DepositSuccess:
-	.string "MOM: Sounds good! I'll put that in\n"
+	.string "Mom: Sounds good! I'll put that in\n"
 	.string "savings for you.$"
 
 NewBarkTown_PlayersHouse_1F_Text_WithdrawSuccess:
-	.string "MOM: Here you go!$"
+	.string "Mom: Here you go!$"
 
 NewBarkTown_PlayersHouse_1F_Text_NoMoneyToDeposit:
-	.string "MOM: You don't have any money to\n"
+	.string "Mom: You don't have any money to\n"
 	.string "deposit right now, sweetie.$"
 
 NewBarkTown_PlayersHouse_1F_Text_NoMoneyToWithdraw:
-	.string "MOM: I haven't saved any money\n"
+	.string "Mom: I haven't saved any money\n"
 	.string "for you yet, honey.$"

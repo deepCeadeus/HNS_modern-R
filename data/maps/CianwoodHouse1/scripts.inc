@@ -37,7 +37,7 @@ CianwoodCity_Text_OldManIntro:
 	.string "I don't remember the last time\n"
 	.string "someone came to visit me.\p"
 	.string "When I was young, I was a\n"
-	.string "POKéMON TRAINER, too.\l"
+	.string "Pokémon Trainer, too.\l"
 	.string "I tried to reach the tower and\l"
 	.string "dive into the ocean.\p"
 	.string "I put a lot of effort into many\n"
@@ -47,22 +47,22 @@ CianwoodCity_Text_OldManIntro:
 	.string "on this beach.$"
 
 CianwoodCity_Text_BellTowerStory:
-	.string "Have you heard of the TIN TOWER\n"
-	.string "in ECRUTEAK?\p"
+	.string "Have you heard of the Tin Tower\n"
+	.string "in Ecruteak?\p"
 	.string "There are what they call Clear Bells\n"
 	.string "on top of the tower.\p"
 	.string "They don't make a single noise\n"
 	.string "in strong winds.\p"
 	.string "There is only one way to make them\n"
 	.string "ring.\p"
-	.string "It is to obtain another CLEAR BELL\n"
+	.string "It is to obtain another Clear Bell\n"
 	.string "just like the ones at the top of the\l"
 	.string "tower.\p"
 	.string "I went after it when I was young.\n"
 	.string "But I never got one…$"
 
 CianwoodCity_Text_WhirlIslandsStory:
-	.string "Have you heard of WHIRL ISLANDS?\p"
+	.string "Have you heard of Whirl Islands?\p"
 	.string "There are what they call Tidal Bells\n"
 	.string "at its waterfall basin.\p"
 	.string "They don't make a single noise\n"
@@ -77,7 +77,7 @@ CianwoodCity_Text_WhirlIslandsStory:
 
 CianwoodCity_Text_ClearBellReaction:
 	.string "Oh! You've managed to get a\n"
-	.string "CLEAR BELL?\p"
+	.string "Clear Bell?\p"
 	.string "The old-time dream of mine…\n"
 	.string "I see…\p"
 	.string "You've done it…\n"
@@ -85,7 +85,7 @@ CianwoodCity_Text_ClearBellReaction:
 	.string "…I can hear it!\p"
 	.string "The chime of the bells on the wind\n"
 	.string "coming from the direction of the\l"
-	.string "TIN TOWER…$"
+	.string "Tin Tower…$"
 
 CianwoodCity_Text_TidalBellReaction:
 	.string "Oh! You've managed to get a\n"
@@ -97,4 +97,4 @@ CianwoodCity_Text_TidalBellReaction:
 	.string "…I can hear it!\p"
 	.string "The chime of the bells on the sea\n"
 	.string "breeze coming from the direction of\l"
-	.string "the WHIRL ISLANDS…$"
+	.string "the Whirl Islands…$"

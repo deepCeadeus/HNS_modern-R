@@ -60,7 +60,7 @@ Route13_EventScript_DirectionsSign::
 	end
 
 Route13_Text_PokefanmAlexSeen:
-	.string "Bow down before my regal POKéMON!$"
+	.string "Bow down before my regal Pokémon!$"
 
 Route13_Text_PokefanmAlexBeaten:
 	.string "How… How dare you mock royalty!$"
@@ -71,29 +71,29 @@ Route13_Text_PokefanmAlexAfterBattle:
 
 Route13_Text_PokefanmJoshuaSeen:
 	.string "Nihihi! Would you like to battle\n"
-	.string "my PIKACHU gang?$"
+	.string "my Pikachu gang?$"
 
 Route13_Text_PokefanmJoshuaBeaten:
-	.string "PI-PIKACHU!$"
+	.string "Pi-Pikachu!$"
 
 Route13_Text_PokefanmJoshuaAfterBattle:
 	.string "You look like you have many\n"
-	.string "POKéMON, but PIKACHU\l"
+	.string "Pokémon, but Pikachu\l"
 	.string "is still the best.$"
 
 Route13_Text_BirdKeeperPerrySeen:
 	.string "Agility is the key attribute of\n"
-	.string "bird POKéMON.$"
+	.string "bird Pokémon.$"
 
 Route13_Text_BirdKeeperPerryBeaten:
 	.string "You beat me with your speed…$"
 
 Route13_Text_BirdKeeperPerryAfterBattle:
-	.string "Your POKéMON are remarkably well-\n"
+	.string "Your Pokémon are remarkably well-\n"
 	.string "trained.$"
 
 Route13_Text_BirdKeeperBretSeen:
-	.string "Check out my POKéMON. Just look\n"
+	.string "Check out my Pokémon. Just look\n"
 	.string "at their coloring and their\l"
 	.string "plumage.$"
 
@@ -107,12 +107,12 @@ Route13_Text_BirdKeeperBretBeaten:
 	.string "Shoot! Not good enough!$"
 
 Route13_Text_BirdKeeperBretAfterBattle:
-	.string "If you groom them, POKéMON get\n"
+	.string "If you groom them, Pokémon get\n"
 	.string "happy.$"
 
 Route13_Text_HikerKennySeen:
-	.string "I should go to ROCK TUNNEL to get\n"
-	.string "myself an ONIX.$"
+	.string "I should go to Rock Tunnel to get\n"
+	.string "myself an Onix.$"
 
 Route13_Text_HikerKennyBeaten:
 	.string "I lost…$"
@@ -124,15 +124,14 @@ Route13_Text_HikerKennyAfterBattle:
 	.string "by little.$"
 
 Route13_Text_TrainerTips:
-	.string "TRAINER TIPS\p"
+	.string "Trainer Tips\p"
 	.string "Look! Right there, at the left\n"
 	.string "side of the post.$"
 
 Route13_Text_Sign:
-	.string "ROUTE 13\p"
-	.string "NORTH TO SILENCE BRIDGE$"
+	.string "Route 13\p"
+	.string "North to Silence Bridge$"
 
 Route13_Text_DirectionsSign:
-	.string "NORTH TO LAVENDER TOWN\p"
-	.string "WEST TO FUCHSIA CITY$"
-
+	.string "North to Lavender Town\p"
+	.string "West to Fuchsia City$"

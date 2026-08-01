@@ -166,7 +166,7 @@ NewMauville_Inside_Raikou_RaikouBattle_3_Stats::
 	return
 
 NewMauville_Inside_Raikou_RaikouBattle_Text::
-	.string "RAIKOU stopped running away.\n"
+	.string "Raikou stopped running away.\n"
 	.string "Can it be captured now?$"
 
 NewMauville_Inside_Raikou_Won::
