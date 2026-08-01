@@ -5,7 +5,7 @@ gBirchDexRatingText_GoFindMrPokemon::
 	.string "you can't miss it!$"
 
 gBirchDexRatingText_Robbery::
-	.string "Prof.Elm: {PLAYER}{KUN}!\p"
+	.string "Prof. Elm: {PLAYER}{KUN}!\p"
 	.string "Get here quick! Something\n"
 	.string "awful has happened!$"
 

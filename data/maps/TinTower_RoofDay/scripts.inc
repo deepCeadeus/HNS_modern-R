@@ -605,4 +605,4 @@ TinTower_RoofDay_Text_Kimono_Closing1::
 
 TinTower_RoofDay_Text_Kimono_After::
 	.string "You have done a great job.\n"
-	.string "Say hello to Prof.Elm for us.$"
+	.string "Say hello to Prof. Elm for us.$"

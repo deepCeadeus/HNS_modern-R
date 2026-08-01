@@ -481,8 +481,8 @@ VioletCity_Text_Kimono_Girl1:
 VioletCity_Text_Kimono_Girl2:
 .string "I see…\p"
 .string "So it was handed from Mr. Pokémon\n"
-.string "to Prof.Elm, then from \l"
-.string "Prof.Elm to you.\p"
+.string "to Prof. Elm, then from \l"
+.string "Prof. Elm to you.\p"
 .string "Now I get it…$"
 
 VioletCity_Text_Kimono_Girl3:
