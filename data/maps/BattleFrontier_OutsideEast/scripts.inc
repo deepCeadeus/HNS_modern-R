@@ -323,34 +323,34 @@ BattleFrontier_OutsideEast_EventScript_Camper::
 	end
 
 BattleFrontier_OutsideEast_Text_BattleTowerSign:
-	.string "This is the BATTLE TOWER!\n"
+	.string "This is the Battle Tower!\n"
 	.string "Keep the win streak as the toughest\l"
-	.string "TRAINER!$"
+	.string "Trainer!$"
 
 BattleFrontier_OutsideEast_Text_BattlePalaceSign:
-	.string "This is the BATTLE PALACE!\n"
-	.string "Keep your eyes on POKéMON battles!$"
+	.string "This is the Battle Palace!\n"
+	.string "Keep your eyes on Pokémon battles!$"
 
 BattleFrontier_OutsideEast_Text_BattleArenaSign:
-	.string "This is the BATTLE ARENA!\n"
+	.string "This is the Battle Arena!\n"
 	.string "Let the toughest teams gather!$"
 
 BattleFrontier_OutsideEast_Text_BattlePyramidSign:
-	.string "This is the BATTLE PYRAMID!\n"
+	.string "This is the Battle Pyramid!\n"
 	.string "Advance through the Battle Quest!$"
 
 BattleFrontier_OutsideEast_Text_RankingHallSign:
-	.string "BATTLE FRONTIER RANKING HALL\n"
+	.string "Battle Frontier Ranking Hall\n"
 	.string "Set your sights on new records!$"
 
 BattleFrontier_OutsideEast_Text_ExchangeCornerSign:
-	.string "BATTLE POINT EXCHANGE SERVICE CORNER\n"
+	.string "Battle Point Exchange Service Corner\n"
 	.string "Exchange your Battle Points and\l"
-	.string "trade with other TRAINERS!$"
+	.string "trade with other Trainers!$"
 
 BattleFrontier_OutsideEast_Text_DecidingTeam:
 	.string "I'm trying to decide on my team for\n"
-	.string "the BATTLE TOWER.\p"
+	.string "the Battle Tower.\p"
 	.string "It's so hard!$"
 
 BattleFrontier_OutsideEast_Text_BFLights:
@@ -360,7 +360,7 @@ BattleFrontier_OutsideEast_Text_BFLights:
 	.string "Brutal.$"
 
 BattleFrontier_OutsideEast_Text_WallsMoved:
-	.string "I swear the BATTLE PYRAMID walls move\n"
+	.string "I swear the Battle Pyramid walls move\n"
 	.string "by themselves!$"
 	
 BattleFrontier_OutsideEast_Text_BreathingInDarkness:
@@ -372,37 +372,37 @@ BattleFrontier_OutsideEast_Text_PutTogetherUltimateTeam:
 	.string "I didn't sleep for a week, but then\n"
 	.string "I put together the ultimate team!\p"
 	.string "I can't see myself losing, no joke.\n"
-	.string "We're storming the BATTLE ARENA!$"
+	.string "We're storming the Battle Arena!$"
 
 BattleFrontier_OutsideEast_Text_HaventGoneYet:
 	.string "My hands won't stop shaking.\n"
 	.string "And I haven't even gone inside\l"
-	.string "the BATTLE PYRAMID yet.$"
+	.string "the Battle Pyramid yet.$"
 
 BattleFrontier_OutsideEast_Text_BelieveInYouBuddyNew:
-	.string "LICKY!\n"
+	.string "Licky!\n"
 	.string "I believe in you, big buddy!\p"
-	.string "I'll make my big LICKY any favorite\n"
+	.string "I'll make my big Licky any favorite\n"
 	.string "tasty treats you like if you win!\p"
-	.string "Just like I did with ZIGG!$"
+	.string "Just like I did with Zigg!$"
 
 BattleFrontier_OutsideEast_Text_LickyIsReady:
-	.string "LICKILICKY seems ready to battle!$"
+	.string "Lickilicky seems ready to battle!$"
 
 BattleFrontier_OutsideEast_Text_SwampertObj:
-	.string "SWAMPERT: Swaaamp!$"
+	.string "Swampert: Swaaamp!$"
 
 BattleFrontier_OutsideEast_Text_TrustTheirNature:
-	.string "In the BATTLE PALACE, you have\n"
-	.string "to trust your POKéMON's nature.$"
+	.string "In the Battle Palace, you have\n"
+	.string "to trust your Pokémon's nature.$"
 
 BattleFrontier_OutsideEast_Text_TrainsOrTrainers:
 	.string "Some trains never come back.\n"
-	.string "Neither do some TRAINERS.$"
+	.string "Neither do some Trainers.$"
 
 BattleFrontier_OutsideEast_Text_SuspiciousMe:
 	.string "Suspicious? Me?\p"
-	.string "I guess I do look like a BURGLAR.$"
+	.string "I guess I do look like a Burglar.$"
 
 BattleFrontier_OutsideEast_Text_DontKnowWhereToStart:
 	.string "Wow!\p"
@@ -418,38 +418,38 @@ BattleFrontier_OutsideEast_Text_RipMaths:
 	.string "Probabilities.\l"
 	.string "Counters.\l"
 	.string "Switch advantages.\p"
-	.string "Then I spent one hour in this DOJO and\n"
+	.string "Then I spent one hour in this Dojo and\n"
 	.string "realized I'd never really battled.\p"
-	.string "I'm just done with POKéMON math.$"
+	.string "I'm just done with Pokémon math.$"
 
 BattleFrontier_OutsideEast_Text_SpencerTaughtMe:
-	.string "SPENSER taught me that a POKéMON's\n"
+	.string "Spenser taught me that a Pokémon's\n"
 	.string "nature isn't just a set of stats,\l" 
 	.string "it's a reflection of its soul.$"
 
 BattleFrontier_OutsideEast_Text_LegendOfBattlePyramid:
-	.string "I've been to the bottom of GRANITE CAVE.\n"
+	.string "I've been to the bottom of Granite Cave.\n"
 	.string "I've explored the innermost chambers of\l"
-	.string "VICTORY ROAD…\p"
-	.string "But the silence in the BATTLE PYRAMID?\p"
+	.string "Victory Road…\p"
+	.string "But the silence in the Battle Pyramid?\p"
 	.string "That's a different kind of dark.\n"
 	.string "It's a heavy silence.\p"
 	.string "It's the sound of a mountain that knows\n"
 	.string "you're an intruder.\p"
-	.string "When you finally see BRANDON's\n"
+	.string "When you finally see Brandon's\n"
 	.string "silhouette at the top, it's like\l"
 	.string "finding a lighthouse in a storm.$"
 
 BattleFrontier_OutsideEast_Text_AnabelOnAnotherLevel:
 	.string "I've won 100 times in a row at the\n" 
-	.string "BATTLE TOWER.\p" 
-	.string "But the FRONTIER BRAIN…\p"
+	.string "Battle Tower.\p" 
+	.string "But the Frontier Brain…\p"
 	.string "She's on another level.$"
 
 BattleFrontier_OutsideEast_Text_AnabelSixthSense:
-	.string "The BATTLE TOWER is a pure test of\n"
+	.string "The Battle Tower is a pure test of\n"
 	.string "strength and strategy, a pillar of logic.\p"
-	.string "Yet, ANABEL reads the flow of battle\n"
+	.string "Yet, Anabel reads the flow of battle\n"
 	.string "like she can see a few seconds into\l"
 	.string "the future.\p"
 	.string "It's not just skill;\n"
@@ -457,7 +457,7 @@ BattleFrontier_OutsideEast_Text_AnabelSixthSense:
 
 BattleFrontier_OutsideEast_Text_SmellsLikeChallenge:
 	.string "The sea air here is different from\n"
-	.string "JOHTO or KANTO.\p"
+	.string "Johto or Kanto.\p"
 	.string "It smells like challenge.$"
 
 BattleFrontier_OutsideEast_Text_SecondPage:
@@ -466,16 +466,16 @@ BattleFrontier_OutsideEast_Text_SecondPage:
 	.string "Still counts.$"
 
 BattleFrontier_OutsideEast_Text_BestIsDome:
-	.string "The BATTLE DOME is obviously the best!\n"
+	.string "The Battle Dome is obviously the best!\n"
 	.string "It's got the biggest crowd!$"
 
 BattleFrontier_OutsideEast_Text_NoBestIsPalace:
-	.string "No way! The BATTLE PALACE is the best!\n"
-	.string "You can hear the POKéMON cheering\l"
+	.string "No way! The Battle Palace is the best!\n"
+	.string "You can hear the Pokémon cheering\l"
 	.string "for themselves!$"
 
 BattleFrontier_OutsideEast_Text_SwamperStrong:
-	.string "My SWAMPERT is incredibly strong,\n"
+	.string "My Swampert is incredibly strong,\n"
 	.string "but it's also incredibly lazy in battle.$"
 
 BattleFrontier_OutsideEast_Text_OddTreeHereSeemsToWiggle:
@@ -493,7 +493,7 @@ BattleFrontier_OutsideEast_Text_OnceAnOddTreePastHere:
 BattleFrontier_OutsideEast_Text_StickyMonWithLongTail:
 	.string "I…\n"
 	.string "I saw it!\p"
-	.string "There was a sticky sort of a POKéMON\n"
+	.string "There was a sticky sort of a Pokémon\n"
 	.string "with a long tail up ahead!\p"
 	.string "It was hiding under a boulder, and\n"
 	.string "it kept staring at me!$"
