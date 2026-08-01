@@ -68,7 +68,7 @@ FortreeCity_House1_Text_YouWillTradeWontYou:
 	.string "My shout from the bottom of my heart?\p"
 	.string "Having heard that, you will trade\n"
 	.string "your {STR_VAR_1} for my {STR_VAR_2},\p"
-	.string "won't you? It's a super rare POKéMON\n"
+	.string "won't you? It's a super rare Pokémon\n"
 	.string "from another region!$"
 
 FortreeCity_House1_Text_MonYouTakeCare:
@@ -90,7 +90,7 @@ FortreeCity_House1_Text_GoingToMakeVolbeatStrong:
 	.string "I hope you do the same with PLUSLE!$"
 
 FortreeCity_House1_Text_TradingMemoriesWithOthers:
-	.string "Trading POKéMON with others…\p"
+	.string "Trading Pokémon with others…\p"
 	.string "It's as if you're trading your own\n"
 	.string "memories with other people.$"
 

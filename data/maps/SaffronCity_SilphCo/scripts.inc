@@ -101,7 +101,7 @@ SaffronCity_SilphCo_Text_Steven1:
 SaffronCity_SilphCo_Text_Steven2:
 	.string "Steven: You are… I remember your\n"
 	.string "eyes.\p"
-	.string "When I see a TRAINER whose eyes\n"
+	.string "When I see a Trainer whose eyes\n"
 	.string "twinkle, I always remember.\p"
 	.string "You have a Pokédex! So you are\n"
 	.string "also in search of Pokémon!\l"

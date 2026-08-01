@@ -78,7 +78,7 @@ UnionCave_B2F_Text_CooltrainerfGwenAfter:
 UnionCave_B2F_Text_CooltrainerfEmmaSeen:
 	.string "If the Pokémon I liked were there,\n"
 	.string "I'd go anywhere.\p"
-	.string "That's what a real TRAINER does.$"
+	.string "That's what a real Trainer does.$"
 
 UnionCave_B2F_Text_CooltrainerfEmmaBeaten:
 	.string "I'd rather pet my babies than this!$"

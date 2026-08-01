@@ -37,7 +37,7 @@ Route18_EventScript_Sign::
 	end
 
 Route18_Text_BirdKeeperBorisSeen:
-	.string "If you're looking for POKéMON,\n"
+	.string "If you're looking for Pokémon,\n"
 	.string "you have to look in the tall grass.$"
 
 Route18_Text_BirdKeeperBorisBeaten:
@@ -48,8 +48,8 @@ Route18_Text_BirdKeeperBorisAfterBattle:
 	.string "fun to battle.$"
 
 Route18_Text_BirdKeeperBobSeen:
-	.string "CYCLING ROAD is a quick shortcut\n"
-	.string "to CELADON.$"
+	.string "Cycling Road is a quick shortcut\n"
+	.string "to Celadon.$"
 
 Route18_Text_BirdKeeperBob_Register:
 	.string "I'll stay here for a while.\p"
@@ -60,10 +60,10 @@ Route18_Text_BirdKeeperBobBeaten:
 	.string "…Whew!$"
 
 Route18_Text_BirdKeeperBobAfterBattle:
-	.string "If you don't have a BICYCLE,\n"
+	.string "If you don't have a bicycle,\n"
 	.string "you're not allowed to use the\l"
 	.string "shortcut.$"
 
 Route18_Text_Sign:
-	.string "ROUTE 18\p"
-	.string "CELADON CITY - FUCHSIA CITY$"
+	.string "Route 18\p"
+	.string "Celadon City - Fuchsia City$"

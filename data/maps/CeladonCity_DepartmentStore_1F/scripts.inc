@@ -19,13 +19,13 @@ CeladonDept1_EventScript_Directory::
     end
 
 CeladonDeptStore_Text_1FReceptionist:
-    .string "Hello! Welcome to CELADON DEPT.\n"
-    .string "STORE!\p"
+    .string "Hello! Welcome to Celadon Dept.\n"
+    .string "Store!\p"
     .string "The directory is on the wall.$"
 
 CeladonDeptStore_Text_1FGentleman:
-    .string "This DEPT. STORE is part of the same\n"
-    .string "chain as the one in GOLDENROD CITY.\p"
+    .string "This Dept. Store is part of the same\n"
+    .string "chain as the one in Goldenrod City.\p"
     .string "They were both renovated at the same\n"
     .string "time.$"
 

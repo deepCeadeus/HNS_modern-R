@@ -141,7 +141,7 @@ SaffronCity_Gym_Text_MediumDorisAfter:
 
 SaffronCity_Gym_Text_PsychicJaredSeen:
 	.string "The Fighting Dojo next door was\n"
-	.string "once this city's Gym.$"
+	.string "once this City's Gym.$"
 
 SaffronCity_Gym_Text_PsychicJaredBeaten:
 	.string "I was no match…$"
@@ -179,11 +179,11 @@ SaffronCity_Gym_EventScript_GymStatuePostVictory::
 SaffronCity_Gym_Text_GymStatue::
     .string "Saffron Pokémon Gym\n"
     .string "Leader: Sabrina\p"
-	.string "Winning Trainers:\n"
+	.string "Certified Trainers:\n"
 	.string "Blue, Red$"
 
 SaffronCity_Gym_Text_GymStatuePlayerWon::
     .string "Saffron Pokémon Gym\n"
     .string "Leader: Sabrina\p"
-    .string "Winning Trainers:\n"
+    .string "Certified Trainers:\n"
 	.string "Blue, Red, {PLAYER}$"

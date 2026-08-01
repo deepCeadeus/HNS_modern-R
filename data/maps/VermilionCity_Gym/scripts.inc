@@ -4,7 +4,7 @@
 .set TRASH_CAN_ID,       VAR_0x8008
 
 .set CHECK_VISITOR_STATE, 6
-.set TYPE, VAR_0x8003
+.set Type, VAR_0x8003
 .set ARGUMENT, VAR_0x8004
 
 VermilionCity_Gym_MapScripts::
@@ -299,13 +299,13 @@ VermilionGym_Text_LtSurgeIntro:
 
 VermilionGym_Text_LtSurgeWinLoss:
 	.string "Surge: Arrrgh! You are strong!\p"
-	.string "Ok, kid. You get Thunderbadge!$"
+	.string "Ok, kid. You get ThunderBadge!$"
 
 VermilionGym_Text_ReceivedThunderBadge:
-	.string "{PLAYER} received Thunderbadge.$"
+	.string "{PLAYER} received ThunderBadge.$"
 
 VermilionGym_Text_ThunderBadgeInfo:
-	.string "Surge: Thunderbadge increases\n"
+	.string "Surge: ThunderBadge increases\n"
 	.string "Pokémon's speed.\p"
 	.string "Consider it proof that you\n"
 	.string "defeated me.\p"
@@ -397,14 +397,14 @@ VermilionCity_Gym_Text_GymGuyPostVictory::
 VermilionCity_Gym_Text_GymStatue::
     .string "Vermilion Pokémon Gym\n"
     .string "Leader: Lt. Surge\p"
-	.string "Winning Trainers:\n"
+	.string "Certified Trainers:\n"
 	.string "Blue, Red$"
 
 
 VermilionCity_Gym_Text_GymStatuePlayerWon::
     .string "Vermilion Pokémon Gym\n"
     .string "Leader: Lt. Surge\p"
-    .string "Winning Trainers:\n"
+    .string "Certified Trainers:\n"
     .string "Blue, Red, {PLAYER}$"
 
 VermilionCity_Gym_Text_NopeOnlyTrashHere::

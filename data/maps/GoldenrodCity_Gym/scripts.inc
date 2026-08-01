@@ -117,18 +117,18 @@ GoldenrodCity_Gym_EventScript_Statue2::
 	end
 
 GoldenrodCity_Gym_Text_GymStatue:
-	.string "GOLDENROD CITY POKéMON GYM$"
+	.string "Goldenrod City Pokémon Gym$"
 
 GoldenrodCity_Gym_Text_GymStatueCertified:
-	.string "GOLDENROD CITY POKéMON GYM\p"
-	.string "WHITNEY'S CERTIFIED TRAINERS:\n"
+	.string "Goldenrod City Pokémon Gym\p"
+	.string "Whitney's Certified Trainers:\n"
 	.string "{PLAYER}$"
 
 GoldenrodCity_Gym_Text_WhitneyBefore:
-    .string "Hi! I'm WHITNEY!\p"
-    .string "Everyone was into POKéMON, so I got\n"
+    .string "Hi! I'm Whitney!\p"
+    .string "Everyone was into Pokémon, so I got\n"
     .string "into it too!\p"
-    .string "POKéMON are super-cute!\p"
+    .string "Pokémon are super-cute!\p"
     .string "You want to battle? I'm warning\n"
     .string "you- I'm good!$"
 
@@ -145,23 +145,23 @@ GoldenrodCity_Gym_Text_WhitneyYouMeanie:
 
 GoldenrodCity_Gym_Text_WhitneyWhatDoYouWant:
     .string "…Sniff…\p"
-    .string "What? What do you want? A BADGE?\p"
+    .string "What? What do you want? A Badge?\p"
     .string "Oh, right. I forgot. Here's\n"
-    .string "PLAINBADGE.$"
+    .string "PlainBadge.$"
 
 GoldenrodCity_Gym_Text_PlayerReceivedPlainBadge:
-    .string "{PLAYER} received PLAINBADGE.$"
+    .string "{PLAYER} received PlainBadge.$"
 
 GoldenrodCity_Gym_Text_WhitneyPlainBadge:
-    .string "PLAINBADGE lets your POKéMON use\n"
-    .string "STRENGTH outside of battle.\p"
-    .string "It also boosts your POKéMON's\n"
-	.string "DEFENSE.\p"
+    .string "PlainBadge lets your Pokémon use\n"
+    .string "Strength outside of battle.\p"
+    .string "It also boosts your Pokémon's\n"
+	.string "Defense.\p"
     .string "Oh, you can have this too!$"
 
 GoldenrodCity_Gym_Text_WhitneyAttract:
-    .string "It's ATTRACT! It makes full use of a\n"
-    .string "POKéMON's charm.\p"
+    .string "It's Attract! It makes full use of a\n"
+    .string "Pokémon's charm.\p"
     .string "Isn't it just perfect for a cutie\n"
     .string "like me?$"
 
@@ -170,7 +170,7 @@ GoldenrodCity_Gym_Text_WhitneyGoodCry:
 
 GoldenrodCity_Gym_Text_WhitneyRematch:
     .string "Hi! It's you!\p"
-    .string "Wow, JOHTO CHAMPION now?\p"
+    .string "Wow, Johto Champion now?\p"
     .string "You really are amazing!\p"
     .string "I want to see how strong you are.\p"
     .string "Want to have a rematch with me?$"
@@ -181,7 +181,7 @@ GoldenrodCity_Gym_Text_WhitneyRematchDefeat:
     .string "…Snivel, hic… …You meanie!$"
 
 GoldenrodCity_Gym_Text_LassCarrieSeen:
-    .string "Don't let my POKéMON's cute looks\n"
+    .string "Don't let my Pokémon's cute looks\n"
     .string "fool you.\p"
     .string "They can whip you!$"
 
@@ -189,29 +189,29 @@ GoldenrodCity_Gym_Text_LassCarrieBeaten:
     .string "Darn… I thought you were weak…$"
 
 GoldenrodCity_Gym_Text_LassCarrieAfter:
-    .string "Do my POKéMON think I'm cute?$"
+    .string "Do my Pokémon think I'm cute?$"
 
 GoldenrodCity_Gym_Text_LassBridgetSeen:
-    .string "I like cute POKéMON better than\n"
-    .string "strong POKéMON.\p"
-    .string "But I have strong and cute POKéMON!$"
+    .string "I like cute Pokémon better than\n"
+    .string "strong Pokémon.\p"
+    .string "But I have strong and cute Pokémon!$"
 
 GoldenrodCity_Gym_Text_LassBridgetBeaten:
     .string "Oh, no, no, no!$"
 
 GoldenrodCity_Gym_Text_LassBridgetAfter:
-    .string "I'm trying to beat WHITNEY, but…\n"
+    .string "I'm trying to beat Whitney, but…\n"
     .string "It's depressing.\p"
     .string "I'm okay! If I lose, I'll just try\n"
     .string "harder next time!$"
 
 GoldenrodCity_Gym_Text_BridgetWhitneyCries:
-    .string "Oh, no. You made WHITNEY cry.\p"
+    .string "Oh, no. You made Whitney cry.\p"
     .string "It's OK. She'll stop soon. She\n"
     .string "always cries when she loses.$"
 
 GoldenrodCity_Gym_Text_BeautyVictoriaSeen:
-    .string "Oh, you are a cute little TRAINER!\p"
+    .string "Oh, you are a cute little Trainer!\p"
     .string "I like you, but I won't hold back!$"
 
 GoldenrodCity_Gym_Text_BeautyVictoriaBeaten:
@@ -226,22 +226,22 @@ GoldenrodCity_Gym_Text_BeautySamanthaSeen:
     .string "you down!$"
 
 GoldenrodCity_Gym_Text_BeautySamanthaBeaten:
-    .string "No! Oh, MEOWTH, I'm so sorry!$"
+    .string "No! Oh, Meowth, I'm so sorry!$"
 
 GoldenrodCity_Gym_Text_BeautySamanthaAfter:
-    .string "I taught MEOWTH moves for taking on\n"
+    .string "I taught Meowth moves for taking on\n"
     .string "any type…$"
 
 GoldenrodCity_Gym_Text_GymGuide:
-    .string "Yo! CHAMP in making!\p"
-    .string "This GYM is home to WHITNEY, the\n"
-    .string "master of NORMAL-type POKéMON.\p"
+    .string "Yo! Champ in making!\p"
+    .string "This Gym is home to Whitney, the\n"
+    .string "master of Normal-type Pokémon.\p"
     .string "Be cautious of her cute team.\p"
-    .string "Some of the POKéMON in this gym\n"
-    .string "have the newly discovered FAIRY\l"
+    .string "Some of the Pokémon in this gym\n"
+    .string "have the newly discovered Fairy\l"
     .string "type as well.\p"
-    .string "Check ROUTE 34 if you need a\n"
-    .string "FIGHTING-type or POISON-type.$"
+    .string "Check Route 34 if you need a\n"
+    .string "Fighting-type or Poison-type.$"
 
 GoldenrodCity_Gym_Text_GymGuideWin:
     .string "You won? Great! I was busy admiring\n"

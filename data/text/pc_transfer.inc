@@ -1,24 +1,24 @@
 gText_PkmnTransferredSomeonesPC::
 	.string "{STR_VAR_2} was transferred to\n"
-	.string "Someone'S Pc.\p"
+	.string "Someone's Pc.\p"
 	.string "It was placed in \n"
 	.string "Box “{STR_VAR_1}.”$"
 
 gText_PkmnTransferredBillsPC::
 	.string "{STR_VAR_2} was transferred to\n"
-	.string "Bill'S Pc.\p"
+	.string "Bill's Pc.\p"
 	.string "It was placed in \n"
 	.string "Box “{STR_VAR_1}.”$"
 
 gText_PkmnTransferredSomeonesPCBoxFull::
 	.string "Box “{STR_VAR_3}” on\n"
-	.string "Someone'S Pc was full.\p"
+	.string "Someone's Pc was full.\p"
 	.string "{STR_VAR_2} was transferred to\n"
 	.string "Box “{STR_VAR_1}.”$"
 
 gText_PkmnTransferredBillsPCBoxFull::
 	.string "Box “{STR_VAR_3}” on\n"
-	.string "Bill'S Pc was full.\p"
+	.string "Bill's Pc was full.\p"
 	.string "{STR_VAR_2} was transferred to\n"
 	.string "Box “{STR_VAR_1}.”$"
 

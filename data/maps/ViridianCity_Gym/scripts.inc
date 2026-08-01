@@ -83,7 +83,7 @@ ViridianCity_Gym_Text_BulkUpSpeech:
 ViridianCity_Gym_Text_LeaderBlue_After:
 	.string "Blue: …\p"
 	.string "All right, I was wrong. You're the\n"
-	.string "real deal. You are a good TRAINER.\p"
+	.string "real deal. You are a good Trainer.\p"
 	.string "But I'm going to beat you someday.\p"
 	.string "Don't you forget it!$"
 
@@ -132,12 +132,12 @@ ViridianCity_Gym_EventScript_GymStatuePostVictory::
 ViridianCity_Gym_Text_GymStatue::
     .string "Viridian Pokémon Gym\n"
     .string "Leader: Blue\p"
-	.string "Winning Trainers:\n"
+	.string "Certified Trainers:\n"
 	.string "Blue, Red$"
 
 ViridianCity_Gym_Text_GymStatuePlayerWon::
     .string "Viridian Pokémon Gym\n"
     .string "Leader: Blue\p"
-    .string "Winning Trainers:\n"
+    .string "Certified Trainers:\n"
 	.string "Blue, Red, {PLAYER}$"
 

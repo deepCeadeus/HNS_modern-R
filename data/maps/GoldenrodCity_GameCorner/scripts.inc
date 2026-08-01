@@ -470,7 +470,7 @@ GoldenrodCity_GameCorner_Text_PrizeVendorQuit:
     .string "again!$"
 
 GoldenrodCity_GameCorner_Text_PrizeVendorNoCoinCase:
-    .string "Oh? You don't have a COIN CASE.$"
+    .string "Oh? You don't have a Coin Case.$"
 
 GoldenrodCity_GameCorner_Text_Pharmacist:
     .string "I always play this slot machine.\n"
@@ -480,7 +480,7 @@ GoldenrodCity_GameCorner_Text_Pharmacist:
 GoldenrodCity_GameCorner_Text_PokefanM1:
     .string "I just love this new slot machine.\p"
     .string "It's more of a challenge than the\n"
-    .string "ones in CELADON.$"
+    .string "ones in Celadon.$"
 
 GoldenrodCity_GameCorner_Text_CooltrainerM:
     .string "Life is a gamble. I'm going to pull\n"
@@ -490,15 +490,15 @@ GoldenrodCity_GameCorner_Text_CooltrainerF:
     .string "I won't quit until I win!$"
 
 GoldenrodCity_GameCorner_Text_Gentleman:
-    .string "I taught ICE BEAM to my POKéMON.\p"
+    .string "I taught Ice Beam to my Pokémon.\p"
     .string "It was hard to get enough coins for\n"
     .string "it, but it was worth it.$"
 
 GoldenrodCity_GameCorner_Text_PokefanM2:
     .string "I couldn't win at the slots, and I'm\n"
-    .string "no good at VOLTORB FLIP.\p"
+    .string "no good at Voltorb Flip.\p"
     .string "I got so furious, I tossed out my\n"
-    .string "COIN CASE in the UNDERGROUND.$"
+    .string "Coin Case in the Underground.$"
 
 GoldenrodCity_GameCorner_Text_MoveTutorInside:
     .string "Wahahah! The coins keep rolling in!$"
@@ -509,11 +509,11 @@ GoldenrodCity_GameCorner_Text_LeftTheirDrink:
 
 @ Voltorb Flip Text Strings
 GoldenrodCity_GameCorner_Text_VF:
-	.string "Welcome to VOLTORB FLIP!\p$"
+	.string "Welcome to Voltorb Flip!\p$"
 
-@ "Play VOLTORB Flip Lv. X?" — level display dialogue used on the main menu and after every round.
+@ "Play Voltorb Flip Lv. X?" — level display dialogue used on the main menu and after every round.
 GoldenrodCity_GameCorner_Text_VF_PlayLevel:
-	.string "Play VOLTORB Flip Lv. {STR_VAR_1}?$"
+	.string "Play Voltorb Flip Lv. {STR_VAR_1}?$"
 
 @ Win / receive-coins messages
 GoldenrodCity_GameCorner_Text_VF_GameClear:
@@ -538,7 +538,7 @@ GoldenrodCity_GameCorner_Text_VF_Dropped:
 
 @ Coin cap message
 GoldenrodCity_GameCorner_Text_VF_CoinCap:
-	.string "You've gathered 9,999 COINS.\n"
+	.string "You've gathered 9,999 Coins.\n"
 	.string "You cannot gather any more.$"
 
 @ Game Info sub-menu header
@@ -547,11 +547,11 @@ GoldenrodCity_GameCorner_Text_VF_WhichInfo:
 
 @ How to Play tutorial
 GoldenrodCity_GameCorner_Text_VF_HowToPlay:
-	.string "VOLTORB Flip is a game in which you flip\n"
+	.string "Voltorb Flip is a game in which you flip\n"
 	.string "over cards to find numbers hidden\l"
 	.string "beneath them.\p"
 	.string "The cards are hiding the numbers\n"
-	.string "1 through 3… and VOLTORB as well.\p"
+	.string "1 through 3… and Voltorb as well.\p"
 	.string "The first number you flip over will give\n"
 	.string "you that many Coins.\p"
 	.string "From then on, the next number you\n"
@@ -561,7 +561,7 @@ GoldenrodCity_GameCorner_Text_VF_HowToPlay:
 	.string "by 'x2.'\p"
 	.string "If it's a 3, your total will be multiplied\n"
 	.string "by 'x3.'\p"
-	.string "But if you flip over a VOLTORB, it's\n"
+	.string "But if you flip over a Voltorb, it's\n"
 	.string "game over.\p"
 	.string "When that happens, you'll lose all the\n"
 	.string "Coins you've collected in the\l"
@@ -591,23 +591,23 @@ GoldenrodCity_GameCorner_Text_VF_HintText:
 	.string "it is that there are many large numbers\l"
 	.string "hidden in that row or column.\p"
 	.string "In the same way, you can tell how many\n"
-	.string "VOLTORB are hidden in the row\l"
+	.string "Voltorb are hidden in the row\l"
 	.string "or column.\p"
 	.string "Consider the hidden number totals and\n"
-	.string "the VOLTORB totals carefully as you\l"
+	.string "the Voltorb totals carefully as you\l"
 	.string "flip over panels!$"
 
 @ About Notes text
 GoldenrodCity_GameCorner_Text_VF_AboutNotes:
 	.string "Use the Notes mode ({L_BUTTON} & {R_BUTTON}) to mark\n"
-	.string "cards with numbers 1-3 or a VOLTORB.\p"
+	.string "cards with numbers 1-3 or a Voltorb.\p"
 	.string "Mark a card you think you know,\n"
 	.string "then flip it when you're sure.\l"
 	.string "Apply a note again to remove it.$"
 
 @ Voltorb Flip Attendant Texts
 GoldenrodCity_GameCorner_Text_VFAttendant1:
-	.string "You want to play VOLTORB FLIP?\p"
+	.string "You want to play Voltorb Flip?\p"
 	.string "You need to be on the other\n"
 	.string "side of the table.$"
 

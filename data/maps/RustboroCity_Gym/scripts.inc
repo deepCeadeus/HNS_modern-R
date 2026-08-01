@@ -186,7 +186,7 @@ RustboroCity_Gym_Text_RoxanneIntro:
 	.string "Pokémon Gym Leader.\p"
 	.string "I became a Gym Leader so that I might\n"
 	.string "apply what I learned at the Pokémon\l"
-	.string "Trainer'S School in battle.\p"
+	.string "Trainer's School in battle.\p"
 	.string "Would you kindly demonstrate how you\n"
 	.string "battle, and with which Pokémon?$"
 
@@ -244,7 +244,7 @@ RustboroCity_Gym_Text_GymStatue:
 
 RustboroCity_Gym_Text_GymStatueCertified:
 	.string "Rustboro City Pokémon Gym\p"
-	.string "Roxanne'S Certified Trainers:\n"
+	.string "Roxanne's Certified Trainers:\n"
 	.string "{PLAYER}$"
 
 RustboroCity_Gym_Text_RoxanneRegisterCall:

@@ -45,7 +45,7 @@ RustboroCity_CuttersHouse_Text_ExplainCut:
 	.string "have to teach the move. It just works.$"
 
 RustboroCity_CuttersHouse_Text_DadHelpedClearLandOfTrees:
-	.string "When they were expanding the city of\n"
+	.string "When they were expanding the City of\n"
 	.string "Rustboro, my dad helped out.\p"
 	.string "He made his Pokémon use Cut to clear\n"
 	.string "the land of trees.$"

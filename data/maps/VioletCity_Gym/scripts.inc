@@ -135,10 +135,10 @@ VioletGym_Text_BirdKeeperAbe_Beaten:
 
 VioletGym_Text_BirdKeeperAbe_After:
 	.string "This is pathetic, losing to some\n"
-	.string "rookie TRAINER…$"
+	.string "rookie Trainer…$"
 
 VioletGym_Text_GymGuide_Intro:
-	.string "Hey! What's up? I'm no TRAINER,\n"
+	.string "Hey! What's up? I'm no Trainer,\n"
 	.string "but I can give some advice!\p"
 	.string "Believe me! If you believe, a\n"
 	.string "championship dream can come true.\p"
@@ -179,5 +179,5 @@ VioletCity_Gym_Text_GymStatue:
 
 VioletCity_Gym_Text_GymStatueCertified:
 	.string "Violet City Pokémon Gym\p"
-	.string "Falkner'S Certified Trainers:\n"
+	.string "Falkner's Certified Trainers:\n"
 	.string "{PLAYER}$"

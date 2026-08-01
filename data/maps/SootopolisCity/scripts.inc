@@ -1417,7 +1417,7 @@ SootopolisCity_Text_GymSign:
 
 SootopolisCity_Text_CitySign:
 	.string "Sootopolis City\p"
-	.string "“The mystical city where history\n"
+	.string "“The mystical City where history\n"
 	.string "slumbers.”$"
 
 SootopolisCity_Text_DoorIsClosed:
@@ -1431,7 +1431,7 @@ SootopolisCity_Text_PhysicallyFitLivingHere:
 
 SootopolisCity_Text_GiantPokemonSuddenlyAppeared:
 	.string "These giant Pokémon suddenly appeared\n"
-	.string "in the middle of the city!\p"
+	.string "in the middle of the City!\p"
 	.string "And, I've never seen them before!\p"
 	.string "Why are they smashing into each\n"
 	.string "other like that?\p"
@@ -1460,7 +1460,7 @@ SootopolisCity_Text_FlyingMonStoppedRampage:
 	.string "Pokémon…$"
 
 SootopolisCity_Text_WonderWhatWorldIsLike:
-	.string "I… I've never been out of this city.\p"
+	.string "I… I've never been out of this City.\p"
 	.string "I wonder what the world is like on\n"
 	.string "the other side of this round sky?$"
 
@@ -1529,7 +1529,7 @@ SootopolisCity_Text_NoOrdinaryTourist:
 	.string "an extraordinary tourist, either.$"
 
 SootopolisCity_Text_CityRegainedCalm:
-	.string "The city has regained its calm…$"
+	.string "The City has regained its calm…$"
 
 SootopolisCity_Text_CaveOfOriginPleaseLeave:
 	.string "Who might you be?\p"

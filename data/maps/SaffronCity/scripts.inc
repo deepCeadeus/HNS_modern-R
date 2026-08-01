@@ -162,10 +162,10 @@ SaffronCity_Text_Youngster2:
 	.string "gather from all over the place.$"
 
 SaffronCity_Text_Lass2:
-	.string "Our city was featured on a radio\n"
+	.string "Our City was featured on a radio\n"
 	.string "program.\p"
 	.string "It's nice to hear praise for your\n"
-	.string "city, but it's a bit embarrassing\l"
+	.string "City, but it's a bit embarrassing\l"
 	.string "too.$"
 
 SaffronCity_Text_Sign:
@@ -187,7 +187,7 @@ SaffronCity_Text_SilphCoSign:
 	.string "Office Building$"
 
 SaffronCity_Text_MrPsychicHouseSign:
-	.string "Mr. Psychic'S House$"
+	.string "Mr. Psychic's House$"
 
 SaffronCity_Text_MagnetTrainStationSign:
 	.string "Saffron City\n"

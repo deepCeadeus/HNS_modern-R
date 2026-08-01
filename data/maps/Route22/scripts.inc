@@ -15,8 +15,8 @@ Route22_EventScript_Sign::
 	end
 
 Route22_Text_VictoryRoadEntranceSign:
-	.string "POKéMON LEAGUE\p"
-	.string "VICTORY ROAD ENTRANCE$"
+	.string "Pokémon League\p"
+	.string "Victory Road Entrance$"
 
 Route22_EventScript_ResetActivation::
 	setvar VAR_TEMP_0, 0
@@ -294,7 +294,7 @@ Route22_Text_Silver1:
 
 Route22_Text_Giovanni1:
 	.string "… … … … … … … … … … … …\p"
-	.string "GIOVANNI: One must acknowledge one's\n"
+	.string "Giovanni: One must acknowledge one's\n"
 	.string "defeat before he can move on…\p"
 	.string "I will go solo… for now…\p"
 	.string "So that one day I will form a\n"
@@ -307,7 +307,7 @@ Route22_Text_Silver2:
 	.string "defeated by a mere child!$"
 
 Route22_Text_Giovanni2:
-	.string "GIOVANNI: Putting together the\n"
+	.string "Giovanni: Putting together the\n"
 	.string "potential of many is how you\l"
 	.string "produce a huge power…\l"
 	.string "That's what an organization is…\p"
@@ -316,7 +316,7 @@ Route22_Text_Giovanni2:
 	.string "I failed… to make the best use of\n"
 	.string "my subordinates' potential…!\p"
 	.string "But you shall witness one day the\n"
-	.string "revival of me and my TEAM ROCKET!$"
+	.string "revival of me and my Team Rocket!$"
 
 Route22_Text_Silver3:
 	.string "{RIVAL}: I don't understand you!\p"
@@ -324,7 +324,7 @@ Route22_Text_Silver3:
 
 Route22_Text_Giovanni3:
 	.string "… … … … … … … … … … … …\p"
-	.string "GIOVANNI: One day you will\n"
+	.string "Giovanni: One day you will\n"
 	.string "understand.$"
 
 Route22_Text_Silver4:

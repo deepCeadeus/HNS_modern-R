@@ -120,10 +120,10 @@ Route24_Movement_GruntLeave:
 	step_end
 
 Route24_Text_RocketSeen:
-	.string "Hey, kid! Me am a TEAM ROCKET\n"
+	.string "Hey, kid! Me am a Team Rocket\n"
 	.string "member kind of guy!\p"
 	.string "Come from another country, a\n"
-	.string "TRAINER number one, me!\p"
+	.string "Trainer number one, me!\p"
 	.string "Think I did, if stop the energy,\n"
 	.string "be big panic for here people!\p"
 	.string "Secret it is my mission, so tell\n"
@@ -141,20 +141,20 @@ Route24_Text_RocketBeaten:
 
 Route24_Text_RocketAfter:
 	.string "OK. Tell you mine secret will I?\n"
-	.string "MACHINE PART steal by me, hide it\l"
-	.string "I did in GYM of the CERULEAN.\p"
+	.string "Machine Part steal by me, hide it\l"
+	.string "I did in Gym of the Cerulean.\p"
 	.string "Inside water put it I did. Look\n"
-	.string "for in water center of GYM at.\p"
+	.string "for in water center of Gym at.\p"
 	.string "But you forget me not!\p"
-	.string "Beat you for sure will TEAM\n"
-	.string "ROCKET.\p"
-	.string "Come from JOHTO will they, mine\n"
+	.string "Beat you for sure will Team\n"
+	.string "Rocket.\p"
+	.string "Come from Johto will they, mine\n"
 	.string "friends, yes. Will revenge they\l"
 	.string "are.$"
 
 Route24_Text_RocketDisappears:
 	.string "…\p"
-	.string "You say what? TEAM ROCKET bye-\n"
+	.string "You say what? Team Rocket bye-\n"
 	.string "bye a go-go? Broken it is says\l"
 	.string "you?\p"
 	.string "Oh, no! Should I do what now on\n"
@@ -175,4 +175,4 @@ Route24_Text_ManRocket:
 Route24_Text_WomanAfterRocket:
 	.string "What was that all about?$"
 Route24_Text_ManAfterRocket:
-	.string "Was that a ROCKET?$"
+	.string "Was that a Rocket?$"

@@ -82,7 +82,7 @@ VioletCity_TrainerSchool_Text_EarlIntro:
 	.string "Earl, I am!\p"
 	.string "Wonderful are Pokémon, yes!\p"
 	.string "Teach you I will to be a better\n"
-	.string "TRAINER!$"
+	.string "Trainer!$"
 
 VioletCity_TrainerSchool_Text_Teacher:
 	.string "Certain Pokémon start off weak and\n"

@@ -521,7 +521,7 @@ SaffronCity_FightingDojoVIP_Text_Bugsy_Rematch:
 
 SaffronCity_FightingDojoVIP_Text_Bugsy_RematchDefeat:
 	.string "Wow, you must be an expert\n"
-	.string "TRAINER.\p"
+	.string "Trainer.\p"
 	.string "My research must not be\n"
 	.string "complete…$"
 
@@ -573,7 +573,7 @@ SaffronCity_FightingDojoVIP_Text_Jasmine_Rematch:
 	.string "Want to have a rematch with me?$"
 
 SaffronCity_FightingDojoVIP_Text_Jasmine_RematchDefeat:
-	.string "…You are a better TRAINER than\n"
+	.string "…You are a better Trainer than\n"
 	.string "me,\p"
 	.string "in both skill and kindness.$"
 
@@ -658,7 +658,7 @@ SaffronCity_FightingDojoVIP_Text_Erika_RematchDefeat:
 	.string "Erika: Losing still leaves a\n"
 	.string "bitter aftertaste…\p"
 	.string "But knowing that there are strong\n"
-	.string "TRAINERS spurs me to do better…$"
+	.string "Trainers spurs me to do better…$"
 
 SaffronCity_FightingDojoVIP_Text_Sabrina_Rematch:
 	.string "Sabrina: Ah, the Champion.\p"

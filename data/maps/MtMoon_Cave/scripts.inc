@@ -90,13 +90,13 @@ MtMoon_Cave_Text_Rival_Before:
 	.string "… … … … … … … … … … … …\p"
 	.string "It's been a while, {PLAYER}.\p"
 	.string "…Since I lost to you, I thought about\n"
-	.string "what I was lacking with my POKéMON…\p"
+	.string "what I was lacking with my Pokémon…\p"
 	.string "And we came up with an answer.\p"
 	.string "{PLAYER}, now we'll show you!$"
 
 MtMoon_Cave_Text_Rival_Win:
 	.string "… … … … … … … … … … … …\p"
-	.string "I thought I raised my POKéMON to be the\n"
+	.string "I thought I raised my Pokémon to be the\n"
 	.string "best they could be…\p"
 	.string "…But it still wasn't enough…$"
 
@@ -104,8 +104,8 @@ MtMoon_Cave_Text_Rival_After:
 	.string "… … … … … … … … … … … …\p"
 	.string "…You won, fair and square.\p"
 	.string "I admit it. But this isn't the end.\p"
-	.string "I'm going to be the greatest POKéMON\n"
-	.string "TRAINER ever.\p"
+	.string "I'm going to be the greatest Pokémon\n"
+	.string "Trainer ever.\p"
 	.string "Because these guys are behind me.\p"
 	.string "…Listen, {PLAYER}.\p"
 	.string "One of these days I'm going to prove\n"
@@ -114,9 +114,9 @@ MtMoon_Cave_Text_Rival_After:
 MtMoon_Cave_Text_Rival_Loss:
 	.string "… … … … … … … … … … … …\p"
 	.string "I've repaid my debt to you.\p"
-	.string "With my POKéMON, I'm going to beat the\n"
-	.string "CHAMPION and become the world's greatest\n"
-	.string "TRAINER.$"
+	.string "With my Pokémon, I'm going to beat the\n"
+	.string "Champion and become the world's greatest\n"
+	.string "Trainer.$"
 
 MtMoon_Cave_Text_Sign:
-	.string "MT MOON SQUARE ->$"
+	.string "Mt. Moon Square ->$"

@@ -939,12 +939,12 @@ MauvilleCity_GameCorner_EventScript_NoCoinCase::
 	end
 
 MauvilleCity_GameCorner_Text_ThisIsMauvilleGameCorner:
-	.string "This is the GAME CORNER.$"
+	.string "This is the Game Corner.$"
 
 MauvilleCity_GameCorner_Text_NeedCoinCaseForCoins:
 	.string "Okay, you wanted some COINS for\n"
 	.string "the games?\p"
-	.string "But you don't have a COIN CASE for\n"
+	.string "But you don't have a Coin Case for\n"
 	.string "stowing the COINS.$"
 
 MauvilleCity_GameCorner_Text_WereYouLookingForCoins:
@@ -967,15 +967,15 @@ MauvilleCity_GameCorner_Text_DontHaveEnoughMoney:
 	.string "enough money for that many COINS…$"
 
 MauvilleCity_GameCorner_Text_NoRoomFor50Coins:
-	.string "Oh! Your COIN CASE is too full to buy\n"
+	.string "Oh! Your Coin Case is too full to buy\n"
 	.string "any more COINS!\p"
-	.string "Enjoy the GOLDENROD GAME CORNER or\n"
+	.string "Enjoy the Goldenrod Game Corner or\n"
 	.string "exchange your COINS for prizes before\l"
 	.string "coming back!$"
 
 MauvilleCity_GameCorner_Text_NoRoomForCoins:
 	.string "Oh?\n"
-	.string "Your COIN CASE can't fit those COINS…$"
+	.string "Your Coin Case can't fit those COINS…$"
 
 MauvilleCity_GameCorner_Text_DontNeedCoinsThen:
 	.string "Oh… You don't need COINS, then?\n"
@@ -1046,7 +1046,7 @@ MauvilleCity_GameCorner_Text_CantWinJackpot:
 
 MauvilleCity_GameCorner_Text_NeedCoinCaseGoNextDoor:
 	.string "Hey, kid, if you want to play here,\n"
-	.string "you need a COIN CASE.\p"
+	.string "you need a Coin Case.\p"
 	.string "I think the young lady next door\n"
 	.string "had one. Go see her!$"
 
@@ -1058,7 +1058,7 @@ MauvilleCity_GameCorner_Text_LuckOnlyLastSoLongTakeCoins:
 MauvilleCity_GameCorner_Text_MauvilleSomethingForEveryone:
 	.string "MAUVILLE has something for\n"
 	.string "everyone.\p"
-	.string "For me, it's the GAME CORNER.$"
+	.string "For me, it's the Game Corner.$"
 
 MauvilleCity_GameCorner_Text_RouletteTablesDifferentRates:
 	.string "The ROULETTE tables have different\n"
@@ -1072,7 +1072,7 @@ MauvilleCity_GameCorner_Text_EasyToLoseTrackOfTime:
 
 MauvilleCity_GameCorner_Text_CoinsAreNeededToPlay:
 	.string "COINS are needed to play here\n"
-	.string "in the GAME CORNER.$"
+	.string "in the Game Corner.$"
 
 MauvilleCity_GameCorner_Text_RouletteOnlyLuck:
 	.string "This ROULETTE thing…\n"
@@ -1103,5 +1103,5 @@ MauvilleCity_GameCorner_Text_HeresSomeSlotsInfo:
 
 MauvilleCity_GameCorner_Text_CantPlayWithNoCoinCase:
 	.string "You can't play if you don't have\n"
-	.string "a COIN CASE.$"
+	.string "a Coin Case.$"
 

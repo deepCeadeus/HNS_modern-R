@@ -646,12 +646,12 @@ DewfordTown_Text_TinyIslandCommunity:
 	.string "everyone picks up on it right away.$"
 
 DewfordTown_Text_TownSign:
-	.string "DEWFORD TOWN\n"
+	.string "DEWFORD Town\n"
 	.string "“A tiny island in the blue sea.”$"
 
 DewfordTown_Text_GymSign:
-	.string "DEWFORD TOWN POKéMON GYM\n"
-	.string "LEADER: BRAWLY\l"
+	.string "DEWFORD Town Pokémon Gym\n"
+	.string "Leader: BRAWLY\l"
 	.string "“A big wave in fighting!”$"
 
 DewfordTown_Text_HallSign:
@@ -659,49 +659,49 @@ DewfordTown_Text_HallSign:
 	.string "“Everyone's information exchange!”$"
 
 Route104_Text_LandedInDewfordDeliverLetter:
-	.string "MR. BRINEY: Ahoy!\n"
+	.string "Mr. BRINEY: Ahoy!\n"
 	.string "We've hit land in DEWFORD.\p"
 	.string "I suppose you're off to deliver that\n"
-	.string "LETTER to, who was it now, STEVEN!$"
+	.string "Letter to, who was it now, Steven!$"
 
 DewfordTown_Text_SetSailBackToPetalburg:
-	.string "MR. BRINEY: Have you delivered your\n"
-	.string "LETTER?\p"
+	.string "Mr. BRINEY: Have you delivered your\n"
+	.string "Letter?\p"
 	.string "Or were you meaning to sail back to\n"
 	.string "PETALBURG?$"
 
 DewfordTown_Text_PetalburgWereSettingSail2:
-	.string "MR. BRINEY: PETALBURG it is, then!\p"
+	.string "Mr. BRINEY: PETALBURG it is, then!\p"
 	.string "Anchors aweigh!\n"
 	.string "PEEKO, we're setting sail, my darling!$"
 
 DewfordTown_Text_GoDeliverIllBeWaiting:
-	.string "MR. BRINEY: Then you go on and deliver\n"
-	.string "the LETTER. I'll be waiting.$"
+	.string "Mr. BRINEY: Then you go on and deliver\n"
+	.string "the Letter. I'll be waiting.$"
 
 DewfordTown_Text_BrineyLandedInDewford:
-	.string "MR. BRINEY: Ahoy!\n"
+	.string "Mr. BRINEY: Ahoy!\n"
 	.string "We've hit land in DEWFORD!\p"
 	.string "You just go on and tell me whenever\n"
 	.string "you want to set sail again!$"
 
 DewfordTown_Text_WhereAreWeBound:
-	.string "MR. BRINEY: Ahoy!\n"
+	.string "Mr. BRINEY: Ahoy!\n"
 	.string "For you, I'll go out to sea anytime!\p"
 	.string "Now, my friend, where are we bound?$"
 
 DewfordTown_Text_PetalburgWereSettingSail:
-	.string "MR. BRINEY: PETALBURG, is it?\p"
+	.string "Mr. BRINEY: PETALBURG, is it?\p"
 	.string "Anchors aweigh!\n"
 	.string "PEEKO, we're setting sail, my darling!$"
 
 DewfordTown_Text_SlateportWereSettingSail:
-	.string "MR. BRINEY: SLATEPORT, is it?\p"
+	.string "Mr. BRINEY: SLATEPORT, is it?\p"
 	.string "Anchors aweigh!\n"
 	.string "PEEKO, we're setting sail, my darling!$"
 
 DewfordTown_Text_JustTellMeWhenYouNeedToSetSail:
-	.string "MR. BRINEY: You just tell me whenever\n"
+	.string "Mr. BRINEY: You just tell me whenever\n"
 	.string "you need to set sail again!$"
 
 DewfordTown_Text_GettingItchToFish:
@@ -726,9 +726,9 @@ DewfordTown_Text_ThrowInFishingAdvice:
 	.string "to haul them in.\p"
 	.string "Also, if you chain your fishing strikes\n"
 	.string "you may encounter different colored\l"
-	.string "POKéMON.\p"
+	.string "Pokémon.\p"
 	.string "Fishing strikes means defeating the\n"
-	.string "wild POKéMON and starting a new\l"
+	.string "wild Pokémon and starting a new\l"
 	.string "fishing encounter.\p"
 	.string "If you run away or whiteout, you\n"
 	.string "will lose your fishing strike!$"
@@ -758,9 +758,9 @@ DewfordTown_Text_FishingAdvice:
 	.string "to haul them in.\p"
 	.string "Also, if you chain your fishing strikes\n"
 	.string "you may encounter different colored\l"
-	.string "POKéMON.\p"
+	.string "Pokémon.\p"
 	.string "Fishing strikes means defeating the\n"
-	.string "wild POKéMON and starting a new\l"
+	.string "wild Pokémon and starting a new\l"
 	.string "fishing encounter.\p"
 	.string "If you run away or whiteout, you\n"
 	.string "will lose your fishing strike!$"

@@ -57,13 +57,13 @@ SeafoamIslands_Gym_EventScript_GymStatuePostVictory::
 SeafoamIslands_Gym_Text_GymStatue::
     .string "Cinnabar Pokémon Gym\n"
     .string "Leader: Blaine\p"
-	.string "Winning Trainers:\n"
+	.string "Certified Trainers:\n"
 	.string "Blue, Red$"
 
 SeafoamIslands_Gym_Text_GymStatuePlayerWon::
     .string "Cinnabar Pokémon Gym\n"
     .string "Leader: Blaine\p"
-    .string "Winning Trainers:\n"
+    .string "Certified Trainers:\n"
 	.string "Blue, Red, {PLAYER}$"
 
 SeafoamIslands_Gym_Text_TM:

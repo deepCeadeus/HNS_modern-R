@@ -152,7 +152,7 @@ SootopolisCity_LotadAndSeedotHouse_Text_DontHaveBigSeedot:
 
 SootopolisCity_LotadAndSeedotHouse_Text_BiggestSeedotInHistory:
 	.string "The biggest Seedot in history!\n"
-	.string "{STR_VAR_2}'S {STR_VAR_3}-{STR_VAR_1} giant!\p"
+	.string "{STR_VAR_2}'s {STR_VAR_3}-{STR_VAR_1} giant!\p"
 	.string "A Seedot bigger than a Lotad\n"
 	.string "always wanted!$"
 
@@ -200,6 +200,6 @@ SootopolisCity_LotadAndSeedotHouse_Text_DontHaveBigLotad:
 
 SootopolisCity_LotadAndSeedotHouse_Text_BiggestLotadInHistory:
 	.string "The biggest Lotad in history!\n"
-	.string "{STR_VAR_2}'S {STR_VAR_3}-{STR_VAR_1} colossus!\p"
+	.string "{STR_VAR_2}'s {STR_VAR_3}-{STR_VAR_1} colossus!\p"
 	.string "A Lotad bigger than a Seedot\n"
 	.string "always wanted!$"

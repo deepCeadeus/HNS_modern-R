@@ -145,7 +145,7 @@ Route44_Text_PokemaniacZachAfter:
     .string "What? You mean that's not true?$"
 
 Route44_Text_CooltrainermAllenSeen:
-    .string "I can tell you're a good TRAINER\n"
+    .string "I can tell you're a good Trainer\n"
     .string "by looking at you.\p"
     .string "I'm good at Pokémon, and I can\n"
     .string "see that you are too.$"
@@ -162,7 +162,7 @@ Route44_Text_CooltrainermAllenAfter:
 
 Route44_Text_CooltrainerfCybilSeen:
     .string "You look strong.\p"
-    .string "Good TRAINERS seek tough\n"
+    .string "Good Trainers seek tough\n"
     .string "opponents instinctively.$"
 
 Route44_Text_CooltrainerfCybilBeaten:

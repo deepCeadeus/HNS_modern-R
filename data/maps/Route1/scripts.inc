@@ -37,14 +37,14 @@ Route1_EventScript_Sign::
 	end
 
 Route1_Text_SchoolboyDanny_Seen:
-	.string "If TRAINERS meet, the first\n"
+	.string "If Trainers meet, the first\n"
 	.string "thing to do is battle.$"
 
 Route1_Text_SchoolboyDanny_Beaten:
 	.string "Awww… I've got a losing record…$"
 
 Route1_Text_SchoolboyDanny_AfterBattle:
-	.string "For TRAINERS, it's a given that\n"
+	.string "For Trainers, it's a given that\n"
 	.string "we'll battle whenever we meet.$"
 
 Route1_Text_CooltrainerFQuinn_Seen:
@@ -62,5 +62,5 @@ Route1_Text_CooltrainerFQuinn_AfterBattle:
 	.string "hard.$"
 
 Route1_Text_Sign:
-	.string "ROUTE 1\p"
-	.string "PALLET TOWN - VIRIDIAN CITY$"
+	.string "Route 1\p"
+	.string "Pallet Town - Viridian City$"

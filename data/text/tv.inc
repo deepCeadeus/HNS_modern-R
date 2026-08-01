@@ -852,7 +852,7 @@ gTVPokemonAnglerText00::
 
 gTVPokemonAnglerText01::
 	.string "{STR_VAR_2} Angler\p"
-	.string "Announcer: Hello! Today, we'll get tips\n"
+	.string "Announcer: Hello! Today, we'll get Tips\n"
 	.string "on fishing for {STR_VAR_2}.\p"
 	.string "Guru, what advice can you give for\n"
 	.string "catching {STR_VAR_2}?\p"

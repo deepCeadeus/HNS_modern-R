@@ -174,7 +174,7 @@ PokemonFanClub_Text_Bayleef:
 
 PokemonFanClub_Text_Listen:
 	.string "Let's all listen politely to\n"
-	.string "other TRAINERS.$"
+	.string "other Trainers.$"
 
 PokemonFanClub_Text_Bragging:
 	.string "If someone brags, brag right\n"
