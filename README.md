@@ -1,13 +1,11 @@
-# WARNING!!!
-# REPOSITORY UNDER DEVELOPMENT!
-
-
 # MODERN Heart & Soul
 **Modern** Heart & Soul is a small modification of the original Pokémon Heart & Soul version 1.2.1+(more recent than 1.2.1, "unofficially" called 1.2.2, but unreleased nonetheless) that includes missing options and features from its base game engine, Pokémon Modern Emerald. It has been created to become the base game of a future romhack: Modern Fire Red & Leaf Green.
 
 The version indicator shows the Pokémon Heart&Soul version (currently "1.2.1"), plus its modded "Modern" version (currently "m1") -> v1.2.1m1
 
 Future releases, if any, will only update the modded "Modern" version, as Heart&Soul 2.0 will use a better engine that is NOT built using Modern Emerald and **CANNOT** (and will not, at least not by me) be easily backported. Players will need to choose between playing the original 1.2.1 plus the "Modern" enhancements made by me, or the 2.0 version by the HnS team. Versions will **NOT** be compatible, **AT ALL,** since HnS 2.0 uses the "Pokeemerald_Expansion" base.
+
+If you are unsure which version to play, play the official one.
 
 You can get more information about Modern Emerald at [Pokécommunity](https://www.Pokécommunity.com/showthread.php?t=494005) and at [Github](https://github.com/resetes12/pokeemerald). 
 
