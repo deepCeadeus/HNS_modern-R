@@ -85,14 +85,14 @@ BattleFrontier_OutsideWest_EventScript_Engineer8::
 	end
 
 BattleFrontier_OutsideWest_Text_Reparations5:
-	.string "We’re almost done with the repairs.\p"
-    .string "MACHAMP’s been a huge help\n"
+	.string "We're almost done with the repairs.\p"
+    .string "Machamp's been a huge help\n"
     .string "lifting the heavier rocks.$"
 
 BattleFrontier_OutsideWest_Text_Reparations6:
     .string "Watch your step!\n"
-    .string "The ground’s still unstable here.\p"
-    .string "Good thing the MACHOKE team’s been\n"
+    .string "The ground's still unstable here.\p"
+    .string "Good thing the Machoke team's been\n"
     .string "helping us clear the debris.$"
 
 BattleFrontier_OutsideWest_Text_Reparations7:
@@ -100,9 +100,9 @@ BattleFrontier_OutsideWest_Text_Reparations7:
     .string "way across while we finish repairs.$"
 
 BattleFrontier_OutsideWest_Text_Reparations8:
-    .string "The cave’s still unstable, so we built\n"
+    .string "The cave's still unstable, so we built\n"
     .string "temporary wooden bridges.\p"
-    .string "They’re sturdy… I think.$"
+    .string "They're sturdy… I think.$"
 
 BattleFrontier_OutsideWest_EventScript_Brandon::
 	lock
@@ -122,15 +122,15 @@ BattleFrontier_OutsideWest_EventScript_Brandon::
 
 BattleFrontier_OutsideWest_Text_Brandon:
 	.string "?????: Hahahah!\p"
-	.string "Are you the explorer SCOTT brought to\n"
-	.string "deal with the POKéMON tearing up\l"
+	.string "Are you the explorer Scott brought to\n"
+	.string "deal with the Pokémon tearing up\l"
 	.string "the underground?\p"
 	.string "…\p"
 	.string "No?\p"
 	.string "That can't be!\p"
-	.string "SCOTT swears you're the best option\n"
+	.string "Scott swears you're the best option\n"
 	.string "we've got.\p"
-	.string "BRANDON: I'm BRANDON, nice to meet\n"
+	.string "Brandon: I'm Brandon, nice to meet\n"
 	.string "a young explorer like you.\p"
 	.string "Come inside. We'll go over the ruins\n"
 	.string "while we examine them.$"

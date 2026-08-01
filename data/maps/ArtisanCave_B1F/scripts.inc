@@ -23,31 +23,31 @@ ArtisanCave_B1F_EventScript_Brandon_1::
 	end
 
 ArtisanCave_B1F_Text_Brandon_Cave_1::
-	.string "BRANDON: Do you know where we are,\n"
+	.string "Brandon: Do you know where we are,\n"
 	.string "young explorer?\p"
-	.string "This cave is known as the ARTISAN CAVE,\n"
+	.string "This cave is known as the Artisan Cave,\n"
 	.string "and it usually holds only one kind of\l"
-	.string "POKéMON. Well… or so we believed.\p"
+	.string "Pokémon. Well… or so we believed.\p"
 	.string "It turns out there are ancient ruins\n"
 	.string "here that no one had ever discovered\l"
 	.string "until now.\p"
 	.string "Strange tremors began some time ago. At\n"
 	.string "first, we blamed faulty construction,\l"
 	.string "until we heard drilling sounds.\p"
-	.string "Six ancient POKéMON forced their way\n"
+	.string "Six ancient Pokémon forced their way\n"
 	.string "into the old cave network beneath us.\p"
-	.string "They are known as the LEGENDARY TITANS,\n"
+	.string "They are known as the Legendary Titans,\n"
 	.string "and I actually have some of them in my\l"
-	.string "POKéMON party.\p"
+	.string "Pokémon party.\p"
 	.string "They are strong! Hahahah!\p"
 	.string "Anyway, there are six chambers here.\n"
-	.string "Each TITAN is sleeping inside one.\p"
-	.string "SCOTT and I think that dealing with\n"
-	.string "the TITANS should prevent more cave\l"
+	.string "Each Titan is sleeping inside one.\p"
+	.string "Scott and I think that dealing with\n"
+	.string "the Titans should prevent more cave\l"
 	.string "collapses.\p"
 	.string "We need someone capable, someone who\n"
 	.string "can handle legendary threats, like you.\p"
-	.string "Maybe even capture them, if you’re\n"
+	.string "Maybe even capture them, if you're\n"
 	.string "up to the task.\p"
 	.string "I'm heading up ahead to the final\n"
 	.string "chamber. I'll see you there.$"
@@ -120,13 +120,13 @@ ArtisanCave_B1F_EventScript_Brandon_2_AllChecksCompleted::
 	end
 
 ArtisanCave_B1F_Text_Brandon_Cave_2::
-	.string "BRANDON: Herein lies REGIGIGAS.\p"
-	.string "REGIGIGAS is the strongest of the\n"
-	.string "LEGENDARY TITANS.\p"
+	.string "Brandon: Herein lies Regigigas.\p"
+	.string "Regigigas is the strongest of the\n"
+	.string "Legendary Titans.\p"
 	.string "However, before letting you proceed,\n"
 	.string "you must prove your prowess by\l"
 	.string "defeating or capturing the other\l"
-	.string "FIVE TITANS.\p"
+	.string "five Titans.\p"
 	.string "Come back when you're done.$"
 
 ArtisanCave_B1F_Text_Brandon_Cave_2_2::
@@ -134,7 +134,7 @@ ArtisanCave_B1F_Text_Brandon_Cave_2_2::
 	.string "Excellent. I'll grant you passage to\n"
 	.string "the final chamber.\p"
 	.string "Good luck, young explorer!\p"
-	.string "I'll see you at the BATTLE PYRAMID!$"
+	.string "I'll see you at the Battle Pyramid!$"
 
 ArtisanCave_B1F_EventScript_PlayerMovement:
 	lock_facing_direction
