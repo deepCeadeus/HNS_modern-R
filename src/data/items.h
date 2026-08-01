@@ -4501,7 +4501,7 @@ const struct Item gItems[] =
 
 //HnS Johto key items
 
-[ITEM_CLEAR_BELL] = {    
+[ITEM_CLEAR_BELL] = {
     .name = _("Clear Bell"),
     .itemId = ITEM_CLEAR_BELL,
     .price = 0,
@@ -4511,7 +4511,7 @@ const struct Item gItems[] =
     .type = ITEM_USE_BAG_MENU,
     .fieldUseFunc = ItemUseOutOfBattle_CannotUse,},
 
-[ITEM_LOST_ITEM] = {    
+[ITEM_LOST_ITEM] = {
     .name = _("Lost Item"),
     .itemId = ITEM_LOST_ITEM,
     .price = 0,
@@ -4521,7 +4521,7 @@ const struct Item gItems[] =
     .type = ITEM_USE_BAG_MENU,
     .fieldUseFunc = ItemUseOutOfBattle_CannotUse,},
 
-[ITEM_MACHINE_PART] = {    
+[ITEM_MACHINE_PART] = {
     .name = _("Machine Part"),
     .itemId = ITEM_MACHINE_PART,
     .price = 0,
@@ -4531,7 +4531,7 @@ const struct Item gItems[] =
     .type = ITEM_USE_BAG_MENU,
     .fieldUseFunc = ItemUseOutOfBattle_CannotUse,},
 
-[ITEM_MYSTERY_EGG] = {    
+[ITEM_MYSTERY_EGG] = {
     .name = _("Mystery Egg"),
     .itemId = ITEM_MYSTERY_EGG,
     .price = 0,
@@ -4541,7 +4541,7 @@ const struct Item gItems[] =
     .type = ITEM_USE_BAG_MENU,
     .fieldUseFunc = ItemUseOutOfBattle_CannotUse,},
 
-[ITEM_PASS] = {    
+[ITEM_PASS] = {
     .name = _("Pass"),
     .itemId = ITEM_PASS,
     .price = 0,
@@ -4551,7 +4551,7 @@ const struct Item gItems[] =
     .type = ITEM_USE_BAG_MENU,
     .fieldUseFunc = ItemUseOutOfBattle_CannotUse,},
 
-[ITEM_RAINBOW_WING] = {    
+[ITEM_RAINBOW_WING] = {
     .name = _("Rainbow Wing"),
     .itemId = ITEM_RAINBOW_WING,
     .price = 0,
@@ -4561,7 +4561,7 @@ const struct Item gItems[] =
     .type = ITEM_USE_BAG_MENU,
     .fieldUseFunc = ItemUseOutOfBattle_CannotUse,},
 
-[ITEM_RED_SCALE] = {    
+[ITEM_RED_SCALE] = {
     .name = _("Red Scale"),
     .itemId = ITEM_RED_SCALE,
     .price = 0,
@@ -4571,7 +4571,7 @@ const struct Item gItems[] =
     .type = ITEM_USE_BAG_MENU,
     .fieldUseFunc = ItemUseOutOfBattle_CannotUse,},
 
-[ITEM_SECRET_POTION] = {    
+[ITEM_SECRET_POTION] = {
     .name = _("Secret Potion"),
     .itemId = ITEM_SECRET_POTION,
     .price = 0,
@@ -4581,7 +4581,7 @@ const struct Item gItems[] =
     .type = ITEM_USE_BAG_MENU,
     .fieldUseFunc = ItemUseOutOfBattle_CannotUse,},
 
-[ITEM_SILVER_WING] = {    
+[ITEM_SILVER_WING] = {
     .name = _("Silver Wing"),
     .itemId = ITEM_SILVER_WING,
     .price = 0,
@@ -4591,7 +4591,7 @@ const struct Item gItems[] =
     .type = ITEM_USE_BAG_MENU,
     .fieldUseFunc = ItemUseOutOfBattle_CannotUse,},
 
-[ITEM_RAGE_CANDY_BAR] = {    
+[ITEM_RAGE_CANDY_BAR] = {
     .name = _("RageCandyBar"),
     .itemId = ITEM_RAGE_CANDY_BAR,
     .price = 100,
@@ -4603,7 +4603,7 @@ const struct Item gItems[] =
     .battleUsage = ITEM_B_USE_MEDICINE,
     .battleUseFunc = ItemUseInBattle_Medicine,},
 
-[ITEM_TIDAL_BELL] = {    
+[ITEM_TIDAL_BELL] = {
     .name = _("Tidal Bell"),
     .itemId = ITEM_TIDAL_BELL,
     .price = 0,
@@ -4611,7 +4611,7 @@ const struct Item gItems[] =
     .importance = 1,
     .pocket = POCKET_KEY_ITEMS,
     .type = ITEM_USE_BAG_MENU,
-    .fieldUseFunc = ItemUseOutOfBattle_CannotUse,},    
+    .fieldUseFunc = ItemUseOutOfBattle_CannotUse,},
 
 // Emerald-specific key items
 
@@ -5056,7 +5056,7 @@ const struct Item gItems2[] =
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = ITEM_PREMIER_BALL - FIRST_BALL,
     },
-    
+
     [ITEM_LOVE_BALL] =
     {
         .name = _("Love Ball"),
