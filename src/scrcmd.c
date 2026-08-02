@@ -66,6 +66,7 @@
 #include "list_menu.h"
 #include "malloc.h"
 #include "starter_choose.h"
+#include "new_game.h"
 
 //HnS For headbutt
 // From party_menu.c (that TU owns the tutor data)
@@ -1653,7 +1654,6 @@ bool8 ScrCmd_showmonpic(struct ScriptContext *ctx)
     // If we have not gotten a pokemon yet, assume this is starter preview
     if (!FlagGet(FLAG_SYS_POKEMON_GET))
     {
-        u32 shinyChance = SHINY_ODDS << gSaveBlock1Ptr->tx_Features_ShinyChance;
         u8 starter = VarGet(VAR_STARTER_MON);
 
         u32 flagTemp;
@@ -1681,7 +1681,7 @@ bool8 ScrCmd_showmonpic(struct ScriptContext *ctx)
         if (!FlagGet(flagTemp))
         {
             u32 fakePid = Random32();
-            if (GET_SHINY_VALUE(GetTrainerId(), fakePid) < shinyChance)
+            if (IsShinyOtIdPersonality(GetTrainerId(gSaveBlock2Ptr->playerTrainerId), fakePid))
                 FlagSet(flagShinyStarter);
 
             FlagSet(flagTemp);
