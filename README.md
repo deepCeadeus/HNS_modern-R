@@ -75,6 +75,21 @@ The **Modern** feature list is:
 
 _*Squirtle, Wartortle, Kakuna, Arbok, Nidoqueen, Nidoking, Vileplume, Geodude, Grimer, Muk, Onix, Scyther, Magikarp, Gyarados, Eeevee, Articuno, Mew second frame taken from the "Gen 3 Resource Sprite Project", so credits to them._
 
+## 🪪CREDITS
+
+* [https://github.com/pret/pokeemerald](Pokeemerald decomp) for its base
+* [Pret's Wiki Tutorials](https://github.com/pret/pokeemerald/wiki/Tutorials):
+    - TONS of their tutorials were used!
+* Repositories and assets used:
+    - [HGSS / DPPt music](https://github.com/CyanSMP64/pokeemerald/tree/dppt_hgss_music ), by CyanSMP64's repo
+    - [BW music](https://github.com/CyanSMP64/pokeemerald/tree/dppt_hgss_bw_music_old), from CyanSMP64's repo
+    - [Day/Night system / Followers](https://github.com/aarant/pokeemerald/tree/followers-expanded-id), from aarant's repo
+    - [PHY/SP new icons and Stab indicator](https://github.com/worpbane/pokeemerald-worped/commits/battle-ui-rework/), from worpbane's repo
+    - [Many stuff was ported from HnS](https://github.com/PokemonHnS-Development/pokemonHnS), from the HnS development team
+* Contributors:
+   - Decap by @fanyx
+   - Tweaks and commits (From Modern Emerald) by @aloven, @pinkshellos, @insertCreativeName5. @davidgfnet, @unique-github-username, @TixoRebel and @bfedie5
+
 ##  HnS original Credits
 
 #### Lead Developer / Game Director
