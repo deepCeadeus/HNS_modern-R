@@ -77,7 +77,57 @@ _*Squirtle, Wartortle, Kakuna, Arbok, Nidoqueen, Nidoking, Vileplume, Geodude, G
 
 ## 🪪CREDITS
 
-* [https://github.com/pret/pokeemerald](Pokeemerald decomp) for its base
+* Modern version by me
+* Decap by [@fanyx](https://github.com/fanyx)
+* Tweaks and commits (From Modern Emerald) by [@aloven](https://github.com/aloven), [@pinkshellos](https://github.com/PinkShellos), [@insertCreativeName5](https://github.com/InsertCreativeName5). [@davidgfnet](https://github.com/davidgfnet), [@unique-github-username](https://github.com/unique-github-username), [@TixoRebel](https://github.com/TixoRebel) and [@bfedie5](https://github.com/bfedie518)
+* Box art by [@-TXTEC-](https://www.reddit.com/user/-TXTEC-)
+* Squirtle, Wartortle, Kakuna, Arbok, Nidoqueen, Nidoking, Vileplume, Geodude, Grimer, Muk, Onix, Scyther, Magikarp, Gyarados, Eeevee, Articuno, Mew second frame taken from the **"Gen 3 Resource Sprite Project"** Discord Server, so credits to them.
+
+## HnS ORIGINAL CREDITS
+
+**Lead Developer / Game Director**
+* Lil Dill
+
+**Developers**
+* TixoRebel
+* InfiniteBacon42
+* Exclsior
+* Phantonomy
+* DaniRainbow
+
+**Open Source Assets Used: Engine & Codebase**
+* pokeemerald - pret
+* Modern Emerald — Resetes12
+* pokeemerald-expansion
+
+**Art — Sprites**
+* Cesare_CBass
+* AveonTrainer
+* PurpleZaffre
+* BatimaTheBat
+
+**Art — Tilesets**
+* Crystal Advance — Kertra
+* Ekat99
+* TheDeadHeroAlistair
+* Johto Redrawn Team
+
+**Maps / Mapping References**
+* Crystal Advance — Kertra
+* Fire Gold — blackfragrant
+* SkidMarc25
+
+**Gameplay**
+* Crystal Legacy — TSP (TheSmithPlays)
+
+**Special Systems / Visuals**
+* Surfing Pokémon overworlds - slawter666, wally-217
+
+**Playtesters**
+MearaTheDigger · Kingofrocks · Ferropexola · Scarred-Healer13 · ShigyNinja · Liquid Justice · aktatertot · Faintful · piobrando · Shortino · Chronotakular · NoVa x CerberuS · Czarwardy · Phantonomy · TeggyDave · HenryChess · Inner Rhymes · Astralaria · GPie · BillyNaing · Penkachu · Emma M · Casper · Marzi · leob0505 · Sayu · RavePossum · Brick · KinoKuma · BlackBelt Jiraiya
+
+# MODERN EMERALD CREDITS
+* [Pokeemerald decomp](https://github.com/pret/pokeemerald) for its base
 * [Pret's Wiki Tutorials](https://github.com/pret/pokeemerald/wiki/Tutorials):
     - TONS of their tutorials were used!
 * Repositories and assets used:
@@ -85,55 +135,6 @@ _*Squirtle, Wartortle, Kakuna, Arbok, Nidoqueen, Nidoking, Vileplume, Geodude, G
     - [BW music](https://github.com/CyanSMP64/pokeemerald/tree/dppt_hgss_bw_music_old), from CyanSMP64's repo
     - [Day/Night system / Followers](https://github.com/aarant/pokeemerald/tree/followers-expanded-id), from aarant's repo
     - [PHY/SP new icons and Stab indicator](https://github.com/worpbane/pokeemerald-worped/commits/battle-ui-rework/), from worpbane's repo
-    - [Many stuff was ported from HnS](https://github.com/PokemonHnS-Development/pokemonHnS), from the HnS development team
-* Contributors:
-   - Decap by @fanyx
-   - Tweaks and commits (From Modern Emerald) by @aloven, @pinkshellos, @insertCreativeName5. @davidgfnet, @unique-github-username, @TixoRebel and @bfedie5
-
-##  HnS original Credits
-
-#### Lead Developer / Game Director
-- **Lil Dill**
-
-#### Developers
-- **TixoRebel**
-- **InfiniteBacon42**
-- **Exclsior**
-- **Phantonomy**
-- **DaniRainbow**
-
-### Open Source Assets Used:
-
-#### Engine & Codebase
-- **pokeemerald - pret** 
-- **Modern Emerald — Resetes12**
-- **pokeemerald-expansion**
-
-#### Art — Sprites
-- **Cesare_CBass**
-- **AveonTrainer**
-- **PurpleZaffre**
-- **BatimaTheBat**
-
-#### Art — Tilesets
-- **Crystal Advance — Kertra**
-- **Ekat99**
-- **TheDeadHeroAlistair**
-- **Johto Redrawn Team**
-
-#### Maps / Mapping References
-- **Crystal Advance — Kertra**
-- **Fire Gold — blackfragrant**
-- **SkidMarc25**
-
-#### Gameplay
-- **Crystal Legacy — TSP (TheSmithPlays)**
-
-#### Special Systems / Visuals
-- **Surfing Pokémon overworlds - slawter666, wally-217**
-
-### Playtesters
-**MearaTheDigger · Kingofrocks · Ferropexola · Scarred-Healer13 · ShigyNinja · Liquid Justice · aktatertot · Faintful · piobrando · Shortino · Chronotakular · NoVa x CerberuS · Czarwardy · Phantonomy · TeggyDave · HenryChess · Inner Rhymes · Astralaria · GPie · BillyNaing · Penkachu · Emma M · Casper · Marzi · leob0505 · Sayu · RavePossum · Brick · KinoKuma · BlackBelt Jiraiya**
 
 
 # For Developers
