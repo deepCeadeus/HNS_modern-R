@@ -24,9 +24,9 @@ CherryGroveCity_EventScript_TriggerGent_Top::
 	msgbox CherrygroveCity_Text_GuideGentTourStart, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, CherryGroveCity_Movement_Trigger_Top
-	waitmovement 0 
+	waitmovement 0
 	applymovement LOCALID_GUIDE_GENT, CherryGroveCity_Movement_Trigger_Gent
-	waitmovement 0 
+	waitmovement 0
 	goto CherryGroveCity_EventScript_GentTour
 	release
 	end
@@ -45,7 +45,7 @@ CherryGroveCity_EventScript_TriggerGent_Mid::
 	msgbox CherrygroveCity_Text_GuideGentTourStart, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_GUIDE_GENT, CherryGroveCity_Movement_Trigger_Gent
-	waitmovement 0 
+	waitmovement 0
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	goto CherryGroveCity_EventScript_GentTour
 	release
@@ -65,9 +65,9 @@ CherryGroveCity_EventScript_TriggerGent_Bottom::
 	msgbox CherrygroveCity_Text_GuideGentTourStart, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_GUIDE_GENT, CherryGroveCity_Movement_Trigger_Gent
-	waitmovement 0 
+	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, CherryGroveCity_Movement_Trigger_Bottom
-	waitmovement 0 
+	waitmovement 0
 	goto CherryGroveCity_EventScript_GentTour
 	release
 	end
@@ -122,7 +122,7 @@ CherryGroveCity_EventScript_GentTour::
 	removeobject LOCALID_GUIDE_GENT
 	closedoor 42, 14
 	waitdooranim
-	
+
 	clearflag FLAG_HIDE_CHERRYGROVE_GUIDE_GENT_HOUSE
 	setflag FLAG_HIDE_GUIDE_GENT_CHERRYGROVE
 	setvar VAR_CHERRYGROVE_CITY_STATE, 1
@@ -137,7 +137,7 @@ CherryGroveCity_EventScript_Fisherman::
 	msgbox CherrygroveCity_Text_MysticWaterGuyBefore, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, CherryGroveCity_EventScript_Fisherman2
 	giveitem ITEM_MYSTIC_WATER
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull 
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	closemessage
 	setflag FLAG_GOT_MYSTICWATER
 	release
@@ -207,7 +207,7 @@ CherryGroveCity_EventScript_Sign::
 	msgbox CherrygroveCity_Text_CitySign, MSGBOX_SIGN
 	closemessage
 	release
-	end	
+	end
 
 CherryGroveCity_EventScript_TriggerSilver_Top::
 	lock
@@ -376,8 +376,8 @@ CherrygroveCity_Text_MysticWaterGuyAfter:
 
 CherrygroveCity_Text_CitySign:
 	.string "Cherrygrove City\p"
-	.string "The City of Cute, Fragrant\n"
-	.string "Flowers$"
+	.string "The city of cute, fragrant\n"
+	.string "flowers$"
 
 CherrygroveCity_Text_GuideGentsHouseSign:
 	.string "Guide Gent's House$"

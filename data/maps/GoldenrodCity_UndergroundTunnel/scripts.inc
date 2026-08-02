@@ -444,4 +444,4 @@ GoldenrodUnderground_Text_KeyOpenedDoor:
     .string "The Basement Key opened the door.$"
 
 GoldenrodUnderground_Text_NoEntry:
-    .string "NO ENTRY BEYOND THIS POINT$"
+    .string "No Entry Beyond This Point$"

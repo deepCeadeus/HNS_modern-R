@@ -162,7 +162,7 @@ SaffronCity_Text_Youngster2:
 	.string "gather from all over the place.$"
 
 SaffronCity_Text_Lass2:
-	.string "Our City was featured on a radio\n"
+	.string "Our city was featured on a radio\n"
 	.string "program.\p"
 	.string "It's nice to hear praise for your\n"
 	.string "City, but it's a bit embarrassing\l"
@@ -170,7 +170,7 @@ SaffronCity_Text_Lass2:
 
 SaffronCity_Text_Sign:
 	.string "Saffron City\p"
-	.string "Shining, Golden Land of Commerce$"
+	.string "Shining, golden land of commerce$"
 
 SaffronCity_Text_GymSign:
 	.string "Saffron City\n"

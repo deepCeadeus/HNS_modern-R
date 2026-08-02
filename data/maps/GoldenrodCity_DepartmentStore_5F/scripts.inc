@@ -124,9 +124,9 @@ GoldenrodDeptStore_Text_5FPokefanM:
     .string "original Trainer's feelings for it.$"
 
 GoldenrodDeptStore_Text_Girl:
-	.string "The lady gave me RETURN!\n"
+	.string "The lady gave me Return!\n"
     .string "My Pokémon must really like me!$"
 
 GoldenrodDeptStore_Text_5FDirectory:
     .string "Customize Your Pokémon\p"
-    .string "5F TM CORNER$"
+    .string "5F TM Corner$"

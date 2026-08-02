@@ -40,7 +40,7 @@ MagmaHideout_3F_1R_EntranceTrigger::
 
 MagmaHideout_3F_1R_EntranceTrigger_Text:
 	.string "A big roar echoes around Magma\n"
-	.string "HIDEOUT.\p"
+	.string "Hideout.\p"
 	.string "It seems that the echoing roars\n"
 	.string "come from a menacing Pokémon.\p"
 	.string "However… It looks distressed.\n"

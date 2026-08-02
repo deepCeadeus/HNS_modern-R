@@ -11,7 +11,7 @@ VermilionCity_House1_Text_FishingDude:
 	.string "I am the Fishing Dude, the elder\n"
 	.string "of the Fishing Bros.\p"
 	.string "Have you met the Fishing Guru at\n"
-	.string "Lake Of Rage?\p"
+	.string "Lake of Rage?\p"
 	.string "He dreams about seeing the\n"
 	.string "world's greatest Magikarp.\p"
 	.string "If you don't mind, could you show\n"

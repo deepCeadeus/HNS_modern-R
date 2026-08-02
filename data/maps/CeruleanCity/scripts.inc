@@ -67,7 +67,7 @@ CeruleanCity_EventScript_Slowbro::
 	end
 
 CeruleanCity_Text_Slowbro:
-	.string "SLOWBRO: Yarah?$"
+	.string "Slowbro: Yarah?$"
 
 CeruleanCity_EventScript_SlowbroWoman::
 	msgbox CeruleanCity_Text_CooltrainerF1, MSGBOX_NPC
@@ -122,7 +122,7 @@ CeruleanCity_Text_Youngster1:
 
 CeruleanCity_Text_Youngster2:
 	.string "Ayuh?\p"
-	.string "My ItemFinder is responding…$"
+	.string "My Itemfinder is responding…$"
 
 CeruleanCity_EventScript_Sign::
 	msgbox CeruleanCity_Text_Sign, MSGBOX_SIGN
@@ -146,7 +146,7 @@ CeruleanCity_EventScript_CapeSign::
 
 CeruleanCity_Text_Sign:
 	.string "Cerulean City\p"
-	.string "A Mysterious Blue Aura Surrounds It$"
+	.string "A mysterious blue aura surrounds it$"
 
 CeruleanCity_Text_GymSign:
 	.string "Cerulean City Pokémon Gym\n"
@@ -161,7 +161,7 @@ CeruleanCity_Text_BikeShopSign:
 CeruleanCity_Text_PoliceSign:
 	.string "There's a notice here…\p"
 	.string "Stamp out thievery and make the\n"
-	.string "City a friendlier, more cheerful\l"
+	.string "city a friendlier, more cheerful\l"
 	.string "place!\p"
 	.string "- Cerulean Police$"
 

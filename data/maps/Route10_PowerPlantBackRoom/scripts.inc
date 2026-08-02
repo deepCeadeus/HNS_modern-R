@@ -76,7 +76,7 @@ Route10_PowerPlantBackRoom_Text_ManagerIWontForgiveCulprit:
 
 Route10_PowerPlantBackRoom_Text_ManagerThatsThePart:
 	.string "Manager: Ah! Yeah!\p"
-	.string "That's the missing PART from my\n"
+	.string "That's the missing part from my\n"
 	.string "beloved generator! You found it?$"
 
 Route10_PowerPlantBackRoom_Text_ManagerTakeThisTM:

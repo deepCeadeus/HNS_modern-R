@@ -103,7 +103,7 @@ PewterCity_EventScript_WelcomeSign::
 
 PewterCity_Text_Sign:
 	.string "Pewter City\n"
-	.string "A Stone Gray City$"
+	.string "A stone gray city$"
 
 PewterCity_Text_GymSign:
 	.string "Pewter City Pokémon Gym\n"

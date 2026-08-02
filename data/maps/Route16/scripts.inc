@@ -13,5 +13,5 @@ Route16_EventScript_Sign::
 
 Route16_Text_Sign:
 	.string "Cycling Road\n"
-	.string "DOWNHILL COASTING\l"
-	.string "ALL THE WAY DOWN!$"
+	.string "Downhill Coasting\l"
+	.string "All The Way Down!$"

@@ -70,7 +70,7 @@ Route11_Text_YoungsterJasonSeen:
 
 Route11_Text_YoungsterJason_Register:
 	.string "Don't move!\p"
-	.string "I'll go to the PokéCENTER and\n"
+	.string "I'll go to the PokéCenter and\n"
 	.string "heal my party.\p"
 	.string "Oh, you need to go?\p"
 	.string "Okay, fine. Here's my\n"

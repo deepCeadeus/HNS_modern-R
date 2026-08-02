@@ -243,7 +243,7 @@ Copycat_Text_GiveDoll:
 	.string "is sewn on? That's proof!$"
 
 Copycat_Text_GivePass:
-	.string "Ok. Here's the Magnet Train Pass\n"
+	.string "OK. Here's the Magnet Train Pass\n"
 	.string "like I promised!$"
 
 Copycat_Text_ExplainPass:
@@ -267,8 +267,8 @@ Copycat_Text_Dodrio1:
 	.string "Dodrio: Gii giii!$"
 
 Copycat_Text_Dodrio2:
-	.string "Mirror, Mirror On The Wall,\n"
-	.string "Who's The Fairest One Of All?$"
+	.string "Mirror, Mirror on the Wall,\n"
+	.string "Who's The fairest one of all?$"
 
 Copycat_Text_2FDoll:
 	.string "This is a rare Pokémon! Huh?\p"

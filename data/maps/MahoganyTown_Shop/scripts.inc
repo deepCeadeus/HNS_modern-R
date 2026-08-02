@@ -236,7 +236,7 @@ MahoganyMart1F_Text_BlackBelt_Lance:
     .string "That guy's Pokémon are tough…$"
 
 MahoganyMart1F_Text_Lance_HyperBeam:
-    .string "Lance: Dragonite, HYPER BEAM.$"
+    .string "Lance: Dragonite, Hyper Beam.$"
 
 MahoganyMart1F_Text_Lance_Radio:
     .string "What took you, {PLAYER}?\p"

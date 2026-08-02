@@ -43,10 +43,10 @@ CeladonCity_Gym_Text_ErikaBeforeBattle:
 CeladonCity_Gym_Text_ErikaBeaten:
 	.string "Erika: Oh! I concede defeat…\p"
 	.string "You are remarkably strong…\p"
-	.string "I shall give you RainbowBadge…$"
+	.string "I shall give you the Rainbow Badge…$"
 
 CeladonCity_Gym_Text_PlayerReceivedRainbowBadge:
-	.string "{PLAYER} received RainbowBadge.$"
+	.string "{PLAYER} received the Rainbow Badge.$"
 
 CeladonCity_Gym_Text_ErikaExplainTM:
 	.string "Erika: That was a delightful\n"

@@ -187,7 +187,7 @@ SlateportCity_ContestHall_Text_ImLikeMajorlyCheesed:
 
 @ Unused
 SlateportCity_ContestHall_Text_ExplainTorment:
-	.string "That's, like, Tm41, you know?\n"
+	.string "That's, like, TM41, you know?\n"
 	.string "Hey, it's Torment, you hearing me?\p"
 	.string "Like, it won't let the other guy\n"
 	.string "use the same move twice in a row, see?\p"
@@ -196,7 +196,7 @@ SlateportCity_ContestHall_Text_ExplainTorment:
 
 @ Unused
 SlateportCity_ContestHall_Text_MCStepUpTakePartInContest:
-	.string "Mc: Oh, my, my!\n"
+	.string "MC: Oh, my, my!\n"
 	.string "Now isn't that a dandy of a Pokémon?\p"
 	.string "Please! Do step right up and take\n"
 	.string "part in our splendid Contests!\p"

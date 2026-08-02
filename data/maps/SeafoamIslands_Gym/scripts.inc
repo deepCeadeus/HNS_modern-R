@@ -67,7 +67,7 @@ SeafoamIslands_Gym_Text_GymStatuePlayerWon::
 	.string "Blue, Red, {PLAYER}$"
 
 SeafoamIslands_Gym_Text_TM:
-	.string "Take this too. This Tm contains\n"
+	.string "Take this too. This TM contains\n"
 	.string "the awesome Overheat.\p"
 	.string "I hope your next opponent has an\n"
 	.string "extra Burn Heal! Waaah!$"
@@ -85,10 +85,10 @@ SeafoamIslands_Gym_Text_BlaineIntro:
 
 SeafoamIslands_Gym_Text_BlaineWinLoss:
 	.string "Blaine: Awesome. I've burned out…\p"
-	.string "You've earned Volcanobadge!$"
+	.string "You've earned the Volcano Badge!$"
 
 SeafoamIslands_Gym_Text_ReceivedVolcanoBadge:
-	.string "{PLAYER} received Volcanobadge.$"
+	.string "{PLAYER} received the Volcano Badge.$"
 
 SeafoamIslands_Gym_Text_BlaineAfterBattle:
 	.string "Blaine: I did lose this time, but\n"

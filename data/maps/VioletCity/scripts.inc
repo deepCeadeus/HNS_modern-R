@@ -443,7 +443,7 @@ VioletCity_Text_Youngster:
 
 VioletCity_Text_Sign:
 	.string "Violet City\p"
-	.string "The City of Nostalgic Scents$"
+	.string "The city of nostalgic scents$"
 
 VioletCity_Text_GymSign:
 	.string "Violet City Pokémon Gym\p"

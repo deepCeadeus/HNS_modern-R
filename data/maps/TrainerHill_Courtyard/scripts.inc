@@ -543,7 +543,7 @@ TrainerHill_Courtyard_Text_LadiesWereStrongAndBeautiful:
 TrainerHill_Courtyard_Text_SoftboiledDesc::
 	.string "Recovers up to\n"
 	.string "half the user's\n"
-	.string "maximum Hp.$"
+	.string "maximum HP.$"
 
 TrainerHill_Courtyard_Text_SeismicTossDesc::
 	.string "Inflicts damage\n"
@@ -618,7 +618,7 @@ TrainerHill_Courtyard_Text_IcyWindDesc::
 TrainerHill_Courtyard_Text_EndureDesc::
 	.string "Endures any at-\n"
 	.string "tack for 1 turn,\n"
-	.string "leaving 1Hp.$"
+	.string "leaving 1HP.$"
 
 TrainerHill_Courtyard_Text_PsychUpDesc::
 	.string "Copies the foe's\n"
@@ -1209,11 +1209,11 @@ TrainerHill_Courtyard_ExchangeServiceCorner_Text_ConfirmCarbos:
 	.string "Is that correct?$"
 
 TrainerHill_Courtyard_ExchangeServiceCorner_Text_ConfirmHpUp:
-	.string "You've chosen the Hp Up.\n"
+	.string "You've chosen the HP Up.\n"
 	.string "Is that correct?$"
 
 TrainerHill_Courtyard_ExchangeServiceCorner_Text_ConfirmBrightpowder:
-	.string "You've chosen the Brightpowder.\n"
+	.string "You've chosen the BrightPowder.\n"
 	.string "Is that correct?$"
 
 TrainerHill_Courtyard_ExchangeServiceCorner_Text_ConfirmWhiteHerb:
@@ -1250,7 +1250,7 @@ TrainerHill_Courtyard_ExchangeServiceCorner_Text_ConfirmLeftovers:
 
 TrainerHill_Courtyard_ExchangeServiceCorner_Text_WellSendItToPC:
 	.string "Thank you!\n"
-	.string "We'll send it to your Pc at home.$"
+	.string "We'll send it to your PC at home.$"
 
 TrainerHill_Courtyard_ExchangeServiceCorner_Text_HereIsYourPrize:
 	.string "Here is your prize!$"
@@ -1261,7 +1261,7 @@ TrainerHill_Courtyard_ExchangeServiceCorner_Text_DontHaveEnoughPoints:
 
 TrainerHill_Courtyard_ExchangeServiceCorner_Text_PCIsFull:
 	.string "I'm so sorry…\n"
-	.string "Your Pc appears to be full…$"
+	.string "Your PC appears to be full…$"
 
 TrainerHill_Courtyard_ExchangeServiceCorner_Text_DontHaveSpaceToHoldIt:
 	.string "I'm so sorry…\n"
@@ -1365,7 +1365,7 @@ TrainerHill_Courtyard_ExchangeServiceCorner_Text_ZincDesc::
 	.string "it will get you somewhere.$"
 
 TrainerHill_Courtyard_ExchangeServiceCorner_Text_CarbosDesc::
-	.string "x10 Ev gain, but halves speed.$"
+	.string "x10 EV gain, but halves speed.$"
 
 TrainerHill_Courtyard_ExchangeServiceCorner_Text_HPUpDesc::
 	.string "A peculiar box made\n"
@@ -1373,7 +1373,7 @@ TrainerHill_Courtyard_ExchangeServiceCorner_Text_HPUpDesc::
 
 TrainerHill_Courtyard_ExchangeServiceCorner_Text_LeftoversDesc::
 	.string "A hold item that gradually restores\n"
-	.string "Hp in battle.$"
+	.string "HP in battle.$"
 
 TrainerHill_Courtyard_ExchangeServiceCorner_Text_WhiteHerbDesc::
 	.string "A hold item that restores any\n"

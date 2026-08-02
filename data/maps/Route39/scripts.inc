@@ -137,7 +137,7 @@ Route39_EventScript_BaobaIntro::
 	end
 
 Route39_Text_ChooseLegend::
-	.string "Baoba: GOOD HEAVENS! Did that\n"
+	.string "Baoba: Good Heavens! Did that\n"
 	.string "shadow belong to a Pokémon?\p"
 	.string "Did you get a good look at it?\n"
 	.string "I can't tell what color it was…$"
@@ -236,7 +236,7 @@ Route39_EventScript_Miltank::
 	end
 
 Route39_Text_Miltank:
-	.string "MILTANK: Mooo!$"
+	.string "Miltank: Mooo!$"
 
 Route39_EventScript_Eugene::
 	trainerbattle_single TRAINER_EUGENE, Route39_Text_SailorEugeneSeen, Route39_Text_SailorEugeneBeaten

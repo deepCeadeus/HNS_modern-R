@@ -33,11 +33,11 @@ MahoganyTown_GymEventScript_GymGuy::
 	closemessage
 	release
 	end
-	
+
 MahoganyTown_Gym_EventScript_GymGuy2::
 	msgbox MahoganyTown_Gym_Text_GuideWin, MSGBOX_DEFAULT
 	release
-	end	
+	end
 
 MahoganyTown_Gym_EventScript_Ronald::
 	trainerbattle_single TRAINER_RONALD MahoganyTown_Gym_Text_BoarderRonaldSeen, MahoganyTown_Gym_Text_BoarderRonaldBeaten
@@ -98,7 +98,7 @@ MahoganyTown_Gym_EventScript_OlivineCheckCianwood::
 MahoganyTown_Gym_EventScript_CianwoodCheckOlivine::
 	goto_if_set FLAG_DEFEATED_OLIVINE_CITY_GYM, MahoganyTown_Gym_EventScript_Pryce_Battle3
 	goto MahoganyTown_Gym_EventScript_Pryce_Battle2
-	
+
 MahoganyTown_Gym_EventScript_Pryce_Battle1::
 	trainerbattle_no_intro TRAINER_PRYCE_1, MahoganyTown_Gym_Text_PryceImpressed
 	goto MahoganyTown_Gym_EventScript_PryceVictory
@@ -138,7 +138,7 @@ MahoganyTown_Gym_Text_PryceImpressed:
     .string "You are worthy of this Badge!$"
 
 MahoganyTown_Gym_Text_ReceivedBadge:
-    .string "{PLAYER} received GlacierBadge.$"
+    .string "{PLAYER} received the Glacier Badge.$"
 
 MahoganyTown_Gym_Text_GlacierBadgeSpeech:
     .string "That Badge will raise the Special\n"

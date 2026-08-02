@@ -201,7 +201,7 @@ CianwoodCity_EventScript_SuicuneTrigger::
 	waitmovement 0
 	delay 55
 	applymovement LOCALID_CIANWOOD_EUSINE, CianwoodCity_Movement_Eusine2
-	waitmovement 0 
+	waitmovement 0
 	msgbox CianwoodCity_Text_EusineSuicune, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_EUSINE, CianwoodCity_Text_EusineBeaten
 	playbgm MUS_HG_EUSINE, TRUE
@@ -308,7 +308,7 @@ CianwoodCity_EventScript_CitySign::
 
 CianwoodCity_Text_Sign:
 	.string "Cianwood City\p"
-	.string "A Port Surrounded by Rough Seas$"
+	.string "A port surrounded by rough seas$"
 
 CianwoodCity_EventScript_GymSign::
 	lock
@@ -331,7 +331,7 @@ CianwoodCity_EventScript_Pharmacy::
 
 CianwoodCity_Text_PharmacySign:
 	.string "500 Years of Tradition\p"
-	.string "Cianwood City PHARMACY\p"
+	.string "Cianwood City Pharmacy\p"
 	.string "We Await Your Medicinal Queries$"
 
 CianwoodCity_EventScript_CaveSign::

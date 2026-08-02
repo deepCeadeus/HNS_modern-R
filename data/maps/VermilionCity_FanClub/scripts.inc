@@ -149,7 +149,7 @@ PokemonFanClub_Text_ClefairyGuy_MakingDo:
 PokemonFanClub_Text_ClefairyGuy_ReturnDoll:
 	.string "Oh, I see now. The girl who lost\n"
 	.string "this Poké Doll is sad…\p"
-	.string "Ok. Could you take this Poké Doll\n"
+	.string "OK. Could you take this Poké Doll\n"
 	.string "back to that poor little girl?\p"
 	.string "I'll befriend a real Clefairy on\n"
 	.string "my own one day. No worries!$"

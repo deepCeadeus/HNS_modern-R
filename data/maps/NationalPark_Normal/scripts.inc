@@ -164,7 +164,7 @@ NationalPark_Normal_Text_PokefanFBeverly_After:
 NationalPark_Normal_Text_PokefanmWilliam_Seen:
 	.string "We adore our Pokémon, even if they\n"
 	.string "dislike us.\p"
-	.string "That's what being a FAN is about.$"
+	.string "That's what being a Fan is about.$"
 
 NationalPark_Normal_Text_PokefanmWilliam_Beaten:
 	.string "M-my Pokémon!$"
@@ -196,4 +196,4 @@ NationalPark_Normal_Text_Sign_BattleNotice:
 NationalPark_Normal_Text_TrainerTips:
 	.string "Trainer Tips\p"
 	.string "Print out Mail by opening it then\n"
-	.string "pressing START.$"
+	.string "pressing Start.$"

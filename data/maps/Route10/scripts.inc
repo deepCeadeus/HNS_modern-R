@@ -92,7 +92,7 @@ Route10_Text_HikerJimBeaten:
 
 Route10_Text_HikerJimAfter:
 	.string "Hay fever is making me sneeze!\n"
-	.string "Ahahah-CHOO!$"
+	.string "Ahahah-Choo!$"
 
 Route10_Text_PokefanmRobertSeen:
 	.string "You like Pokémon, don't you?\p"

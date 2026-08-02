@@ -155,11 +155,11 @@ Route43_Text_CamperSpencerBeaten:
     .string "Losing isn't fun at all…$"
 
 Route43_Text_CamperSpencerAfter:
-    .string "What is going on at Lake Of Rage?\p"
+    .string "What is going on at Lake of Rage?\p"
     .string "We were planning to camp there.$"
 
 Route43_Text_PicnickerTiffanySeen:
-    .string "Are you going to Lake Of Rage too?\p"
+    .string "Are you going to Lake of Rage too?\p"
     .string "Let's play for a little while!$"
 
 Route43_Text_PicnickerTiffanyBeaten:
@@ -171,11 +171,11 @@ Route43_Text_PicnickerTiffanyWantsPicnic:
 
 Route43_Sign1:
     .string "Route 43\p"
-    .string "Lake Of Rage - Mahogany Town$"
+    .string "Lake of Rage - Mahogany Town$"
 
 Route43_Sign2:
     .string "Route 43\p"
-    .string "Lake Of Rage - Mahogany Town$"
+    .string "Lake of Rage - Mahogany Town$"
 
 Route43_TrainerTips:
     .string "Trainer Tips\p"

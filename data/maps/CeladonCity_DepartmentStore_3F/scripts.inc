@@ -39,6 +39,6 @@ CeladonDeptStore3F_Text_SuperNerd:
 	.string "The TM Shop sells some rare moves.$"
 
 CeladonDeptStore3F_Text_Directory:
-	.string "3F: TM SHOP\p"
+	.string "3F: TM Shop\p"
 	.string "Make Your Pokémon Stronger!$"
 

@@ -53,13 +53,13 @@ PewterCity_Gym_Text_Brock_WinLoss:
 	.string "Go ahead--take this Badge.$"
 
 PewterCity_Gym_Text_ReceivedBoulderBadge:
-	.string "{PLAYER} received BoulderBadge.$"
+	.string "{PLAYER} received the Boulder Badge.$"
 
 PewterCity_Gym_Text_Brock_BoulderBadge:
 	.string "Brock: {PLAYER}, thanks. I enjoyed\n"
 	.string "battling you, even though I am a bit\l"
 	.string "upset.\p"
-	.string "That BoulderBadge will make your\n"
+	.string "That Boulder Badge will make your\n"
 	.string "Pokémon even more powerful.$"
 
 PewterCity_Gym_Text_EarthquakeSpeech:

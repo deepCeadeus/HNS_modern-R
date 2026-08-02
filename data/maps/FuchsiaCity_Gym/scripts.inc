@@ -104,10 +104,10 @@ FuchsiaCity_Gym_Text_Janine_DisappointYou:
 FuchsiaCity_Gym_Text_Janine_ToughOne:
 	.string "Janine: You're a tough one. You\n"
 	.string "definitely won…\p"
-	.string "Here's SoulBadge. Take it.$"
+	.string "Here's the Soul Badge. Take it.$"
 
 FuchsiaCity_Gym_Text_ReceivedSoulBadge:
-	.string "{PLAYER} received SoulBadge.$"
+	.string "{PLAYER} received the Soul Badge.$"
 
 FuchsiaCity_Gym_Text_Janine_ToxicSpeech:
 	.string "Janine: You're so tough! I have a\n"

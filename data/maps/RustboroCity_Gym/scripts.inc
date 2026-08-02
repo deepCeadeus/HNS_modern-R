@@ -209,28 +209,28 @@ RustboroCity_Gym_Text_ReceivedStoneBadge:
 RustboroCity_Gym_Text_StoneBadgeInfoTakeThis:
 	.string "The Stone Badge heightens the Attack\n"
 	.string "power of your Pokémon.\p"
-	.string "It also enables them to use the Hm move\n"
+	.string "It also enables them to use the HM move\n"
 	.string "Cut outside of battle.\p"
 	.string "Please take this with you, too.$"
 
 RustboroCity_Gym_Text_ExplainRockTomb:
-	.string "That Technical Machine, Tm39,\n"
+	.string "That Technical Machine, TM39,\n"
 	.string "contains Rock Tomb.\p"
 	.string "It not only inflicts damage by dropping\n"
 	.string "rocks, it also lowers Speed.\p"
-	.string "If you use a Tm, it instantly teaches\n"
+	.string "If you use a TM, it instantly teaches\n"
 	.string "the move to a Pokémon.$"
-	.string "Remember, a Tm can be used only once,\n"
+	.string "Remember, a TM can be used only once,\n"
 	.string "so think before you use it.$"
 
 RustboroCity_Gym_Text_ExplainRockTombInfinite:
-	.string "That Technical Machine, Tm39,\n"
+	.string "That Technical Machine, TM39,\n"
 	.string "contains Rock Tomb.\p"
 	.string "It not only inflicts damage by dropping\n"
 	.string "rocks, it also lowers Speed.\p"
-	.string "If you use a Tm, it instantly teaches\n"
+	.string "If you use a TM, it instantly teaches\n"
 	.string "the move to a Pokémon.$"
-	.string "A Tm can be used as many times as you'd\n"
+	.string "A TM can be used as many times as you'd\n"
 	.string "like, so please enjoy it.$"
 
 RustboroCity_Gym_Text_RoxannePostBattle:
@@ -266,7 +266,7 @@ RustboroCity_Gym_Text_RoxanneRegisterCall:
 
 RustboroCity_Gym_Text_RegisteredRoxanne:
 	.string "Registered Gym Leader Roxanne\n"
-	.string "in the Pokénav.$"
+	.string "in the PokéNav.$"
 
 RustboroCity_Gym_Text_RoxannePreRematch:
 	.string "Roxanne: I'm so glad to see you again.\n"

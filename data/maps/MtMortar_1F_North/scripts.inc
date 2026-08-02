@@ -61,7 +61,7 @@ MountMortar2_Text_PokemaniacMillerAfter:
 	.string "I wonder how he is?$"
 
 MountMortar2_Text_SupernerdMarkusSeen:
-	.string "Hey! HUGH!$"
+	.string "Hey! Hugh!$"
 
 MountMortar2_Text_SupernerdMarkusBeaten:
 	.string "I mistook you for someone\n"

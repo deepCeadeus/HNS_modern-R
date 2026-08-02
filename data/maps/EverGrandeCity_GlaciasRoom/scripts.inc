@@ -66,7 +66,7 @@ EverGrandeCity_GlaciasRoom_EventScript_Defeated::
 	end
 
 EverGrandeCity_GlaciasRoom_Text_IntroSpeech:
-	.string "Welcome, my name is GLACIA\n"
+	.string "Welcome, my name is Glacia\n"
 	.string "of the Elite Four.\p"
 	.string "I've traveled from afar to Hoenn\n"
 	.string "so that I may hone my ice skills.\p"
@@ -77,7 +77,7 @@ EverGrandeCity_GlaciasRoom_Text_IntroSpeech:
 	.string "go all out against you!$"
 
 EverGrandeCity_GlaciasRoom_Text_IntroSpeech2:
-	.string "Welcome again, I'm GLACIA. I won't\n"
+	.string "Welcome again, I'm Glacia. I won't\n"
 	.string "introduce myself again, you know me.\p"
 	.string "I haven't had any challenge since I\n"
 	.string "last battled you and your Pokémon.\p"

@@ -254,7 +254,7 @@ OlivineCity_Gym_EventScript_CianwoodCheckMahog::
 OlivineCity_Gym_EventScript_MahogCheckCianwood::
 	goto_if_set FLAG_DEFEATED_CIANWOOD_GYM, OlivineCity_Gym_EventScript_Jasmine_Battle3
 	goto OlivineCity_Gym_EventScript_Jasmine_Battle2
-	
+
 OlivineCity_Gym_EventScript_Jasmine_Battle1::
 	trainerbattle_no_intro TRAINER_JASMINE_1, OlivineCity_Gym_Text_JasmineBetterTrainer
 	goto OlivineCity_Gym_EventScript_JasmineVictory
@@ -293,10 +293,10 @@ OlivineCity_Gym_Text_JasmineBetterTrainer:
 	.string "I confer upon you this Badge.$"
 
 OlivineCity_Gym_Text_ReceivedMineralBadge:
-	.string "{PLAYER} received MineralBadge.$"
+	.string "{PLAYER} received the Mineral Badge.$"
 
 OlivineCity_Gym_Text_JasmineBadgeSpeech:
-	.string "MineralBadge raises Pokémon's \n"
+	.string "The Mineral Badge raises Pokémon's \n"
 	.string "Special Defense.\p"
 	.string "…Um… Please take this too…$"
 

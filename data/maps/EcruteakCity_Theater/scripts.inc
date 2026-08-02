@@ -972,7 +972,7 @@ EcruteakCity_Theater_Text_KimonoGirlBeaten:
 	.string "…$"
 
 EcruteakCity_Theater_Text_ZukiSeen:
-	.string "Welcome. My name is ZUKI.\n"
+	.string "Welcome. My name is Zuki.\n"
 	.string "I met you previously in Violet\l"
 	.string "City.\p"
 	.string "To bring back {STR_VAR_1}, we\n"

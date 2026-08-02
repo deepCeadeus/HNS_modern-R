@@ -178,7 +178,7 @@ BattleFrontier_Lounge9_EV_HP_TEXT2:
 	.string "Go Wailord!$"
 
 BattleFrontier_Lounge9_EV_ATK_TEXT:
-	.string "OSHA! I can train your Pokémon\n"
+	.string "Osha! I can train your Pokémon\n"
 	.string "in Attack.\p"
 	.string "Are you ready?$"
 

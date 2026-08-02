@@ -23,7 +23,7 @@ Route34_DayCare_Text_Bookshelf1:
 	.string "A dictionary!\p"
 	.string "{PLAYER} opened the dictionary to\n"
 	.string "a random page.\p"
-	.string "'BABE'\n"
+	.string "'Babe'\n"
 	.string "A noun, meaning infant or baby.\p"
 	.string "{PLAYER} put away the dictionary.$"
 
@@ -32,33 +32,33 @@ Route34_DayCare_Text_Bookshelf2:
 	.string "{PLAYER} flipped through\n"
 	.string "the book.\p"
 	.string "It must have the word\n"
-	.string "POKéMON written on every page.\p"
+	.string "Pokémon written on every page.\p"
 	.string "{PLAYER} put away the book.$"
 
 Route34_DayCare_Text_Bookshelf3:
 	.string "A book of word assocations!\p"
 	.string "{PLAYER} flipped through\n"
 	.string "the book.\p"
-	.string "PICHU -> CUTE\l"
-	.string "CLEFFA -> CUTE\l"
-	.string "IGGLYBUFF -> SONG\l"
-	.string "TYROGUE -> FIGHTING\l"
-	.string "SMOOCHUM -> ICE\l"
-	.string "ELEKID -> ELECTRIC\l"
-	.string "MAGBY -> FIRE\p"
+	.string "Pichu -> Cute\l"
+	.string "Cleffa -> Cute\l"
+	.string "Igglybuff -> Song\l"
+	.string "Tyrogue -> Fighting\l"
+	.string "Smoochum -> Ice\l"
+	.string "Elekid -> Electric\l"
+	.string "Magby -> Fire\p"
 	.string "{PLAYER} put away the book.$"
 
 Route34_DayCare_Text_Bookshelf4:
 	.string "A book of Pokémon abilities!\p"
 	.string "{PLAYER} flipped through\n"
 	.string "the book.\p"
-	.string "PICHU -> STATIC\l"
-	.string "CLEFFA -> CUTE CHARM\l"
-	.string "IGGLYBUFF -> CUTE CHARM\l"
-	.string "TYROGUE -> GUTS\l"
-	.string "SMOOCHUM -> OBLIVIOUS\l"
-	.string "ELEKID -> STATIC\l"
-	.string "MAGBY -> FLAME BODY\p"
+	.string "Pichu -> Static\l"
+	.string "Cleffa -> Cute Charm\l"
+	.string "Igglybuff -> Cute Charm\l"
+	.string "Tyrogue -> Guts\l"
+	.string "Smoochum -> Oblivious\l"
+	.string "Elekid -> Static\l"
+	.string "Magby -> Flame Body\p"
 	.string "{PLAYER} put away the book.$"
 
 Route34_DayCare_EventScript_Clerk::
@@ -193,7 +193,7 @@ Route34_DayCare_EventScript_Ditto::
 	end
 
 Route34_DayCare_Text_Ditto:
-	.string "DITTO: Tto!$"
+	.string "Ditto: Tto!$"
 
 Route34_EventScript_DaycareMan::
 	lock

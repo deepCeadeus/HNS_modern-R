@@ -137,7 +137,7 @@ DragonsDen_Cavern_Movement_ClairLeaveRight:
 	step_end
 
 DragonsDen_Cavern_Text_ClairGiveDragonclaw:
-    .string "Clair: WAIT!\p"
+    .string "Clair: Wait!\p"
 	.string "I'm sorry about this.\n"
     .string "Here, take this as my apology.$"
 

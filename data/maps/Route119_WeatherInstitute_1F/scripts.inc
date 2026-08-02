@@ -78,7 +78,7 @@ Route119_WeatherInstitute_1F_EventScript_Grunt4::
 	end
 
 Route119_WeatherInstitute_1F_Text_Grunt1Intro:
-	.string "The BOSS got interested in\n"
+	.string "The Boss got interested in\n"
 	.string "the research they have going here,\l"
 	.string "so he sent us out.\p"
 	.string "You quit meddling!$"
@@ -88,7 +88,7 @@ Route119_WeatherInstitute_1F_Text_Grunt1Defeat:
 	.string "Blasted by a kid…$"
 
 Route119_WeatherInstitute_1F_Text_Grunt1PostBattle:
-	.string "Our BOSS knows everything.\p"
+	.string "Our Boss knows everything.\p"
 	.string "But I'm just a Grunt. What would I know\n"
 	.string "about what he's thinking?$"
 
@@ -123,7 +123,7 @@ Route119_WeatherInstitute_1F_Text_ProfStudyingRain:
 	.string "if the rain can be put to good use.$"
 
 Route119_WeatherInstitute_1F_Text_NoticingAbnormalWeather:
-	.string "On the 2nd floor of the INSTITUTE,\n"
+	.string "On the 2nd floor of the Institute,\n"
 	.string "we study the weather patterns over\l"
 	.string "the Hoenn region.\p"
 	.string "We've been noticing temporary and\n"
@@ -134,7 +134,7 @@ Route119_WeatherInstitute_1F_Text_WhatWereAquasUpTo:
 	.string "Hello!\n"
 	.string "We've been saved by your actions!\p"
 	.string "What I don't understand is what on\n"
-	.string "earth the AQUAS were up to.$"
+	.string "earth the Aquas were up to.$"
 
 Route119_WeatherInstitute_1F_Text_TakeRestInBed:
 	.string "There's a bed…\n"
@@ -142,4 +142,4 @@ Route119_WeatherInstitute_1F_Text_TakeRestInBed:
 
 Route119_WeatherInstitute_1F_Text_TakeRestInBed_PokecenterChallenge:
 	.string "Sorry, you are playing with\n"
-	.string "the PokéCENTER challenge!$"
+	.string "the PokéCenter challenge!$"

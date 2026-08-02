@@ -72,14 +72,14 @@ SaffronCity_Gym_Text_SabrinaWinLoss:
 	.string "It far exceeds what I foresaw…\p"
 	.string "Maybe it isn't possible to fully\n"
 	.string "predict what the future holds…\p"
-	.string "Ok, you win. You earned yourself\n"
-	.string "Marshbadge.$"
+	.string "OK, you win. You earned yourself\n"
+	.string "the Marsh Badge.$"
 
 SaffronCity_Gym_Text_ReceivedMarshBadge:
-	.string "{PLAYER} received Marshbadge.$"
+	.string "{PLAYER} received the Marsh Badge.$"
 
 SaffronCity_Gym_Text_MarshBadgeInfo:
-	.string "Sabrina: Marshbadge draws out\n"
+	.string "Sabrina: The Marsh Badge draws out\n"
 	.string "your subliminal powers…\p"
 	.string "Although I failed to accurately\n"
 	.string "predict your power, this much I\l"
@@ -141,7 +141,7 @@ SaffronCity_Gym_Text_MediumDorisAfter:
 
 SaffronCity_Gym_Text_PsychicJaredSeen:
 	.string "The Fighting Dojo next door was\n"
-	.string "once this City's Gym.$"
+	.string "once this city's Gym.$"
 
 SaffronCity_Gym_Text_PsychicJaredBeaten:
 	.string "I was no match…$"
