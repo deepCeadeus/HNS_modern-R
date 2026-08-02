@@ -196,7 +196,7 @@ RadioTower1F_Text_QuizQuestion2:
 RadioTower1F_Text_QuizQuestion3:
     .string "Bull's-eye!\n"
     .string "Question 3:\p"
-    .string "Kurt, the PokéBall creator, uses\n"
+    .string "Kurt, the Poké Ball creator, uses\n"
 	.string "apricorns as ingredients?$"
 
 RadioTower1F_Text_QuizQuestion4:
