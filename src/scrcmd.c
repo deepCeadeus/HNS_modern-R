@@ -66,6 +66,7 @@
 #include "list_menu.h"
 #include "malloc.h"
 #include "starter_choose.h"
+#include "new_game.h"
 
 //HnS For headbutt
 // From party_menu.c (that TU owns the tutor data)
@@ -1681,7 +1682,9 @@ bool8 ScrCmd_showmonpic(struct ScriptContext *ctx)
         if (!FlagGet(flagTemp))
         {
             u32 fakePid = Random32();
-            if (GET_SHINY_VALUE(GetTrainerId(), fakePid) < shinyChance)
+            u32 otId = GetTrainerId(gSaveBlock2Ptr->playerTrainerId);
+            
+            if (GET_SHINY_VALUE(otId, fakePid) < shinyChance)
                 FlagSet(flagShinyStarter);
 
             FlagSet(flagTemp);
