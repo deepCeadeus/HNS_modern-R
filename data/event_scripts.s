@@ -875,7 +875,7 @@ gText_PokemonTrainerSchoolEmail::
 	.string "… … … … … …$"
 
 gText_PlayerHouseBootPC::
-	.string "{PLAYER} booted up the Pc.$"
+	.string "{PLAYER} booted up the PC.$"
 
 gText_PokeblockLinkCanceled::
 	.string "The link was canceled.$"
