@@ -1,6 +1,8 @@
 ## If you are unsure which version to play, play the official one
 
-# MODERN Heart & Soul
+## DO NOT, UNDER ANY CIRCUMSTANCE, REPORT BUGS TO THE OFFICIAL HNS REPO OR DISCORD SERVER
+
+# (UNOFFICIAL) MODERN Heart & Soul
 **Modern** Heart & Soul is a small modification of the original Pokémon Heart & Soul version 1.2.1+(more recent than 1.2.1, "unofficially" called 1.2.2, but unreleased nonetheless) that includes missing options and features from its base game engine, Pokémon Modern Emerald. It has been created to become the base game of a future romhack: Modern Fire Red & Leaf Green.
 
 The version indicator shows the Pokémon Heart&Soul version (currently "1.2.1"), plus its modded "Modern" version (currently "m1") -> v1.2.1m1
@@ -64,7 +66,7 @@ The **Modern** feature list is:
 - Chain Fishing is back, and Sweet Scent chaining is also implemented.
 - The Battle Frontier has been customized, with 95% new NPCs and text (nothing special, just to give it a new flavour).
 - Voltorb Flip in casinos!
-- "GBS Sounds" object to listen to the original music!
+- "GB Sounds" object to listen to the original music!
 - Large amount of bugfixes to the HnS base (1.2.1): 
     - Tons tiles and collision fixes and improvements to match Gen 3-like & FRLG map and tile design.
     - Text and typo fixes.
