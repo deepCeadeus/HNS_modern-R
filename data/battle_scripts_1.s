@@ -232,6 +232,8 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectCalmMind               @ EFFECT_CALM_MIND
 	.4byte BattleScript_EffectDragonDance            @ EFFECT_DRAGON_DANCE
 	.4byte BattleScript_EffectCamouflage             @ EFFECT_CAMOUFLAGE
+	.4byte BattleScript_EffectHitEscape		 @ EFFECT_HIT_ESCAPE
+	.4byte BattleScript_EffectSuckerPunch		 @ EFFECT_SUCKER_PUNCH
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -2812,8 +2814,142 @@ BattleScript_EffectCamouflage::
 	attackanimation
 	waitanimation
 	printstring STRINGID_PKMNCHANGEDTYPE
-	waitmessage B_WAIT_TIME_LONG
-	goto BattleScript_MoveEnd
+	setstatchanger STAT_EVASION, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_StatUpEnd
+	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_StatUpDoAnim
+	pause B_WAIT_TIME_SHORT
+	goto BattleScript_StatUpPrintString
+		
+BattleScript_EffectHitEscape::
+    attackcanceler
+    accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+    attackstring
+    ppreduce
+    critcalc
+    damagecalc
+    typecalc
+    adjustnormaldamage
+    attackanimation
+    waitanimation
+    effectivenesssound
+    hitanimation BS_TARGET
+    waitstate
+    healthbarupdate BS_TARGET
+    datahpupdate BS_TARGET
+    critmessage
+    waitmessage B_WAIT_TIME_LONG
+    resultmessage
+    waitmessage B_WAIT_TIME_LONG
+    jumpifmovehadnoeffect BattleScript_MoveEnd
+    seteffectwithchance
+    jumpifbattletype BATTLE_TYPE_TRAINER, BattleScript_HitEscapeTrainer
+    tryfaintmon BS_TARGET
+    tryfaintmon_spikes BS_TARGET, BattleScript_HitEscapeEnd
+    jumpifbattletype BATTLE_TYPE_ARENA, BattleScript_HitEscapeEnd2
+    jumpifcantswitch SWITCH_IGNORE_ESCAPE_PREVENTION | BS_ATTACKER, BattleScript_HitEscapeEnd2
+    waitanimation
+    openpartyscreen BS_ATTACKER, BattleScript_HitEscapeEnd2
+    switchoutabilities BS_ATTACKER
+    waitstate
+    switchhandleorder BS_ATTACKER, 2
+    returntoball BS_ATTACKER
+    getswitchedmondata BS_ATTACKER
+    switchindataupdate BS_ATTACKER
+    hpthresholds BS_ATTACKER
+    printstring STRINGID_SWITCHINMON
+    switchinanim BS_ATTACKER, TRUE
+    waitstate
+    switchineffects BS_ATTACKER
+    goto BattleScript_MoveEnd
+    
+    BattleScript_HitEscapeEnd:
+    setbyte sGIVEEXP_STATE, 0
+    getexp BS_TARGET
+    switchinanim BS_ATTACKER, TRUE
+    moveendall
+    goto BattleScript_HandleFaintedMon
+    
+    BattleScript_HitEscapeEnd2:
+    tryfaintmon BS_TARGET
+    tryfaintmon_spikes BS_TARGET, BattleScript_HitEscapeArenaFaintedMon
+    switchinanim BS_ATTACKER, TRUE
+    moveendall
+    end
+    
+    BattleScript_HitEscapeArenaFaintedMon:
+    switchinanim BS_ATTACKER, TRUE
+    moveendall
+    goto BattleScript_HandleFaintedMon
+    
+    BattleScript_HitEscapeTrainer:
+    jumpifbattletype BATTLE_TYPE_ARENA, BattleScript_HitEscapeEnd2
+    jumpifcantswitch SWITCH_IGNORE_ESCAPE_PREVENTION | BS_ATTACKER, BattleScript_TrainerFinalMon
+    jumpifcantswitch SWITCH_IGNORE_ESCAPE_PREVENTION | BS_TARGET, BattleScript_TrainerFinalMon
+    
+    openpartyscreen BS_ATTACKER, BattleScript_HitEscapeEnd
+    switchoutabilities BS_ATTACKER
+    waitstate
+    switchhandleorder BS_ATTACKER, 2
+    returntoball BS_ATTACKER
+    getswitchedmondata BS_ATTACKER
+    switchindataupdate BS_ATTACKER
+    hpthresholds BS_ATTACKER
+    printstring STRINGID_SWITCHINMON
+    hidepartystatussummary BS_ATTACKER
+    switchinanim BS_ATTACKER, TRUE
+    waitstate
+    switchineffects BS_ATTACKER
+    goto BattleScript_MoveEnd
+    
+    BattleScript_TrainerFinalMon:
+    tryfaintmon BS_TARGET
+    tryfaintmon_spikes BS_TARGET, BattleScript_HitEscapeTrainerEnd
+    jumpifbattletype BATTLE_TYPE_ARENA, BattleScript_HitEscapeEnd2
+    jumpifcantswitch SWITCH_IGNORE_ESCAPE_PREVENTION | BS_ATTACKER, BattleScript_HitEscapeTrainerEnd2
+    waitanimation
+    openpartyscreen BS_ATTACKER, BattleScript_HitEscapeEnd2
+    switchoutabilities BS_ATTACKER
+    waitstate
+    switchhandleorder BS_ATTACKER, 2
+    returntoball BS_ATTACKER
+    getswitchedmondata BS_ATTACKER
+    switchindataupdate BS_ATTACKER
+    hpthresholds BS_ATTACKER
+    printstring STRINGID_SWITCHINMON
+    switchinanim BS_ATTACKER, TRUE
+    waitstate
+    switchineffects BS_ATTACKER
+    goto BattleScript_MoveEnd
+    
+    BattleScript_HitEscapeTrainerEnd:
+    setbyte sGIVEEXP_STATE, 0
+    getexp BS_TARGET
+    switchinanim BS_ATTACKER, TRUE
+    moveendall
+    goto BattleScript_HandleFaintedMon
+    
+    BattleScript_HitEscapeTrainerEnd2:
+    tryfaintmon BS_TARGET
+    tryfaintmon_spikes BS_TARGET, BattleScript_HitEscapeTrainerEnd
+    jumpifbattletype BATTLE_TYPE_ARENA, BattleScript_HitEscapeEnd2
+    goto BattleScript_HitEscapeEnd2
+    
+    
+BattleScript_EffectSuckerPunch::
+	attackcanceler
+    	various BS_TARGET, VARIOUS_SUCKER_PUNCH_CHECK
+    	jumpifbyte CMP_EQUAL, gBattleCommunication, TRUE, BattleScript_SuckerPunchFail
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	goto BattleScript_HitFromAtkString
+	
+BattleScript_SuckerPunchFail::
+        attackstring
+        ppreduce
+        pause B_WAIT_TIME_SHORT
+        orbyte gMoveResultFlags, MOVE_RESULT_FAILED
+        resultmessage
+        waitmessage B_WAIT_TIME_LONG
+        goto BattleScript_MoveEnd
 
 BattleScript_FaintAttacker::
 	playfaintcry BS_ATTACKER
@@ -2946,12 +3082,7 @@ BattleScript_LocalBattleWonLoseTexts::
 	printstring STRINGID_TRAINER2LOSETEXT
 BattleScript_LocalBattleWonReward::
 	getmoneyreward
-	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 1, BattleScript_LocalBattleWonRewardMom
 	printstring STRINGID_PLAYERGOTMONEY
-	waitmessage B_WAIT_TIME_LONG
-	goto BattleScript_PayDayMoneyAndPickUpItems
-BattleScript_LocalBattleWonRewardMom::
-	printstring STRINGID_PLAYERGOTMONEYMOM
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_PayDayMoneyAndPickUpItems::
 	givepaydaymoney
@@ -3518,9 +3649,21 @@ BattleScript_AllStatsUpRet::
 	return
 
 BattleScript_RapidSpinAway::
-	rapidspinfree
-	return
+    rapidspinfree
+    goto BattleScript_RapidSpinSpeed
 
+BattleScript_RapidSpinSpeed::
+    	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_SPEED, MAX_STAT_STAGE, BattleScript_RapidSpinRet
+    	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_ATTACKER, BIT_SPEED, 0
+    	setstatchanger STAT_SPEED, 1, FALSE
+    	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_RapidSpinRet
+    	printfromtable gStatUpStringIds
+    	waitmessage B_WAIT_TIME_LONG
+
+BattleScript_RapidSpinRet::
+    	return	
+	
 BattleScript_WrapFree::
 	printstring STRINGID_PKMNGOTFREE
 	waitmessage B_WAIT_TIME_LONG
@@ -4033,6 +4176,14 @@ BattleScript_RainDishActivates::
 	healthbarupdate BS_ATTACKER
 	datahpupdate BS_ATTACKER
 	end3
+	
+BattleScript_IceBodyActivates::
+	printstring STRINGID_PKMNSXRESTOREDHPALITTLE2
+	waitmessage B_WAIT_TIME_LONG
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	end3	
 
 BattleScript_SandstreamActivates::
 	pause B_WAIT_TIME_SHORT
@@ -4081,6 +4232,7 @@ BattleScript_IntimidateActivatesLoop:
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_IntimidateActivatesLoopIncrement
 	jumpifability BS_TARGET, ABILITY_CLEAR_BODY, BattleScript_IntimidatePrevented
 	jumpifability BS_TARGET, ABILITY_HYPER_CUTTER, BattleScript_IntimidatePrevented
+	jumpifability BS_TARGET, ABILITY_DEFIANT, BattleScript_IntimidatePrevented
 	jumpifability BS_TARGET, ABILITY_WHITE_SMOKE, BattleScript_IntimidatePrevented
 	statbuffchange STAT_CHANGE_NOT_PROTECT_AFFECTED | STAT_CHANGE_ALLOW_PTR, BattleScript_IntimidateActivatesLoopIncrement
 	jumpifbyte CMP_GREATER_THAN, cMULTISTRING_CHOOSER, 1, BattleScript_IntimidateActivatesLoopIncrement
@@ -4232,6 +4384,11 @@ BattleScript_ColorChangeActivates::
 	printstring STRINGID_PKMNCHANGEDTYPEWITH
 	waitmessage B_WAIT_TIME_LONG
 	return
+
+BattleScript_MultitypeActivates::
+    	printstring STRINGID_PKMNCHANGEDTYPEWITH
+    	waitmessage B_WAIT_TIME_LONG
+    	end3
 
 BattleScript_RoughSkinActivates::
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
@@ -4459,6 +4616,14 @@ BattleScript_BerryConfuseHealEnd2::
 	removeitem BS_ATTACKER
 	end2
 
+BattleScript_BerryStatPickupEnd2::
+	printstring STRINGID_PKMNPICKEDUPITEMWITH
+	playanimation BS_EFFECT_BATTLER, B_ANIM_HELD_ITEM_EFFECT
+	statbuffchange STAT_CHANGE_ALLOW_PTR, BattleScript_BerryStatPickupDoStatUp
+BattleScript_BerryStatPickupDoStatUp::
+	call BattleScript_StatUp
+	return
+
 BattleScript_BerryStatRaiseEnd2::
 	playanimation BS_ATTACKER, B_ANIM_HELD_ITEM_EFFECT
 	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_BerryStatRaiseDoStatUp
@@ -4637,3 +4802,10 @@ BattleScript_ItemDropped::
 	playse SE_BALL_BOUNCE_1
 	printfromtable gItemDroppedStringIds
 	return
+BattleScript_SnowWarningActivates::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_PKMNSXWHIPPEDUPHAILSTORM
+	waitstate
+	playanimation BS_BATTLER_0, B_ANIM_HAIL_CONTINUES
+	call BattleScript_WeatherFormChanges
+	end3

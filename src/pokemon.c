@@ -76,6 +76,8 @@ static void Task_PlayMapChosenOrBattleBGM(u8 taskId);
 static bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
 static u16 GiveMoveToBoxMon(struct BoxPokemon *boxMon, u16 move);
 static bool8 ShouldSkipFriendshipChange(void);
+static u16 GetPreEvolution(u16 species);
+static bool8 CanEvolve(u16 species);
 
 EWRAM_DATA static u8 sLearningMoveTableID = 0;
 EWRAM_DATA u8 gPlayerPartyCount = 0;
@@ -575,9 +577,9 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     //SPECIES_TO_HOENN(UNUSED_SPACE8),
     //SPECIES_TO_HOENN(UNUSED_SPACE9),
     //SPECIES_TO_HOENN(UNUSED_SPACE10),
-    //SPECIES_TO_HOENN(DEOXYS_ATTACK),
-    //SPECIES_TO_HOENN(DEOXYS_DEFENSE),
-    //SPECIES_TO_HOENN(DEOXYS_SPEED),
+    SPECIES_TO_HOENN(DEOXYS_ATTACK),
+    SPECIES_TO_HOENN(DEOXYS_DEFENSE),
+    SPECIES_TO_HOENN(DEOXYS_SPEED),
 };
 
 // Assigns all species to the National Dex Index (Summary No. for National Dex)
@@ -1043,9 +1045,9 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     //SPECIES_TO_NATIONAL(UNUSED_SPACE8),
     //SPECIES_TO_NATIONAL(UNUSED_SPACE9),
     //SPECIES_TO_NATIONAL(UNUSED_SPACE10),
-    //SPECIES_TO_NATIONAL(DEOXYS_ATTACK),
-    //SPECIES_TO_NATIONAL(DEOXYS_DEFENSE),
-    //SPECIES_TO_NATIONAL(DEOXYS_SPEED),
+    SPECIES_TO_NATIONAL(DEOXYS_ATTACK),
+    SPECIES_TO_NATIONAL(DEOXYS_DEFENSE),
+    SPECIES_TO_NATIONAL(DEOXYS_SPEED),
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index
@@ -1512,9 +1514,9 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     //HOENN_TO_NATIONAL(UNUSED_SPACE8),
     //HOENN_TO_NATIONAL(UNUSED_SPACE9),
     //HOENN_TO_NATIONAL(UNUSED_SPACE10),
-    //HOENN_TO_NATIONAL(DEOXYS_ATTACK),
-    //HOENN_TO_NATIONAL(DEOXYS_DEFENSE),
-    //HOENN_TO_NATIONAL(DEOXYS_SPEED),
+    HOENN_TO_NATIONAL(DEOXYS_ATTACK),
+    HOENN_TO_NATIONAL(DEOXYS_DEFENSE),
+    HOENN_TO_NATIONAL(DEOXYS_SPEED),
 };
 
 const struct SpindaSpot gSpindaSpotGraphics[] =
@@ -6428,7 +6430,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         if (ShouldGetStatBadgeBoost(FLAG_BADGE07_GET, battlerIdAtk))
         spAttack = (110 * spAttack) / 100;
 
-    // Apply type-bonus hold item
+    // Apply type-bonus hold item 2026june17fixed
     for (i = 0; i < ARRAY_COUNT(sHoldEffectToType); i++)
     {
         if (gSaveBlock2Ptr->optionStyle == 1)
@@ -6442,17 +6444,19 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
                     spAttack = (spAttack * (attackerHoldEffectParam + 100)) / 100;
                 break;
             }
-        }
+        }  
         else if (gSaveBlock2Ptr->optionStyle == 0)
-        {
+        {  
             if (attackerHoldEffect == sHoldEffectToType[i][0]
                 && type == sHoldEffectToType[i][1])
             {
-                attack = (attack * (attackerHoldEffectParam + 100)) / 100;
-                spAttack = (spAttack * (attackerHoldEffectParam + 100)) / 100;
+            	if (IS_MOVE_SPECIAL(gCurrentMove))
+    		    spAttack = (spAttack * (attackerHoldEffectParam + 100)) / 100;
+		else
+                    attack = (attack * (attackerHoldEffectParam + 100)) / 100;
                 break;
             }
-        }
+        }    
     }
 
     // Apply boosts from hold items
@@ -6462,6 +6466,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         spAttack = (150 * spAttack) / 100;
     if (defenderHoldEffect == HOLD_EFFECT_SOUL_DEW && !(gBattleTypeFlags & (BATTLE_TYPE_FRONTIER)) && (defender->species == SPECIES_LATIAS || defender->species == SPECIES_LATIOS))
         spDefense = (150 * spDefense) / 100;
+    if (defenderHoldEffect == HOLD_EFFECT_PREVENT_EVOLVE && CanEvolve(defender->species))
+    {
+    defense = (150 * defense) / 100;
+    spDefense = (150 * spDefense) / 100;
+    }
     if (attackerHoldEffect == HOLD_EFFECT_DEEP_SEA_TOOTH && attacker->species == SPECIES_CLAMPERL)
         spAttack *= 2;
     if (defenderHoldEffect == HOLD_EFFECT_DEEP_SEA_SCALE && defender->species == SPECIES_CLAMPERL)
@@ -6472,96 +6481,124 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         defense *= 2;
     if (attackerHoldEffect == HOLD_EFFECT_THICK_CLUB && (attacker->species == SPECIES_CUBONE || attacker->species == SPECIES_MAROWAK))
         attack *= 2;
+    if ((attackerHoldEffect == HOLD_EFFECT_FAIRY_POWER && moveType == TYPE_NORMAL) && attacker->ability == ABILITY_PIXILATE)  
+     {
+        attack *= 1.2;
+        spAttack *= 1.2;
+    }
+    if ((attackerHoldEffect == HOLD_EFFECT_DRAGON_POWER && moveType == TYPE_NORMAL) && attacker->ability == ABILITY_DRAGONIZE)  
+     {
+        attack *= 1.2;
+        spAttack *= 1.2;
+    }
+    if ((attackerHoldEffect == HOLD_EFFECT_GHOST_POWER && moveType == TYPE_NORMAL) && attacker->ability == ABILITY_MINDS_EYE)  
+     {
+        attack *= 1.2;
+        spAttack *= 1.2;
+    }
+    if ((attackerHoldEffect == HOLD_EFFECT_FLYING_POWER && moveType == TYPE_NORMAL) && attacker->ability == ABILITY_AERILATE)  
+     {
+        attack *= 1.2;
+        spAttack *= 1.2;
+    }
+    if ((attackerHoldEffect == HOLD_EFFECT_STEEL_POWER && moveType == TYPE_NORMAL) && attacker->ability == ABILITY_METAL_COAT)  
+    {
+        attack *= 1.2;
+        spAttack *= 1.2;
+    } 
+    /*
     if ((attackerHoldEffect == HOLD_EFFECT_FAIRY_POWER && moveType == TYPE_FAIRY) && attacker->ability == ABILITY_MULTITYPE)
     {
-        attack *= 1.365;
-        spAttack *= 1.365;
+        attack *= 1.25;
+        spAttack *= 1.25;
     }
     else if ((attackerHoldEffect == HOLD_EFFECT_BUG_POWER && moveType == TYPE_BUG) && attacker->ability == ABILITY_MULTITYPE)
     {
-        attack *= 1.365;
-        spAttack *= 1.365;
+        attack *= 1.25;
+        spAttack *= 1.25;
     }
     else if ((attackerHoldEffect == HOLD_EFFECT_STEEL_POWER && moveType == TYPE_STEEL) && attacker->ability == ABILITY_MULTITYPE)
     {
-        attack *= 1.365;
-        spAttack *= 1.365;
+        attack *= 1.25;
+        spAttack *= 1.25;
     }
     else if ((attackerHoldEffect == HOLD_EFFECT_GROUND_POWER && moveType == TYPE_GROUND) && attacker->ability == ABILITY_MULTITYPE)
     {
-        attack *= 1.365;
-        spAttack *= 1.365;
+        attack *= 1.25;
+        spAttack *= 1.25;
     }
     else if ((attackerHoldEffect == HOLD_EFFECT_ROCK_POWER && moveType == TYPE_ROCK) && attacker->ability == ABILITY_MULTITYPE)
     {    
-        attack *= 1.365;
-        spAttack *= 1.365;
+        attack *= 1.25;
+        spAttack *= 1.25;
     }
     else if ((attackerHoldEffect == HOLD_EFFECT_GRASS_POWER && moveType == TYPE_GRASS) && attacker->ability == ABILITY_MULTITYPE)
     {
-        attack *= 1.365;
-        spAttack *= 1.365;
+        attack *= 1.25;
+        spAttack *= 1.25;
     }
     else if ((attackerHoldEffect == HOLD_EFFECT_DARK_POWER && moveType == TYPE_DARK) && attacker->ability == ABILITY_MULTITYPE)
     {
-        attack *= 1.365;
-        spAttack *= 1.365;
+        attack *= 1.25;
+        spAttack *= 1.25;
     }
     else if ((attackerHoldEffect == HOLD_EFFECT_FIGHTING_POWER && moveType == TYPE_FIGHTING) && attacker->ability == ABILITY_MULTITYPE)
     {
-        attack *= 1.365;
-        spAttack *= 1.365;
+        attack *= 1.25;
+        spAttack *= 1.25;
     }
     else if ((attackerHoldEffect == HOLD_EFFECT_ELECTRIC_POWER && moveType == TYPE_ELECTRIC) && attacker->ability == ABILITY_MULTITYPE)
     {
-        attack *= 1.365;
-        spAttack *= 1.365;
+        attack *= 1.25;
+        spAttack *= 1.25;
     }
     else if ((attackerHoldEffect == HOLD_EFFECT_WATER_POWER && moveType == TYPE_WATER) && attacker->ability == ABILITY_MULTITYPE)
     {
-        attack *= 1.365;
-        spAttack *= 1.365;
+        attack *= 1.25;
+        spAttack *= 1.25;
     }
     else if ((attackerHoldEffect == HOLD_EFFECT_FLYING_POWER && moveType == TYPE_FLYING) && attacker->ability == ABILITY_MULTITYPE)
     {
-        attack *= 1.365;
-        spAttack *= 1.365;
+        attack *= 1.25;
+        spAttack *= 1.25;
     }
     else if ((attackerHoldEffect == HOLD_EFFECT_POISON_POWER && moveType == TYPE_POISON) && attacker->ability == ABILITY_MULTITYPE)
     {
-        attack *= 1.365;
-        spAttack *= 1.365;
+        attack *= 1.25;
+        spAttack *= 1.25;
     }
     else if ((attackerHoldEffect == HOLD_EFFECT_ICE_POWER && moveType == TYPE_ICE) && attacker->ability == ABILITY_MULTITYPE)
     {
-        attack *= 1.365;
-        spAttack *= 1.365;
+        attack *= 1.25;
+        spAttack *= 1.25;
     }
     else if ((attackerHoldEffect == HOLD_EFFECT_GHOST_POWER && moveType == TYPE_GHOST) && attacker->ability == ABILITY_MULTITYPE)
     {
-        attack *= 1.365;
-        spAttack *= 1.365;
+        attack *= 1.25;
+        spAttack *= 1.25;
     }
     else if ((attackerHoldEffect == HOLD_EFFECT_PSYCHIC_POWER && moveType == TYPE_PSYCHIC) && attacker->ability == ABILITY_MULTITYPE)
     {
-        attack *= 1.365;
-        spAttack *= 1.365;
+        attack *= 1.25;
+        spAttack *= 1.25;
     }
     else if ((attackerHoldEffect == HOLD_EFFECT_FIRE_POWER && moveType == TYPE_FIRE) && attacker->ability == ABILITY_MULTITYPE)
     {
-        attack *= 1.365;
-        spAttack *= 1.365;
+        attack *= 1.25;
+        spAttack *= 1.25;
     }
     else if ((attackerHoldEffect == HOLD_EFFECT_DRAGON_POWER && moveType == TYPE_DRAGON) && attacker->ability == ABILITY_MULTITYPE)
     {
-        attack *= 1.365;
-        spAttack *= 1.365;
+        attack *= 1.25;
+        spAttack *= 1.25;
     }
     else if ((defenderHoldEffect == HOLD_EFFECT_NORMAL_POWER) && defender->ability == ABILITY_MULTITYPE)
     {
         defense *= 1.25;
         spDefense *= 1.25;
     }
+    */
+    
     //Test event
     if ((attacker->ability == ABILITY_LEVITATE) && (type == TYPE_MYSTERY))
     {
@@ -6570,11 +6607,25 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     }
     // Apply abilities / field sports
     if (gSaveBlock2Ptr->optionStyle == 0)
+    {
         if (defender->ability == ABILITY_THICK_FAT && (type == TYPE_FIRE || type == TYPE_ICE))
             gBattleMovePower /= 2;
+    }
     else if (gSaveBlock2Ptr->optionStyle == 1)
+    {
         if (defender->ability == ABILITY_THICK_FAT && (type == TYPE_FIRE || type == TYPE_ICE))
             spAttack /= 2;
+    }
+    if (gSaveBlock2Ptr->optionStyle == 0)
+    {
+        if (defender->ability == ABILITY_DAMP && type == TYPE_FIRE)
+            gBattleMovePower /= 2;
+    }
+    else if (gSaveBlock2Ptr->optionStyle == 1)
+    {
+        if (defender->ability == ABILITY_DAMP && type == TYPE_FIRE)
+            spAttack /= 2;
+    }
     if ((defender->ability != ABILITY_NONE) 
     && (gSaveBlock2Ptr->optionsDifficulty == 2) 
     && (side == B_SIDE_PLAYER))
@@ -6636,14 +6687,42 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     }
     if (attacker->ability == ABILITY_HUSTLE)
         attack = (150 * attack) / 100;
+    if (attacker->ability == ABILITY_TOUGH_CLAWS)
+        attack = (120 * attack) / 100;   
+    if (attacker->ability == ABILITY_HYPER_CUTTER && (gCurrentMove == MOVE_VICE_GRIP))
+        attack = (120 * attack) / 100;
+    if (attacker->ability == ABILITY_LEGEND_PLATE && (gCurrentMove == MOVE_JUDGMENT))
+        spAttack = (200 * spAttack) / 100;      
     if (attacker->ability == ABILITY_CACOPHONY && (gCurrentMove == MOVE_SNORE || gCurrentMove == MOVE_UPROAR || gCurrentMove == MOVE_HYPER_VOICE || gCurrentMove == MOVE_BUG_BUZZ))
         spAttack = (150 * spAttack) / 100;
-    if (attacker->ability == ABILITY_PLUS && ABILITY_ON_FIELD2(ABILITY_MINUS))
+    if (attacker->ability == ABILITY_STRONG_JAW && (gCurrentMove == MOVE_BITE || gCurrentMove == MOVE_CRUNCH || gCurrentMove == MOVE_FIRE_FANG || gCurrentMove == MOVE_HYPER_FANG || gCurrentMove == MOVE_ICE_FANG || gCurrentMove == MOVE_POISON_FANG || gCurrentMove == MOVE_THUNDER_FANG))
+        attack = (150 * attack) / 100;      
+    if (attacker->ability == ABILITY_IRON_FIST && (gCurrentMove == MOVE_FIRE_PUNCH || gCurrentMove == MOVE_ICE_PUNCH || gCurrentMove == MOVE_THUNDER_PUNCH || gCurrentMove == MOVE_MACH_PUNCH || gCurrentMove == MOVE_SHADOW_PUNCH || gCurrentMove == MOVE_DIZZY_PUNCH || gCurrentMove == MOVE_DYNAMIC_PUNCH || gCurrentMove == MOVE_FOCUS_PUNCH || gCurrentMove == MOVE_COMET_PUNCH || gCurrentMove == MOVE_MEGA_PUNCH))
+    	attack = (120 * attack) / 100; 
+    if (attacker->ability == ABILITY_RECKLESS && (gCurrentMove == MOVE_JUMP_KICK || gCurrentMove == MOVE_TAKE_DOWN || gCurrentMove == MOVE_SUBMISSION || gCurrentMove == MOVE_HI_JUMP_KICK || gCurrentMove == MOVE_STRUGGLE || gCurrentMove == MOVE_DOUBLE_EDGE || gCurrentMove == MOVE_VOLT_TACKLE || gCurrentMove == MOVE_HEAD_SMASH))
+        attack = (120 * attack) / 100; 
+    if (attacker->ability == ABILITY_SHARPNESS && (gCurrentMove == MOVE_AERIAL_ACE || gCurrentMove == MOVE_AIR_CUTTER || gCurrentMove == MOVE_AIR_SLASH || gCurrentMove == MOVE_CUT || gCurrentMove == MOVE_FURY_CUTTER || gCurrentMove == MOVE_LEAF_BLADE || gCurrentMove == MOVE_PSYCHO_CUT || gCurrentMove == MOVE_SLASH || gCurrentMove == MOVE_STONE_AXE || gCurrentMove == MOVE_NIGHT_SLASH))
+    {
+       spAttack = (120 * spAttack) / 100;
+       attack = (120 * attack) / 100;
+    }        
+    if (attacker->ability == ABILITY_PLUS)
+    {
+    if (ABILITY_ON_FIELD2(ABILITY_MINUS))
         spAttack = (150 * spAttack) / 100;
-    if (attacker->ability == ABILITY_MINUS && ABILITY_ON_FIELD2(ABILITY_PLUS))
+    else
+        spAttack = (110 * spAttack) / 100;
+    }
+    if (attacker->ability == ABILITY_MINUS)
+    {
+    if (ABILITY_ON_FIELD2(ABILITY_PLUS))
         spAttack = (150 * spAttack) / 100;
     //Not updated to HnS #DIFFICULTY
     /*if ((gSaveBlock2Ptr->optionsDifficulty == 2))
+    else
+        spAttack = (110 * spAttack) / 100;
+    }
+    if ((gSaveBlock2Ptr->optionsDifficulty == 2))
     {
         // Sceptile gets Thick Fat to reduce dmg from their weaknesses, and a 10% dmg increase.
         if ((attacker->species == SPECIES_SCEPTILE) && (attackerHoldEffect == HOLD_EFFECT_HARD_MODE_MODIFIER))
@@ -6783,10 +6862,49 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (attacker->ability == ABILITY_DRAGONS_MAW && moveType == TYPE_DRAGON)
         gBattleMovePower = (150 * gBattleMovePower) / 100;
+    //if (attacker->ability == ABILITY_ADAPTABILITY && moveType == TYPE_NORMAL)
+        //gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (attacker->ability == ABILITY_ILLUMINATE && moveType == TYPE_ELECTRIC)
         gBattleMovePower = (110 * gBattleMovePower) / 100;
+    //TESTING FOR LORD HELIX
+    if (attacker->ability == ABILITY_BERSERK && attacker->hp <= (attacker->maxHP / 2))
+    	spAttack = (150 * spAttack) / 100;
+    // rivary test code
+    if (attacker->ability == ABILITY_RIVALRY)
+    {
+    	u8 genderAtk = GetGenderFromSpeciesAndPersonality(
+            attacker->species,
+            attacker->personality);
+
+    	u8 genderDef = GetGenderFromSpeciesAndPersonality(
+            defender->species,
+            defender->personality);
+
+        if (genderAtk != MON_GENDERLESS && genderDef != MON_GENDERLESS)
+        {
+            if (genderAtk == genderDef)
+                gBattleMovePower = (125 * gBattleMovePower) / 100;
+            else
+                gBattleMovePower = (90 * gBattleMovePower) / 100;
+        }
+    }
+    //run away tiggers a 20% increase in DEF/spDEF at 50% HP meaning the tables have turned and maybe you want to run now. still should trigger 100% run from battle  
+    if (defender->ability == ABILITY_RUN_AWAY
+    	&& defender->hp <= (defender->maxHP / 2))
+    {
+    	defense = (120 * defense) / 100;
+    	spDefense = (120 * spDefense) / 100;
+    } 
     if (defender->ability == ABILITY_MARVEL_SCALE && defender->status1)
         defense = (150 * defense) / 100;
+    //MODERN SANDSTORM
+    if (WEATHER_HAS_EFFECT2
+    && (gBattleWeather & B_WEATHER_SANDSTORM)
+    && (defender->type1 == TYPE_ROCK || defender->type2 == TYPE_ROCK))
+    {
+    spDefense = (150 * spDefense) / 100;
+    }
+    
     if (type == TYPE_ELECTRIC && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, ABILITYEFFECT_MUD_SPORT, 0))
         gBattleMovePower /= 2;
     if (type == TYPE_FIRE && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, ABILITYEFFECT_WATER_SPORT, 0))
@@ -6803,6 +6921,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (200 * gBattleMovePower) / 100;
     if ((attacker->species == SPECIES_GROUDON) && (moveType == TYPE_FIRE))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
+        // Scyther and Kabutops get STAB for SLASH
+    if ((attacker->species == SPECIES_SCYTHER) && (gCurrentMove == MOVE_SLASH))
+        gBattleMovePower = (150 * gBattleMovePower) / 100; 
+    if ((attacker->species == SPECIES_KABUTOPS) && (gCurrentMove == MOVE_SLASH))
+        gBattleMovePower = (150 * gBattleMovePower) / 100;       
 
     // Self-destruct / Explosion cut defense in half
     if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
@@ -9522,6 +9645,20 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem)
         targetSpecies = GetSpeciesRandomSeeded(targetSpecies, TX_RANDOM_T_EVO, 0);
 
     return targetSpecies;
+}
+
+// everstone helper fxn to check if can evolve
+static bool8 CanEvolve(u16 species)
+{
+    int i;
+
+    for (i = 0; i < EVOS_PER_MON; i++)
+    {
+        if (gEvolutionTable[species][i].method != 0)
+            return TRUE;
+    }
+
+    return FALSE;
 }
 
 u16 HoennPokedexNumToSpecies(u16 hoennNum)

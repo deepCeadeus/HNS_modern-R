@@ -2432,6 +2432,53 @@ u8 CastformDataTypeChange(u8 battler)
     return formChange;
 }
 
+static u8 GetMultitypeType(u8 battler)
+{
+    u8 holdEffect = ItemId_GetHoldEffect(gBattleMons[battler].item);
+
+    switch (holdEffect)
+    {
+    case HOLD_EFFECT_FAIRY_POWER:
+        return TYPE_FAIRY;
+    case HOLD_EFFECT_BUG_POWER:
+        return TYPE_BUG;
+    case HOLD_EFFECT_STEEL_POWER:
+        return TYPE_STEEL;
+    case HOLD_EFFECT_GROUND_POWER:
+        return TYPE_GROUND;
+    case HOLD_EFFECT_ROCK_POWER:
+        return TYPE_ROCK;
+    case HOLD_EFFECT_GRASS_POWER:
+        return TYPE_GRASS;
+    case HOLD_EFFECT_DARK_POWER:
+        return TYPE_DARK;
+    case HOLD_EFFECT_FIGHTING_POWER:
+        return TYPE_FIGHTING;
+    case HOLD_EFFECT_ELECTRIC_POWER:
+        return TYPE_ELECTRIC;
+    case HOLD_EFFECT_WATER_POWER:
+        return TYPE_WATER;
+    case HOLD_EFFECT_FLYING_POWER:
+        return TYPE_FLYING;
+    case HOLD_EFFECT_POISON_POWER:
+        return TYPE_POISON;
+    case HOLD_EFFECT_ICE_POWER:
+        return TYPE_ICE;
+    case HOLD_EFFECT_GHOST_POWER:
+        return TYPE_GHOST;
+    case HOLD_EFFECT_PSYCHIC_POWER:
+        return TYPE_PSYCHIC;
+    case HOLD_EFFECT_FIRE_POWER:
+        return TYPE_FIRE;
+    case HOLD_EFFECT_DRAGON_POWER:
+        return TYPE_DRAGON;
+    case HOLD_EFFECT_NORMAL_POWER:
+        return TYPE_NORMAL;
+    default:
+        return TYPE_NORMAL;
+    }
+}
+
 u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveArg)
 {
     u8 effect = 0;
@@ -2551,6 +2598,15 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     effect++;
                 }
                 break;
+            case ABILITY_SNOW_WARNING:
+                if (!(gBattleWeather & B_WEATHER_HAIL_PERMANENT))
+                {
+                    gBattleWeather = B_WEATHER_HAIL;
+                    BattleScriptPushCursorAndCallback(BattleScript_SnowWarningActivates);
+                    gBattleScripting.battler = battler;
+                    effect++;
+                }
+                break;
             case ABILITY_SAND_STREAM:
                 if (!(gBattleWeather & B_WEATHER_SANDSTORM_PERMANENT))
                 {
@@ -2576,6 +2632,25 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     gSpecialStatuses[battler].intimidatedMon = 1;
                 }
                 break;
+            
+            case ABILITY_MULTITYPE:
+	    {
+    		
+    		{
+        	    u8 newType = GetMultitypeType(battler);
+
+        	    if (!IS_BATTLER_OF_TYPE(battler, newType))
+        	    {
+            		gBattleScripting.battler = battler;
+			SET_BATTLER_TYPE(battler, newType);
+			PREPARE_TYPE_BUFFER(gBattleTextBuff1, newType);
+			BattleScriptPushCursorAndCallback(BattleScript_MultitypeActivates);
+			effect++;
+        	    }
+    		}
+    		break;
+	    }
+                
             case ABILITY_FORECAST:
                 effect = CastformDataTypeChange(battler);
                 if (effect != 0)
@@ -2630,6 +2705,49 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         effect++;
                     }
                     break;
+                case ABILITY_ICE_BODY:
+                    if (WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_HAIL)
+                     && gBattleMons[battler].maxHP > gBattleMons[battler].hp)
+                    {
+                        gLastUsedAbility = ABILITY_ICE_BODY; // why
+                        BattleScriptPushCursorAndCallback(BattleScript_IceBodyActivates);
+                        gBattleMoveDamage = gBattleMons[battler].maxHP / 16;
+                        if (gBattleMoveDamage == 0)
+                            gBattleMoveDamage = 1;
+                        gBattleMoveDamage *= -1;
+                        effect++;
+                    }
+                    break;
+                case ABILITY_FORECAST:
+                     if (WEATHER_HAS_EFFECT
+                     && (gBattleWeather & (B_WEATHER_RAIN
+                     			 | B_WEATHER_SUN
+                     			 | B_WEATHER_HAIL))
+                     && gBattleMons[battler].maxHP > gBattleMons[battler].hp)
+                    {
+                        gLastUsedAbility = ABILITY_FORECAST; // why
+                        BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
+                        gBattleMoveDamage = gBattleMons[battler].maxHP / 8; //Castform is a special case
+                        if (gBattleMoveDamage == 0)
+                            gBattleMoveDamage = 1;
+                        gBattleMoveDamage *= -1;
+                        effect++;
+                    }
+                    break;
+               case ABILITY_EARLY_BIRD:
+               	    if ((gBattleMons[battler].status1 & STATUS1_SLEEP)
+        		 && gBattleMons[battler].maxHP > gBattleMons[battler].hp)
+                    {
+                        gLastUsedAbility = ABILITY_EARLY_BIRD; // why
+                        BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
+                        gBattleMoveDamage = gBattleMons[battler].maxHP / 8; //SPECIAL CASE FOR EARLY BIRD POKEMON
+                        if (gBattleMoveDamage == 0)
+                            gBattleMoveDamage = 1;
+                        gBattleMoveDamage *= -1;
+                        effect++;
+                    }
+                    break;     
+                        
                 case ABILITY_SHED_SKIN:
                     if ((gBattleMons[battler].status1 & STATUS1_ANY) && (Random() % 3) == 0)
                     {
@@ -2663,8 +2781,33 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         effect++;
                     }
                     break;
+                    
+                    //Run away works like speed boost but only gives +1 stage over default  or 1.5x speed. it will ramp up from negative stat stage to +1 in theory. Swift Swim and Chlorophyll give an immediate 2x boost in the correct weather while speed boost adds a stage up to +6 stages.
+                case ABILITY_RUN_AWAY:
+                    if ((gBattleMons[battler].hp <= (gBattleMons[battler].maxHP / 2)) && (gBattleMons[battler].statStages[STAT_SPEED] <= DEFAULT_STAT_STAGE))
+                    {
+                        gBattleMons[battler].statStages[STAT_SPEED]++;
+                        gBattleScripting.animArg1 = STAT_ANIM_PLUS1 + STAT_SPEED;
+                        gBattleScripting.animArg2 = 0;
+                        BattleScriptPushCursorAndCallback(BattleScript_SpeedBoostActivates);
+                        gBattleScripting.battler = battler;
+                        effect++;
+                    }
+                    break;
                 case ABILITY_TRUANT:
                     gDisableStructs[gBattlerAttacker].truantCounter ^= 1;
+                    //TRUANT HEALS ON SLEEP STATUS
+                    if ((gBattleMons[battler].status1 & STATUS1_SLEEP)
+        		 && gBattleMons[battler].maxHP > gBattleMons[battler].hp)
+                    {
+                        gLastUsedAbility = ABILITY_TRUANT; // why
+                        BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
+                        gBattleMoveDamage = gBattleMons[battler].maxHP / 8; //SPECIAL CASE FOR LAZY POKEMON
+                        if (gBattleMoveDamage == 0)
+                            gBattleMoveDamage = 1;
+                        gBattleMoveDamage *= -1;
+                        effect++;
+                    }
                     break;
                 }
             }
@@ -2777,6 +2920,29 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     effect++;
                 }
                 break;
+             // CHANGE ON HIT TESTING This allows it to be traced, knock off removes it, arceus can switch from trick then get hit and change again. Might remove later if i block trace, knock off, skill swap, etc 
+            case ABILITY_MULTITYPE:
+	    {
+    		if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+ 		&& move != MOVE_STRUGGLE
+ 		&& gBattleMoves[move].power != 0
+ 		&& TARGET_TURN_DAMAGED
+ 		&& gBattleMons[battler].hp != 0)
+    		{
+        	    u8 newType = GetMultitypeType(battler);
+
+        	    if (!IS_BATTLER_OF_TYPE(battler, newType))
+        	    {
+            		SET_BATTLER_TYPE(battler, newType);
+            		PREPARE_TYPE_BUFFER(gBattleTextBuff1, newType);
+            		BattleScriptPushCursor();
+            		gBattlescriptCurrInstr = BattleScript_ColorChangeActivates;
+            		effect++;
+        	    }
+    		}
+    		break;
+	    }
+	    
             case ABILITY_ROUGH_SKIN:
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && gBattleMons[gBattlerAttacker].hp != 0
@@ -2784,7 +2950,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && TARGET_TURN_DAMAGED
                  && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT))
                 {
-                    gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 16;
+                    gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 8;
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
                     BattleScriptPushCursor();
@@ -2792,6 +2958,50 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     effect++;
                 }
                 break;
+             case ABILITY_PICKUP:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                && gBattlerAttacker != battler
+                && gBattleMons[gBattlerAttacker].hp != 0
+		&& gBattleMons[battler].hp != 0
+		&& !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+		&& (Random() % 5) == 0)
+                    {
+                    for (i = 0; i < NUM_STATS - 1; i++)
+                    {
+                        if (gBattleMons[battler].statStages[STAT_ATK + i] < MAX_STAT_STAGE)
+                            break;
+                    }
+                    if (i != NUM_STATS - 1)
+                    {
+                        do
+                        {
+                            i = Random() % (NUM_STATS - 1);
+                        } while (gBattleMons[battler].statStages[STAT_ATK + i] == MAX_STAT_STAGE);
+
+                        PREPARE_STAT_BUFFER(gBattleTextBuff1, i + 1);
+
+                        gBattleTextBuff2[0] = B_BUFF_PLACEHOLDER_BEGIN;
+                        gBattleTextBuff2[1] = B_BUFF_STRING;
+                        gBattleTextBuff2[2] = STRINGID_STATSHARPLY;
+                        gBattleTextBuff2[3] = STRINGID_STATSHARPLY >> 8;
+                        gBattleTextBuff2[4] = B_BUFF_STRING;
+                        gBattleTextBuff2[5] = STRINGID_STATROSE;
+                        gBattleTextBuff2[6] = STRINGID_STATROSE >> 8;
+                        gBattleTextBuff2[7] = EOS;
+
+                        gEffectBattler = battler;
+                        gBattleScripting.battler = battler;
+                        SET_STATCHANGER(i + 1, 2, FALSE);
+                        gBattleScripting.animArg1 = STAT_ANIM_PLUS2 + (i + 1);
+                        gBattleScripting.animArg2 = 0;
+                        gBattleCommunication[MOVE_EFFECT_BYTE] += MOVE_EFFECT_AFFECTS_USER;
+                        BattleScriptPushCursor();
+                        gBattlescriptCurrInstr = (BattleScript_BerryStatPickupEnd2);
+                        effect++;
+                    }
+                    } 
+                    break;   
+                
             case ABILITY_EFFECT_SPORE:
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && gBattleMons[gBattlerAttacker].hp != 0

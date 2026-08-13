@@ -1,4 +1,3 @@
-
 #include "global.h"
 #include "main.h"
 #include "battle.h"
@@ -441,6 +440,7 @@ static void BufferIvOrEvStats(u8 mode);
 static void ToggleStatsOverlay(void);
 static void ShowStatsOverlay(void);
 static void HideStatsOverlay(void);
+static void PrintPokedexOrCancel(void);
 
 // const rom data
 #include "data/text/move_descriptions.h"
@@ -1430,6 +1430,8 @@ static void HideShowShinyStar(bool8 invisible)
 
     if (IsMonShiny(&sMonSummaryScreen->currentMon))
         sShinyStarObjData->sprite->invisible = invisible;
+    else if (IsMonShiny(&sMonSummaryScreen->currentMon) && (sMonSummaryScreen->summary.isEgg))
+        sShinyStarObjData->sprite->invisible = invisible;
     else
         sShinyStarObjData->sprite->invisible = TRUE;
 
@@ -1445,6 +1447,8 @@ static void ShowShinyStarObjIfMonShiny(void)
         return;
 
     if (IsMonShiny(&sMonSummaryScreen->currentMon))
+        HideShowShinyStar(FALSE);
+    else if (IsMonShiny(&sMonSummaryScreen->currentMon) && (sMonSummaryScreen->summary.isEgg))
         HideShowShinyStar(FALSE);
     else
         HideShowShinyStar(TRUE);
@@ -1895,6 +1899,16 @@ static void Task_OpenPokedexFromSummary(u8 taskId)
         FreeSummaryScreen();
         DestroyTask(taskId);
         
+        // Clear all BG tilemaps to prevent leftover tiles bleeding into the Pokédex screen
+        FillBgTilemapBufferRect_Palette0(0, 0, 0, 0, 32, 32);
+        FillBgTilemapBufferRect_Palette0(1, 0, 0, 0, 32, 32);
+        FillBgTilemapBufferRect_Palette0(2, 0, 0, 0, 32, 32);
+        FillBgTilemapBufferRect_Palette0(3, 0, 0, 0, 32, 32);
+        CopyBgTilemapBufferToVram(0);
+        CopyBgTilemapBufferToVram(1);
+        CopyBgTilemapBufferToVram(2);
+        CopyBgTilemapBufferToVram(3);
+
         // Open the Pokédex info screen for this specific Pokémon
         OpenPokedexInfoScreen(species, CB2_ReturnToSummaryFromPokedex);
     }
@@ -1902,8 +1916,10 @@ static void Task_OpenPokedexFromSummary(u8 taskId)
 
 static void CB2_ShowPokedexEntryFromSummary(void)
 {
-    // Only open Pokedex if not an egg and player has Pokedex
-    if (!sMonSummaryScreen->summary.isEgg && FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
+    // Only open Pokedex if not an egg and player has Pokedex and player is not in Battle
+    if (!sMonSummaryScreen->summary.isEgg
+    && FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE
+    && !gMain.inBattle)
     {
         // Begin fade out and set task to open Pokedex after cleanup
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
@@ -1962,10 +1978,20 @@ static void Task_HandleInput(u8 taskId)
             {
                 if (sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO)
                 {
-                    StopPokemonAnimations();
-                    PlaySE(SE_SELECT);
-                    // Open the Pokedex entry for this species
-                    CB2_ShowPokedexEntryFromSummary();
+                    if (!sMonSummaryScreen->summary.isEgg
+    			&& FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE
+    			&& !gMain.inBattle) // Battle shows CANCEL instead of POKEDEX from summary screen.
+                    {
+                        StopPokemonAnimations();
+                        PlaySE(SE_SELECT);
+                        CB2_ShowPokedexEntryFromSummary();
+                    }
+                    else
+                    {
+                        StopPokemonAnimations();
+                        PlaySE(SE_SELECT);
+                        BeginCloseSummaryScreen(taskId);
+                    }                    
                 }
                 else // Contest or Battle Moves
                 {
@@ -2117,6 +2143,7 @@ static void Task_ChangeSummaryMon(u8 taskId)
         break;
     case 11:
         PrintPageSpecificText(sMonSummaryScreen->currPageIndex);
+        PrintPokedexOrCancel();
         LimitEggSummaryPageDisplay();
         break;
     case 12:
@@ -2204,7 +2231,7 @@ static void ChangePage(u8 taskId, s8 delta)
     else if (delta == 1 && sMonSummaryScreen->currPageIndex == sMonSummaryScreen->maxPageIndex)
         return;
 
-    PlaySECursorMove(SE_SELECT);
+    PlaySE(SE_SELECT);
     ClearPageWindowTilemaps(sMonSummaryScreen->currPageIndex);
     sMonSummaryScreen->currPageIndex += delta;
     data[0] = 0;
@@ -3314,8 +3341,10 @@ static void PrintPageNamesAndStats(void)
     PrintTextOnWindow(PSS_LABEL_WINDOW_BATTLE_MOVES_TITLE, gText_BattleMoves, 2, 1, 0, 1);
     PrintTextOnWindow(PSS_LABEL_WINDOW_CONTEST_MOVES_TITLE, gText_ContestMoves, 2, 1, 0, 1);
 
-    // Show POKéDEX if not an egg and player has Pokedex, otherwise show CANCEL
-    if (!sMonSummaryScreen->summary.isEgg && FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
+    // Show POKéDEX for non-Eggs when the player has the Pokédex and is not in battle; otherwise show CANCEL.
+    if (!sMonSummaryScreen->summary.isEgg
+    && FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE
+    && !gMain.inBattle)
     {
         stringXPos = GetStringRightAlignXOffset(FONT_NORMAL, gText_MenuPokedex, 62);
         iconXPos = stringXPos - 16;
@@ -3381,6 +3410,37 @@ static void PrintPageNamesAndStats(void)
     PrintTextOnWindow(PSS_LABEL_WINDOW_MOVES_APPEAL_JAM, gText_Appeal, 0, 1, 0, 1);
     PrintTextOnWindow(PSS_LABEL_WINDOW_MOVES_APPEAL_JAM, gText_Jam, 0, 17, 0, 1);
 }
+// Redraws the CANCEL (A) or POKEDEX (A) prompt when scrolling
+// between Eggs and Pokémon. Called from Task_ChangeSummaryMon case 11.
+static void PrintPokedexOrCancel(void)
+{
+    int stringXPos;
+    int iconXPos;
+    
+    // Show POKéDEX for non-Eggs when the player has the Pokédex and is not in battle; otherwise show CANCEL.
+    FillWindowPixelBuffer(PSS_LABEL_WINDOW_PROMPT_CANCEL, PIXEL_FILL(0));
+    if (!sMonSummaryScreen->summary.isEgg
+    && FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE
+    && !gMain.inBattle)
+    {
+        stringXPos = GetStringRightAlignXOffset(FONT_NORMAL, gText_MenuPokedex, 62);
+        iconXPos = stringXPos - 16;
+        if (iconXPos < 0)
+            iconXPos = 0;
+        PrintAOrBButtonIcon(PSS_LABEL_WINDOW_PROMPT_CANCEL, FALSE, iconXPos);
+        PrintTextOnWindow(PSS_LABEL_WINDOW_PROMPT_CANCEL, gText_MenuPokedex, stringXPos, 1, 0, 0);
+    }
+    else
+    {
+        stringXPos = GetStringRightAlignXOffset(FONT_NORMAL, gText_Cancel2, 62);
+        iconXPos = stringXPos - 16;
+        if (iconXPos < 0)
+            iconXPos = 0;
+        PrintAOrBButtonIcon(PSS_LABEL_WINDOW_PROMPT_CANCEL, FALSE, iconXPos);
+        PrintTextOnWindow(PSS_LABEL_WINDOW_PROMPT_CANCEL, gText_Cancel2, stringXPos, 1, 0, 0);
+    }
+}
+
 
 static void PutPageWindowTilemaps(u8 page)
 {
@@ -3958,7 +4018,7 @@ static void BufferIvOrEvStats(u8 mode)
         PrintRightColumnStats();
         break;
     case 2:
-    default:
+    default: ;
         const s8 *natureMod = gNatureStatTable[
             (sMonSummaryScreen->summary.hiddenNature == HIDDEN_NATURE_NONE) ? sMonSummaryScreen->summary.nature : sMonSummaryScreen->summary.hiddenNature];
         BufferStat(currHPString, 0, hp, 0, 3);
@@ -4467,7 +4527,7 @@ static void SetMoveTypeIcons(void)
     for (i = 0; i < MAX_MON_MOVES; i++)
     {
         if (summary->moves[i] != MOVE_NONE) {
-            if (summary->moves[i] == MOVE_HIDDEN_POWER) {
+            if (summary->moves[i] == MOVE_HIDDEN_POWER || summary->moves[i] == MOVE_JUDGMENT) {
                 u8 typeBits  = ((GetMonData(mon, MON_DATA_HP_IV) & 1) << 0)
                      | ((GetMonData(mon, MON_DATA_ATK_IV) & 1) << 1)
                      | ((GetMonData(mon, MON_DATA_DEF_IV) & 1) << 2)
@@ -4514,7 +4574,7 @@ static void SetNewMoveTypeIcon(void)
     else
     {
         if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES)
-            if (sMonSummaryScreen->newMove == MOVE_HIDDEN_POWER) {
+            if (sMonSummaryScreen->newMove == MOVE_HIDDEN_POWER || sMonSummaryScreen->newMove == MOVE_JUDGMENT) {
                 u8 typeBits  = ((GetMonData(mon, MON_DATA_HP_IV) & 1) << 0)
                      | ((GetMonData(mon, MON_DATA_ATK_IV) & 1) << 1)
                      | ((GetMonData(mon, MON_DATA_DEF_IV) & 1) << 2)
