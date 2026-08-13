@@ -299,20 +299,20 @@ VermilionGym_Text_LtSurgeIntro:
 
 VermilionGym_Text_LtSurgeWinLoss:
 	.string "Surge: Arrrgh! You are strong!\p"
-	.string "Ok, kid. You get ThunderBadge!$"
+	.string "OK, kid. You get the Thunder Badge!$"
 
 VermilionGym_Text_ReceivedThunderBadge:
-	.string "{PLAYER} received ThunderBadge.$"
+	.string "{PLAYER} received the Thunder Badge.$"
 
 VermilionGym_Text_ThunderBadgeInfo:
-	.string "Surge: ThunderBadge increases\n"
+	.string "Surge: The Thunder Badge increases\n"
 	.string "Pokémon's speed.\p"
 	.string "Consider it proof that you\n"
 	.string "defeated me.\p"
 	.string "You wear it proudly, hear?$"
 
 VermilionGym_Text_LtSurgeTm:
-	.string "And take this Tm. It served me\n"
+	.string "And take this TM. It served me\n"
 	.string "well in the war!$"
 
 VermilionGym_Text_LtSurgeThunderstone:

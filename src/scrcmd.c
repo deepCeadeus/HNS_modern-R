@@ -1654,7 +1654,6 @@ bool8 ScrCmd_showmonpic(struct ScriptContext *ctx)
     // If we have not gotten a pokemon yet, assume this is starter preview
     if (!FlagGet(FLAG_SYS_POKEMON_GET))
     {
-        u32 shinyChance = SHINY_ODDS << gSaveBlock1Ptr->tx_Features_ShinyChance;
         u8 starter = VarGet(VAR_STARTER_MON);
 
         u32 flagTemp;
@@ -1685,6 +1684,9 @@ bool8 ScrCmd_showmonpic(struct ScriptContext *ctx)
             u32 otId = GetTrainerId(gSaveBlock2Ptr->playerTrainerId);
             
             if (GET_SHINY_VALUE(otId, fakePid) < shinyChance)
+
+            if (IsShinyOtIdPersonality(GetTrainerId(gSaveBlock2Ptr->playerTrainerId), fakePid))
+
                 FlagSet(flagShinyStarter);
 
             FlagSet(flagTemp);

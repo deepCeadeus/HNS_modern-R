@@ -20,8 +20,8 @@ NewMauville_Inside_Raikou_EntranceTrigger::
 	end
 
 NewMauville_Inside_Raikou_EntranceTrigger_Text:
-	.string "A big roar echoes around NEW\n"
-	.string "MAUVILLE.\p"
+	.string "A big roar echoes around New\n"
+	.string "Mauville.\p"
 	.string "Is there something hiding in\n"
 	.string "this place?$"
 

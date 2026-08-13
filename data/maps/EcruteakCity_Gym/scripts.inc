@@ -107,10 +107,10 @@ MortyWinLossText:
 	.string "All right. This Badge is yours.$"
 
 Text_ReceivedFogBadge:
-	.string "{PLAYER} received the FogBadge.$"
+	.string "{PLAYER} received the Fog Badge.$"
 
 MortyText_FogBadgeSpeech:
-	.string "With the FogBadge, Pokémon up\n"
+	.string "With the Fog Badge, Pokémon up\n"
 	.string "to Level 50 will obey you.\p"
 	.string "Also, any Pokémon that knows\n"
 	.string "Surf will be able to use it\l"

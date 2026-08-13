@@ -59,4 +59,4 @@ GoldenrodDeptStore_Text_4FGameboyKid:
 
 GoldenrodDeptStore_Text_4FDirectory:
     .string "Let Us Pump Up Your Pokémon!\p"
-    .string "4F MEDICINE BOX$"
+    .string "4F Medicine Box$"

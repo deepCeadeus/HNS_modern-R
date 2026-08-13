@@ -69,7 +69,7 @@ PokefanM_Text_AllanSeen:
 PokefanM_Text_AllanSeen_Rematch:
 	.string "My Granbull is the cutest in the\n"
 	.string "world.\p"
-	.string "And so are the rest of my PokÉMon!$"
+	.string "And so are the rest of my Pokémon!$"
 
 PokefanM_Text_Allan_Register::
 	.string "Do you want to see how strong my\n"

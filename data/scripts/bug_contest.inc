@@ -196,5 +196,5 @@ BugContest_Text_TakePartInFuture:
 
 BugContest_Text_TransferAndReturn:
 	.string "Your chosen Bug Pokémon will now\n"
-	.string "be sent to the Pc and your party\l"
+	.string "be sent to the PC and your party\l"
 	.string "will be returned to you.$"

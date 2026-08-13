@@ -380,7 +380,7 @@ AzaleaTown_Text_Rocket1:
 	.string "Aren't I a good Samaritan?$"
 
 AzaleaTown_Text_Rocket2:
-	.string "Do you know about Slowpoketail?\n"
+	.string "Do you know about SlowpokeTail?\n"
 	.string "I heard it's tasty!\p"
 	.string "Aren't you glad I told you that?$"
 

@@ -213,7 +213,7 @@ SSAqua_B1F_EventScript_Nate::
 	end
 
 SSAqua_B1F_Text_SchoolboyNateSeen:
-	.string "Do you know the Ruins Of Alph?$"
+	.string "Do you know the Ruins of Alph?$"
 
 SSAqua_B1F_Text_SchoolboyNateBeaten:
 	.string "Yaargh!$"
@@ -229,7 +229,7 @@ SSAqua_B1F_EventScript_Ricky::
 
 SSAqua_B1F_Text_SchoolboyRickySeen:
 	.string "There are some odd stone panels\n"
-	.string "in the Ruins Of Alph.$"
+	.string "in the Ruins of Alph.$"
 
 SSAqua_B1F_Text_SchoolboyRickyBeaten:
 	.string "I was done in!$"

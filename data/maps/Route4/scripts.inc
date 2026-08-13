@@ -70,6 +70,6 @@ Route4_Text_PicnickerSharon_AfterBattle:
 
 Route4_Text_MtMoonSquareSign:
 	.string "Mt. Moon New Entrance\n"
-	.string "DUE TO CAVE-IN\p"
-	.string "WATCH YOUR STEP$"
+	.string "Due To Cave-In\p"
+	.string "Watch Your Step.$"
 

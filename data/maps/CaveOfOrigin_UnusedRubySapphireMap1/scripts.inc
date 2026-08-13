@@ -61,8 +61,8 @@ CaveOfOrigin_UnusedRubySapphireMap1_Scientist3_Text:
 	.string "unhabited by humans, so something\l"
 	.string "happening here is extremely myterious,\l"
 	.string "to say the least.\p"
-	.string "KIRI is also looking for clues.\n"
+	.string "Kiri is also looking for clues.\n"
 	.string "We need to unravel this mystery.$"
 
 CaveOfOrigin_UnusedRubySapphireMap1_Kirlia_Text:
-	.string "KIRI: Kir!$"
+	.string "Kiri: Kir!$"

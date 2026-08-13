@@ -131,4 +131,4 @@ GoldenrodDeptStore_Text_6FSuperNerd:
 
 GoldenrodDeptStore_Text_6FDirectory:
     .string "Take a Break from Shopping!\p"
-    .string "6F TRANQUIL SQUARE$"
+    .string "6F Tranquil Square$"

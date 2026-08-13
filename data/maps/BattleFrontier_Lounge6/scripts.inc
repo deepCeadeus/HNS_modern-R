@@ -76,7 +76,7 @@ BattleFrontier_Lounge6_Text_WouldYouLikeToTrade:
 @
 @BattleFrontier_Lounge6_Text_SkittySoMuchCuterThanImagined:
 @	.string "Giggle!\n"
-@	.string "A SKITTY is so much cuter than I had\l"
+@	.string "A Skitty is so much cuter than I had\l"
 @	.string "imagined. I'm delighted!$"
 
 BattleFrontier_Lounge6_EventScript_Hiker::

@@ -400,7 +400,7 @@ VermilionCity_EventScript_DiglettsCaveSign::
 
 VermilionCity_Text_Sign:
 	.string "Vermilion City\p"
-	.string "The Port of Exquisite Sunsets$"
+	.string "The port of exquisite sunsets$"
 
 VermilionCity_Text_GymSign:
 	.string "Vermilion City\n"

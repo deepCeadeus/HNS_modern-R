@@ -99,7 +99,7 @@ Route12_Text_FisherKyleBeaten:
 	.string "You do remember?$"
 
 Route12_Text_FisherKyleAfterBattle:
-	.string "The tug you feel on the ROD when\n"
+	.string "The tug you feel on the Rod when\n"
 	.string "you hook a Pokémon…\p"
 	.string "That's the best feeling ever for\n"
 	.string "an angler like me.$"

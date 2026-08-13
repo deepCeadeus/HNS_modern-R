@@ -82,10 +82,10 @@ CianwoodGym_EventScript_ChuckGotoDojo::
 	end
 
 CianwoodGym_Text_ChuckGotoDojo:
-	.string "WAHAHAHA {PLAYER}!\n"
+	.string "Wahahaha {PLAYER}!\n"
 	.string "I'm in the middle of my training!\p"
 	.string "If you want another match, come to\n"
-	.string "the Fighting Dojo in Saffron!$"	
+	.string "the Fighting Dojo in Saffron!$"
 
 CianwoodGym_EventScript_ChuckAtDojo::
 	msgbox CianwoodGym_Text_ChuckAtDojo, MSGBOX_DEFAULT
@@ -95,7 +95,7 @@ CianwoodGym_EventScript_ChuckAtDojo::
 
 CianwoodGym_Text_ChuckAtDojo:
 	.string "I will see you at the Dojo!\n"
-	.string "WAHAHAHAHAHA$"
+	.string "Wahahahahaha$"
 
 CianwoodGym_EventScript_OlivineCheckMahog::
 	goto_if_set FLAG_DEFEATED_MAHOGANY_TOWN_GYM, CianwoodGym_EventScript_Chuck_Battle3
@@ -104,7 +104,7 @@ CianwoodGym_EventScript_OlivineCheckMahog::
 CianwoodGym_EventScript_MahogCheckOlivine::
 	goto_if_set FLAG_DEFEATED_OLIVINE_CITY_GYM, CianwoodGym_EventScript_Chuck_Battle3
 	goto CianwoodGym_EventScript_Chuck_Battle2
-	
+
 CianwoodGym_EventScript_Chuck_Battle1::
 	trainerbattle_no_intro TRAINER_CHUCK_1, CianwoodGym_Text_ChuckIntro2
 	goto CianwoodGym_EventScript_ChuckVictory
@@ -132,7 +132,7 @@ CianwoodGym_Movement_ChuckRight:
 	step_end
 
 CianwoodGym_Text_ChuckIntro1:
-	.string "WAHAHAH!\p"
+	.string "Wahahah!\p"
 	.string "So you've come this far!\p"
 	.string "Let me tell you, I'm tough!\p"
 	.string "My Pokémon will crush stones and\n"
@@ -154,13 +154,13 @@ CianwoodGym_Text_ChuckIntro3:
 CianwoodGym_Text_ChuckLoss:
 	.string "Wha? Huh? I lost?\p"
 	.string "How about that!\n"
-	.string "You're worthy of StormBadge!$"
+	.string "You're worthy of the Storm Badge!$"
 
 CianwoodGym_Text_GetStormBadge:
-	.string "{PLAYER} received StormBadge.$"
+	.string "{PLAYER} received the Storm Badge.$"
 
 CianwoodGym_Text_ChuckBadgeSpeech:
-	.string "StormBadge makes all Pokémon up to\n"
+	.string "The Storm Badge makes all Pokémon up to\n"
 	.string "L70 obey, even traded ones.\p"
 	.string "It also lets your Pokémon use Fly\n"
 	.string "when you're not in a battle.\p"
@@ -172,13 +172,13 @@ CianwoodGym_Text_ChuckTMSpeech:
 	.string "damage. Just don't get hit first!$"
 
 CianwoodGym_Text_ChuckAfter:
-	.string "WAHAHAH! I enjoyed battling you!\p"
+	.string "Wahahah! I enjoyed battling you!\p"
 	.string "But a loss is a loss!\p"
 	.string "From now on, I'm going to train\n"
 	.string "24 hours a day!$"
 
 CianwoodGym_Text_ChuckRematch:
-	.string "WAHAHAH! Johto Champion!\p"
+	.string "Wahahah! Johto Champion!\p"
 	.string "You've come back for more!\p"
 	.string "I see your skills have improved!\p"
 	.string "Ready to see who's stronger?$"

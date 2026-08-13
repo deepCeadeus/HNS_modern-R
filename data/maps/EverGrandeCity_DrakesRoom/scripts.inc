@@ -71,7 +71,7 @@ EverGrandeCity_DrakesRoom_EventScript_Defeated::
 
 EverGrandeCity_DrakesRoom_Text_IntroSpeech:
 	.string "I am the last of the Pokémon League\n"
-	.string "Elite Four, DRAKE the Dragon master!\p"
+	.string "Elite Four, Drake the Dragon master!\p"
 	.string "In their natural state, Pokémon are\n"
 	.string "wild living things. They are free.\p"
 	.string "At times, they hinder us.\n"
@@ -84,7 +84,7 @@ EverGrandeCity_DrakesRoom_Text_IntroSpeech:
 
 EverGrandeCity_DrakesRoom_Text_IntroSpeech2:
 	.string "I am the last of the Pokémon League\n"
-	.string "Elite Four, DRAKE the Dragon master!\p"
+	.string "Elite Four, Drake the Dragon master!\p"
 	.string "How are your Pokémon partners?\n"
 	.string "Did they help you get stronger?\p"
 	.string "I'm sure they did!\p"

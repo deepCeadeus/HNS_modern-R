@@ -875,7 +875,7 @@ gText_PokemonTrainerSchoolEmail::
 	.string "… … … … … …$"
 
 gText_PlayerHouseBootPC::
-	.string "{PLAYER} booted up the Pc.$"
+	.string "{PLAYER} booted up the PC.$"
 
 gText_PokeblockLinkCanceled::
 	.string "The link was canceled.$"
@@ -947,7 +947,7 @@ gText_ThankYouForAccessingMysteryGift::
 	.string "Mystery Gift System.$"
 
 gText_PlayerFoundOneTMHM::
-	.string "{PLAYER} FOUND ONE {STR_VAR_1}\n"
+	.string "{PLAYER} found one {STR_VAR_1}\n"
 	.string "{STR_VAR_2}!$"
 
 gText_Sudowoodo_Attacked::

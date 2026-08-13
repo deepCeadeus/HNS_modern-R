@@ -140,7 +140,7 @@ GoldenrodCity_RadioTower_3F_Text_Open:
 	.string "The gate is open.$"
 
 GoldenrodCity_RadioTower_3F_Text_PersonnelSign:
-	.string "3F PERSONNEL$"
+	.string "3F Personnel$"
 
 GoldenrodCity_RadioTower_3F_Text_PokemonMusicSign:
 	.string "Pokémon Music with Host DJ Ben$"

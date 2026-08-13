@@ -210,7 +210,7 @@ SaffronCity_FightingDojo_Text_Speed:
 	.string "Spd$"
 
 SaffronCity_FightingDojo_Text_WouldYouLikeToBattle:
-	.string "Battle {STR_VAR_1} FOR 3 {STR_VAR_2} EVs?$"
+	.string "Battle {STR_VAR_1} for 3 {STR_VAR_2} EVs?$"
 
 SaffronCity_FightingDojo_Text_BlackBelt:
 	.string "You enter the Fighting Dojo!\p"

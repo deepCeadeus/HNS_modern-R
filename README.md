@@ -1,11 +1,13 @@
-# MODERN Heart & Soul
+## If you are unsure which version to play, play the official one
+
+## DO NOT, UNDER ANY CIRCUMSTANCE, REPORT BUGS TO THE OFFICIAL HNS REPO OR DISCORD SERVER
+
+# (UNOFFICIAL) MODERN Heart & Soul
 **Modern** Heart & Soul is a small modification of the original Pokémon Heart & Soul version 1.2.1+(more recent than 1.2.1, "unofficially" called 1.2.2, but unreleased nonetheless) that includes missing options and features from its base game engine, Pokémon Modern Emerald. It has been created to become the base game of a future romhack: Modern Fire Red & Leaf Green.
 
 The version indicator shows the Pokémon Heart&Soul version (currently "1.2.1"), plus its modded "Modern" version (currently "m1") -> v1.2.1m1
 
 Future releases, if any, will only update the modded "Modern" version, as Heart&Soul 2.0 will use a better engine that is NOT built using Modern Emerald and **CANNOT** (and will not, at least not by me) be easily backported. Players will need to choose between playing the original 1.2.1 plus the "Modern" enhancements made by me, or the 2.0 version by the HnS team. Versions will **NOT** be compatible, **AT ALL,** since HnS 2.0 uses the "Pokeemerald_Expansion" base.
-
-If you are unsure which version to play, play the official one.
 
 You can get more information about Modern Emerald at [Pokécommunity](https://www.Pokécommunity.com/showthread.php?t=494005) and at [Github](https://github.com/resetes12/pokeemerald). 
 
@@ -64,7 +66,7 @@ The **Modern** feature list is:
 - Chain Fishing is back, and Sweet Scent chaining is also implemented.
 - The Battle Frontier has been customized, with 95% new NPCs and text (nothing special, just to give it a new flavour).
 - Voltorb Flip in casinos!
-- "GBS Sounds" object to listen to the original music!
+- "GB Sounds" object to listen to the original music!
 - Large amount of bugfixes to the HnS base (1.2.1): 
     - Tons tiles and collision fixes and improvements to match Gen 3-like & FRLG map and tile design.
     - Text and typo fixes.
@@ -72,53 +74,66 @@ The **Modern** feature list is:
     - Pokegear Map fixes.
     - Tons of bugfixes from Modern Emerald 3.3+.
 
+## 🪪CREDITS
 
-_*Squirtle, Wartortle, Kakuna, Arbok, Nidoqueen, Nidoking, Vileplume, Geodude, Grimer, Muk, Onix, Scyther, Magikarp, Gyarados, Eeevee, Articuno, Mew second frame taken from the "Gen 3 Resource Sprite Project", so credits to them._
+* Modern version by me
+* Decap by [@fanyx](https://github.com/fanyx)
+* Tweaks and commits (From Modern Emerald) by [@aloven](https://github.com/aloven), [@pinkshellos](https://github.com/PinkShellos), [@insertCreativeName5](https://github.com/InsertCreativeName5). [@davidgfnet](https://github.com/davidgfnet), [@unique-github-username](https://github.com/unique-github-username), [@TixoRebel](https://github.com/TixoRebel) and [@bfedie5](https://github.com/bfedie518)
+* [Box art](https://i.imgur.com/NOsaRVf.png) by [@-TXTEC-](https://www.reddit.com/user/-TXTEC-)
+* Squirtle, Wartortle, Kakuna, Arbok, Nidoqueen, Nidoking, Vileplume, Geodude, Grimer, Muk, Onix, Scyther, Magikarp, Gyarados, Eeevee, Articuno, Mew second frame taken from the **"Gen 3 Resource Sprite Project"** Discord Server, so credits to them.
 
-##  HnS original Credits
+## HnS ORIGINAL CREDITS
 
-#### Lead Developer / Game Director
-- **Lil Dill**
+**Lead Developer / Game Director**
+* Lil Dill
 
-#### Developers
-- **TixoRebel**
-- **InfiniteBacon42**
-- **Exclsior**
-- **Phantonomy**
-- **DaniRainbow**
+**Developers**
+* TixoRebel
+* InfiniteBacon42
+* Exclsior
+* Phantonomy
+* DaniRainbow
 
-### Open Source Assets Used:
+**Open Source Assets Used: Engine & Codebase**
+* pokeemerald - pret
+* Modern Emerald — Resetes12
+* pokeemerald-expansion
 
-#### Engine & Codebase
-- **pokeemerald - pret** 
-- **Modern Emerald — Resetes12**
-- **pokeemerald-expansion**
+**Art — Sprites**
+* Cesare_CBass
+* AveonTrainer
+* PurpleZaffre
+* BatimaTheBat
 
-#### Art — Sprites
-- **Cesare_CBass**
-- **AveonTrainer**
-- **PurpleZaffre**
-- **BatimaTheBat**
+**Art — Tilesets**
+* Crystal Advance — Kertra
+* Ekat99
+* TheDeadHeroAlistair
+* Johto Redrawn Team
 
-#### Art — Tilesets
-- **Crystal Advance — Kertra**
-- **Ekat99**
-- **TheDeadHeroAlistair**
-- **Johto Redrawn Team**
+**Maps / Mapping References**
+* Crystal Advance — Kertra
+* Fire Gold — blackfragrant
+* SkidMarc25
 
-#### Maps / Mapping References
-- **Crystal Advance — Kertra**
-- **Fire Gold — blackfragrant**
-- **SkidMarc25**
+**Gameplay**
+* Crystal Legacy — TSP (TheSmithPlays)
 
-#### Gameplay
-- **Crystal Legacy — TSP (TheSmithPlays)**
+**Special Systems / Visuals**
+* Surfing Pokémon overworlds - slawter666, wally-217
 
-#### Special Systems / Visuals
-- **Surfing Pokémon overworlds - slawter666, wally-217**
+**Playtesters**
+MearaTheDigger · Kingofrocks · Ferropexola · Scarred-Healer13 · ShigyNinja · Liquid Justice · aktatertot · Faintful · piobrando · Shortino · Chronotakular · NoVa x CerberuS · Czarwardy · Phantonomy · TeggyDave · HenryChess · Inner Rhymes · Astralaria · GPie · BillyNaing · Penkachu · Emma M · Casper · Marzi · leob0505 · Sayu · RavePossum · Brick · KinoKuma · BlackBelt Jiraiya
 
-### Playtesters
-**MearaTheDigger · Kingofrocks · Ferropexola · Scarred-Healer13 · ShigyNinja · Liquid Justice · aktatertot · Faintful · piobrando · Shortino · Chronotakular · NoVa x CerberuS · Czarwardy · Phantonomy · TeggyDave · HenryChess · Inner Rhymes · Astralaria · GPie · BillyNaing · Penkachu · Emma M · Casper · Marzi · leob0505 · Sayu · RavePossum · Brick · KinoKuma · BlackBelt Jiraiya**
+# MODERN EMERALD CREDITS
+* [Pokeemerald decomp](https://github.com/pret/pokeemerald) for its base
+* [Pret's Wiki Tutorials](https://github.com/pret/pokeemerald/wiki/Tutorials):
+    - TONS of their tutorials were used!
+* Repositories and assets used:
+    - [HGSS / DPPt music](https://github.com/CyanSMP64/pokeemerald/tree/dppt_hgss_music ), by CyanSMP64's repo
+    - [BW music](https://github.com/CyanSMP64/pokeemerald/tree/dppt_hgss_bw_music_old), from CyanSMP64's repo
+    - [Day/Night system / Followers](https://github.com/aarant/pokeemerald/tree/followers-expanded-id), from aarant's repo
+    - [PHY/SP new icons and Stab indicator](https://github.com/worpbane/pokeemerald-worped/commits/battle-ui-rework/), from worpbane's repo
 
 
 # For Developers

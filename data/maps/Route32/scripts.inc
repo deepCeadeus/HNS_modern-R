@@ -437,7 +437,7 @@ Route32_Text_FisherHenry_Seen:
 	.string "My Pokémon? Freshly caught!$"
 
 Route32_Text_FisherHenry_Beaten:
-	.string "SPLASH?$"
+	.string "Splash?$"
 
 Route32_Text_FisherHenry_Register:
 	.string "I'll show you more freshly\n"
@@ -536,7 +536,7 @@ Route32_Text_MeetFrieda:
 	.string "I'll give you a reward.$"
 
 Route32_Text_FriedaGivesGift:
-	.string "Here's a Poison BARB for you!$"
+	.string "Here's a Poison Barb for you!$"
 
 Route32_Text_FriedaGaveGift:
 	.string "Frieda: Give it to a Pokémon\n"

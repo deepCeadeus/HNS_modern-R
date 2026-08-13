@@ -182,7 +182,7 @@ GoldenrodCity_RadioTower_4F4_Text_ScientistRichAfter:
 	.string "Team Rocket?$"
 
 GoldenrodCity_RadioTower_4F4_Text_ProductionSign:
-	.string "4F PRODUCTION$"
+	.string "4F Production$"
 
 GoldenrodCity_RadioTower_4F4_Text_Studio2Sign:
-	.string "4F STUDIO 2$"
+	.string "4F Studio 2$"

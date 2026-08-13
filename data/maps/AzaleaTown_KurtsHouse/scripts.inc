@@ -294,7 +294,7 @@ KurtsHouse_Text_KurtMakingBallsMustWait:
 	.string "They're supposed to have disbanded\n"
 	.string "three years ago.\p"
 	.string "Anyway, they're at the Well,\n"
-	.string "cutting off Slowpoketails to sell!\p"
+	.string "cutting off SlowpokeTails to sell!\p"
 	.string "So I'm going to go give them a\n"
 	.string "lesson in pain!\p"
 	.string "Hang on, Slowpoke! Old Kurt\n"

@@ -53,7 +53,7 @@ OlivineCity_EventScript_CityTrigger:: @FLAGHEAP
 	clearflag FLAG_HIDE_LIGHTHOUSE_JASMINE
 	clearflag FLAG_HIDE_WHIRL_ISLANDS_TENTACRUEL
 	setvar VAR_GETFLY, 0
-	
+
 	setvar VAR_OLIVINE_CITY_STATE, 1
 
 	@Cianwood flags
@@ -69,7 +69,7 @@ OlivineCity_EventScript_SilverTrigger::
 	opendoor 11, 27
 	addobject LOCALID_OLIVINE_SILVER
 	playbgm MUS_HG_ENCOUNTER_RIVAL, TRUE
-	delay 20 
+	delay 20
 	closedoor 11, 27
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	call_if_eq VAR_TEMP_1, 28, OlivineCity_EventScript_SilverWalkToPlayer1
@@ -311,7 +311,7 @@ OlivineCity_Text_Sailor2:
 
 OlivineCity_Text_Sign:
 	.string "Olivine City\p"
-	.string "The Port Closest to Foreign Lands$"
+	.string "The port closest to foreign lands$"
 
 OlivineCity_Text_PortSign:
 	.string "Olivine Port\n"

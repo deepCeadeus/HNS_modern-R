@@ -140,7 +140,7 @@ CeladonCity_EventScript_TrainerTips::
 
 CeladonCity_Text_Sign:
 	.string "Celadon City\p"
-	.string "The City of Rainbow Dreams$"
+	.string "The city of rainbow dreams$"
 
 CeladonGym_Text_Sign:
 	.string "Celadon City Pokémon Gym\n"

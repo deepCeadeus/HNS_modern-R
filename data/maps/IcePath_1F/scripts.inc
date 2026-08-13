@@ -115,7 +115,7 @@ IcePath_1F_Text_Stuck2:
     .string "Would you push my back?$"
 
 IcePath_1F_Text_Shove:
-    .string "…SHOVE!…$"
+    .string "…Shove!…$"
 
 IcePath_1F_Text_Cruel:
     .string "Don't be so cruel.\n"

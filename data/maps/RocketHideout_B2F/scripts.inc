@@ -636,7 +636,7 @@ RocketHideout_B2F_Text_LanceElectrodeFaint:
     .string "all the problems.\p"
     .string "I don't see a switch on it…\p"
     .string "We have no choice. We have to\n"
-    .string "make all the ELECTRODE faint.\p"
+    .string "make all the Electrode faint.\p"
     .string "That should stop this machine\n"
     .string "from transmitting that strange\l"
     .string "signal.\p"

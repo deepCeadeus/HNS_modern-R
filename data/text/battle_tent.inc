@@ -1,7 +1,7 @@
 FallarborTown_BattleTentLobby_Text_WelcomeToBattleTent:
 	.string "I welcome you to the Battle Tent:\n"
 	.string "Arena!\p"
-	.string "I am your guide to the Set Ko Tourney!$"
+	.string "I am your guide to the Set KO Tourney!$"
 
 FallarborTown_BattleTentLobby_Text_TakeChallenge:
 	.string "Now, do you wish to take the challenge\n"
@@ -13,7 +13,7 @@ FallarborTown_BattleTentLobby_Text_AwaitAnotherChallenge:
 
 FallarborTown_BattleTentLobby_Text_ExplainFallarborTent:
 	.string "In the Battle Tent: Arena, we\n"
-	.string "undertake the Set Ko Tourney.\p"
+	.string "undertake the Set KO Tourney.\p"
 	.string "All participants enter with a team of\n"
 	.string "three Pokémon.\p"
 	.string "The three Pokémon must be lined up\n"
@@ -394,7 +394,7 @@ VerdanturfTown_BattleTentLobby_Text_ExplainMoveRules:
 	.string "direct damage on the foe.\p"
 	.string "There are defensive moves that are\n"
 	.string "used to prepare for enemy attacks or\l"
-	.string "used to heal Hp and so on.\p"
+	.string "used to heal HP and so on.\p"
 	.string "There are also other somewhat-odd\n"
 	.string "moves that may enfeeble the foes with\l"
 	.string "stat problems including poison and \l"

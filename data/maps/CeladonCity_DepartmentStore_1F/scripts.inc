@@ -35,9 +35,9 @@ CeladonDeptStore_Text_1FTeacher:
     .string "I'm afraid I'll get lost.$"
 
 CeladonDeptStore_Text_1FDirectory:
-    .string "1F: SERVICE COUNTER\p"
-    .string "2F: TRAINER'S MARKET\p"
-    .string "3F: TM SHOP\p"
-    .string "4F: WISEMAN GIFTS\p"
-    .string "5F: DRUG STORE\p"
-    .string "6F: ROOFTOP SQUARE$"
+    .string "1F: Service Counter\p"
+    .string "2F: Trainer's Market\p"
+    .string "3F: TM Shop\p"
+    .string "4F: Wiseman Gifts\p"
+    .string "5F: Drug Store\p"
+    .string "6F: Rooftop Square$"

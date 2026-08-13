@@ -14,12 +14,12 @@ FortreeCity_PokemonCenter_1F_RhyperiorEvo::
 	end
 
 FortreeCity_PokemonCenter_1F_RhyperiorEvo_Text:
-	.string "RHYDON evolves by trading.\n"
+	.string "Rhydon evolves by trading.\n"
 	.string "But only if it is traded with an object.\p"
 	.string "Which object, you might ask?\p"
 	.string "Well… My memory is not as good as it\n"
 	.string "was thirty years ago… It was a…\l"
-	.string "HARD… HARD… Ah.\p"
+	.string "Hard… Hard… Ah.\p"
 	.string "I can't remember it. Sorry.$"
 
 FortreeCity_PokemonCenter_1F_EventScript_Nurse::
@@ -50,21 +50,21 @@ FortreeCity_PokemonCenter_1F_Text_GoToSafariZone:
 
 FortreeCity_PokemonCenter_1F_Text_RecordCornerIsNeat:
 	.string "Have you done anything at\n"
-	.string "the RECORD CORNER?\p"
+	.string "the Record Corner?\p"
 	.string "It's pretty neat. It mixes and matches\n"
 	.string "the records of Trainers.\p"
 	.string "I don't know quite how it works,\n"
 	.string "but it's cool. It's exciting, even!$"
 
 FortreeCity_PokemonCenter_1F_Text_DoYouKnowAboutPokenav:
-	.string "Oh, wow, you have a PokéNAV!\n"
+	.string "Oh, wow, you have a PokéNav!\n"
 	.string "And it's just like mine!\p"
-	.string "Do you know about PokéNAV's\n"
-	.string "MATCH CALL system?\p"
+	.string "Do you know about PokéNav's\n"
+	.string "Match Call system?\p"
 	.string "Access it, and you can chat with\n"
 	.string "registered Trainers anytime.\p"
 	.string "It also shows you which Trainers\n"
 	.string "want a rematch with you.\p"
-	.string "It's really nifty! Those DEVON guys\n"
+	.string "It's really nifty! Those Devon guys\n"
 	.string "sure know what they're doing!$"
 

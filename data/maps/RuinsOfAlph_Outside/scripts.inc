@@ -129,13 +129,13 @@ RuinsOfAlph_Outside_Text_MysteryChamberSign:
 	.string "Mystery Stone Panel Chamber$"
 
 RuinsOfAlph_Outside_Text_MainSign:
-	.string "Ruins Of Alph\n"
+	.string "Ruins of Alph\n"
 	.string "Visitors Welcome$"
 
 RuinsOfAlph_Outside_Text_ResearchSign:
-	.string "Ruins Of Alph Research Center\p"
-	.string "The Authority On The\n"
-	.string "Ruins Of Alph$"
+	.string "Ruins of Alph Research Center\p"
+	.string "The Authority on the\n"
+	.string "Ruins of Alph$"
 
 RuinsOfAlph_Outside_Text_Fisher1:
 	.string "While exploring the Ruins, we\n"
