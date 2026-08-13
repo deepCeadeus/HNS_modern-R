@@ -6717,11 +6717,13 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
     if (ABILITY_ON_FIELD2(ABILITY_PLUS))
         spAttack = (150 * spAttack) / 100;
+     else
+        spAttack = (110 * spAttack) / 100;
+    }   
+        
     //Not updated to HnS #DIFFICULTY
     /*if ((gSaveBlock2Ptr->optionsDifficulty == 2))
-    else
-        spAttack = (110 * spAttack) / 100;
-    }
+    
     if ((gSaveBlock2Ptr->optionsDifficulty == 2))
     {
         // Sceptile gets Thick Fat to reduce dmg from their weaknesses, and a 10% dmg increase.
