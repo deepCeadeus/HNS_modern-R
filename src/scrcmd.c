@@ -1683,8 +1683,6 @@ bool8 ScrCmd_showmonpic(struct ScriptContext *ctx)
             u32 fakePid = Random32();
             u32 otId = GetTrainerId(gSaveBlock2Ptr->playerTrainerId);
             
-            if (GET_SHINY_VALUE(otId, fakePid) < shinyChance)
-
             if (IsShinyOtIdPersonality(GetTrainerId(gSaveBlock2Ptr->playerTrainerId), fakePid))
 
                 FlagSet(flagShinyStarter);
