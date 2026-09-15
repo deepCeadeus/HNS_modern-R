@@ -7,6 +7,7 @@
 #include "battle_dome.h"
 #include "battle_interface.h"
 #include "battle_message.h"
+#include "battle_script_commands.h"
 #include "battle_setup.h"
 #include "battle_tv.h"
 #include "bg.h"
@@ -43,6 +44,7 @@
 #include "event_data.h"
 #include "constants/flags.h"
 #include "pokemon_special_anim.h"
+#include "constants/abilities.h"
 
 static void PlayerHandleGetMonData(void);
 static void PlayerHandleSetMonData(void);
@@ -1941,16 +1943,25 @@ u8 TypeEffectiveness(u8 targetId)
 
 bool8 IsMoveSTAB(u16 move, u8 battlerId)
 {
-	u8 moveType = gBattleMoves[move].type;
+	u8 moveType = DisplayMoveTypeChange(move);
+    u16 species = GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_SPECIES);
 
-	u8 oldBattler = gBattlerAttacker;
-gBattlerAttacker = gActiveBattler;
-moveType = CheckAbilityChangeMoveType(move);
-gBattlerAttacker = oldBattler;
+
     if (IS_MOVE_STATUS(move))
         return FALSE;
     
-    if (move == MOVE_HIDDEN_POWER || move == MOVE_JUDGMENT)
+    if ((species == SPECIES_GROUDON) && (moveType == TYPE_FIRE) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
+        return TRUE;
+    if ((species == SPECIES_SHIFTRY) && (moveType == TYPE_FLYING) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
+        return TRUE;    
+    if ((species == SPECIES_SCYTHER) && (move == MOVE_SLASH) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
+        return TRUE;
+    if ((species == SPECIES_KABUTOPS) && (move == MOVE_SLASH) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
+        return TRUE;      
+    
+        
+    
+    if (move == MOVE_HIDDEN_POWER || move == MOVE_JUDGMENT && !(gBattleMons[gActiveBattler].ability == ABILITY_MULTITYPE))
     {
         u8 typeBits  = ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_HP_IV) & 1) << 0)
                      | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_ATK_IV) & 1) << 1)
@@ -2023,15 +2034,11 @@ static void MoveSelectionDisplayMoveTypeDoubles(u8 targetId)
     u16 move = moveInfo->moves[gMoveSelectionCursor[gActiveBattler]];
     
     // Check for ability like Dragonize
-    u8 old = gBattlerAttacker;
-    gBattlerAttacker = gActiveBattler;
-    type = gBattleMoves[move].type;
-    type = CheckAbilityChangeMoveType(move);
-    gBattlerAttacker = old;
-
     moveCategory = gBattleMoves[move].category;
+    type = DisplayMoveTypeChange(move);
 
-    if (move == MOVE_HIDDEN_POWER || move == MOVE_JUDGMENT)
+
+    if (move == MOVE_HIDDEN_POWER || move == MOVE_JUDGMENT && !(gBattleMons[gActiveBattler].ability == ABILITY_MULTITYPE))
     {
         u8 typeBits  = ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_HP_IV) & 1) << 0)
                      | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_ATK_IV) & 1) << 1)
@@ -2077,17 +2084,12 @@ static void MoveSelectionDisplayMoveType(void) //Made this display a Move Type I
 	u8 targetId = GetBattlerAtPosition(BATTLE_OPPOSITE(GetBattlerPosition(gActiveBattler)));
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleBufferA[gActiveBattler][4]);
     u16 move = moveInfo->moves[gMoveSelectionCursor[gActiveBattler]];
-    
-    // Check for ability like Dragonize
-    u8 old = gBattlerAttacker;
-    gBattlerAttacker = gActiveBattler;
-    type = gBattleMoves[move].type;
-    type = CheckAbilityChangeMoveType(move);
-    gBattlerAttacker = old;
-	
-    moveCategory = gBattleMoves[move].category;
 
-    if (move == MOVE_HIDDEN_POWER || move == MOVE_JUDGMENT)
+    moveCategory = gBattleMoves[move].category;
+    type = DisplayMoveTypeChange(move);
+
+
+    if (move == MOVE_HIDDEN_POWER || move == MOVE_JUDGMENT && !(gBattleMons[gActiveBattler].ability == ABILITY_MULTITYPE))
     {
         u8 typeBits  = ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_HP_IV) & 1) << 0)
                      | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_ATK_IV) & 1) << 1)

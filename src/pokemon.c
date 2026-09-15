@@ -6626,6 +6626,26 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         if (defender->ability == ABILITY_DAMP && type == TYPE_FIRE)
             spAttack /= 2;
     }
+    if (gSaveBlock2Ptr->optionStyle == 0)
+    {
+        if (defender->ability == ABILITY_MAGMA_ARMOR && type == TYPE_WATER)
+            gBattleMovePower /= 2;
+    }
+    else if (gSaveBlock2Ptr->optionStyle == 1)
+    {
+        if (defender->ability == ABILITY_MAGMA_ARMOR && type == TYPE_WATER)
+            spAttack /= 2;
+    }
+    if (gSaveBlock2Ptr->optionStyle == 0)
+    {
+        if (defender->ability == ABILITY_INSOMNIA && type == TYPE_DARK)
+            gBattleMovePower /= 2;
+    }
+    else if (gSaveBlock2Ptr->optionStyle == 1)
+    {
+        if (defender->ability == ABILITY_INSOMNIA && type == TYPE_DARK)
+            spAttack /= 2;
+    }
     if ((defender->ability != ABILITY_NONE) 
     && (gSaveBlock2Ptr->optionsDifficulty == 2) 
     && (side == B_SIDE_PLAYER))
@@ -6692,7 +6712,9 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (attacker->ability == ABILITY_HYPER_CUTTER && (gCurrentMove == MOVE_VICE_GRIP))
         attack = (120 * attack) / 100;
     if (attacker->ability == ABILITY_LEGEND_PLATE && (gCurrentMove == MOVE_JUDGMENT))
-        spAttack = (200 * spAttack) / 100;      
+        spAttack = (200 * spAttack) / 100;
+    if (attacker->ability == ABILITY_MULTITYPE && (gCurrentMove == MOVE_JUDGMENT))
+        spAttack = (120 * spAttack) / 100;//hold item fix(intended STAB x1.2)         
     if (attacker->ability == ABILITY_CACOPHONY && (gCurrentMove == MOVE_SNORE || gCurrentMove == MOVE_UPROAR || gCurrentMove == MOVE_HYPER_VOICE || gCurrentMove == MOVE_BUG_BUZZ))
         spAttack = (150 * spAttack) / 100;
     if (attacker->ability == ABILITY_STRONG_JAW && (gCurrentMove == MOVE_BITE || gCurrentMove == MOVE_CRUNCH || gCurrentMove == MOVE_FIRE_FANG || gCurrentMove == MOVE_HYPER_FANG || gCurrentMove == MOVE_ICE_FANG || gCurrentMove == MOVE_POISON_FANG || gCurrentMove == MOVE_THUNDER_FANG))
@@ -6705,7 +6727,14 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
        spAttack = (120 * spAttack) / 100;
        attack = (120 * attack) / 100;
+    }
+    //Early Bird
+    if (attacker->ability == ABILITY_EARLY_BIRD && (gCurrentMove == MOVE_QUICK_ATTACK || gCurrentMove == MOVE_NIGHT_SHADE || gCurrentMove == MOVE_MACH_PUNCH || gCurrentMove == MOVE_SUCKER_PUNCH || gCurrentMove == MOVE_EXTREME_SPEED || gCurrentMove == MOVE_FAKE_OUT))
+    {
+       spAttack = (125 * spAttack) / 100;
+       attack = (125 * attack) / 100;
     }        
+    //        
     if (attacker->ability == ABILITY_PLUS)
     {
     if (ABILITY_ON_FIELD2(ABILITY_MINUS))
@@ -6717,7 +6746,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
     if (ABILITY_ON_FIELD2(ABILITY_PLUS))
         spAttack = (150 * spAttack) / 100;
-     else
+    else
         spAttack = (110 * spAttack) / 100;
     }   
         
@@ -6906,6 +6935,36 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
     spDefense = (150 * spDefense) / 100;
     }
+    // NEW BONUS 
+    if (WEATHER_HAS_EFFECT2
+    && (gBattleWeather & B_WEATHER_SANDSTORM)
+    && (attacker->type1 == TYPE_GROUND || attacker->type2 == TYPE_GROUND)
+    && type == TYPE_GROUND)
+    {
+    gBattleMovePower = (130 * gBattleMovePower) / 100;
+    }
+    if (WEATHER_HAS_EFFECT2
+    && (gBattleWeather & B_WEATHER_SANDSTORM)
+    && (attacker->type1 == TYPE_STEEL || attacker->type2 == TYPE_STEEL)
+    && type == TYPE_STEEL)
+    {
+    gBattleMovePower = (130 * gBattleMovePower) / 100;
+    }
+    //MODERN HAIL
+    if (WEATHER_HAS_EFFECT2
+    && (gBattleWeather & B_WEATHER_HAIL)
+    && (defender->type1 == TYPE_ICE || defender->type2 == TYPE_ICE))
+    {
+    defense = (150 * defense) / 100;
+    }
+    // NEW BONUS
+    if (WEATHER_HAS_EFFECT2
+    && (gBattleWeather & B_WEATHER_HAIL)
+    && (attacker->type1 == TYPE_ICE || attacker->type2 == TYPE_ICE)
+    && type == TYPE_ICE)
+    {
+    gBattleMovePower = (130 * gBattleMovePower) / 100;
+    }
     
     if (type == TYPE_ELECTRIC && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, ABILITYEFFECT_MUD_SPORT, 0))
         gBattleMovePower /= 2;
@@ -6918,15 +6977,20 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (type == TYPE_WATER && attacker->ability == ABILITY_TORRENT && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (type == TYPE_BUG && attacker->ability == ABILITY_SWARM && attacker->hp <= (attacker->maxHP / 3))
+    	//Vital Spirit Buff
+    if (type == TYPE_FIGHTING && attacker->ability == ABILITY_VITAL_SPIRIT && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
-    if ((attacker->species == SPECIES_SPINDA) && ((Random() % 100) <= 2))
+    if ((attacker->species == SPECIES_SPINDA) && ((Random() % 100) <= 2) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
         gBattleMovePower = (200 * gBattleMovePower) / 100;
-    if ((attacker->species == SPECIES_GROUDON) && (moveType == TYPE_FIRE))
+    if ((attacker->species == SPECIES_GROUDON) && (moveType == TYPE_FIRE) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
+        //Shiftry flying stab
+    if ((attacker->species == SPECIES_SHIFTRY) && (moveType == TYPE_FLYING) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
+        gBattleMovePower = (150 * gBattleMovePower) / 100;    
         // Scyther and Kabutops get STAB for SLASH
-    if ((attacker->species == SPECIES_SCYTHER) && (gCurrentMove == MOVE_SLASH))
+    if ((attacker->species == SPECIES_SCYTHER) && (gCurrentMove == MOVE_SLASH) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
         gBattleMovePower = (150 * gBattleMovePower) / 100; 
-    if ((attacker->species == SPECIES_KABUTOPS) && (gCurrentMove == MOVE_SLASH))
+    if ((attacker->species == SPECIES_KABUTOPS) && (gCurrentMove == MOVE_SLASH) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
         gBattleMovePower = (150 * gBattleMovePower) / 100;       
 
     // Self-destruct / Explosion cut defense in half
@@ -8420,7 +8484,8 @@ u8 GetAbilityBySpecies(u16 species, u8 abilityNum)
         else
             abilityNum = 1;
     }
-    if ((abilityNum == 0) && (species == SPECIES_ARTICUNO 
+    if ((abilityNum == 0) 
+           && (species == SPECIES_ARTICUNO 
             || species == SPECIES_ZAPDOS 
             || species == SPECIES_MOLTRES
             || species == SPECIES_MEWTWO
@@ -8428,11 +8493,23 @@ u8 GetAbilityBySpecies(u16 species, u8 abilityNum)
             || species == SPECIES_ENTEI
             || species == SPECIES_SUICUNE
             || species == SPECIES_HO_OH
-            || species == SPECIES_LUGIA)
+            || species == SPECIES_LUGIA
+            || species == SPECIES_DEOXYS_ATTACK
+            || species == SPECIES_DEOXYS_DEFENSE
+            || species == SPECIES_DEOXYS_SPEED)
             && (gSaveBlock1Ptr->tx_Mode_Legendary_Abilities == 0))
         gLastUsedAbility = gSpeciesInfo[species].abilities_old[0];
     else if ((abilityNum == 1)
-            && (species == SPECIES_NOCTOWL || species == SPECIES_YANMEGA)
+            && (species == SPECIES_NOCTOWL 
+             || species == SPECIES_YANMEGA
+             || species == SPECIES_CLAMPERL
+             || species == SPECIES_HUNTAIL
+             || species == SPECIES_GOREBYSS
+             || species == SPECIES_WAILMER
+             || species == SPECIES_WAILORD
+             || species == SPECIES_REGIROCK
+             || species == SPECIES_REGICE
+             || species == SPECIES_REGISTEEL)
             && (gSaveBlock1Ptr->tx_Mode_Modern_Types == 0))
         gLastUsedAbility = gSpeciesInfo[species].abilities_old[1];
     else if (abilityNum)
@@ -11990,7 +12067,14 @@ u8 GetTypeBySpecies(u16 species, u8 typeNum)
 {
     u8 type;
 
-    if ((gSaveBlock1Ptr->tx_Mode_Modern_Types == 0) 
+    //If "tx_Mode_Modern_Types" is enabled, 18 Pokémon have new types. THIS CODE DISABLES THE NEW TYPES IN EACH POKÉMON.
+    //The second column shows which type has been added or removed from each Pokémon.
+    //"-" means that the type is removed, "+" means that the type is added.
+
+    //The game defaults to the new typings.
+    //Logically speaking, this should have been reversed: The code should check if "tx_Mode_Modern_Types" is enabled, and then
+    //apply the new typing. I didn't do it like that, and reversing it means breaking savegames, so now it stays like this.
+    if ((gSaveBlock1Ptr->tx_Mode_Modern_Types == 0)
     && (species == SPECIES_ARBOK                //-Dark
     || species == SPECIES_PARASECT              //+Grass, -Ghost
     || species == SPECIES_GOLDUCK               //-Psychic
@@ -12009,14 +12093,25 @@ u8 GetTypeBySpecies(u16 species, u8 typeNum)
     || species == SPECIES_SWALOT                //-Normal
     || species == SPECIES_LUVDISC               //-Fairy
     || species == SPECIES_ELECTIVIRE            //-Fighting
-    || species == SPECIES_YANMEGA))             //+Flying, -Dragon
+    || species == SPECIES_MAGMORTAR             //-Steel
+    || species == SPECIES_CHIMECHO              //-Steel
+    || species == SPECIES_YANMEGA               //+Flying, -Dragon
+    || species == SPECIES_HUNTAIL               //-Psychic
+    || species == SPECIES_GOREBYSS              //-Dark
+    || species == SPECIES_PINSIR                //-Flying
+    || species == SPECIES_BLASTOISE             //-Steel
+    || species == SPECIES_LEDIAN                //+Normal, -Bug
+    || species == SPECIES_SWELLOW               //-Fighting
+    || species == SPECIES_AMPHAROS))            //-Dragon
     {
         if (typeNum == 1)
             type = gSpeciesInfo[species].types_old[0];
         else
             type = gSpeciesInfo[species].types_old[1];
     }
-    else if ((gSaveBlock1Ptr->tx_Mode_Fairy_Types == 0) 
+    //20 new Pokémon are now Fairy Type. This code DISABLES the Fairy type for the following Pokémon.
+    //Same as above, this code should be reversed, but I didn't do it, so it stays like that for now.
+    else if ((gSaveBlock1Ptr->tx_Mode_Fairy_Types == 0)
     && (species == SPECIES_JIGGLYPUFF 
     || species == SPECIES_WIGGLYTUFF
     || species == SPECIES_CLEFAIRY
@@ -12043,7 +12138,8 @@ u8 GetTypeBySpecies(u16 species, u8 typeNum)
         else
             type = gSpeciesInfo[species].types_old[1];
     }
-    else if ((gSaveBlock1Ptr->tx_Mode_Modern_Types == 1) 
+    //When modern typings are enabled, Snubull and Granbull also have Fairy Type + Normal Type
+    else if ((gSaveBlock1Ptr->tx_Mode_Modern_Types == 1)
     && (species == SPECIES_SNUBBULL
     || species == SPECIES_GRANBULL))
     {

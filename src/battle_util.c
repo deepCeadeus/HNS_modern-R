@@ -1608,7 +1608,7 @@ u8 DoBattlerEndTurnEffects(void)
                         gBattleTextBuff1[3] = *(gBattleStruct->wrappedMove + gActiveBattler * 2 + 1);
                         gBattleTextBuff1[4] = EOS;
                         gBattlescriptCurrInstr = BattleScript_WrapTurnDmg;
-                        gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
+                        gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
                         if (gBattleMoveDamage == 0)
                             gBattleMoveDamage = 1;
                     }
@@ -2698,7 +2698,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     {
                         gLastUsedAbility = ABILITY_RAIN_DISH; // why
                         BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
-                        gBattleMoveDamage = gBattleMons[battler].maxHP / 16;
+                        gBattleMoveDamage = gBattleMons[battler].maxHP / 12; //buffed
                         if (gBattleMoveDamage == 0)
                             gBattleMoveDamage = 1;
                         gBattleMoveDamage *= -1;
@@ -2711,13 +2711,25 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     {
                         gLastUsedAbility = ABILITY_ICE_BODY; // why
                         BattleScriptPushCursorAndCallback(BattleScript_IceBodyActivates);
-                        gBattleMoveDamage = gBattleMons[battler].maxHP / 16;
+                        gBattleMoveDamage = gBattleMons[battler].maxHP / 12; //buffed
                         if (gBattleMoveDamage == 0)
                             gBattleMoveDamage = 1;
                         gBattleMoveDamage *= -1;
                         effect++;
                     }
                     break;
+                case ABILITY_WATER_VEIL:
+                    if (gBattleMons[battler].maxHP > gBattleMons[battler].hp)
+                    {
+                        gLastUsedAbility = ABILITY_WATER_VEIL; // why
+                        BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
+                        gBattleMoveDamage = gBattleMons[battler].maxHP / 16; //uncondtional so smaller boost
+                        if (gBattleMoveDamage == 0)
+                            gBattleMoveDamage = 1;
+                        gBattleMoveDamage *= -1;
+                        effect++;
+                    }
+                    break;    
                 case ABILITY_FORECAST:
                      if (WEATHER_HAS_EFFECT
                      && (gBattleWeather & (B_WEATHER_RAIN
@@ -2794,6 +2806,31 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         effect++;
                     }
                     break;
+                case ABILITY_LIGHTNING_ROD:
+                    if ((gBattleMons[battler].statStages[STAT_SPEED] < MAX_STAT_STAGE && gDisableStructs[battler].isFirstTurn != 2)
+                    	&& WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_RAIN))
+                    {
+                        gBattleMons[battler].statStages[STAT_SPATK]++;
+                        gBattleScripting.animArg1 = STAT_ANIM_PLUS1 + STAT_SPATK;
+                        gBattleScripting.animArg2 = 0;
+                        BattleScriptPushCursorAndCallback(BattleScript_LightningRodActivates);
+                        gBattleScripting.battler = battler;
+                        effect++;
+                    }
+                    break;    
+                case ABILITY_GUTS:
+                    if ((gBattleMons[battler].hp <= (gBattleMons[battler].maxHP / 3))
+                        && (gBattleMons[battler].statStages[STAT_ATK] <= DEFAULT_STAT_STAGE)
+                    	&& !(gBattleMons[battler].status1))
+                    {
+                        gBattleMons[battler].statStages[STAT_ATK]++;
+                        gBattleScripting.animArg1 = STAT_ANIM_PLUS1 + STAT_ATK;
+                        gBattleScripting.animArg2 = 0;
+                        BattleScriptPushCursorAndCallback(BattleScript_GutsActivates);
+                        gBattleScripting.battler = battler;
+                        effect++;
+                    }
+                    break;      
                 case ABILITY_TRUANT:
                     gDisableStructs[gBattlerAttacker].truantCounter ^= 1;
                     //TRUANT HEALS ON SLEEP STATUS
@@ -2906,7 +2943,21 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
             switch (gLastUsedAbility)
             {
             case ABILITY_COLOR_CHANGE:
-                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                {
+                //Hidden Power effect check
+                //Checks for Hidden Power effect Judgment
+                //MultiType changes its type thats why this check exists
+                if (move == MOVE_HIDDEN_POWER || (move == MOVE_JUDGMENT && !(gBattleMons[gBattlerAttacker].ability == ABILITY_MULTITYPE)))
+        {
+        	GET_MOVE_TYPE(move, moveType);
+        }
+    		//Everything else (including Aerilate, Dragonize, Pixilate, Forecast)
+    		else
+    		{
+        	moveType = CheckAbilityChangeMoveType(move);
+        	}
+        	//Re-Ordered this to bottom so it doesnt read stale data from && !IS_BATTLER_OF_TYPE(battler, moveType) causing type changing abilities not to work correctly
+        	if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && move != MOVE_STRUGGLE
                  && gBattleMoves[move].power != 0
                  && TARGET_TURN_DAMAGED
@@ -2918,6 +2969,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     BattleScriptPushCursor();
                     gBattlescriptCurrInstr = BattleScript_ColorChangeActivates;
                     effect++;
+                }
                 }
                 break;
              // CHANGE ON HIT TESTING This allows it to be traced, knock off removes it, arceus can switch from trick then get hit and change again. Might remove later if i block trace, knock off, skill swap, etc 
@@ -2958,17 +3010,18 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     effect++;
                 }
                 break;
+              //NOTE TO SELF For Pickup: AUG/29/26 changed all battler to gBattlerTarget hopefully this will prevent any bugs and keep it consistant. I was unsure if battler was the appropriate designation. Cute Charm uses gBattlerAttacker and gBattlerTarget. Added in if/else for sableye text. otherwise its just gBattlescriptCurrInstr = (BattleScript_BerryStatPickupEnd2); effect++;
              case ABILITY_PICKUP:
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
-                && gBattlerAttacker != battler
+                && gBattlerAttacker != gBattlerTarget
                 && gBattleMons[gBattlerAttacker].hp != 0
-		&& gBattleMons[battler].hp != 0
+		&& gBattleMons[gBattlerTarget].hp != 0
 		&& !gProtectStructs[gBattlerAttacker].confusionSelfDmg
 		&& (Random() % 5) == 0)
                     {
                     for (i = 0; i < NUM_STATS - 1; i++)
                     {
-                        if (gBattleMons[battler].statStages[STAT_ATK + i] < MAX_STAT_STAGE)
+                        if (gBattleMons[gBattlerTarget].statStages[STAT_ATK + i] < MAX_STAT_STAGE)
                             break;
                     }
                     if (i != NUM_STATS - 1)
@@ -2976,7 +3029,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         do
                         {
                             i = Random() % (NUM_STATS - 1);
-                        } while (gBattleMons[battler].statStages[STAT_ATK + i] == MAX_STAT_STAGE);
+                        } while (gBattleMons[gBattlerTarget].statStages[STAT_ATK + i] == MAX_STAT_STAGE);
 
                         PREPARE_STAT_BUFFER(gBattleTextBuff1, i + 1);
 
@@ -2989,15 +3042,25 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         gBattleTextBuff2[6] = STRINGID_STATROSE >> 8;
                         gBattleTextBuff2[7] = EOS;
 
-                        gEffectBattler = battler;
-                        gBattleScripting.battler = battler;
+                        gEffectBattler = gBattlerTarget;
+                        gBattleScripting.battler = gBattlerTarget;
                         SET_STATCHANGER(i + 1, 2, FALSE);
                         gBattleScripting.animArg1 = STAT_ANIM_PLUS2 + (i + 1);
                         gBattleScripting.animArg2 = 0;
                         gBattleCommunication[MOVE_EFFECT_BYTE] += MOVE_EFFECT_AFFECTS_USER;
                         BattleScriptPushCursor();
+                        {
+                        if (gBattleMons[gBattlerTarget].species == SPECIES_SABLEYE)
+                        {
+                        gBattlescriptCurrInstr = (BattleScript_GemStatPickupEnd2);
+                        effect++;
+                        }
+                        else
+                        {
                         gBattlescriptCurrInstr = (BattleScript_BerryStatPickupEnd2);
                         effect++;
+                        }
+                        }
                     }
                     } 
                     break;   

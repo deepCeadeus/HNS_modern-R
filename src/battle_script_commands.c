@@ -1422,6 +1422,19 @@ u8 CheckAbilityChangeMoveType(u16 move) // handles move type change
         break;
         }
     }
+    if (moveType == TYPE_MYSTERY && gBattleMoves[move].power != 0)
+        switch (ability)
+        {
+        case ABILITY_MULTITYPE:
+        {
+          //if (move == MOVE_JUDGMENT)
+              moveType = gBattleMons[gBattlerAttacker].type1;
+              //moveType = TYPE_GHOST; test
+          //else
+              //moveType = TYPE_MYSTERY;
+        break;
+        }
+        }
     return moveType;
 }
 
@@ -1433,7 +1446,7 @@ u8 DisplayMoveTypeChange(u16 move)
 {
     u8 moveType = gBattleMoves[move].type;
     u8 ability  = gBattleMons[gActiveBattler].ability;
-
+    
     if (moveType == TYPE_NORMAL && gBattleMoves[move].power != 0)
         switch (ability)
         {
@@ -1480,6 +1493,19 @@ u8 DisplayMoveTypeChange(u16 move)
         break;
         }
     }
+    if (moveType == TYPE_MYSTERY && gBattleMoves[move].power != 0)
+        switch (ability)
+        {
+        case ABILITY_MULTITYPE:
+        {
+          //if (move == MOVE_JUDGMENT)
+              moveType = gBattleMons[gActiveBattler].type1;
+              //moveType = TYPE_GHOST; test
+          //else
+            //  moveType = TYPE_MYSTERY;
+        break;
+        }
+        }
     return moveType;
 }
 
@@ -1684,8 +1710,17 @@ static void Cmd_typecalc(void)
     }
 
     GET_MOVE_TYPE(gCurrentMove, moveType);
-    if (gCurrentMove == MOVE_HIDDEN_POWER || gCurrentMove == MOVE_JUDGMENT)
+    // Hidden Power
+    if (gCurrentMove == MOVE_HIDDEN_POWER || (gCurrentMove == MOVE_JUDGMENT && !(gBattleMons[gBattlerAttacker].ability == ABILITY_MULTITYPE)))
+        {
         moveType = getHiddenPowerType();
+    	}
+    //Judgment	
+    else if (gCurrentMove == MOVE_JUDGMENT && (gBattleMons[gBattlerAttacker].ability == ABILITY_MULTITYPE))
+    { 
+        moveType = CheckAbilityChangeMoveType(gCurrentMove);
+    }    
+    //Everything else
     else
         moveType = CheckAbilityChangeMoveType(gCurrentMove);
 
@@ -2038,9 +2073,17 @@ u8 AI_TypeCalc(u16 move, u16 targetSpecies, u8 targetAbility)
 
     if (move == MOVE_STRUGGLE)
         return 0;
-
-    if (move == MOVE_HIDDEN_POWER || move == MOVE_JUDGMENT)
+     //Hidden Power
+     if (move == MOVE_HIDDEN_POWER || (move == MOVE_JUDGMENT && !(gBattleMons[gActiveBattler].ability == ABILITY_MULTITYPE)))
+        {
         moveType = getHiddenPowerType();
+        }
+    //Judgment
+    else if (move == MOVE_JUDGMENT && (gBattleMons[gActiveBattler].ability == ABILITY_MULTITYPE))
+    	{ 
+        moveType = CheckAbilityChangeMoveType(move);
+    	}    
+    //Everything else
     else
         moveType = CheckAbilityChangeMoveType(move);
 
@@ -2103,17 +2146,48 @@ u8 AI_TypeCalc(u16 move, u16 targetSpecies, u8 targetAbility)
 
 // used to properly display type effectiveness on battle menu ui without breaking existing functions of AI_TypeCalc
 u8 AI_TypeDisplay(u16 move, u16 targetSpecies, u8 targetAbility)
-{
+{   
+    // The lines to u8 movetype; are the original 
+    // commented out type1,2 for NEW changes
     s32 i = 0;
     u8 flags = 0;
-    u8 type1 = GetTypeBySpecies(targetSpecies, 1), type2 = GetTypeBySpecies(targetSpecies, 2);
+    //u8 type1 = GetTypeBySpecies(targetSpecies, 1), type2 = GetTypeBySpecies(targetSpecies, 2);
     u8 moveType;
-
+    //NEW 
+    u8 targetId; //original doesnt ask for target id to get type
+    u8 type1, type2; //simplified to later determine
+    
+    if (!IsDoubleBattle())
+    	targetId = GetBattlerAtPosition(BATTLE_OPPOSITE(GetBattlerPosition(gActiveBattler)));//This is how it is in battle_controller_player.c for singles
+    else
+    	targetId = GetBattlerAtPosition(GetBattlerPosition(gMultiUsePlayerCursor));//This is how it is in battle_controller_player.c for doubles
+    	
+    //For arceus/kecleon when opponent has these abilities so type display is current changed type and effectivness arrow is correct
+    if (targetAbility == ABILITY_COLOR_CHANGE || targetAbility == ABILITY_MULTITYPE)
+    {
+    	type1 = gBattleMons[targetId].type1;//battle_controller_player.c wants targetId
+    	type2 = gBattleMons[targetId].type2;//
+    }	
+    else
+    {
+    	type1 = GetTypeBySpecies(targetSpecies, 1);//this is what originally determines type
+    	type2 = GetTypeBySpecies(targetSpecies, 2);//the original code only checked species type not current type for type changing abilities so effectiveness was locked to default
+    }
+    // Start of the original code with judgment added
     if (move == MOVE_STRUGGLE)
         return 0;
-
-    if (move == MOVE_HIDDEN_POWER || move == MOVE_JUDGMENT)
+    //Hidden Power
+    if (move == MOVE_HIDDEN_POWER || (move == MOVE_JUDGMENT && !(gBattleMons[gActiveBattler].ability == ABILITY_MULTITYPE)))
+        {
         moveType = getHiddenPowerType2();
+        }
+    //Judgment    
+
+    else if (move == MOVE_JUDGMENT && (gBattleMons[gActiveBattler].ability == ABILITY_MULTITYPE))
+    	{ 
+        moveType = DisplayMoveTypeChange(move);
+    	}    
+    //Everything else
     else
         moveType = DisplayMoveTypeChange(move);
 
