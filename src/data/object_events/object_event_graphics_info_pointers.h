@@ -191,7 +191,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BigRegistee
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Latias;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Latios;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GameboyKid;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ContestJudge;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Eusine;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanWatering;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MayWatering;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanDecorating;
@@ -210,7 +210,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KyogreAslee
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GroudonAsleep;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Rayquaza;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Whirlpool;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Zigzagoon;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ContestJudge;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pikachu;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Azumarill;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Wingull;
@@ -460,8 +460,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BIG_REGISTEEL_DOLL] =       &gObjectEventGraphicsInfo_BigRegisteelDoll,
     [OBJ_EVENT_GFX_LATIAS] =                   &gObjectEventGraphicsInfo_Latias,
     [OBJ_EVENT_GFX_LATIOS] =                   &gObjectEventGraphicsInfo_Latios,
-    [OBJ_EVENT_GFX_GBA_KID] =              &gObjectEventGraphicsInfo_GameboyKid,
-    [OBJ_EVENT_GFX_EUSINE] =            &gObjectEventGraphicsInfo_ContestJudge, //cycling_triathlete_f
+    [OBJ_EVENT_GFX_GBA_KID] =                  &gObjectEventGraphicsInfo_GameboyKid,
+    [OBJ_EVENT_GFX_EUSINE] =                   &gObjectEventGraphicsInfo_Eusine, //cycling_triathlete_f
     [OBJ_EVENT_GFX_BRENDAN_WATERING] =         &gObjectEventGraphicsInfo_BrendanWatering,
     [OBJ_EVENT_GFX_MAY_WATERING] =             &gObjectEventGraphicsInfo_MayWatering,
     [OBJ_EVENT_GFX_BRENDAN_DECORATING] =       &gObjectEventGraphicsInfo_BrendanDecorating,
@@ -479,8 +479,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_KYOGRE_ASLEEP] =            &gObjectEventGraphicsInfo_KyogreAsleep,
     [OBJ_EVENT_GFX_GROUDON_ASLEEP] =           &gObjectEventGraphicsInfo_GroudonAsleep,
     [OBJ_EVENT_GFX_RAYQUAZA] =                 &gObjectEventGraphicsInfo_Rayquaza,
-     [OBJ_EVENT_GFX_WHIRLPOOL] =                 &gObjectEventGraphicsInfo_Whirlpool,   
-    [OBJ_EVENT_GFX_ZIGZAGOON_2] =              &gObjectEventGraphicsInfo_Zigzagoon,
+    [OBJ_EVENT_GFX_WHIRLPOOL] =                 &gObjectEventGraphicsInfo_Whirlpool,   
+    [OBJ_EVENT_GFX_CONTEST_JUDGE] =              &gObjectEventGraphicsInfo_ContestJudge,
     [OBJ_EVENT_GFX_PIKACHU] =                  &gObjectEventGraphicsInfo_Pikachu,
     [OBJ_EVENT_GFX_AZUMARILL] =                &gObjectEventGraphicsInfo_Azumarill,
     [OBJ_EVENT_GFX_SLOWPOKE_NO_TAIL] =                  &gObjectEventGraphicsInfo_Wingull,

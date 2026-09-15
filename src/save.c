@@ -994,27 +994,14 @@ u8 LoadGameSave(u8 saveType)
         StringCopy(gSaveBlock2Ptr->rivalName, gSilverPresetNames[0]);
         gSaveBlock1Ptr->versionId = 7;
     }
-    return status;
-}
-
-u16 TradeFix(void)
-{
-    u8 status;
-    int i, j;
-
-    for (i = 0; i < gPlayerPartyCount; i++)
-    {
-        FixSavePokemon1_Reverse(&(gPlayerParty[i].box));
-    }
-
-    /* Don't apply to PC Pokémon
-    for (i = 0; i < TOTAL_BOXES_COUNT; i++)
-    {
-        for (j = 0; j < IN_BOX_COUNT; j++)
+    if (gSaveBlock1Ptr->versionId <8){
         {
-            FixSavePokemon1_Reverse(&(gPokemonStoragePtr->boxes[i][j]));
+            // Retroactively set shiny-seen flags for any shinies already in party/PC/daycare
+            ScanOwnedMonsForShinies();
         }
-    }*/
+        gSaveBlock1Ptr->versionId = 8;
+    }
+    return status;
 }
 
 u16 GetSaveBlocksPointersBaseOffset(void)

@@ -28,6 +28,7 @@
 #include "overworld.h"
 #include "party_menu.h"
 #include "pokeblock.h"
+#include "pokedex.h"
 #include "pokemon.h"
 #include "pokemon_storage_system.h"
 #include "random.h"
@@ -1672,6 +1673,36 @@ bool8 IsBadEggInParty(void)
     for (i = 0; i < partyCount; i++)
     {
         if (GetMonData(&gPlayerParty[i], MON_DATA_SANITY_IS_BAD_EGG) == TRUE)
+            return TRUE;
+        if ((GetMonData(&gPlayerParty[i], MON_DATA_POKEBALL, NULL) == ITEM_LOVE_BALL)
+        || (GetMonData(&gPlayerParty[i], MON_DATA_POKEBALL, NULL) == ITEM_LURE_BALL)
+        || (GetMonData(&gPlayerParty[i], MON_DATA_POKEBALL, NULL) == ITEM_FRIEND_BALL)
+        || (GetMonData(&gPlayerParty[i], MON_DATA_POKEBALL, NULL) == ITEM_HEAVY_BALL)
+        || (GetMonData(&gPlayerParty[i], MON_DATA_POKEBALL, NULL) == ITEM_MOON_BALL)
+        || (GetMonData(&gPlayerParty[i], MON_DATA_POKEBALL, NULL) == ITEM_LEVEL_BALL)
+        || (GetMonData(&gPlayerParty[i], MON_DATA_POKEBALL, NULL) == ITEM_FAST_BALL)
+        || (GetMonData(&gPlayerParty[i], MON_DATA_POKEBALL, NULL) == ITEM_GS_BALL))
+            return TRUE;
+    }
+
+    return FALSE;
+}
+
+bool8 PlayerHasMESpeciesOrItem(void)
+{
+    u8 partyCount = CalculatePlayerPartyCount();
+    u8 i;
+
+    for (i = 0; i < partyCount; i++)
+    {
+        if ((GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, NULL) == ITEM_FERTILIZER)
+        || (GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, NULL) == ITEM_BIG_NUGGET)
+        || (GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, NULL) == ITEM_EXP_SHARE_SMALL)
+        || (GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, NULL) == ITEM_RAGE_CANDY_BAR)
+        || (GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, NULL) == ITEM_FAIRY_GEM)
+        || (GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, NULL) >= ITEM_ADAMANT_MINT && GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, NULL) <= ITEM_TIMID_MINT))
+            return TRUE;
+        if ((GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL) >= SPECIES_AMBIPOM && GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL) <= SPECIES_UNUSED_SPACE10))
             return TRUE;
     }
 
@@ -3980,6 +4011,8 @@ bool8 InPokemonCenter(void)
         MAP_EVER_GRANDE_CITY_POKEMON_CENTER_1F,
         MAP_EVER_GRANDE_CITY_POKEMON_LEAGUE_1F,
         MAP_BATTLE_FRONTIER_POKEMON_CENTER_1F,
+        MAP_ECRUTEAK_CITY_POKEMON_CENTER,
+        MAP_ECRUTEAK_CITY_POKEMON_CENTER_B1,
         MAP_BATTLE_COLOSSEUM_2P,
         MAP_TRADE_CENTER,
         MAP_RECORD_CORNER,
@@ -4517,6 +4550,8 @@ bool16 TryChangeDeoxysForm(void)
 
         SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPECIES, &targetSpecies);
         CalculateMonStats(&gPlayerParty[gSpecialVar_0x8004]);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(targetSpecies), FLAG_SET_SEEN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(targetSpecies), FLAG_SET_CAUGHT);
         gSpecialVar_Result = TRUE;
         return TRUE;
     }
@@ -4867,4 +4902,16 @@ u8 ContextNpcGetTextColor(void)
             gfxId = VarGetObjectEventGraphicsId(gfxId - OBJ_EVENT_GFX_VAR_0);
         return GetColorFromTextColorTable(gfxId);
     }*/
+}
+
+void ReverseFixSavePokemon1(void)
+{
+    u8 partyIndex = gSpecialVar_0x8004;
+    struct Pokemon *mon = &gPlayerParty[partyIndex];
+    
+    if ((GetMonData(mon, MON_DATA_SPECIES, NULL) != SPECIES_NONE)
+     || (GetMonData(mon, MON_DATA_SPECIES, NULL) != SPECIES_EGG))
+    {
+        FixSavePokemon1_Reverse_Single(&mon->box);
+    }
 }

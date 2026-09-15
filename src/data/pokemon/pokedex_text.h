@@ -2554,16 +2554,16 @@ const u8 gUrsalunaPokedexText[] = _(
     "manipulate peat at will.");
 
 const u8 gUrsaluna_BloodMoonPokedexText[] = _(
-            "It crossed the sea and drifted\n"
-            "ashore in a new land. Surviving in this\n"
-            "place led it to take on a unique\n"
-            "appearance and gain special powers.");
+    "It crossed the sea and drifted\n"
+    "ashore in a new land. Surviving in this\n"
+    "place led it to take on a unique\n"
+    "appearance and gain special powers.");
 
 const u8 gKleavorPokedexText[] = _(
-            "A violent creature that fells trees with\n"
-            "its crude axes and shields itself with hard\n"
-            "stone. Should one encounter this Pokémon\n"
-            "in the wild, one's only recourse is to flee.");
+    "A violent creature that fells trees with\n"
+    "its crude axes and shields itself with hard\n"
+    "stone. Should one encounter this Pokémon\n"
+    "in the wild, one's only recourse is to flee.");
 
 const u8 gDeoxysAPokedexText[] = _(
     "An alien virus that fell to earth on\n" 
@@ -2582,3 +2582,4 @@ const u8 gDeoxysSPokedexText[] = _(
     "a meteor underwent a DNA mutation to\n"
     "become this Pokémon. Its body has\n"
     "reconfigured for superior speed.");         
+

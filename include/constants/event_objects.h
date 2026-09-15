@@ -209,7 +209,7 @@
 #define OBJ_EVENT_GFX_KYOGRE_ASLEEP              205
 #define OBJ_EVENT_GFX_GROUDON_ASLEEP             206
 #define OBJ_EVENT_GFX_RAYQUAZA                   207
-#define OBJ_EVENT_GFX_ZIGZAGOON_2                208
+#define OBJ_EVENT_GFX_CONTEST_JUDGE                208
 #define OBJ_EVENT_GFX_PIKACHU                    209
 #define OBJ_EVENT_GFX_AZUMARILL                  210
 #define OBJ_EVENT_GFX_SLOWPOKE_NO_TAIL                    211

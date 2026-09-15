@@ -1898,6 +1898,16 @@ static void Task_OpenPokedexFromSummary(u8 taskId)
             DestroyMonSpritesGfxManager(MON_SPR_GFX_MANAGER_A);
         FreeSummaryScreen();
         DestroyTask(taskId);
+
+        // Clear all BG tilemaps to prevent leftover tiles bleeding into the Pokédex screen
+        FillBgTilemapBufferRect_Palette0(0, 0, 0, 0, 32, 32);
+        FillBgTilemapBufferRect_Palette0(1, 0, 0, 0, 32, 32);
+        FillBgTilemapBufferRect_Palette0(2, 0, 0, 0, 32, 32);
+        FillBgTilemapBufferRect_Palette0(3, 0, 0, 0, 32, 32);
+        CopyBgTilemapBufferToVram(0);
+        CopyBgTilemapBufferToVram(1);
+        CopyBgTilemapBufferToVram(2);
+        CopyBgTilemapBufferToVram(3);
         
         // Clear all BG tilemaps to prevent leftover tiles bleeding into the Pokédex screen
         FillBgTilemapBufferRect_Palette0(0, 0, 0, 0, 32, 32);
@@ -1978,9 +1988,11 @@ static void Task_HandleInput(u8 taskId)
             {
                 if (sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO)
                 {
+
                     if (!sMonSummaryScreen->summary.isEgg
     			&& FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE
     			&& !gMain.inBattle) // Battle shows CANCEL instead of POKEDEX from summary screen.
+
                     {
                         StopPokemonAnimations();
                         PlaySE(SE_SELECT);
@@ -1991,7 +2003,9 @@ static void Task_HandleInput(u8 taskId)
                         StopPokemonAnimations();
                         PlaySE(SE_SELECT);
                         BeginCloseSummaryScreen(taskId);
+
                     }                    
+
                 }
                 else // Contest or Battle Moves
                 {
@@ -3230,7 +3244,7 @@ static void PrintMonInfo(void)
         PrintEggInfo();
     ScheduleBgCopyTilemapToVram(0);
 }
-static const u8 sText_Deoxys_Number[] = _("{NO}{CLEAR 0x01}386");
+static const u8 sText_Deoxys_Number[] = _("{NO}{CLEAR 0x01}425");
 static const u8 sText_Test_Number[] = _("{NO}{CLEAR 0x01}???");
 
 static void PrintNotEggInfo(void)
@@ -3440,6 +3454,8 @@ static void PrintPokedexOrCancel(void)
         PrintTextOnWindow(PSS_LABEL_WINDOW_PROMPT_CANCEL, gText_Cancel2, stringXPos, 1, 0, 0);
     }
 }
+
+
 
 
 static void PutPageWindowTilemaps(u8 page)

@@ -375,6 +375,7 @@ extern const u8 gText_Birch_SoItsPlayer[];
 extern const u8 gText_Birch_YourePlayer[];
 extern const u8 gText_Birch_ChallengesSoundRight[];
 extern const u8 gText_Birch_AreYouReady[];
+extern const u8 gText_Birch_ChallengeSelected[];
 extern const u8 gText_ContinueMenuPlayer[];
 extern const u8 gText_ContinueMenuTime[];
 extern const u8 gText_ContinueMenuPokedex[];
@@ -3310,6 +3311,12 @@ extern const u8 gText_UnitSystemImperial[]; //tx_optionsPlus
 extern const u8 gText_Var1DotVar2_Metric[];
 extern const u8 gText_Follow[];
 extern const u8 gText_PkmnWillFollowYou[];
+
+//Item move
+extern const u8 gMenuText_Move[];
+extern const u8 gText_MoveItemWhere[];
+extern const u8 gText_XsYAnd[];
+extern const u8 gText_XsYWereSwapped[];
 
 // Mom's Savings
 extern const u8 gText_CheckSavings[];

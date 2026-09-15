@@ -152,7 +152,32 @@ CableClub_Text_OtherTrainerNotReady:
 
 CableClub_Text_YouHaveAMonThatCantBeTaken:
 	.string "You have at least one Pokémon\n"
-	.string "that can't be taken.$"
+	.string "that can't be taken.\p"
+	.string "If any of your {PKMN} was caught in a\n"
+	.string "{COLOR RED}Love Ball, Lure Ball, Friend Ball\l"
+	.string "Heavy Ball, Moon Ball, Level Ball\l"
+	.string "Fast Ball or GS Ball{COLOR DARK_GRAY}, they can't\l"
+	.string "be traded, even to other Modern\l"
+	.string "Heart & Soul games.\p"
+	.string "If any of your {PKMN} was caught in any\n"
+	.string "of the mentioned Poké Balls, and it was\l"
+	.string "was changed to a standard Poké Ball,\l"
+	.string "it also can't be traded.\p"
+	.string "If you want to trade them, or if you\n"
+	.string "see a {COLOR RED}BAD EGG{COLOR DARK_GRAY}, talk to the Trading\l"
+	.string "Fixer to fix your Pokémon.$"
+
+CableClub_Text_YouHaveMESpeciesOrItems:
+	.string "You have at least one Pokémon or item\n"
+	.string "that isn't available in any of the\l"
+	.string "original Pokémon games.\p"
+	.string "If you plan on trading with those games,\n"
+	.string "please remove any post Generation III\l"
+	.string "Pokémon species or any of these items:\l"
+	.string "{COLOR BLUE}Growth Mulch, Big Nugget, Exp. Share S,\l"
+	.string "Fairy Gem, Rage Candy Bar, and all Mints{COLOR DARK_GRAY}.\p"
+	.string "Otherwise, the other player might see\n"
+	.string "a {COLOR RED}BAD EGG{COLOR DARK_GRAY}.$"
 
 RecordCorner_Text_TakeSeatAndWait:
 	.string "Please take your seat and wait.$"

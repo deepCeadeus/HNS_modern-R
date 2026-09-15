@@ -2264,7 +2264,8 @@ void BattleMainCB2(void)
 
     if (gSaveBlock2Ptr->optionsBattleSpeed
         && !(gBattleTypeFlags & BATTLE_TYPE_LINK)
-        && !gBattleCaptureSuccessActive)
+        && !gBattleCaptureSuccessActive
+        && !gPaletteFade.active)
     {
         bool8 ballActive = FALSE;
         u8 i;
@@ -3849,7 +3850,7 @@ static void BattleStartClearSetData(void)
         gLastPrintedMoves[i] = MOVE_NONE;
         gBattleResources->flags->flags[i] = 0;
         gPalaceSelectionBattleScripts[i] = 0;
-        if (gSaveBlock2Ptr->optionsCursorMemory)
+        if ((gSaveBlock2Ptr->optionsCursorMemory) == 0)
         {
             gTargetSelectionCursor[i] = 0xFF;
             gTargetSelectionMove[i] = 0xFF;
@@ -4003,7 +4004,7 @@ void SwitchInClearSetData(void)
 
     gActionSelectionCursor[gActiveBattler] = 0;
     gMoveSelectionCursor[gActiveBattler] = 0;
-    if (gSaveBlock2Ptr->optionsCursorMemory)
+    if ((gSaveBlock2Ptr->optionsCursorMemory) == 0)
         gTargetSelectionCursor[gActiveBattler] = 0xFF;
 
     ptr = (u8 *)&gDisableStructs[gActiveBattler];
@@ -4087,7 +4088,7 @@ void FaintClearSetData(void)
 
     gActionSelectionCursor[gActiveBattler] = 0;
     gMoveSelectionCursor[gActiveBattler] = 0;
-    if (gSaveBlock2Ptr->optionsCursorMemory)
+    if ((gSaveBlock2Ptr->optionsCursorMemory) == 0)
         gTargetSelectionCursor[gActiveBattler] = 0xFF;
 
     ptr = (u8 *)&gDisableStructs[gActiveBattler];
@@ -4411,7 +4412,7 @@ static void BattleIntroSafariQuickRun(void)
             if ((JOY_HELD(R_BUTTON)) && (JOY_HELD(L_BUTTON)))
             {
                 PlaySE(SE_FLEE);
-                //gBattlerAttacker = gBattlerByTurnOrder[gCurrentTurnActionNumber];
+
                 gBattleOutcome = B_OUTCOME_RAN;
                 gBattleMainFunc = HandleEndTurn_RanFromBattle;
                 return;
@@ -4435,7 +4436,7 @@ static void BattleIntroSafariQuickRun(void)
 
                 sSafariRunHoldCounter = 0;
                 PlaySE(SE_FLEE);
-                //gBattlerAttacker = gBattlerByTurnOrder[gCurrentTurnActionNumber];
+
                 gBattleOutcome = B_OUTCOME_RAN;
                 gBattleMainFunc = HandleEndTurn_RanFromBattle;
                 return;

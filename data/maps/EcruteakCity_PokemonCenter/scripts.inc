@@ -3,6 +3,7 @@
 
 EcruteakCity_PokemonCenter_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, EcruteakCity_PokemonCenter_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
 	.byte 0
 
 EcruteakCity_PokemonCenter_OnTransition::
@@ -97,8 +98,10 @@ EcruteakCity_PokemonCenter_EventScript_Link_Fixer_Yes_First::
 	end
 
 EcruteakCity_PokemonCenter_EventScript_Link_Fixer_Yes_Second::
-	faceplayer
-	callnative TradeFix
+	special ChoosePartyMon
+	waitstate
+	special ReverseFixSavePokemon1
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, EcruteakCity_PokemonCenter_EventScript_Link_Fixer_No
 	msgbox EcruteakCity_PokemonCenter1F_Text_Fixer_Yes_Second, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -191,30 +194,28 @@ EcruteakCity_PokemonCenter1F_Text_LinkWoman:
 	.string "only Pokémon Center that offers\l"
 	.string "Trading and Battling with players\l"
 	.string "from different games, including:\p"
-	.string "Pokémon Modern Emerald 3.3+ and official\n"
-	.string "Pokémon Emerald, plus probably the\l"
-	.string "rest of the official games (untested!).\p"
-	.string "{COLOR RED}Please, DON'T TRY TO TRADE OR BATTLE\n"
-	.string "with Pokémon that have been put in\l"
-	.string "the following Poké Balls:\p"
+	.string "Pokémon Modern Emerald 3.3+,\n"
+	.string "Pokémon Modern Heart & Soul,\l"
+	.string "Pokémon Modern FireRed & LeafGreen,\l"
+	.string "and all the official games (only tested\l"
+	.string "with Pokémon Emerald).\p"
+	.string "{COLOR RED}Pokémon that are in the following\n"
+	.string "Poké Balls can't be traded:\p"
 	.string "{COLOR DARK_GRAY}Love Ball, Lure Ball, Friend Ball\n"
 	.string "Heavy Ball, Moon Ball, Level Ball\l"
 	.string "Fast Ball or GS Ball.\p"
-	.string "At best, nothing will happen.\p"
-	.string "At worst, data might get corrupted\n"
-	.string "(Not probable, but might be possible).\p"
-	.string "Please, fix your Pokémon by talking\n"
+	.string "Pokémon that have been in the mentioned\n"
+	.string "Poké Balls at any point will show up as\l"
+	.string "{COLOR RED}BAD EGGS{COLOR DARK_GRAY} in the second player screen.\p"
+	.string "You can fix these Pokémon by talking\n"
 	.string "to the Man sitting on the sofa.$"
 
 EcruteakCity_PokemonCenter1F_Text_Fixer:
 	.string "I'm the Trading Fixer.\p"
-	.string "I can fix your {COLOR RED}Party{COLOR DARK_GRAY}, meaning {COLOR RED}all six\n"
-	.string "of your current Pokémon{COLOR DARK_GRAY} if they've\l"
+	.string "I can fix your Pokémon if they've ever\n"
 	.string "been placed in Heart & Soul extra\l"
-	.string "Poké Balls.\p"
-	.string "You {COLOR RED}don't need{COLOR DARK_GRAY} to do this if you haven't\n"
-	.string "placed any of your six Pokémon in Heart\l"
-	.string "& Soul newly added Poké Balls.\p"
+	.string "Poké Balls or if they show up as\l"
+	.string "BAD EGGS in other games.\p"
 	.string "Continue?$"
 
 EcruteakCity_PokemonCenter1F_Text_Fixer_No:
@@ -222,16 +223,13 @@ EcruteakCity_PokemonCenter1F_Text_Fixer_No:
 
 EcruteakCity_PokemonCenter1F_Text_Fixer_Yes_First:
 	.string "Are you sure you want to fix your\n"
-	.string "{COLOR RED}whole{COLOR DARK_GRAY} party?\l"
-	.string "Pokémon on the PC are not affected.\p"
-	.string "They will be placed in a normal Poké Ball\n"
-	.string "again, if it's necessary.\p"
+	.string "Pokémon?\p"
+	.string "Pokémon on the PC are not affected.\n"
+	.string "The selected Pokémon will be placed in a\l"
+	.string "common Poké Ball again.\p"
 	.string "Just making sure you're absolutely sure\n"
-	.string "about this operation. {COLOR RED}Don't{COLOR DARK_GRAY} press yes if\l"
-	.string "you still have Pokémon that haven't\l"
-	.string "been placed in the Poké Balls that the\l"
-	.string "the woman at the entrance hasn't\l"
-	.string "mentioned.$"
+	.string "about this operation.\l"
+	.string "{COLOR RED}Don't{COLOR DARK_GRAY} press yes if you aren't sure.$"
 
 EcruteakCity_PokemonCenter1F_Text_Fixer_Yes_Second:
 	.string "Done.$"

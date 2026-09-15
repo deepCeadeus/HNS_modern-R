@@ -587,6 +587,13 @@ CableClub_EventScript_AbortLinkPlayerHasBadEgg::
 	release
 	end
 
+CableClub_EventScript_PlayerHasMESpeciesOrItems::
+	msgbox CableClub_Text_YouHaveMESpeciesOrItems, MSGBOX_DEFAULT
+	closemessage
+	return
+	end
+
+
 CableClub_EventScript_AbortLinkForeignGame::
 	special CloseLink
 	msgbox CableClub_Text_CantMixWithJapaneseGame, MSGBOX_DEFAULT
@@ -644,6 +651,7 @@ Movement_PlayerFaceAttendantLeft:
 	step_end
 
 Movement_PlayerFaceAttendantRight:
+	walk_down
 	face_right
 	step_end
 
@@ -856,6 +864,8 @@ CableClub_EventScript_UnionRoomAttendant::
 	faceplayer
 	setvar VAR_FRONTIER_FACILITY, FACILITY_UNION_ROOM
 	goto_if_unset FLAG_SYS_POKEDEX_GET, CableClub_EventScript_WirelessClubAdjustements
+	specialvar VAR_RESULT, PlayerHasMESpeciesOrItem
+	call_if_eq VAR_RESULT, TRUE, CableClub_EventScript_PlayerHasMESpeciesOrItems
 	specialvar VAR_RESULT, IsBadEggInParty
 	goto_if_eq VAR_RESULT, TRUE, CableClub_EventScript_AbortLinkPlayerHasBadEgg
 	copyvar VAR_0x8007, VAR_LAST_TALKED
@@ -957,6 +967,8 @@ CableClub_EventScript_DirectCornerAttendant::
 	faceplayer
 	setvar VAR_FRONTIER_FACILITY, FACILITY_MULTI_OR_EREADER  @ Set preemptively for multi battles, ignored otherwise
 	goto_if_unset FLAG_SYS_POKEDEX_GET, CableClub_EventScript_WirelessClubAdjustements
+	specialvar VAR_RESULT, PlayerHasMESpeciesOrItem
+	call_if_eq VAR_RESULT, TRUE, CableClub_EventScript_PlayerHasMESpeciesOrItems
 	specialvar VAR_RESULT, IsBadEggInParty
 	goto_if_eq VAR_RESULT, TRUE, CableClub_EventScript_AbortLinkPlayerHasBadEgg
 	specialvar VAR_RESULT, IsWirelessAdapterConnected
@@ -1228,23 +1240,23 @@ CableClub_EventScript_AdapterNotConnected::
 	end
 
 CableClub_EventScript_OpenUnionRoomBarrier::
-	setmetatile 5, 2, METATILE_Kanto_PokemonCenter_Floor_ShadowTop_Alt, FALSE
-	setmetatile 5, 3, METATILE_Kanto_PokemonCenter_Floor_Plain_Alt, FALSE
+	setmetatile 5, 3, METATILE_Kanto_PokemonCenter_Floor_ShadowTop_Alt, FALSE
+	setmetatile 5, 4, METATILE_Kanto_PokemonCenter_Floor_Plain_Alt, FALSE
 	return
 
 CableClub_EventScript_CloseUnionRoomBarrier::
-	setmetatile 5, 2, METATILE_Kanto_PokemonCenter_Floor_ShadowTop, TRUE
-	setmetatile 5, 3, METATILE_Kanto_PokemonCenter_CounterBarrier, TRUE
+	setmetatile 5, 3, METATILE_Kanto_PokemonCenter_Floor_ShadowTop, TRUE
+	setmetatile 5, 4, METATILE_Kanto_PokemonCenter_CounterBarrier, TRUE
 	return
 
 CableClub_EventScript_OpenDirectCornerBarrier::
-	setmetatile 9, 2, METATILE_Kanto_PokemonCenter_Floor_ShadowTop_Alt, FALSE
-	setmetatile 9, 3, METATILE_Kanto_PokemonCenter_Floor_Plain_Alt, FALSE
+	setmetatile 9, 3, METATILE_Kanto_PokemonCenter_Floor_ShadowTop_Alt, FALSE
+	setmetatile 9, 4, METATILE_Kanto_PokemonCenter_Floor_Plain_Alt, FALSE
 	return
 
 CableClub_EventScript_CloseDirectCornerBarrier::
-	setmetatile 9, 2, METATILE_Kanto_PokemonCenter_Floor_ShadowTop, TRUE
-	setmetatile 9, 3, METATILE_Kanto_PokemonCenter_CounterBarrier, TRUE
+	setmetatile 9, 3, METATILE_Kanto_PokemonCenter_Floor_ShadowTop, TRUE
+	setmetatile 9, 4, METATILE_Kanto_PokemonCenter_CounterBarrier, TRUE
 	return
 
 EventScript_OpenMossdeepGameCornerBarrier::
