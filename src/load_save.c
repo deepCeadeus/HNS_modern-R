@@ -233,6 +233,7 @@ void CopyPartyAndObjectsFromSave(void)
     PrintTXSaveData(); //tx_randomizer_and_challenges
     LoadPlayerParty();
     LoadObjectEvents();
+    ScanOwnedMonsForShinies(); // Retroactively set shiny flags for existing party/PC mons (sept 15 2026 THIS IS AN ADDITONAL SCAN FOR NOW SO DEBUG SHINIES ARE ADDED EVERY LOAD)
 }
 
 void LoadPlayerBag(void)

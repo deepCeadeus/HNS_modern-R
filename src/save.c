@@ -15,6 +15,7 @@
 #include "event_data.h"
 #include "strings.h"
 #include "string_util.h"
+#include "pokedex.h"
 
 static u16 CalculateChecksum(void *, u16);
 static bool8 ReadFlashSector(u8, struct SaveSector *);
