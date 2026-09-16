@@ -853,11 +853,11 @@ static const u8 sText_Description_Features_RTC_Type_RTC[]             = _("Use v
 static const u8 sText_Description_Features_RTC_Type_FakeRTC[]         = _("Use a fake Real Time Clock.\n1h in real life = 1 day in-game.");
 static const u8 sText_Description_Features_ItemDrop_On[]              = _("Wild Pokémon will drop their hold\nitem after defeating them.");
 static const u8 sText_Description_Features_ItemDrop_Off[]             = _("Wild Pokémon items will be only\nobtainable via capture or Thief.");
-static const u8 sText_Description_Features_ShinyChance_8192[]         = _("Very low chance of Shiny encounter.\nDefault chance from Generation III.");
-static const u8 sText_Description_Features_ShinyChance_4096[]         = _("Low chance of Shiny encounter.\nDefault chance from Generation VI+.");
-static const u8 sText_Description_Features_ShinyChance_2048[]         = _("Decent chance of Shiny encounter.");
-static const u8 sText_Description_Features_ShinyChance_1024[]         = _("High chance of Shiny encounter.");
-static const u8 sText_Description_Features_ShinyChance_512[]          = _("Very high chance of Shiny encounter.");
+static const u8 sText_Description_Features_ShinyChance_8192[]         = _("Fair chance of Shiny encounter.\n0.39%");
+static const u8 sText_Description_Features_ShinyChance_4096[]         = _("Good chance of Shiny encounter.\n0.78%");
+static const u8 sText_Description_Features_ShinyChance_2048[]         = _("High chance of Shiny encounter.\n1.56%");
+static const u8 sText_Description_Features_ShinyChance_1024[]         = _("Very High chance of Shiny encounter.\n3.125%");
+static const u8 sText_Description_Features_ShinyChance_512[]          = _("Extreme chance of Shiny encounter.\n6.25%");
 static const u8 sText_Description_Features_EasyFeebas_On[]            = _("Feebas is easier to catch and spawns\neverywhere in Route 119.");
 static const u8 sText_Description_Features_EasyFeebas_Off[]           = _("Feebas is encountered in random\nspots in Route 119.");
 static const u8 sText_Description_Features_Unlimited_WT_On[]          = _("Enables a daily limit of 3\nWonderTrades. Recommended.");
@@ -2900,11 +2900,11 @@ static void DrawChoices_Challenges_PCHeal(int selection, int y)
     DrawOptionMenuChoice(sText_No, GetStringRightAlignXOffset(1, sText_On, 198), y, styles[1], active);
 }
 
-static const u8 sText_Challenges_ShinyChance_8192[]   = _("8192");
-static const u8 sText_Challenges_ShinyChance_4096[]   = _("4096");
-static const u8 sText_Challenges_ShinyChance_2048[]   = _("2048");
-static const u8 sText_Challenges_ShinyChance_1024[]   = _("1024");
-static const u8 sText_Challenges_ShinyChance_512[]    = _("512");
+static const u8 sText_Challenges_ShinyChance_8192[]   = _("256");
+static const u8 sText_Challenges_ShinyChance_4096[]   = _("128");
+static const u8 sText_Challenges_ShinyChance_2048[]   = _("64");
+static const u8 sText_Challenges_ShinyChance_1024[]   = _("32");
+static const u8 sText_Challenges_ShinyChance_512[]    = _("16");
 static const u8 *const sText_Challenges_ShinyChance_Strings[] = {sText_Challenges_ShinyChance_8192,  sText_Challenges_ShinyChance_4096,  sText_Challenges_ShinyChance_2048,  sText_Challenges_ShinyChance_1024,  sText_Challenges_ShinyChance_512};
 static void DrawChoices_Features_ShinyChance(int selection, int y)
 {

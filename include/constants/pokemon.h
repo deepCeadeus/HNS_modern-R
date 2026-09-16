@@ -93,7 +93,7 @@
 #define MAX_STAT_STAGE    12
 
 // Shiny odds
-#define SHINY_BITS 3
+#define SHINY_BITS 8 //Changed from 3 to increase overall shiny rate
 #define SHINY_ODDS (1 << SHINY_BITS) // default: 1 << 3 = 8. Actual shiny rate is (SHINY_ODDS * pow(2, gSaveBlock1Ptr->tx_Features_ShinyChance)) / 65536
 /*
 Assuming SHINY_ODDS = 8:
@@ -102,6 +102,14 @@ tx_Features_ShinyChance = 1     ->  shiny rate 1/4096
 tx_Features_ShinyChance = 2     ->  shiny rate 1/2048
 tx_Features_ShinyChance = 3     ->  shiny rate 1/1024
 tx_Features_ShinyChance = 4     ->  shiny rate 1/512
+
+new rate 09/15/2026
+1/256
+1/128
+1/64
+1/32
+1/16
+
 */
 
 // Ribbon IDs used by TV and Pokénav
