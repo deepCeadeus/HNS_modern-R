@@ -3,6 +3,36 @@
 
 # DO NOT, UNDER ANY CIRCUMSTANCE, REPORT BUGS TO THE OFFICIAL HNS REPO OR DISCORD SERVER
 
+# HNS_modern-R
+
+This Fork Features changes from my other fork -> Modern Emerald R using the ORAS tileset
+Updated Weather effects in battle
+Rebalanced Moves and Abilities
+Learnset Changes
+Updates to some pokemon (Feraligatr gets Dragonize)
+Some Gen 4+ updates to moves/abilities (example: Rapid Spin adds +1 Speed Stage)
+Additional moves for coverage (example: Sucker Punch, Fire Fang, Volt Switch and more)
+The goal of these addtions was to have a game that feels close to gen 4+ with a stable/fully functional battle frontier with less grind (better shiny odds/debug menu)
+Old saves from HnS 1.2.1 should all work fine with this.
+
+you can find the list of balance changes ported over from here:
+[Github](https://github.com/deepCeadeus/pokeemerald-modern-oras-R)
+
+This not have the guaranteed shiny starter at 1/16 shiny rates like I added in Modern Emerald R
+At 1/16 it is a very quick reset
+
+In the OG HnS there was a bug from using the debug menu to fly(fast travel) before getting the actual move fly. It caused the fly flags to be set, locking players from progressing and getting the HM FLY, blocking progress(softlock). I recomend not using the debug menu until you finish the game. (This is one of the many reasons I think debug was not included in the original release) 
+
+For refrence to compile with debug menu use:
+make modern DEBUG=1
+
+# The (UNOFFICIAL) MODERN Heart & Soul README:
+
+# If you are unsure which version to play, play the official one. 
+# Version 2.0 is better than this version. Play this version if you want to continue using your 1.2.1 save with new features and bug fixes.
+
+# DO NOT, UNDER ANY CIRCUMSTANCE, REPORT BUGS TO THE OFFICIAL HNS REPO OR DISCORD SERVER
+
 # (UNOFFICIAL) MODERN Heart & Soul
 **Modern** Heart & Soul is a small modification of the original Pokémon Heart & Soul version 1.2.1+(more recent than 1.2.1, "unofficially" called 1.2.2, but unreleased nonetheless) that includes missing options and features from its base game engine, Pokémon Modern Emerald. It has been created to become the base game of a future romhack: Modern Fire Red & Leaf Green.
 
