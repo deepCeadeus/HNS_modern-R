@@ -109,7 +109,7 @@ BattleFrontier_Lounge6_EventScript_Hiker_No_Pay::
 	end
 
 BattleFrontier_Lounge6_EventScript_Hiker_Yes_Pay::
-	setvar VAR_0x8008, 9999
+	setvar VAR_0x8008, 999
 	specialvar VAR_TEMP_C, GetFrontierBattlePoints
 	goto_if_ge VAR_TEMP_C, VAR_0x8008, BattleFrontier_Lounge6_EventScript_Hiker_Yes_Pay_EnoughMoney
 	faceplayer
