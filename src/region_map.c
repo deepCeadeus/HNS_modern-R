@@ -175,6 +175,7 @@ const struct RegionMapLocation gRegionMapEntries_Johto[] = {
     [MAPSEC_KANTO_SAFARI_ZONE] = { 3, 17, 1, 1, sMapName_Kanto_Safari_Zone},
     [MAPSEC_KANTO_VICTORY_ROAD] = { 16, 7, 1, 1, sMapName_Victory_Road_Gate},
     [MAPSEC_MT_SILVER_INSIDE] = { 14, 6, 1, 1, sMapName_Mt__Silver},
+    [MAPSEC_TRAINER_HILL] = { 2, 5, 1, 1, sMapName_Trainer_Hill},
 };
 
 
