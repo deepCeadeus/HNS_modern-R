@@ -6713,7 +6713,15 @@ static const u64 sTutorLearnsets[] =
                                 | TUTOR(MOVE_SWIFT)
                                 | TUTOR(MOVE_FURY_CUTTER)),
 
-    [SPECIES_UNUSED_SPACE5]             = (0),
+    [SPECIES_VICTINI]          = (TUTOR(MOVE_DREAM_EATER)
+                                | TUTOR(MOVE_FIRE_PUNCH)
+                                | TUTOR(MOVE_PSYCH_UP)
+                                | TUTOR(MOVE_SLEEP_TALK)
+                                | TUTOR(MOVE_SNORE)
+                                | TUTOR(MOVE_SUBSTITUTE)
+                                | TUTOR(MOVE_SWAGGER)
+                                | TUTOR(MOVE_SWIFT)
+                                | TUTOR(MOVE_BLAST_BURN)),
 
     [SPECIES_UNUSED_SPACE6]             = (0),
 
@@ -6748,10 +6756,36 @@ static const u64 sTutorLearnsets[] =
                                 | TUTOR(MOVE_FIRE_PUNCH)
                                 | TUTOR(MOVE_FURY_CUTTER)),
 
-    [SPECIES_UNUSED_SPACE8]             = (0),
+    [SPECIES_ARTICUNO_GALAR]    = (TUTOR(MOVE_DREAM_EATER)
+                                 | TUTOR(MOVE_PSYCH_UP)
+                                 | TUTOR(MOVE_SLEEP_TALK)
+                                 | TUTOR(MOVE_SNORE)
+                                 | TUTOR(MOVE_SUBSTITUTE)
+                                 | TUTOR(MOVE_SWAGGER)
+                                 | TUTOR(MOVE_SWIFT)),
 
-    [SPECIES_UNUSED_SPACE9]             = (0),
+    [SPECIES_ZAPDOS_GALAR]             = ( TUTOR(MOVE_BODY_SLAM)
+                                          | TUTOR(MOVE_COUNTER)
+                                          | TUTOR(MOVE_DOUBLE_EDGE)
+                                          | TUTOR(MOVE_DREAM_EATER)
+                                          | TUTOR(MOVE_DYNAMIC_PUNCH)
+                                          | TUTOR(MOVE_ENDURE)
+                                          | TUTOR(MOVE_MEGA_KICK)
+                                          | TUTOR(MOVE_MEGA_PUNCH)
+                                          | TUTOR(MOVE_ROLLOUT)
+                                          | TUTOR(MOVE_SEISMIC_TOSS)
+                                          | TUTOR(MOVE_SLEEP_TALK)
+                                          | TUTOR(MOVE_SNORE)
+                                          | TUTOR(MOVE_SUBSTITUTE)
+                                          | TUTOR(MOVE_SWAGGER)
+                                          | TUTOR(MOVE_SWIFT)),
 
-    [SPECIES_UNUSED_SPACE10]             = (0),
+    [SPECIES_MOLTRES_GALAR]     = (TUTOR(MOVE_ENDURE)
+                                 | TUTOR(MOVE_ROCK_SLIDE)
+                                 | TUTOR(MOVE_SLEEP_TALK)
+                                 | TUTOR(MOVE_SNORE)
+                                 | TUTOR(MOVE_SUBSTITUTE)
+                                 | TUTOR(MOVE_SWAGGER)
+                                 | TUTOR(MOVE_SWIFT)),
     
 };
