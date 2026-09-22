@@ -66928,6 +66928,160 @@
           }
         },
         {
+          "map": "MAP_FUCHSIA_CITY_SAFARI_ZONE_BEACH",
+          "base_label": "gFuchsiaCitySafariZoneBeach_Night",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_LOTAD"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_CACNEA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_MAKUHITA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_MAKUHITA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_LOMBRE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_TRAPINCH"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_TRAPINCH"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_TRAPINCH"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_BELDUM"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_VIBRAVA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_ZAPDOS_GALAR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_ZAPDOS_GALAR"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_TENTACOOL"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_QUAGSIRE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_QUAGSIRE"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_QUAGSIRE"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_TENTACRUEL"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_TENTACOOL"
+              }
+            ]
+          }
+        },
+        {
           "map": "MAP_FUCHSIA_CITY_SAFARI_ZONE_CAVE",
           "base_label": "gFuchsiaCity_SafariZoneCave",
           "land_mons": {
@@ -66992,6 +67146,160 @@
                 "min_level": 17,
                 "max_level": 30,
                 "species": "SPECIES_ZUBAT"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_RELICANTH"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_QUAGSIRE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_QUAGSIRE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_QUAGSIRE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_FEEBAS"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_FUCHSIA_CITY_SAFARI_ZONE_CAVE",
+          "base_label": "gFuchsiaCity_SafariZoneCave_Night",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_WHISMUR"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_WHISMUR"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_NOSEPASS"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_NOSEPASS"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_NOSEPASS"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_BAGON"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_ARTICUNO_GALAR"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_ARTICUNO_GALAR"
               }
             ]
           },
@@ -67236,6 +67544,160 @@
           }
         },
         {
+          "map": "MAP_FUCHSIA_CITY_SAFARI_ZONE_MOUNTAIN",
+          "base_label": "gFuchsiaCity_SafariZoneMountain_Night",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_MEDITITE"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_MEDITITE"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_BALTOY"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_BALTOY"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_ABSOL"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_ABSOL"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_MOLTRES_GALAR"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_MOLTRES_GALAR"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_WHISCASH"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_WHISCASH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BARBOACH"
+              }
+            ]
+          }
+        },
+        {
           "map": "MAP_FUCHSIA_CITY_SAFARI_ZONE_BRUSH",
           "base_label": "gFuchsiaCity_SafariZoneBrush",
           "land_mons": {
@@ -67300,6 +67762,75 @@
                 "min_level": 17,
                 "max_level": 30,
                 "species": "SPECIES_CASTFORM"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_FUCHSIA_CITY_SAFARI_ZONE_BRUSH",
+          "base_label": "gFuchsiaCity_SafariZoneBrush_Night",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_TROPIUS"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_TROPIUS"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_CHIMECHO"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_CHIMECHO"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_CHIMECHO"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_CHIMECHO"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_TROPIUS"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_TROPIUS"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_ABSOL"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_CASTFORM"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_VICTINI"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_VICTINI"
               }
             ]
           }

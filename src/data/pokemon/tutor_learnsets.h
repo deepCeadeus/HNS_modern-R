@@ -6717,6 +6717,11 @@ static const u64 sTutorLearnsets[] =
 
     [SPECIES_VICTINI]          = (TUTOR(MOVE_DREAM_EATER)
                                 | TUTOR(MOVE_FIRE_PUNCH)
+                                | TUTOR(MOVE_ICY_WIND)
+    				| TUTOR(MOVE_MEGA_KICK)
+    				| TUTOR(MOVE_MEGA_PUNCH)
+    				| TUTOR(MOVE_METRONOME)
+    				| TUTOR(MOVE_MIMIC)
                                 | TUTOR(MOVE_PSYCH_UP)
                                 | TUTOR(MOVE_SLEEP_TALK)
                                 | TUTOR(MOVE_SNORE)
