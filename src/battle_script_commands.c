@@ -3399,7 +3399,11 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 }
                 break;
             case MOVE_EFFECT_RECHARGE:
-                if(gSaveBlock1Ptr->tx_Mode_GenOneRecharge){    
+                if (gBattleMons[gBattlerAttacker].species == SPECIES_URSALUNA_BLOODMOON && gChosenMove == MOVE_BLOOD_MOON)
+                {
+                gBattleMons[gEffectBattler].status2 |= STATUS2_TORMENT;
+                }
+                else if(gSaveBlock1Ptr->tx_Mode_GenOneRecharge){    
                     // Only recharge if the target survived the hit
                     if (gBattleMons[gBattlerTarget].hp != 0)
                     {

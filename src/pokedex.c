@@ -4627,8 +4627,8 @@ bool16 HasAllMons(void)
             return FALSE;
     }
 
-    // -2 excludes Arceus and Test
-    for (i = JOHTO_DEX_COUNT; i < NATIONAL_DEX_COUNT - 2; i++)
+    // -6 excludes Arceus, Victini, the Three Galar birds and Test
+    for (i = JOHTO_DEX_COUNT; i < NATIONAL_DEX_COUNT - 6; i++)
     {
         if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
             return FALSE;

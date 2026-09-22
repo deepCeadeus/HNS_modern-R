@@ -2486,7 +2486,7 @@ static void DebugAction_FlagsVars_SetValue(u8 taskId)
 static void DebugAction_FlagsVars_PokedexFlags_All(u8 taskId)
 {
     u16 i;
-    for (i = 0; i < NATIONAL_DEX_COUNT - 1; i++)
+    for (i = 0; i < NATIONAL_DEX_COUNT - 5; i++)
     {
         GetSetPokedexFlag(i + 1, FLAG_SET_CAUGHT);
         GetSetPokedexFlag(i + 1, FLAG_SET_SEEN);
@@ -2533,7 +2533,7 @@ static void DebugAction_FlagsVars_PokedexFlags_Reset(u8 taskId)
 static void DebugAction_FlagsVars_PokedexFlags_Seen(u8 taskId)
 {
     u16 i;
-    for (i = 0; i < NATIONAL_DEX_COUNT - 1; i++)
+    for (i = 0; i < NATIONAL_DEX_COUNT - 5; i++)
     {
         GetSetPokedexFlag(i + 1, FLAG_SET_SEEN);
     }
