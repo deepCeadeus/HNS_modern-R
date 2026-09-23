@@ -4,6 +4,8 @@
 .set LOCALID_SAFARIATTENDANT_4, 7
 
 FuchsiaCity_SafariZoneBeach_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SetTimeEncounters
+	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
 	.byte 0
 
 SafariZoneFuchsia_EventScript_Attendant1::

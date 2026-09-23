@@ -67115,12 +67115,12 @@
               {
                 "min_level": 17,
                 "max_level": 30,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_ANORITH"
               },
               {
                 "min_level": 17,
                 "max_level": 30,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_ANORITH"
               },
               {
                 "min_level": 17,
@@ -67160,7 +67160,7 @@
               {
                 "min_level": 10,
                 "max_level": 30,
-                "species": "SPECIES_WOOPER"
+                "species": "SPECIES_MUDKIP"
               },
               {
                 "min_level": 10,
@@ -67269,12 +67269,12 @@
               {
                 "min_level": 17,
                 "max_level": 30,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_LILEEP"
               },
               {
                 "min_level": 17,
                 "max_level": 30,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_LILEEP"
               },
               {
                 "min_level": 17,
@@ -67314,12 +67314,12 @@
               {
                 "min_level": 10,
                 "max_level": 30,
-                "species": "SPECIES_WOOPER"
+                "species": "SPECIES_MUDKIP"
               },
               {
                 "min_level": 10,
                 "max_level": 30,
-                "species": "SPECIES_QUAGSIRE"
+                "species": "SPECIES_MUDKIP"
               },
               {
                 "min_level": 10,
@@ -67428,12 +67428,12 @@
               {
                 "min_level": 17,
                 "max_level": 30,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_SOLROCK"
               },
               {
                 "min_level": 17,
                 "max_level": 30,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_SOLROCK"
               },
               {
                 "min_level": 17,
@@ -67552,17 +67552,17 @@
               {
                 "min_level": 17,
                 "max_level": 30,
-                "species": "SPECIES_MEDITITE"
-              },
-              {
-                "min_level": 17,
-                "max_level": 30,
-                "species": "SPECIES_MEDITITE"
-              },
-              {
-                "min_level": 17,
-                "max_level": 30,
                 "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_MEDITITE"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_BALTOY"
               },
               {
                 "min_level": 17,
@@ -67577,27 +67577,27 @@
               {
                 "min_level": 17,
                 "max_level": 30,
-                "species": "SPECIES_BALTOY"
-              },
-              {
-                "min_level": 17,
-                "max_level": 30,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 17,
-                "max_level": 30,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 17,
-                "max_level": 30,
                 "species": "SPECIES_ABSOL"
               },
               {
                 "min_level": 17,
                 "max_level": 30,
-                "species": "SPECIES_ABSOL"
+                "species": "SPECIES_LUNATONE"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_LUNATONE"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_TORCHIC"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_TORCHIC"
               },
               {
                 "min_level": 17,
@@ -67800,22 +67800,22 @@
               {
                 "min_level": 17,
                 "max_level": 30,
-                "species": "SPECIES_CHIMECHO"
-              },
-              {
-                "min_level": 17,
-                "max_level": 30,
-                "species": "SPECIES_TROPIUS"
-              },
-              {
-                "min_level": 17,
-                "max_level": 30,
-                "species": "SPECIES_TROPIUS"
-              },
-              {
-                "min_level": 17,
-                "max_level": 30,
                 "species": "SPECIES_ABSOL"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_TROPIUS"
+              },
+              {
+                "min_level": 40,
+                "max_level": 45,
+                "species": "SPECIES_SCEPTILE"
+              },
+              {
+                "min_level": 17,
+                "max_level": 30,
+                "species": "SPECIES_CASTFORM"
               },
               {
                 "min_level": 17,
