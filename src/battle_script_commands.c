@@ -3399,7 +3399,7 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 }
                 break;
             case MOVE_EFFECT_RECHARGE:
-                if (gBattleMons[gBattlerAttacker].species == SPECIES_URSALUNA_BLOODMOON && gChosenMove == MOVE_BLOOD_MOON)
+                if (gChosenMove == MOVE_BLOOD_MOON)
                 {
                 gBattleMons[gEffectBattler].status2 |= STATUS2_TORMENT;
                 }

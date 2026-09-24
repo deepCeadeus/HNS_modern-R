@@ -21,6 +21,16 @@ you can find the list of balance changes ported over from here:
 This not have the guaranteed shiny starter at 1/16 shiny rates like I added in Modern Emerald R
 At 1/16 it is a very quick reset
 
+IMPORTANT!
+I have added some new rare encounters and changed some kanto spawns to the Fuchsia City Safari zone.
+	A rare pokemon can be found in each of the 4 zones
+	These rare encounters are not from kanto, johto, or hoenn
+	*2% encounters that occur only at night*
+	- *REDACTED*
+	- *REDACTED* 
+	- *REDACTED*
+	- *REDACTED*
+
 In the OG HnS there was a bug from using the debug menu to fly(fast travel) before getting the actual move fly. It caused the fly flags to be set, locking players from progressing and getting the HM FLY, blocking progress(softlock). I recomend not using the debug menu until you finish the game. (This is one of the many reasons I think debug was not included in the original release) 
 
 For refrence to compile with debug menu use:
