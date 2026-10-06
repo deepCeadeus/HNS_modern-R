@@ -1507,7 +1507,7 @@ static const u8 sIceFangDescription[] = _(
 
 static const u8 sFireFangDescription[] = _(
     "Bites with fiery fangs.\n"
-    "May cause flinching.");    
+    "May cause flinching.");  
 
 static const u8 sNightSlashDescription[] = _(
     "A dark opportunistic slash.\n"
@@ -1543,7 +1543,7 @@ static const u8 sRageFistDescription[] = _(
 
 static const u8 sHyperDrillDescription[] = _(
     "A piercing drill attack.\n"
-    "Bypasses protect or detect.");  
+    "Bypasses protect or detect."); 
 
 static const u8 sJudgmentDescription[] = _(
     "The effectiveness varies\n"
@@ -1568,6 +1568,10 @@ static const u8 sFieryWrathDescription[] = _(
 static const u8 sSearingShotDescription[] = _(
     "Scarlet flames torch\n"
     "everything around the user.");
+    
+static const u8 sModernGrowthDescription[] = _(
+    "Raises Sp. Atk and Atk\n"
+    "by forcing growth.");    
 
 
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
@@ -1965,4 +1969,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_THUNDEROUS_KICK - 1] = sThunderousKickDescription,
     [MOVE_FIERY_WRATH - 1] = sFieryWrathDescription,
     [MOVE_SEARING_SHOT - 1] = sSearingShotDescription,
+    [MOVE_MODERN_GROWTH - 1] = sModernGrowthDescription,
 };
