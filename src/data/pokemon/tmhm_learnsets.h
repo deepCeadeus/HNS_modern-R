@@ -9500,6 +9500,7 @@ const union {
         .SURF = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .WATERFALL = TRUE,
     } },
 
     [SPECIES_CASTFORM] = { .learnset = {
