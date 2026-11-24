@@ -5300,7 +5300,8 @@ static const u64 sTutorLearnsets[] =
                                 | TUTOR(MOVE_SWIFT)
                                 | TUTOR(MOVE_FURY_CUTTER)),
 
-    [SPECIES_SHUPPET]          = (TUTOR(MOVE_BODY_SLAM)
+    [SPECIES_SHUPPET]          = (TUTOR(MOVE_SWORDS_DANCE)
+    				| TUTOR(MOVE_BODY_SLAM)
                                 | TUTOR(MOVE_DOUBLE_EDGE)
                                 | TUTOR(MOVE_MIMIC)
                                 | TUTOR(MOVE_DREAM_EATER)
@@ -5313,7 +5314,8 @@ static const u64 sTutorLearnsets[] =
                                 | TUTOR(MOVE_SWAGGER)
                                 | TUTOR(MOVE_SLEEP_TALK)),
 
-    [SPECIES_BANETTE]          = (TUTOR(MOVE_BODY_SLAM)
+    [SPECIES_BANETTE]          = (TUTOR(MOVE_SWORDS_DANCE)
+    				| TUTOR(MOVE_BODY_SLAM)
                                 | TUTOR(MOVE_DOUBLE_EDGE)
                                 | TUTOR(MOVE_MIMIC)
                                 | TUTOR(MOVE_METRONOME)
